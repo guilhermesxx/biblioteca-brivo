@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'brivo',
+    'biblioteca',
 ]
+
+# biblioteca/settings.py
+AUTH_USER_MODEL = 'brivo.Usuario'
 
 
 
