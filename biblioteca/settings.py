@@ -37,13 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'brivo',
-    'biblioteca',
+    'brivo',  # App customizado para usuários e livros
+    'biblioteca',  # Seu app principal
+    'corsheaders',
+    'rest_framework',  # Adicionar Django Rest Framework
 ]
+
 
 # biblioteca/settings.py
 AUTH_USER_MODEL = 'brivo.Usuario'
 
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Substitua pela URL do seu frontend
+]
 
 
 
@@ -55,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'biblioteca.urls'
