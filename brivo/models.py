@@ -2,30 +2,36 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.utils import timezone
 
-
 # Gerenciador customizado de usuário
 class CustomUserManager(BaseUserManager):
-    def create_user(self, ra, nome, email, senha=None):
+    def create_user(self, ra, nome, email, turma, tipo, senha=None):
         if not email:
             raise ValueError("O e-mail é obrigatório.")
         if not ra:
             raise ValueError("O RA é obrigatório.")
         if not nome:
             raise ValueError("O nome é obrigatório.")
-        user = self.model(ra=ra, nome=nome, email=self.normalize_email(email))
-        if senha:
-            user.set_password(senha)
-        else:
-            user.set_password(None)
+        if not turma:
+            raise ValueError("A turma é obrigatória.")
+        if not tipo:
+            raise ValueError("O tipo de usuário é obrigatório.")
+
+        user = self.model(
+            ra=ra,
+            nome=nome,
+            email=self.normalize_email(email),
+            turma=turma,
+            tipo=tipo
+        )
+        user.set_password(senha)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, ra, nome, email, senha=None):
-        user = self.create_user(ra, nome, email, senha)
+    def create_superuser(self, ra, nome, email, turma="ADM", tipo="admin", senha=None):
+        user = self.create_user(ra, nome, email, turma, tipo, senha)
         user.is_admin = True
         user.save(using=self._db)
         return user
-
 
 # Modelo de Usuário Customizado
 class Usuario(AbstractBaseUser):
@@ -45,7 +51,7 @@ class Usuario(AbstractBaseUser):
     is_admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['ra', 'nome', 'turma']
+    REQUIRED_FIELDS = ['ra', 'nome', 'turma', 'tipo']
 
     objects = CustomUserManager()
 
@@ -57,7 +63,6 @@ class Usuario(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return self.is_admin
-
 
 # Modelo de Livro
 class Livro(models.Model):
@@ -78,7 +83,6 @@ class Livro(models.Model):
 
     def __str__(self):
         return self.titulo
-
 
 # Modelo de Empréstimo
 class Emprestimo(models.Model):

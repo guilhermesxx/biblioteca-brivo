@@ -11,7 +11,20 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         senha = validated_data.pop('senha')
-        usuario = Usuario.objects.create_user(**validated_data, senha=senha)
+        ra = validated_data.get('ra')
+        nome = validated_data.get('nome')
+        email = validated_data.get('email')
+        turma = validated_data.get('turma')
+        tipo = validated_data.get('tipo')
+
+        usuario = Usuario.objects.create_user(
+            ra=ra,
+            nome=nome,
+            email=email,
+            turma=turma,
+            tipo=tipo,
+            senha=senha
+        )
         return usuario
 
     def update(self, instance, validated_data):
