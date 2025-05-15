@@ -8,8 +8,15 @@ class CustomUserManager(BaseUserManager):
     def create_user(self, ra, nome, email, senha=None):
         if not email:
             raise ValueError("O e-mail é obrigatório.")
+        if not ra:
+            raise ValueError("O RA é obrigatório.")
+        if not nome:
+            raise ValueError("O nome é obrigatório.")
         user = self.model(ra=ra, nome=nome, email=self.normalize_email(email))
-        user.set_password(senha)
+        if senha:
+            user.set_password(senha)
+        else:
+            user.set_password(None)
         user.save(using=self._db)
         return user
 
@@ -64,10 +71,10 @@ class Livro(models.Model):
     editora = models.CharField(max_length=255, null=True, blank=True)
     data_publicacao = models.DateField()
     numero_paginas = models.IntegerField(null=True, blank=True)
-    tipo = models.CharField(max_length=6, choices=TIPO_LIVRO_CHOICES)  # Corrigido o max_length para 6
+    tipo = models.CharField(max_length=6, choices=TIPO_LIVRO_CHOICES)
     disponivel = models.BooleanField(default=True)
-    foto = models.ImageField(upload_to='livros/', null=True, blank=True)  # Foto do livro
-    descricao = models.TextField(null=True, blank=True)  # Descrição do livro
+    foto = models.ImageField(upload_to='livros/', null=True, blank=True)
+    descricao = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.titulo

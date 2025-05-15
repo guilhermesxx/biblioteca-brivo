@@ -7,13 +7,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Usuario
-        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo']  # Incluindo ID
+        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo']
 
     def create(self, validated_data):
         senha = validated_data.pop('senha')
-        usuario = Usuario.objects.create(**validated_data)
-        usuario.set_password(senha)
-        usuario.save()
+        usuario = Usuario.objects.create_user(**validated_data, senha=senha)
         return usuario
 
     def update(self, instance, validated_data):
@@ -38,12 +36,8 @@ class EmprestimoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def validate(self, data):
-        # Verifica se o livro existe
-        livro = data.get('livro')
-        if not Livro.objects.filter(id=livro.id).exists():
-            raise serializers.ValidationError("Livro não encontrado.")
-        # Verifica se o usuário existe
-        usuario = data.get('usuario')
-        if not Usuario.objects.filter(id=usuario.id).exists():
-            raise serializers.ValidationError("Usuário não encontrado.")
+        if not data.get('livro'):
+            raise serializers.ValidationError({"livro": "Este campo é obrigatório."})
+        if not data.get('usuario'):
+            raise serializers.ValidationError({"usuario": "Este campo é obrigatório."})
         return data
