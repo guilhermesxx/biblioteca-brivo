@@ -49,8 +49,17 @@ class EmprestimoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def validate(self, data):
-        if not data.get('livro'):
+        livro = data.get('livro')
+        usuario = data.get('usuario')
+
+        # Verifica se os campos estão preenchidos
+        if not livro:
             raise serializers.ValidationError({"livro": "Este campo é obrigatório."})
-        if not data.get('usuario'):
+        if not usuario:
             raise serializers.ValidationError({"usuario": "Este campo é obrigatório."})
+
+        # Verifica se o livro está disponível
+        if not livro.disponivel:
+            raise serializers.ValidationError({"livro": "Este livro não está disponível para empréstimo."})
+
         return data
