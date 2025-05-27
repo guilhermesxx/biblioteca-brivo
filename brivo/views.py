@@ -1,17 +1,18 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
+from rest_framework.permissions import IsAuthenticated
 from .models import Livro, Usuario, Emprestimo
 from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer
-from rest_framework import generics
-from .models import Emprestimo
-from .serializers import EmprestimoSerializer
 from .permissions import EhDonoOuAdmin
-from rest_framework.permissions import IsAuthenticated
 
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-    
+
+class LivroViewSet(viewsets.ModelViewSet):
+    queryset = Livro.objects.all()
+    serializer_class = LivroSerializer
+
 class EmprestimoListView(generics.ListCreateAPIView):
     serializer_class = EmprestimoSerializer
     permission_classes = [IsAuthenticated]
@@ -22,31 +23,26 @@ class EmprestimoListView(generics.ListCreateAPIView):
             return Emprestimo.objects.all()
         return Emprestimo.objects.filter(usuario=user)
 
-class LivroViewSet(viewsets.ModelViewSet):
-    queryset = Livro.objects.all()
-    serializer_class = LivroSerializer
-
 class EmprestimoViewSet(viewsets.ModelViewSet):
     queryset = Emprestimo.objects.all()
     serializer_class = EmprestimoSerializer
+    permission_classes = [IsAuthenticated, EhDonoOuAdmin]
 
     def perform_create(self, serializer):
         emprestimo = serializer.save()
-        # Quando criar um empréstimo, marca o livro como indisponível
-        livro = emprestimo.livro
-        livro.disponivel = False
-        livro.save()
+        emprestimo.livro.disponivel = False
+        emprestimo.livro.save()
 
     def perform_update(self, serializer):
+        instance = self.get_object()
+        devolvido_antes = instance.devolvido
         emprestimo = serializer.save()
-        # Se devolvido = True, torna o livro disponível novamente
-        if emprestimo.devolvido:
-            livro = emprestimo.livro
-            livro.disponivel = True
-            livro.save()
 
+        # Se acabou de ser devolvido
+        if not devolvido_antes and emprestimo.devolvido:
+            emprestimo.marcar_devolucao()
 
 class EmprestimoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Emprestimo.objects.all()
     serializer_class = EmprestimoSerializer
-    permission_classes = [EhDonoOuAdmin]
+    permission_classes = [IsAuthenticated, EhDonoOuAdmin]

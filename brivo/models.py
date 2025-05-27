@@ -96,6 +96,9 @@ class Emprestimo(models.Model):
         return f"Empréstimo de {self.livro.titulo} para {self.usuario.nome}"
 
     def marcar_devolucao(self):
-        self.devolvido = True
-        self.data_devolucao = timezone.now()
-        self.save()
+        if not self.devolvido:
+            self.devolvido = True
+            self.data_devolucao = timezone.now()
+            self.save()
+            self.livro.disponivel = True
+            self.livro.save()
