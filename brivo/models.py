@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
 
 # Gerenciador customizado de usuário
@@ -21,20 +21,28 @@ class CustomUserManager(BaseUserManager):
             nome=nome,
             email=self.normalize_email(email),
             turma=turma,
-            tipo=tipo
+            tipo=tipo,
+            is_active=True,
+            is_staff=(tipo == "admin"),
+            is_superuser=(tipo == "admin"),
         )
         user.set_password(senha)
         user.save(using=self._db)
         return user
 
     def create_superuser(self, ra, nome, email, turma="ADM", tipo="admin", senha=None):
-        user = self.create_user(ra, nome, email, turma, tipo, senha)
-        user.is_admin = True
-        user.save(using=self._db)
-        return user
+        return self.create_user(
+            ra=ra,
+            nome=nome,
+            email=email,
+            turma=turma,
+            tipo=tipo,
+            senha=senha
+        )
+
 
 # Modelo de Usuário Customizado
-class Usuario(AbstractBaseUser):
+class Usuario(AbstractBaseUser, PermissionsMixin):
     TIPO_USUARIO_CHOICES = [
         ('aluno', 'Aluno'),
         ('professor', 'Professor'),
@@ -47,8 +55,9 @@ class Usuario(AbstractBaseUser):
     turma = models.CharField(max_length=20)
     tipo = models.CharField(max_length=10, choices=TIPO_USUARIO_CHOICES)
     data_cadastro = models.DateTimeField(auto_now_add=True)
+
     is_active = models.BooleanField(default=True)
-    is_admin = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['ra', 'nome', 'turma', 'tipo']
@@ -58,11 +67,6 @@ class Usuario(AbstractBaseUser):
     def __str__(self):
         return self.nome
 
-    def has_perm(self, perm, obj=None):
-        return self.is_admin
-
-    def has_module_perms(self, app_label):
-        return self.is_admin
 
 # Modelo de Livro
 class Livro(models.Model):
@@ -84,6 +88,7 @@ class Livro(models.Model):
     def __str__(self):
         return self.titulo
 
+
 # Modelo de Empréstimo
 class Emprestimo(models.Model):
     livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
@@ -94,6 +99,14 @@ class Emprestimo(models.Model):
 
     def __str__(self):
         return f"Empréstimo de {self.livro.titulo} para {self.usuario.nome}"
+
+    def save(self, *args, **kwargs):
+        is_new = self.pk is None
+        super().save(*args, **kwargs)
+
+        if is_new and not self.devolvido:
+            self.livro.disponivel = False
+            self.livro.save()
 
     def marcar_devolucao(self):
         if not self.devolvido:

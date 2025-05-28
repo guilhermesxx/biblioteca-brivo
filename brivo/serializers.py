@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Livro, Usuario, Emprestimo
 
+
 class UsuarioSerializer(serializers.ModelSerializer):
     senha = serializers.CharField(write_only=True)
 
@@ -22,18 +23,24 @@ class UsuarioSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+
 class LivroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livro
         fields = '__all__'
 
+
 class EmprestimoSerializer(serializers.ModelSerializer):
+    usuario_nome = serializers.CharField(source='usuario.nome', read_only=True)
+    livro_titulo = serializers.CharField(source='livro.titulo', read_only=True)
+
     class Meta:
         model = Emprestimo
-        fields = '__all__'
+        fields = ['id', 'livro', 'usuario', 'usuario_nome', 'livro_titulo', 'data_emprestimo', 'data_devolucao', 'devolvido']
 
     def validate(self, data):
-        if self.instance is None:  # Somente na criação
+        # Validação apenas na criação
+        if self.instance is None:
             livro = data.get('livro')
             usuario = data.get('usuario')
 
