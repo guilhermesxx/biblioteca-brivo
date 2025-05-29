@@ -48,9 +48,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'brivo.Usuario'
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Substitua pela URL do seu frontend
-]
+CORS_ALLOW_ALL_ORIGINS = True  # Para teste local
 
 
 
@@ -143,3 +141,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

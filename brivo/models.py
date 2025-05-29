@@ -83,11 +83,27 @@ class Livro(models.Model):
     numero_paginas = models.IntegerField(null=True, blank=True)
     tipo = models.CharField(max_length=6, choices=TIPO_LIVRO_CHOICES)
     disponivel = models.BooleanField(default=True)
-    foto = models.ImageField(upload_to='livros/', null=True, blank=True)
+    capa = models.URLField(blank=True, null=True)
     descricao = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.titulo
+    
+    # Categoria (se existir)
+class Categoria(models.Model):
+    nome = models.CharField(max_length=100)
+    imagem = models.ImageField(upload_to='imagens_categoria/', null=True, blank=True)
+
+    def __str__(self):
+        return self.nome
+
+# Configuração para logotipo do app
+class Configuracao(models.Model):
+    nome_app = models.CharField(max_length=100, default="Biblioteca Brivo")
+    logo = models.ImageField(upload_to='logos_app/', null=True, blank=True)
+
+    def __str__(self):
+        return "Configuração Geral"
 
 
 # Modelo de Empréstimo

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualização da Capa do Livro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .livro {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .info {
+      text-align: left;
+    }
+
+    .info strong {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Detalhes do Livro</h1>
+
+  <div class="livro" id="livro">
+    Carregando...
+  </div>
+
+  <script>
+    const loginUrl = 'http://127.0.0.1:8000/api/token/';
+    const livroId = 11; // Altere aqui o ID do livro
+    const livroUrl = `http://127.0.0.1:8000/api/livros/${livroId}/`;
+
+    const loginData = {
+      email: "guilherme1920x@gmail.com",
+      password: "brito@123"
+    };
+
+    // Fazer login e obter token
+    fetch(loginUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(loginData)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Erro no login');
+      return response.json();
+    })
+    .then(data => {
+      const token = data.access;
+
+      // Buscar livro com token JWT
+      return fetch(livroUrl, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Erro ao buscar o livro');
+      return response.json();
+    })
+    .then(livro => {
+      const livroDiv = document.getElementById('livro');
+
+      livroDiv.innerHTML = `
+        <img src="${livro.capa}" alt="Capa do Livro">
+        <div class="info">
+          <p><strong>Título:</strong> ${livro.titulo}</p>
+          <p><strong>Autor:</strong> ${livro.autor}</p>
+          <p><strong>Tipo:</strong> ${livro.tipo === 'fisico' ? 'Físico' : 'PDF'}</p>
+          <p><strong>Publicação:</strong> ${livro.data_publicacao}</p>
+          <p><strong>Páginas:</strong> ${livro.numero_paginas ?? 'N/A'}</p>
+        </div>
+      `;
+    })
+    .catch(error => {
+      const livroDiv = document.getElementById('livro');
+      livroDiv.innerHTML = `<p style="color: red;">${error.message}</p>`;
+      console.error(error);
+    });
+  </script>
+
+</body>
+</html>

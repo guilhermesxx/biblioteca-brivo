@@ -25,6 +25,8 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
 
 class LivroSerializer(serializers.ModelSerializer):
+    capa = serializers.URLField(required=False)
+
     titulo = serializers.CharField(
         error_messages={
             "blank": "O título é obrigatório.",
@@ -37,6 +39,16 @@ class LivroSerializer(serializers.ModelSerializer):
             "required": "O autor é obrigatório."
         }
     )
+
+    class Meta:
+        model = Livro
+        fields = '__all__'
+
+
+    class Meta:
+        model = Livro
+        fields = '__all__'
+
 
     class Meta:
         model = Livro
