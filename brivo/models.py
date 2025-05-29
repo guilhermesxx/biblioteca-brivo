@@ -4,7 +4,7 @@ from django.utils import timezone
 
 # Gerenciador customizado de usuário
 class CustomUserManager(BaseUserManager):
-    def create_user(self, ra, nome, email, turma, tipo, senha=None):
+    def create_user(self, ra, nome, email, turma, tipo, password=None):
         if not email:
             raise ValueError("O e-mail é obrigatório.")
         if not ra:
@@ -26,19 +26,20 @@ class CustomUserManager(BaseUserManager):
             is_staff=(tipo == "admin"),
             is_superuser=(tipo == "admin"),
         )
-        user.set_password(senha)
+        user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, ra, nome, email, turma="ADM", tipo="admin", senha=None):
+    def create_superuser(self, ra, nome, email, turma="ADM", tipo="admin", password=None):
         return self.create_user(
             ra=ra,
             nome=nome,
             email=email,
             turma=turma,
             tipo=tipo,
-            senha=senha
+            password=password
         )
+
 
 
 # Modelo de Usuário Customizado
