@@ -25,6 +25,19 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
 
 class LivroSerializer(serializers.ModelSerializer):
+    titulo = serializers.CharField(
+        error_messages={
+            "blank": "O título é obrigatório.",
+            "required": "O título é obrigatório."
+        }
+    )
+    autor = serializers.CharField(
+        error_messages={
+            "blank": "O autor é obrigatório.",
+            "required": "O autor é obrigatório."
+        }
+    )
+
     class Meta:
         model = Livro
         fields = '__all__'
