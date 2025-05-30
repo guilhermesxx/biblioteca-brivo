@@ -6,6 +6,32 @@ from rest_framework.decorators import action
 from .models import Livro, Usuario, Emprestimo, Reserva
 from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer, ReservaSerializer
 from .permissions import EhDonoOuAdmin, EhAdmin
+from rest_framework.views import APIView
+
+from .utils import enviar_email
+
+
+from rest_framework.views import APIView
+from .utils import enviar_email
+
+class TesteEmailView(APIView):
+    def get(self, request):
+        enviar_email(
+            destinatario='contaescola338@gmail.com',  # <-- coloque aqui o e-mail que vai receber o teste
+            assunto='Teste de E-mail',
+            mensagem='Este é um teste do sistema da biblioteca.'
+        )
+        return Response({'mensagem': 'E-mail enviado com sucesso'})
+
+
+class TesteEmailView(APIView):
+    def get(self, request):
+        enviar_email(
+            destinatario='destinatario@gmail.com',
+            assunto='Teste de E-mail',
+            mensagem='Este é um teste de envio de e-mail no Django.'
+        )
+        return Response({'mensagem': 'E-mail enviado com sucesso'})
 
 
 # ✅ Apenas administradores podem gerenciar usuários
