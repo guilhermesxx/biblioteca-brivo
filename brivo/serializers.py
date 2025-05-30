@@ -1,6 +1,23 @@
 from rest_framework import serializers
-from .models import Livro, Usuario, Emprestimo
+from .models import Livro, Usuario, Emprestimo, Reserva
+class ReservaSerializer(serializers.ModelSerializer):
+    aluno_nome = serializers.CharField(source='aluno.nome', read_only=True)  # opcional, aparece no retorno
 
+    class Meta:
+        model = Reserva
+        fields = ['id', 'livro', 'aluno', 'aluno_nome', 'data_reserva', 'status', 'notificado_em']
+        read_only_fields = ['id', 'aluno', 'aluno_nome', 'data_reserva', 'status', 'notificado_em']
+
+    def create(self, validated_data):
+        request = self.context.get('request')
+        if request and hasattr(request, 'user'):
+            validated_data['aluno'] = request.user
+
+        livro = validated_data['livro']
+        if livro.disponivel:
+            raise serializers.ValidationError({"livro": "O livro ainda está disponível. Você pode fazer o empréstimo direto."})
+
+        return super().create(validated_data)
 
 class UsuarioSerializer(serializers.ModelSerializer):
     senha = serializers.CharField(write_only=True)
@@ -23,7 +40,6 @@ class UsuarioSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
-
 class LivroSerializer(serializers.ModelSerializer):
     capa = serializers.URLField(required=False)
 
@@ -44,36 +60,23 @@ class LivroSerializer(serializers.ModelSerializer):
         model = Livro
         fields = '__all__'
 
-
-    class Meta:
-        model = Livro
-        fields = '__all__'
-
-
-    class Meta:
-        model = Livro
-        fields = '__all__'
-
-
 class EmprestimoSerializer(serializers.ModelSerializer):
+    usuario = serializers.PrimaryKeyRelatedField(read_only=True)  # será preenchido pela view
     usuario_nome = serializers.CharField(source='usuario.nome', read_only=True)
     livro_titulo = serializers.CharField(source='livro.titulo', read_only=True)
 
     class Meta:
         model = Emprestimo
-        fields = ['id', 'livro', 'usuario', 'usuario_nome', 'livro_titulo', 'data_emprestimo', 'data_devolucao', 'devolvido']
+        fields = [
+            'id', 'livro', 'usuario', 'usuario_nome',
+            'livro_titulo', 'data_emprestimo', 'data_devolucao', 'devolvido'
+        ]
 
     def validate(self, data):
-        # Validação apenas na criação
-        if self.instance is None:
-            livro = data.get('livro')
-            usuario = data.get('usuario')
-
-            if not livro:
-                raise serializers.ValidationError({"livro": "Este campo é obrigatório."})
-            if not usuario:
-                raise serializers.ValidationError({"usuario": "Este campo é obrigatório."})
+        # Só valida disponibilidade se o campo 'livro' estiver sendo enviado (POST ou PUT/PATCH com 'livro')
+        if 'livro' in data:
+            livro = data['livro']
             if not livro.disponivel:
                 raise serializers.ValidationError({"livro": "Este livro não está disponível para empréstimo."})
-
         return data
+

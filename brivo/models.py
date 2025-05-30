@@ -41,8 +41,6 @@ class CustomUserManager(BaseUserManager):
         )
 
 
-
-# Modelo de Usuário Customizado
 class Usuario(AbstractBaseUser, PermissionsMixin):
     TIPO_USUARIO_CHOICES = [
         ('aluno', 'Aluno'),
@@ -69,7 +67,6 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
         return self.nome
 
 
-# Modelo de Livro
 class Livro(models.Model):
     TIPO_LIVRO_CHOICES = [
         ('fisico', 'Físico'),
@@ -88,8 +85,8 @@ class Livro(models.Model):
 
     def __str__(self):
         return self.titulo
-    
-    # Categoria (se existir)
+
+
 class Categoria(models.Model):
     nome = models.CharField(max_length=100)
     imagem = models.ImageField(upload_to='imagens_categoria/', null=True, blank=True)
@@ -97,7 +94,7 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nome
 
-# Configuração para logotipo do app
+
 class Configuracao(models.Model):
     nome_app = models.CharField(max_length=100, default="Biblioteca Brivo")
     logo = models.ImageField(upload_to='logos_app/', null=True, blank=True)
@@ -106,7 +103,24 @@ class Configuracao(models.Model):
         return "Configuração Geral"
 
 
-# Modelo de Empréstimo
+class Reserva(models.Model):
+    STATUS_CHOICES = [
+        ('na_fila', 'Na Fila'),
+        ('aguardando_confirmacao', 'Aguardando Confirmação'),
+        ('expirado', 'Expirado'),
+        ('concluido', 'Concluído'),
+    ]
+
+    livro = models.ForeignKey(Livro, on_delete=models.CASCADE, related_name='reservas')
+    aluno = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='reservas')
+    data_reserva = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=30, choices=STATUS_CHOICES, default='na_fila')
+    notificado_em = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f'Reserva de {self.livro.titulo} por {self.aluno.nome} ({self.status})'
+
+
 class Emprestimo(models.Model):
     livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
@@ -118,17 +132,35 @@ class Emprestimo(models.Model):
         return f"Empréstimo de {self.livro.titulo} para {self.usuario.nome}"
 
     def save(self, *args, **kwargs):
-        is_new = self.pk is None
-        super().save(*args, **kwargs)
-
-        if is_new and not self.devolvido:
+        # Verifica se foi marcado como devolvido
+        if self.pk is not None:
+            original = Emprestimo.objects.get(pk=self.pk)
+            if not original.devolvido and self.devolvido:
+                self.data_devolucao = timezone.now()
+                self.livro.disponivel = True
+                self.livro.save()
+                self._notificar_reserva()
+        elif not self.devolvido:
+            # Novo empréstimo → livro fica indisponível
             self.livro.disponivel = False
             self.livro.save()
 
+        super().save(*args, **kwargs)
+
     def marcar_devolucao(self):
+        """Método para uso explícito"""
         if not self.devolvido:
             self.devolvido = True
             self.data_devolucao = timezone.now()
             self.save()
-            self.livro.disponivel = True
-            self.livro.save()
+
+    def _notificar_reserva(self):
+        proxima_reserva = Reserva.objects.filter(
+            livro=self.livro,
+            status='na_fila'
+        ).order_by('data_reserva').first()
+
+        if proxima_reserva:
+            proxima_reserva.status = 'aguardando_confirmacao'
+            proxima_reserva.notificado_em = timezone.now()
+            proxima_reserva.save()

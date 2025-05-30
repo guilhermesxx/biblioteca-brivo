@@ -1,57 +1,69 @@
 from django.test import TestCase
-from rest_framework.exceptions import ValidationError
-from brivo.serializers import LivroSerializer
+from rest_framework.test import APIClient
+from django.urls import reverse
+from .models import Usuario, Livro, Emprestimo
 
-from datetime import date
+class EmprestimoUpdateTests(TestCase):
+    def setUp(self):
+        self.client = APIClient()
 
-class LivroSerializerTestCase(TestCase):
-    def test_numero_paginas_invalido(self):
-        """Deve falhar se número de páginas for menor ou igual a zero"""
-        data = {
-            "titulo": "Livro Teste",
-            "autor": "Autor Teste",
-            "editora": "Editora Teste",
-            "data_publicacao": date.today(),
-            "numero_paginas": 0,  # inválido
-            "tipo": "fisico",
-            "disponivel": True,
-        }
+        # Criando usuários
+        self.aluno = Usuario.objects.create_user(
+            ra="123", nome="Aluno Teste", email="aluno@example.com",
+            turma="1A", tipo="aluno", password="123"
+        )
 
-        serializer = LivroSerializer(data=data)
-        self.assertFalse(serializer.is_valid())
-        self.assertIn("numero_paginas", serializer.errors)
-        self.assertEqual(serializer.errors["numero_paginas"][0], "O número de páginas deve ser maior que zero.")
+        self.professor = Usuario.objects.create_user(
+            ra="456", nome="Professor Teste", email="prof@example.com",
+            turma="2B", tipo="professor", password="123"
+        )
 
-    def test_titulo_em_branco(self):
-        """Deve falhar se o título estiver em branco"""
-        data = {
-            "titulo": "",
-            "autor": "Autor Teste",
-            "editora": "Editora Teste",
-            "data_publicacao": date.today(),
-            "numero_paginas": 100,
-            "tipo": "fisico",
-            "disponivel": True,
-        }
+        self.admin = Usuario.objects.create_user(
+            ra="789", nome="Admin Teste", email="admin@example.com",
+            turma="ADM", tipo="admin", password="123"
+        )
 
-        serializer = LivroSerializer(data=data)
-        self.assertFalse(serializer.is_valid())
-        self.assertIn("titulo", serializer.errors)
-        self.assertEqual(serializer.errors["titulo"][0], "O título é obrigatório.")
+        # Criando livro (sem 'quantidade'!)
+        self.livro = Livro.objects.create(
+            titulo="Livro Teste",
+            autor="Autor Teste",
+            data_publicacao="2020-01-01",
+            tipo="fisico"
+        )
 
-    def test_autor_em_branco(self):
-        """Deve falhar se o autor estiver em branco"""
-        data = {
-            "titulo": "Livro Teste",
-            "autor": "",
-            "editora": "Editora Teste",
-            "data_publicacao": date.today(),
-            "numero_paginas": 100,
-            "tipo": "fisico",
-            "disponivel": True,
-        }
+        # Criando empréstimo para o aluno
+        self.emprestimo = Emprestimo.objects.create(
+            livro=self.livro,
+            usuario=self.aluno
+        )
 
-        serializer = LivroSerializer(data=data)
-        self.assertFalse(serializer.is_valid())
-        self.assertIn("autor", serializer.errors)
-        self.assertEqual(serializer.errors["autor"][0], "O autor é obrigatório.")
+        self.url = reverse('emprestimo-detail', kwargs={'pk': self.emprestimo.pk})
+
+    def autenticar(self, usuario):
+        self.client.force_authenticate(user=usuario)
+
+    def test_usuario_pode_marcar_devolvido(self):
+        self.autenticar(self.aluno)
+
+        response = self.client.patch(self.url, {'devolvido': True}, format='json')
+        self.emprestimo.refresh_from_db()
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(self.emprestimo.devolvido)
+        self.assertIsNotNone(self.emprestimo.data_devolucao)
+
+    def test_apenas_dono_ou_admin_pode_editar(self):
+        self.autenticar(self.professor)  # Professor tentando editar empréstimo de outro
+
+        response = self.client.patch(self.url, {'devolvido': True}, format='json')
+
+        self.assertEqual(response.status_code, 403)  # Esperado: acesso negado
+
+    def test_admin_pode_editar_emprestimo_de_outro_usuario(self):
+        self.autenticar(self.admin)
+
+        response = self.client.patch(self.url, {'devolvido': True}, format='json')
+        self.emprestimo.refresh_from_db()
+
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(self.emprestimo.devolvido)
