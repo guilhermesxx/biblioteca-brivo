@@ -14,6 +14,16 @@ from .utils import enviar_email
 from rest_framework.views import APIView
 from .utils import enviar_email
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .utils import enviar_lembretes_de_devolucao
+
+class LembreteDevolucaoView(APIView):
+    def get(self, request):
+        enviar_lembretes_de_devolucao()
+        return Response({"mensagem": "Lembretes de devolução enviados com sucesso."})
+
+
 class TesteEmailView(APIView):
     def get(self, request):
         enviar_email(
