@@ -2,57 +2,27 @@ from rest_framework import viewsets, generics, permissions, status
 from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.views import APIView
 
 from .models import Livro, Usuario, Emprestimo, Reserva
 from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer, ReservaSerializer
 from .permissions import EhDonoOuAdmin, EhAdmin
-from rest_framework.views import APIView
+from .utils import enviar_email, enviar_lembretes_de_devolucao, notificar_primeiro_da_fila
 
-from .utils import enviar_email
+# ---------------------------
+# ✅ Usuários (admin-only)
+# ---------------------------
 
-
-from rest_framework.views import APIView
-from .utils import enviar_email
-
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from .utils import enviar_lembretes_de_devolucao
-
-class LembreteDevolucaoView(APIView):
-    def get(self, request):
-        enviar_lembretes_de_devolucao()
-        return Response({"mensagem": "Lembretes de devolução enviados com sucesso."})
-
-
-class TesteEmailView(APIView):
-    def get(self, request):
-        enviar_email(
-            destinatario='contaescola338@gmail.com',  # <-- coloque aqui o e-mail que vai receber o teste
-            assunto='Teste de E-mail',
-            mensagem='Este é um teste do sistema da biblioteca.'
-        )
-        return Response({'mensagem': 'E-mail enviado com sucesso'})
-
-
-class TesteEmailView(APIView):
-    def get(self, request):
-        enviar_email(
-            destinatario='destinatario@gmail.com',
-            assunto='Teste de E-mail',
-            mensagem='Este é um teste de envio de e-mail no Django.'
-        )
-        return Response({'mensagem': 'E-mail enviado com sucesso'})
-
-
-# ✅ Apenas administradores podem gerenciar usuários
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
     permission_classes = [IsAuthenticated, EhAdmin]
 
 
-# ✅ Qualquer usuário autenticado pode visualizar livros (GET)
-# ✅ Somente administradores podem criar, editar ou deletar livros
+# ---------------------------
+# ✅ Livros (admin pode alterar, outros só visualizam)
+# ---------------------------
+
 class LivroViewSet(viewsets.ModelViewSet):
     queryset = Livro.objects.all()
     serializer_class = LivroSerializer
@@ -63,7 +33,10 @@ class LivroViewSet(viewsets.ModelViewSet):
         return [IsAuthenticated(), EhAdmin()]
 
 
-# ✅ Regras de visualização/edição para empréstimos
+# ---------------------------
+# ✅ Empréstimos
+# ---------------------------
+
 class EmprestimoViewSet(viewsets.ModelViewSet):
     queryset = Emprestimo.objects.all()
     serializer_class = EmprestimoSerializer
@@ -87,7 +60,33 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
             emprestimo.marcar_devolucao()
 
 
-# ✅ Criar reservas se livro estiver indisponível e usuário ainda não reservou
+# ---------------------------
+# ✅ Devolução de Empréstimo (dispara notificação da fila)
+# ---------------------------
+
+class DevolverEmprestimoView(APIView):
+    def post(self, request, pk):
+        try:
+            emprestimo = Emprestimo.objects.get(pk=pk)
+            if emprestimo.devolvido:
+                return Response({"erro": "Esse empréstimo já foi devolvido."}, status=status.HTTP_400_BAD_REQUEST)
+
+            emprestimo.devolvido = True
+            emprestimo.save()
+
+            # 🔔 Notificar o próximo da fila
+            notificar_primeiro_da_fila(emprestimo.livro)
+
+            return Response({"mensagem": "Livro devolvido com sucesso e fila notificada."})
+
+        except Emprestimo.DoesNotExist:
+            return Response({"erro": "Empréstimo não encontrado."}, status=status.HTTP_404_NOT_FOUND)
+
+
+# ---------------------------
+# ✅ Reservas
+# ---------------------------
+
 class CriarReservaAPIView(generics.CreateAPIView):
     serializer_class = ReservaSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -120,7 +119,6 @@ class CriarReservaAPIView(generics.CreateAPIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
-# ✅ ViewSet para reservas com endpoint de confirmação
 class ReservaViewSet(viewsets.ModelViewSet):
     queryset = Reserva.objects.all()
     serializer_class = ReservaSerializer
@@ -156,3 +154,23 @@ class ReservaViewSet(viewsets.ModelViewSet):
         reserva.save()
 
         return Response({'mensagem': 'Reserva confirmada e empréstimo criado com sucesso.'}, status=200)
+
+
+# ---------------------------
+# ✅ Notificações e lembretes por e-mail
+# ---------------------------
+
+class LembreteDevolucaoView(APIView):
+    def get(self, request):
+        enviar_lembretes_de_devolucao()
+        return Response({"mensagem": "Lembretes de devolução enviados com sucesso."})
+
+
+class TesteEmailView(APIView):
+    def get(self, request):
+        enviar_email(
+            destinatario='contaescola338@gmail.com',  # Ou qualquer outro e-mail de teste
+            assunto='Teste de E-mail',
+            mensagem='Este é um teste do sistema da biblioteca.'
+        )
+        return Response({'mensagem': 'E-mail enviado com sucesso'})

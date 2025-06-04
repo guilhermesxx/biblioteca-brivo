@@ -32,3 +32,20 @@ def enviar_lembretes_de_devolucao():
         mensagem = f"Olá {usuario.nome},\n\nEste é um lembrete de que o livro '{livro.titulo}' deverá ser devolvido até amanhã ({emprestimo.data_devolucao}).\n\nPor favor, evite atrasos 😊.\n\nSistema de Biblioteca Escolar"
 
         enviar_email(usuario.email, assunto, mensagem)
+
+# brivo/utils.py
+
+def notificar_primeiro_da_fila(livro):
+    from .models import Reserva  # evitar import circular
+
+    reserva = Reserva.objects.filter(livro=livro, notificado=False).order_by('data_reserva').first()
+
+    if reserva:
+        usuario = reserva.usuario
+        assunto = "📚 Livro disponível para retirada"
+        mensagem = f"Olá {usuario.nome},\n\nO livro '{livro.titulo}' que você reservou está disponível para retirada.\n\nRetire-o o quanto antes para garantir seu empréstimo. 😉\n\nSistema de Biblioteca Escolar"
+
+        enviar_email(usuario.email, assunto, mensagem)
+
+        reserva.notificado = True
+        reserva.save()
