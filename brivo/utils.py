@@ -6,6 +6,37 @@ from datetime import timedelta, date
 from django.utils.timezone import now
 
 from .models import Emprestimo  # ok ✅
+# brivo/utils.py
+
+from datetime import timedelta
+from django.utils import timezone
+from .models import Reserva
+
+
+def enviar_avisos_reserva_expirando():
+    hoje = timezone.now().date()
+    dia_seguinte = hoje + timedelta(days=1)
+
+    reservas = Reserva.objects.filter(
+        status='aguardando_confirmacao',
+        data_reserva__date=hoje - timedelta(days=1)  # supondo que validade = 2 dias
+    )
+
+    for reserva in reservas:
+        assunto = "Sua reserva está prestes a expirar"
+        mensagem = f"""
+Olá, {reserva.aluno.nome}!
+
+Você fez uma reserva do livro "{reserva.livro.titulo}" e ela vai expirar amanhã.
+
+Caso ainda queira o livro, confirme o empréstimo no sistema o quanto antes.
+
+Se não for confirmada, ela será liberada para o próximo da fila.
+
+Atenciosamente,  
+Biblioteca Escolar
+"""
+        enviar_email(destinatario=reserva.aluno.email, assunto=assunto, mensagem=mensagem)
 
 
 def enviar_email(destinatario, assunto, mensagem):

@@ -7,7 +7,15 @@ from rest_framework.views import APIView
 from .models import Livro, Usuario, Emprestimo, Reserva
 from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer, ReservaSerializer
 from .permissions import EhDonoOuAdmin, EhAdmin
-from .utils import enviar_email, enviar_lembretes_de_devolucao, notificar_primeiro_da_fila
+from .utils import enviar_email, enviar_lembretes_de_devolucao, notificar_primeiro_da_fila ,enviar_avisos_reserva_expirando
+
+# brivo/views.py (adicione no final)
+
+class AvisoReservaExpirandoView(APIView):
+    def get(self, request):
+        enviar_avisos_reserva_expirando()
+        return Response({"mensagem": "Avisos de reserva prestes a expirar enviados com sucesso."})
+
 
 # ---------------------------
 # ✅ Usuários (admin-only)

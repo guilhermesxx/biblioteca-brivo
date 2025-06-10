@@ -4,6 +4,10 @@ from .views import UsuarioViewSet, LivroViewSet, EmprestimoViewSet, ReservaViewS
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from .views import LembreteDevolucaoView
 
+
+from brivo.views import AvisoReservaExpirandoView
+
+
 router = DefaultRouter()
 router.register(r'usuarios', UsuarioViewSet)
 router.register(r'livros', LivroViewSet)
@@ -19,5 +23,6 @@ urlpatterns = [
 
 urlpatterns += [
     path('lembrete-devolucao/', LembreteDevolucaoView.as_view()),
+    path("avisar-reservas-expirando/", AvisoReservaExpirandoView.as_view()),
 ]
 
