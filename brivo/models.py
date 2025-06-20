@@ -40,6 +40,9 @@ class CustomUserManager(BaseUserManager):
             password=password
         )
 
+class UsuarioQuerySet(models.QuerySet):
+    def ativos(self):
+        return self.filter(ativo=True)
 
 class Usuario(AbstractBaseUser, PermissionsMixin):
     TIPO_USUARIO_CHOICES = [
@@ -63,10 +66,18 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
+    ativo = models.BooleanField(default=True)
+
+    objects = UsuarioQuerySet.as_manager()
+
     def __str__(self):
         return self.nome
 
 
+
+class LivroQuerySet(models.QuerySet):
+    def ativos(self):
+        return self.filter(ativo=True)
 class Livro(models.Model):
     TIPO_LIVRO_CHOICES = [
         ('fisico', 'Físico'),
@@ -82,6 +93,10 @@ class Livro(models.Model):
     disponivel = models.BooleanField(default=True)
     capa = models.URLField(blank=True, null=True)
     descricao = models.TextField(null=True, blank=True)
+
+    ativo = models.BooleanField(default=True)  # ✅ campo para soft delete
+    
+    objects = LivroQuerySet.as_manager()  # ✅ Ativa a queryset customizada
 
     def __str__(self):
         return self.titulo

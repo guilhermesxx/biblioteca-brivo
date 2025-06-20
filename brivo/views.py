@@ -39,7 +39,20 @@ class LivroViewSet(viewsets.ModelViewSet):
         if self.request.method in SAFE_METHODS:
             return [IsAuthenticated()]
         return [IsAuthenticated(), EhAdmin()]
+    
+class LivroViewSet(viewsets.ModelViewSet):
+    queryset = Livro.objects.all()  # obrigatório para DRF
+    serializer_class = LivroSerializer
+    permission_classes = [IsAuthenticated]
 
+    def get_queryset(self):
+        return Livro.objects.ativos()
+
+
+
+# ---------------------------
+# PEDIR FERNANDO PARA AJUDAR ACIMA , DUPLIQUEI A LINHA 43 A 48 , E ARRUMA E ORGANIZAR
+# ---------------------------
 
 # ---------------------------
 # ✅ Empréstimos
