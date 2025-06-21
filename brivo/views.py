@@ -13,6 +13,7 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from .models import Livro
 from .serializers import LivroSerializer
+from .utils import registrar_acao
 
 # ARRUMAR ACIMA PODE TER ALGUMS DUPLICADOS
 
@@ -33,12 +34,49 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     serializer_class = UsuarioSerializer
     permission_classes = [IsAuthenticated, EhAdmin]
 
+    def perform_create(self, serializer):
+        usuario = serializer.save()
+        registrar_acao(self.request.user, usuario, 'CRIACAO', descricao='Usuário criado.')
+
+    def perform_update(self, serializer):
+        usuario = serializer.save()
+        registrar_acao(self.request.user, usuario, 'EDICAO', descricao='Usuário editado.')
+
     def destroy(self, request, *args, **kwargs):
         usuario = self.get_object()
         usuario.ativo = False
         usuario.save()
+        registrar_acao(request.user, usuario, 'DESATIVACAO', descricao='Usuário desativado.')
         return Response({'mensagem': 'Usuário desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
 
+
+# class UsuarioViewSet(viewsets.ModelViewSet):
+#     queryset = Usuario.objects.all()
+#     serializer_class = UsuarioSerializer
+#     permission_classes = [IsAuthenticated, EhAdmin]
+
+#     def destroy(self, request, *args, **kwargs):
+#         usuario = self.get_object()
+#         usuario.ativo = False
+#         usuario.save()
+#         return Response({'mensagem': 'Usuário desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+
+#     def perform_create(self, serializer):
+#         usuario = serializer.save()
+#         registrar_acao(self.request.user, usuario, 'CRIACAO', descricao='Usuário criado.')
+
+#     def perform_update(self, serializer):
+#         usuario = serializer.save()
+#         registrar_acao(self.request.user, usuario, 'EDICAO', descricao='Usuário editado.')
+
+#     def destroy(self, request, *args, **kwargs):
+#         usuario = self.get_object()
+#         usuario.ativo = False
+#         usuario.save()
+#         registrar_acao(request.user, usuario, 'DESATIVACAO', descricao='Usuário desativado.')
+#         return Response({'mensagem': 'Usuário desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+
+# LINHA ACIMA VER SE VAI PRECISAR DE ALGO , FIQUEI NA DUVIDA SE ESTAVA DUPLICADO E ETC
 
 # ---------------------------
 # ✅ Livros (admin pode alterar, outros só visualizam)
@@ -56,11 +94,22 @@ class LivroViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return Livro.objects.ativos()
 
+    def perform_create(self, serializer):
+        livro = serializer.save()
+        registrar_acao(self.request.user, livro, 'CRIACAO', descricao='Livro criado.')
+
+    def perform_update(self, serializer):
+        livro = serializer.save()
+        registrar_acao(self.request.user, livro, 'EDICAO', descricao='Livro editado.')
+
     def destroy(self, request, *args, **kwargs):
         livro = self.get_object()
         livro.ativo = False
         livro.save()
+        registrar_acao(request.user, livro, 'DESATIVACAO', descricao='Livro desativado.')
         return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+
+
 
 # ---------------------------
 # PEDIR FERNANDO PARA AJUDAR ACIMA , DUPLIQUEI A LINHA 43 A 48 , E ARRUMA E ORGANIZAR
@@ -91,6 +140,7 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
 
         if not devolvido_antes and emprestimo.devolvido:
             emprestimo.marcar_devolucao()
+            
 
 
 # ---------------------------
