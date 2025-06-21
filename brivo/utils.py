@@ -12,6 +12,19 @@ from datetime import timedelta
 from django.utils import timezone
 from .models import Reserva
 
+from .models import HistoricoAcao
+
+def registrar_acao(usuario, objeto, acao, descricao=''):
+    HistoricoAcao.objects.create(
+        usuario=usuario,
+        objeto_tipo=type(objeto).__name__,
+        objeto_id=objeto.id,
+        acao=acao,
+        descricao=descricao
+    )
+
+
+# TESTE DE ENVIO DE GMAIL ABAIXO
 
 def enviar_avisos_reserva_expirando():
     hoje = timezone.now().date()

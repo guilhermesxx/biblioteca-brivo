@@ -1,6 +1,31 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
+from django.contrib.auth import get_user_model
+
+
+#Criar o modelo de log abaixo
+
+
+
+class HistoricoAcao(models.Model):
+    usuario = models.ForeignKey('brivo.Usuario', on_delete=models.SET_NULL, null=True)
+    #VER COM O FERNANDO SE ACIMA ESTA CERTO
+    ACAO_CHOICES = [
+        ('CRIACAO', 'Criação'),
+        ('EDICAO', 'Edição'),
+        ('DESATIVACAO', 'Desativação'),
+    ]
+
+    usuario = models.ForeignKey('brivo.Usuario', on_delete=models.SET_NULL, null=True)
+    objeto_tipo = models.CharField(max_length=50)
+    objeto_id = models.PositiveIntegerField()
+    acao = models.CharField(max_length=20, choices=ACAO_CHOICES)
+    data = models.DateTimeField(auto_now_add=True)
+    descricao = models.TextField(blank=True)
+
+    def __str__(self):
+        return f"{self.usuario} fez {self.acao} em {self.objeto_tipo} (ID {self.objeto_id})"
 
 # Gerenciador customizado de usuário
 class CustomUserManager(BaseUserManager):

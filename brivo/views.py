@@ -8,6 +8,13 @@ from .models import Livro, Usuario, Emprestimo, Reserva
 from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer, ReservaSerializer
 from .permissions import EhDonoOuAdmin, EhAdmin
 from .utils import enviar_email, enviar_lembretes_de_devolucao, notificar_primeiro_da_fila ,enviar_avisos_reserva_expirando
+from rest_framework import status
+from rest_framework import viewsets, status
+from rest_framework.response import Response
+from .models import Livro
+from .serializers import LivroSerializer
+
+# ARRUMAR ACIMA PODE TER ALGUMS DUPLICADOS
 
 # brivo/views.py (adicione no final)
 
@@ -26,29 +33,34 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     serializer_class = UsuarioSerializer
     permission_classes = [IsAuthenticated, EhAdmin]
 
+    def destroy(self, request, *args, **kwargs):
+        usuario = self.get_object()
+        usuario.ativo = False
+        usuario.save()
+        return Response({'mensagem': 'Usuário desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+
 
 # ---------------------------
 # ✅ Livros (admin pode alterar, outros só visualizam)
 # ---------------------------
 
 class LivroViewSet(viewsets.ModelViewSet):
-    queryset = Livro.objects.all()
+    queryset = Livro.objects.ativos()
     serializer_class = LivroSerializer
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
             return [IsAuthenticated()]
         return [IsAuthenticated(), EhAdmin()]
-    
-class LivroViewSet(viewsets.ModelViewSet):
-    queryset = Livro.objects.all()  # obrigatório para DRF
-    serializer_class = LivroSerializer
-    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return Livro.objects.ativos()
 
-
+    def destroy(self, request, *args, **kwargs):
+        livro = self.get_object()
+        livro.ativo = False
+        livro.save()
+        return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
 
 # ---------------------------
 # PEDIR FERNANDO PARA AJUDAR ACIMA , DUPLIQUEI A LINHA 43 A 48 , E ARRUMA E ORGANIZAR
