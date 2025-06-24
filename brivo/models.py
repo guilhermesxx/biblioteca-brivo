@@ -69,6 +69,9 @@ class UsuarioQuerySet(models.QuerySet):
     def ativos(self):
         return self.filter(ativo=True)
 
+class UsuarioManager(CustomUserManager.from_queryset(UsuarioQuerySet)):
+    pass
+
 class Usuario(AbstractBaseUser, PermissionsMixin):
     TIPO_USUARIO_CHOICES = [
         ('aluno', 'Aluno'),
@@ -89,14 +92,13 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['ra', 'nome', 'turma', 'tipo']
 
-    objects = CustomUserManager()
-
     ativo = models.BooleanField(default=True)
 
-    objects = UsuarioQuerySet.as_manager()
+    objects = UsuarioManager()  # ✅ agora junta CustomUserManager + QuerySet.ativos()
 
     def __str__(self):
         return self.nome
+
 
 
 

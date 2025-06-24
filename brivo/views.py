@@ -14,6 +14,8 @@ from rest_framework.response import Response
 from .models import Livro
 from .serializers import LivroSerializer
 from .utils import registrar_acao
+from rest_framework import viewsets, filters
+from django_filters.rest_framework import DjangoFilterBackend
 
 # ARRUMAR ACIMA PODE TER ALGUMS DUPLICADOS
 
@@ -257,3 +259,16 @@ class TesteEmailView(APIView):
             mensagem='Este é um teste do sistema da biblioteca.'
         )
         return Response({'mensagem': 'E-mail enviado com sucesso'})
+    
+#passo 7.2
+
+class LivroViewSet(viewsets.ModelViewSet):
+    queryset = Livro.objects.filter(ativo=True)
+    serializer_class = LivroSerializer
+    permission_classes = [IsAuthenticated]
+
+    # Filtros e busca
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['titulo', 'autor', 'genero']
+    search_fields = ['titulo', 'autor', 'genero', 'descricao']
+   
