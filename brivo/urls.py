@@ -2,9 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import UsuarioViewSet, LivroViewSet, EmprestimoViewSet, ReservaViewSet, TesteEmailView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from .views import LembreteDevolucaoView
-
-
+from .views import LembreteDevolucaoView, DashboardAdminView
 from brivo.views import AvisoReservaExpirandoView
 
 
@@ -19,6 +17,8 @@ urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('teste-email/', TesteEmailView.as_view()),
+    path('dashboard/', DashboardAdminView.as_view(), name='dashboard-admin'),
+
 ]
 
 urlpatterns += [

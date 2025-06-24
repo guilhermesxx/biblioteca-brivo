@@ -32,10 +32,68 @@ from .serializers import LivroSerializer
 from .permissions import EhAdmin
 from .utils import registrar_acao
 
+# Dashboard e Painéis de Estatísticas (Admin)
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+
+class DashboardAdminView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        if request.user.tipo != 'admin':
+            return Response({'erro': 'Acesso negado. Apenas administradores podem acessar o dashboard.'}, status=403)
+
+        # Livros
+        total_livros = Livro.objects.count()
+        livros_ativos = Livro.objects.filter(ativo=True).count()
+        livros_inativos = Livro.objects.filter(ativo=False).count()
+
+        # Usuários
+        total_usuarios = Usuario.objects.filter(ativo=True).count()
+        total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno').count()
+        total_professores = Usuario.objects.filter(ativo=True, tipo='professor').count()
+        total_admins = Usuario.objects.filter(ativo=True, tipo='admin').count()
+
+        # Reservas
+        reservas_na_fila = Reserva.objects.filter(status='na_fila').count()
+        reservas_aguardando = Reserva.objects.filter(status='aguardando_confirmacao').count()
+        reservas_concluidas = Reserva.objects.filter(status='concluido').count()
+        reservas_expiradas = Reserva.objects.filter(status='expirado').count()
+
+        # Empréstimos
+        emprestimos_ativos = Emprestimo.objects.filter(devolvido=False).count()
+        emprestimos_concluidos = Emprestimo.objects.filter(devolvido=True).count()
+
+        return Response({
+            'livros': {
+                'total': total_livros,
+                'ativos': livros_ativos,
+                'inativos': livros_inativos,
+            },
+            'usuarios': {
+                'total': total_usuarios,
+                'alunos': total_alunos,
+                'professores': total_professores,
+                'admins': total_admins,
+            },
+            'reservas': {
+                'na_fila': reservas_na_fila,
+                'aguardando': reservas_aguardando,
+                'concluidas': reservas_concluidas,
+                'expiradas': reservas_expiradas,
+            },
+            'emprestimos': {
+                'ativos': emprestimos_ativos,
+                'devolvidos': emprestimos_concluidos,
+            }
+        })
+
+
 class LivroViewSet(viewsets.ModelViewSet):
-    queryset = Livro.objects.ativos()
+    queryset = Livro.objects.all()
     serializer_class = LivroSerializer
-    permission_classes = [IsAuthenticated]  # default
+    permission_classes = [IsAuthenticated]
 
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['titulo', 'autor', 'genero']
@@ -47,7 +105,10 @@ class LivroViewSet(viewsets.ModelViewSet):
         return [IsAuthenticated(), EhAdmin()]
 
     def get_queryset(self):
-        return Livro.objects.ativos()
+        user = self.request.user
+        if user.tipo == 'admin':
+            return Livro.objects.all()
+        return Livro.objects.filter(ativo=True)
 
     def perform_create(self, serializer):
         livro = serializer.save()
