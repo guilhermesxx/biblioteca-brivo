@@ -37,6 +37,13 @@ from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from django.db.models.functions import TruncMonth
+from django.db.models import Count
+from .models import Livro, Usuario, Emprestimo, Reserva
+
 class DashboardAdminView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -44,26 +51,39 @@ class DashboardAdminView(APIView):
         if request.user.tipo != 'admin':
             return Response({'erro': 'Acesso negado. Apenas administradores podem acessar o dashboard.'}, status=403)
 
-        # Livros
+        # 📊 Estatísticas básicas
         total_livros = Livro.objects.count()
         livros_ativos = Livro.objects.filter(ativo=True).count()
         livros_inativos = Livro.objects.filter(ativo=False).count()
 
-        # Usuários
         total_usuarios = Usuario.objects.filter(ativo=True).count()
         total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno').count()
         total_professores = Usuario.objects.filter(ativo=True, tipo='professor').count()
         total_admins = Usuario.objects.filter(ativo=True, tipo='admin').count()
 
-        # Reservas
         reservas_na_fila = Reserva.objects.filter(status='na_fila').count()
         reservas_aguardando = Reserva.objects.filter(status='aguardando_confirmacao').count()
         reservas_concluidas = Reserva.objects.filter(status='concluido').count()
         reservas_expiradas = Reserva.objects.filter(status='expirado').count()
 
-        # Empréstimos
         emprestimos_ativos = Emprestimo.objects.filter(devolvido=False).count()
         emprestimos_concluidos = Emprestimo.objects.filter(devolvido=True).count()
+
+        # 📈 Gráficos - Empréstimos por mês
+        emprestimos_por_mes = (
+            Emprestimo.objects.annotate(mes=TruncMonth('data_emprestimo'))
+            .values('mes')
+            .annotate(total=Count('id'))
+            .order_by('mes')
+        )
+
+        # 📈 Gráficos - Reservas por mês
+        reservas_por_mes = (
+            Reserva.objects.annotate(mes=TruncMonth('data_reserva'))
+            .values('mes')
+            .annotate(total=Count('id'))
+            .order_by('mes')
+        )
 
         return Response({
             'livros': {
@@ -86,8 +106,13 @@ class DashboardAdminView(APIView):
             'emprestimos': {
                 'ativos': emprestimos_ativos,
                 'devolvidos': emprestimos_concluidos,
+            },
+            'graficos': {
+                'emprestimos_por_mes': list(emprestimos_por_mes),
+                'reservas_por_mes': list(reservas_por_mes),
             }
         })
+
 
 
 class LivroViewSet(viewsets.ModelViewSet):
