@@ -19,6 +19,51 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 # ARRUMAR ACIMA PODE TER ALGUMS DUPLICADOS
 
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
+
+from rest_framework import viewsets, filters, status
+from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
+from rest_framework.response import Response
+from django_filters.rest_framework import DjangoFilterBackend
+
+from .models import Livro
+from .serializers import LivroSerializer
+from .permissions import EhAdmin
+from .utils import registrar_acao
+
+class LivroViewSet(viewsets.ModelViewSet):
+    queryset = Livro.objects.ativos()
+    serializer_class = LivroSerializer
+    permission_classes = [IsAuthenticated]  # default
+
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['titulo', 'autor', 'genero']
+    search_fields = ['titulo', 'autor', 'genero', 'descricao']
+
+    def get_permissions(self):
+        if self.request.method in SAFE_METHODS:
+            return [IsAuthenticated()]
+        return [IsAuthenticated(), EhAdmin()]
+
+    def get_queryset(self):
+        return Livro.objects.ativos()
+
+    def perform_create(self, serializer):
+        livro = serializer.save()
+        registrar_acao(self.request.user, livro, 'CRIACAO', descricao='Livro criado.')
+
+    def perform_update(self, serializer):
+        livro = serializer.save()
+        registrar_acao(self.request.user, livro, 'EDICAO', descricao='Livro editado.')
+
+    def destroy(self, request, *args, **kwargs):
+        livro = self.get_object()
+        livro.ativo = False
+        livro.save()
+        registrar_acao(request.user, livro, 'DESATIVACAO', descricao='Livro desativado.')
+        return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+
 # brivo/views.py (adicione no final)
 
 class AvisoReservaExpirandoView(APIView):
@@ -84,32 +129,32 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 # ✅ Livros (admin pode alterar, outros só visualizam)
 # ---------------------------
 
-class LivroViewSet(viewsets.ModelViewSet):
-    queryset = Livro.objects.ativos()
-    serializer_class = LivroSerializer
+# class LivroViewSet(viewsets.ModelViewSet):
+#     queryset = Livro.objects.ativos()
+#     serializer_class = LivroSerializer
 
-    def get_permissions(self):
-        if self.request.method in SAFE_METHODS:
-            return [IsAuthenticated()]
-        return [IsAuthenticated(), EhAdmin()]
+#     def get_permissions(self):
+#         if self.request.method in SAFE_METHODS:
+#             return [IsAuthenticated()]
+#         return [IsAuthenticated(), EhAdmin()]
 
-    def get_queryset(self):
-        return Livro.objects.ativos()
+#     def get_queryset(self):
+#         return Livro.objects.ativos()
 
-    def perform_create(self, serializer):
-        livro = serializer.save()
-        registrar_acao(self.request.user, livro, 'CRIACAO', descricao='Livro criado.')
+#     def perform_create(self, serializer):
+#         livro = serializer.save()
+#         registrar_acao(self.request.user, livro, 'CRIACAO', descricao='Livro criado.')
 
-    def perform_update(self, serializer):
-        livro = serializer.save()
-        registrar_acao(self.request.user, livro, 'EDICAO', descricao='Livro editado.')
+#     def perform_update(self, serializer):
+#         livro = serializer.save()
+#         registrar_acao(self.request.user, livro, 'EDICAO', descricao='Livro editado.')
 
-    def destroy(self, request, *args, **kwargs):
-        livro = self.get_object()
-        livro.ativo = False
-        livro.save()
-        registrar_acao(request.user, livro, 'DESATIVACAO', descricao='Livro desativado.')
-        return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+#     def destroy(self, request, *args, **kwargs):
+#         livro = self.get_object()
+#         livro.ativo = False
+#         livro.save()
+#         registrar_acao(request.user, livro, 'DESATIVACAO', descricao='Livro desativado.')
+#         return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
 
 
 
@@ -262,13 +307,4 @@ class TesteEmailView(APIView):
     
 #passo 7.2
 
-class LivroViewSet(viewsets.ModelViewSet):
-    queryset = Livro.objects.filter(ativo=True)
-    serializer_class = LivroSerializer
-    permission_classes = [IsAuthenticated]
 
-    # Filtros e busca
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['titulo', 'autor', 'genero']
-    search_fields = ['titulo', 'autor', 'genero', 'descricao']
-   

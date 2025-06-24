@@ -117,6 +117,7 @@ class Livro(models.Model):
     data_publicacao = models.DateField()
     numero_paginas = models.IntegerField(null=True, blank=True)
     tipo = models.CharField(max_length=6, choices=TIPO_LIVRO_CHOICES)
+    genero = models.CharField(max_length=100, null=True, blank=True)  # ✅ Adicione este campo
     disponivel = models.BooleanField(default=True)
     capa = models.URLField(blank=True, null=True)
     descricao = models.TextField(null=True, blank=True)
