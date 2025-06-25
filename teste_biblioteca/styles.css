@@ -1,0 +1,89 @@
+/* Reset simples */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.btn-group button {
+  margin-top: 0;
+}
+
+.output {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 12px;
+  border-radius: 6px;
+  max-height: 250px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+  margin-top: 12px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+#token-status {
+  font-weight: bold;
+  margin-top: 8px;
+}
