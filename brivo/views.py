@@ -44,6 +44,26 @@ from django.db.models.functions import TruncMonth
 from django.db.models import Count
 from .models import Livro, Usuario, Emprestimo, Reserva
 
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from django.utils import timezone
+from datetime import timedelta
+from django.db.models.functions import TruncMonth
+from django.db.models import Count
+from .models import Livro, Usuario, Emprestimo, Reserva
+
+
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from django.utils import timezone
+from django.db.models import Count
+from django.db.models.functions import TruncMonth
+from datetime import timedelta
+
+from .models import Livro, Usuario, Emprestimo, Reserva
+
 class DashboardAdminView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -51,25 +71,45 @@ class DashboardAdminView(APIView):
         if request.user.tipo != 'admin':
             return Response({'erro': 'Acesso negado. Apenas administradores podem acessar o dashboard.'}, status=403)
 
+        # 🗓️ Filtro por período (query param ?periodo=ultimos_7_dias ou mes_atual)
+        periodo = request.query_params.get('periodo')
+        agora = timezone.now()
+
+        filtro_usuarios = {}
+        filtro_emprestimos = {}
+        filtro_reservas = {}
+
+        if periodo == 'ultimos_7_dias':
+            data_limite = agora - timedelta(days=7)
+            filtro_usuarios = {'data_cadastro__gte': data_limite}
+            filtro_emprestimos = {'data_emprestimo__gte': data_limite}
+            filtro_reservas = {'data_reserva__gte': data_limite}
+
+        elif periodo == 'mes_atual':
+            inicio_mes = agora.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+            filtro_usuarios = {'data_cadastro__gte': inicio_mes}
+            filtro_emprestimos = {'data_emprestimo__gte': inicio_mes}
+            filtro_reservas = {'data_reserva__gte': inicio_mes}
+
         # 📊 Estatísticas básicas
         total_livros = Livro.objects.count()
         livros_ativos = Livro.objects.filter(ativo=True).count()
         livros_inativos = Livro.objects.filter(ativo=False).count()
 
-        total_usuarios = Usuario.objects.filter(ativo=True).count()
-        total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno').count()
-        total_professores = Usuario.objects.filter(ativo=True, tipo='professor').count()
-        total_admins = Usuario.objects.filter(ativo=True, tipo='admin').count()
+        total_usuarios = Usuario.objects.filter(ativo=True, **filtro_usuarios).count()
+        total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno', **filtro_usuarios).count()
+        total_professores = Usuario.objects.filter(ativo=True, tipo='professor', **filtro_usuarios).count()
+        total_admins = Usuario.objects.filter(ativo=True, tipo='admin', **filtro_usuarios).count()
 
-        reservas_na_fila = Reserva.objects.filter(status='na_fila').count()
-        reservas_aguardando = Reserva.objects.filter(status='aguardando_confirmacao').count()
-        reservas_concluidas = Reserva.objects.filter(status='concluido').count()
-        reservas_expiradas = Reserva.objects.filter(status='expirado').count()
+        reservas_na_fila = Reserva.objects.filter(status='na_fila', **filtro_reservas).count()
+        reservas_aguardando = Reserva.objects.filter(status='aguardando_confirmacao', **filtro_reservas).count()
+        reservas_concluidas = Reserva.objects.filter(status='concluido', **filtro_reservas).count()
+        reservas_expiradas = Reserva.objects.filter(status='expirado', **filtro_reservas).count()
 
-        emprestimos_ativos = Emprestimo.objects.filter(devolvido=False).count()
-        emprestimos_concluidos = Emprestimo.objects.filter(devolvido=True).count()
+        emprestimos_ativos = Emprestimo.objects.filter(devolvido=False, **filtro_emprestimos).count()
+        emprestimos_concluidos = Emprestimo.objects.filter(devolvido=True, **filtro_emprestimos).count()
 
-        # 📈 Gráficos - Empréstimos por mês
+        # 📈 Gráficos (gerais, sem filtro de data)
         emprestimos_por_mes = (
             Emprestimo.objects.annotate(mes=TruncMonth('data_emprestimo'))
             .values('mes')
@@ -77,7 +117,6 @@ class DashboardAdminView(APIView):
             .order_by('mes')
         )
 
-        # 📈 Gráficos - Reservas por mês
         reservas_por_mes = (
             Reserva.objects.annotate(mes=TruncMonth('data_reserva'))
             .values('mes')
@@ -86,6 +125,7 @@ class DashboardAdminView(APIView):
         )
 
         return Response({
+            'filtro_aplicado': periodo or 'todos',
             'livros': {
                 'total': total_livros,
                 'ativos': livros_ativos,
@@ -112,6 +152,7 @@ class DashboardAdminView(APIView):
                 'reservas_por_mes': list(reservas_por_mes),
             }
         })
+
 
 
 
