@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-cz@z3!zy40$nhe+az@@a3e*%cg4)c67^^9+l*2h^87=p%clv=7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+# isso  ['*'] faz o servidor aceitar qualuqer ip
 
 
 # Application definition
@@ -85,9 +86,12 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
-    
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
+
 
 
 WSGI_APPLICATION = 'biblioteca.wsgi.application'

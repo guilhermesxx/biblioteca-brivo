@@ -1,23 +1,22 @@
+# brivo/models.py
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
 from django.contrib.auth import get_user_model
 
 
-#Criar o modelo de log abaixo
-
-
-
+# Criar o modelo de log abaixo
 class HistoricoAcao(models.Model):
+    # O campo 'usuario' já está definido uma vez, a linha duplicada foi removida.
     usuario = models.ForeignKey('brivo.Usuario', on_delete=models.SET_NULL, null=True)
-    #VER COM O FERNANDO SE ACIMA ESTA CERTO
+    
     ACAO_CHOICES = [
         ('CRIACAO', 'Criação'),
         ('EDICAO', 'Edição'),
         ('DESATIVACAO', 'Desativação'),
     ]
 
-    usuario = models.ForeignKey('brivo.Usuario', on_delete=models.SET_NULL, null=True)
     objeto_tipo = models.CharField(max_length=50)
     objeto_id = models.PositiveIntegerField()
     acao = models.CharField(max_length=20, choices=ACAO_CHOICES)
@@ -48,20 +47,21 @@ class CustomUserManager(BaseUserManager):
             turma=turma,
             tipo=tipo,
             is_active=True,
-            is_staff=(tipo == "admin"),
-            is_superuser=(tipo == "admin"),
+            is_staff=(tipo == "admin"), # Define is_staff com base no tipo
+            is_superuser=(tipo == "admin"), # Define is_superuser com base no tipo
         )
         user.set_password(password)
         user.save(using=self._db)
         return user
 
     def create_superuser(self, ra, nome, email, turma="ADM", tipo="admin", password=None):
+        # Chama create_user com tipo "admin" para criar um superusuário
         return self.create_user(
             ra=ra,
             nome=nome,
             email=email,
             turma=turma,
-            tipo=tipo,
+            tipo=tipo, # Garante que o tipo seja 'admin' para superusuários
             password=password
         )
 
@@ -69,6 +69,7 @@ class UsuarioQuerySet(models.QuerySet):
     def ativos(self):
         return self.filter(ativo=True)
 
+# Combina o CustomUserManager com a Custom QuerySet
 class UsuarioManager(CustomUserManager.from_queryset(UsuarioQuerySet)):
     pass
 
@@ -83,28 +84,35 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     nome = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     turma = models.CharField(max_length=20)
-    tipo = models.CharField(max_length=10, choices=TIPO_USUARIO_CHOICES)
+    tipo = models.CharField(max_length=10, choices=TIPO_USUARIO_CHOICES) # Campo 'tipo' para diferenciar usuários
     data_cadastro = models.DateTimeField(auto_now_add=True)
 
     is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False) # Usado pelo Django Admin
+    is_superuser = models.BooleanField(default=False) # Usado pelo Django Admin e permissões
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['ra', 'nome', 'turma', 'tipo']
+    USERNAME_FIELD = 'email' # Campo usado para login
+    REQUIRED_FIELDS = ['ra', 'nome', 'turma', 'tipo'] # Campos obrigatórios na criação de usuário
 
-    ativo = models.BooleanField(default=True)
+    ativo = models.BooleanField(default=True) # Campo para soft delete
 
-    objects = UsuarioManager()  # ✅ agora junta CustomUserManager + QuerySet.ativos()
+    objects = UsuarioManager() # Gerenciador customizado para o modelo Usuario
 
     def __str__(self):
         return self.nome
 
+    # Métodos para compatibilidade com o sistema de permissões do Django
+    def has_perm(self, perm, obj=None):
+        return self.is_superuser # Superusuário tem todas as permissões
 
+    def has_module_perms(self, app_label):
+        return self.is_superuser # Superusuário tem permissões em todos os módulos
 
 
 class LivroQuerySet(models.QuerySet):
     def ativos(self):
         return self.filter(ativo=True)
+
 class Livro(models.Model):
     TIPO_LIVRO_CHOICES = [
         ('fisico', 'Físico'),
@@ -117,14 +125,14 @@ class Livro(models.Model):
     data_publicacao = models.DateField()
     numero_paginas = models.IntegerField(null=True, blank=True)
     tipo = models.CharField(max_length=6, choices=TIPO_LIVRO_CHOICES)
-    genero = models.CharField(max_length=100, null=True, blank=True)  # ✅ Adicione este campo
+    genero = models.CharField(max_length=100, null=True, blank=True)
     disponivel = models.BooleanField(default=True)
     capa = models.URLField(blank=True, null=True)
     descricao = models.TextField(null=True, blank=True)
 
-    ativo = models.BooleanField(default=True)  # ✅ campo para soft delete
+    ativo = models.BooleanField(default=True) # campo para soft delete
     
-    objects = LivroQuerySet.as_manager()  # ✅ Ativa a queryset customizada
+    objects = LivroQuerySet.as_manager() # Ativa a queryset customizada
 
     def __str__(self):
         return self.titulo
