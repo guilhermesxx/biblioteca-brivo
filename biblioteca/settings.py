@@ -7,7 +7,7 @@ For more information on this file, see
 https://docs.djangoproject.com/en/5.2/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/5.2/ref/settings/
+https://docs.djangoproject.com/en/5.2/ref/settings/#f-list-of-settings
 """
 
 from pathlib import Path
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-cz@z3!zy40$nhe+az@@a3e*%cg4)c67^^9+l*2h^87=p%clv=7
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-# isso  ['*'] faz o servidor aceitar qualuqer ip
+# isso   ['*'] faz o servidor aceitar qualuqer ip
 
 
 # Application definition
@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'brivo',  # App customizado para usuários e livros
-    'biblioteca',  # Seu app principal
+    'brivo',    # App customizado para usuários e livros
+    'biblioteca',    # Seu app principal
     'corsheaders',
-    'rest_framework',  # Adicionar Django Rest Framework
+    'rest_framework',    # Adicionar Django Rest Framework
     'django_filters',
 ]
 
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'brivo.Usuario'
 
 
-CORS_ALLOW_ALL_ORIGINS = True  # Para teste local
+CORS_ALLOW_ALL_ORIGINS = True    # Para teste local
 
 
 
@@ -87,7 +87,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny', # <-- ALTERADO PARA AllowAny
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
@@ -160,6 +160,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'guilherme1920x@gmail.com'             # <-- aqui você coloca o SEU GMAIL
-EMAIL_HOST_PASSWORD = 'yqeg eser phpo kqhh'         # <-- aqui você cola a senha de app
+EMAIL_HOST_PASSWORD = 'yqeg eser phpo kqhh'             # <-- aqui você cola a senha de app
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-

@@ -52,7 +52,7 @@ def usuario_me_view(request):
 
 class UsuarioViewSet(viewsets.ModelViewSet):
     """
-    ViewSet para gerenciar usuários.
+    Viewset para gerenciar usuários.
     Permissões ajustadas:
     - Admin: pode criar, listar, atualizar e desativar qualquer usuário.
     - Aluno/Professor: pode visualizar e atualizar seu próprio perfil.
@@ -65,9 +65,13 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         """
         Define as permissões com base na ação (list, retrieve, create, update, destroy).
         """
-        # Para 'list' (listar todos os usuários) e 'create' (criar novo usuário),
-        # apenas administradores autenticados têm permissão.
-        if self.action in ['list', 'create']:
+        # Para 'create' (criar novo usuário), permita acesso sem autenticação.
+        # A validação do tipo de usuário (admin, professor, aluno) será feita no serializer.
+        if self.action == 'create':
+            return [permissions.AllowAny()] # Permite que qualquer um (autenticado ou não) crie um usuário.
+        
+        # Para 'list' (listar todos os usuários), apenas administradores autenticados têm permissão.
+        elif self.action == 'list':
             return [IsAuthenticated(), EhAdmin()]
         
         # Para 'retrieve' (obter detalhes de um usuário específico),
@@ -84,7 +88,6 @@ class UsuarioViewSet(viewsets.ModelViewSet):
             return [IsAuthenticated(), EhAdmin()]
         
         # Permissão padrão para outras ações, caso existam.
-        # Isso deve ser um fallback e idealmente não será atingido para as ações principais.
         return [IsAuthenticated()] 
 
     def perform_create(self, serializer):
@@ -92,7 +95,10 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         Salva um novo usuário e registra a ação.
         """
         usuario = serializer.save()
-        registrar_acao(self.request.user, usuario, 'CRIACAO', descricao='Usuário criado.')
+        # Passa o usuário logado se existir, caso contrário, passa None.
+        # Isso evita erros se um usuário anônimo tentar criar uma conta.
+        user_for_log = self.request.user if self.request.user.is_authenticated else None
+        registrar_acao(user_for_log, usuario, 'CRIACAO', descricao='Usuário criado.')
 
     def perform_update(self, serializer):
         """
@@ -117,7 +123,7 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 
 class LivroViewSet(viewsets.ModelViewSet):
     """
-    ViewSet para gerenciar livros.
+    Viewset para gerenciar livros.
     Admin pode criar, editar, desativar. Outros usuários podem apenas visualizar livros ativos.
     """
     queryset = Livro.objects.all() # Queryset base para admins
@@ -177,7 +183,7 @@ class LivroViewSet(viewsets.ModelViewSet):
 
 class EmprestimoViewSet(viewsets.ModelViewSet):
     """
-    ViewSet para gerenciar empréstimos.
+    Viewset para gerenciar empréstimos.
     Admin e professor podem ver todos. Alunos veem apenas seus próprios empréstimos.
     """
     queryset = Emprestimo.objects.all()
@@ -280,7 +286,7 @@ class CriarReservaAPIView(generics.CreateAPIView):
 
 class ReservaViewSet(viewsets.ModelViewSet):
     """
-    ViewSet para gerenciar reservas.
+    Viewset para gerenciar reservas.
     Admin pode ver todas. Alunos veem apenas suas próprias reservas.
     """
     queryset = Reserva.objects.all()
