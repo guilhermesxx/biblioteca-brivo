@@ -1,5 +1,3 @@
-# brivo/views.py
-
 from rest_framework import viewsets, generics, permissions, status
 from rest_framework.permissions import IsAuthenticated, SAFE_METHODS
 from rest_framework.response import Response
@@ -8,25 +6,26 @@ from rest_framework.views import APIView
 from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models.functions import TruncMonth
-from django.db.models import Count
-from django.utils import timezone
-from datetime import timedelta
+from django.db.models import Count, Sum, F, Q
+from django.utils import timezone # Importação essencial para lidar com fusos horários
+from datetime import timedelta, date
 
 # Importações de modelos e serializers
-from .models import Livro, Usuario, Emprestimo, Reserva
-from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer, ReservaSerializer
-from .permissions import EhDonoOuAdmin, EhAdmin # Assumindo que estas permissões estão definidas
+from .models import Livro, Usuario, Emprestimo, Reserva, AlertaSistema
+from .serializers import LivroSerializer, UsuarioSerializer, EmprestimoSerializer, ReservaSerializer, AlertaSistemaSerializer
+from .permissions import EhDonoOuAdmin, EhAdmin, EhProfessorOuAdmin
 from .utils import (
-    enviar_email, 
-    enviar_lembretes_de_devolucao, 
-    notificar_primeiro_da_fila, 
+    enviar_email,
+    enviar_lembretes_de_devolucao,
+    notificar_primeiro_da_fila,
     enviar_avisos_reserva_expirando,
-    registrar_acao # Importar a função registrar_acao
+    registrar_acao,
+    enviar_notificacao_alerta_publico
 )
 
 # Importação do Simple JWT
 from rest_framework_simplejwt.views import TokenObtainPairView
-from .serializers import CustomTokenObtainPairSerializer # Importa seu serializer customizado
+from .serializers import CustomTokenObtainPairSerializer
 
 # -----------------------------------------------------------------------------
 # Views de Autenticação e Usuário
@@ -57,46 +56,53 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     - Admin: pode criar, listar, atualizar e desativar qualquer usuário.
     - Aluno/Professor: pode visualizar e atualizar seu próprio perfil.
     """
-    queryset = Usuario.objects.all()
+    queryset = Usuario.objects.all().order_by('nome') # CORREÇÃO: Adicionado order_by para paginação consistente
     serializer_class = UsuarioSerializer
-    # A permissão é definida dinamicamente no método get_permissions abaixo
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['tipo']
+    search_fields = ['nome', 'email', 'ra', 'turma']
 
     def get_permissions(self):
         """
         Define as permissões com base na ação (list, retrieve, create, update, destroy).
         """
-        # Para 'create' (criar novo usuário), permita acesso sem autenticação.
-        # A validação do tipo de usuário (admin, professor, aluno) será feita no serializer.
         if self.action == 'create':
-            return [permissions.AllowAny()] # Permite que qualquer um (autenticado ou não) crie um usuário.
-        
-        # Para 'list' (listar todos os usuários), apenas administradores autenticados têm permissão.
-        elif self.action == 'list':
-            return [IsAuthenticated(), EhAdmin()]
-        
-        # Para 'retrieve' (obter detalhes de um usuário específico),
-        # 'update' (atualizar um usuário) e 'partial_update' (atualizar parcialmente um usuário),
-        # o usuário autenticado pode acessar seu próprio perfil, ou um administrador pode acessar qualquer perfil.
-        elif self.action in ['retrieve', 'update', 'partial_update']:
-            # EhDonoOuAdmin deve verificar se o request.user é o dono do objeto OU se é um admin.
-            # Isso permite que um usuário edite/veja seu próprio perfil e que admins editem/vejam qualquer perfil.
-            return [IsAuthenticated(), EhDonoOuAdmin()] 
-        
-        # Para 'destroy' (desativar/excluir um usuário),
+            return [permissions.AllowAny()]
+
+        # Para 'list' (listar todos os usuários) e 'counts' (obter contagens),
         # apenas administradores autenticados têm permissão.
+        elif self.action in ['list', 'counts']:
+            return [IsAuthenticated(), EhAdmin()]
+
+        elif self.action in ['retrieve', 'update', 'partial_update']:
+            return [IsAuthenticated(), EhDonoOuAdmin()]
+
         elif self.action == 'destroy':
             return [IsAuthenticated(), EhAdmin()]
-        
-        # Permissão padrão para outras ações, caso existam.
-        return [IsAuthenticated()] 
+
+        return [IsAuthenticated()]
+
+    def get_queryset(self):
+        """
+        Retorna o queryset de usuários ativos por padrão para listagem.
+        Admins podem ver todos.
+        """
+        user = self.request.user
+        if user.is_authenticated and user.tipo == 'admin':
+            queryset = Usuario.objects.all().order_by('nome') # CORREÇÃO: Adicionado order_by
+        else:
+            queryset = Usuario.objects.filter(ativo=True).order_by('nome') # CORREÇÃO: Adicionado order_by
+
+        # O DjangoFilterBackend e SearchFilter já aplicam os filtros automaticamente
+        # com base em filterset_fields e search_fields definidos acima.
+        return queryset
+
 
     def perform_create(self, serializer):
         """
         Salva um novo usuário e registra a ação.
         """
         usuario = serializer.save()
-        # Passa o usuário logado se existir, caso contrário, passa None.
-        # Isso evita erros se um usuário anônimo tentar criar uma conta.
         user_for_log = self.request.user if self.request.user.is_authenticated else None
         registrar_acao(user_for_log, usuario, 'CRIACAO', descricao='Usuário criado.')
 
@@ -112,10 +118,29 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         Desativa (soft delete) um usuário e registra a ação.
         """
         usuario = self.get_object()
-        usuario.ativo = False # Realiza um soft delete
+        usuario.ativo = False
         usuario.save()
         registrar_acao(request.user, usuario, 'DESATIVACAO', descricao='Usuário desativado.')
         return Response({'mensagem': 'Usuário desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+
+    @action(detail=False, methods=['get'], url_path='counts', permission_classes=[IsAuthenticated, EhAdmin])
+    def counts(self, request):
+        """
+        Retorna as contagens de usuários por tipo (total, alunos, professores, admins).
+        Apenas administradores podem acessar.
+        """
+        total_usuarios_ativos = Usuario.objects.filter(ativo=True).count()
+        total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno').count()
+        total_professores = Usuario.objects.filter(ativo=True, tipo='professor').count()
+        total_admins = Usuario.objects.filter(ativo=True, tipo='admin').count()
+
+        return Response({
+            'total_usuarios_ativos': total_usuarios_ativos,
+            'alunos': total_alunos,
+            'professores': total_professores,
+            'admins': total_admins,
+        }, status=status.HTTP_200_OK)
+
 
 # -----------------------------------------------------------------------------
 # Views de Livros
@@ -126,7 +151,7 @@ class LivroViewSet(viewsets.ModelViewSet):
     Viewset para gerenciar livros.
     Admin pode criar, editar, desativar. Outros usuários podem apenas visualizar livros ativos.
     """
-    queryset = Livro.objects.all() # Queryset base para admins
+    queryset = Livro.objects.all().order_by('titulo') # CORREÇÃO: Adicionado order_by para paginação consistente
     serializer_class = LivroSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['titulo', 'autor', 'genero']
@@ -136,10 +161,8 @@ class LivroViewSet(viewsets.ModelViewSet):
         """
         Define as permissões para as ações de livros.
         """
-        # Para métodos seguros (GET, HEAD, OPTIONS), todos os usuários autenticados têm permissão.
         if self.request.method in SAFE_METHODS:
             return [IsAuthenticated()]
-        # Para outros métodos (POST, PUT, PATCH, DELETE), apenas administradores autenticados têm permissão.
         return [IsAuthenticated(), EhAdmin()]
 
     def get_queryset(self):
@@ -147,11 +170,9 @@ class LivroViewSet(viewsets.ModelViewSet):
         Retorna o queryset de livros com base no tipo de usuário.
         """
         user = self.request.user
-        # Se o usuário é um administrador, retorna todos os livros (ativos e inativos).
         if user.is_authenticated and user.tipo == 'admin':
-            return Livro.objects.all()
-        # Para outros tipos de usuário, retorna apenas os livros ativos.
-        return Livro.objects.filter(ativo=True)
+            return Livro.objects.all().order_by('titulo') # CORREÇÃO: Adicionado order_by
+        return Livro.objects.filter(ativo=True).order_by('titulo') # CORREÇÃO: Adicionado order_by
 
     def perform_create(self, serializer):
         """
@@ -172,7 +193,7 @@ class LivroViewSet(viewsets.ModelViewSet):
         Desativa (soft delete) um livro e registra a ação.
         """
         livro = self.get_object()
-        livro.ativo = False # Realiza um soft delete
+        livro.ativo = False
         livro.save()
         registrar_acao(request.user, livro, 'DESATIVACAO', descricao='Livro desativado.')
         return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
@@ -186,20 +207,18 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
     Viewset para gerenciar empréstimos.
     Admin e professor podem ver todos. Alunos veem apenas seus próprios empréstimos.
     """
-    queryset = Emprestimo.objects.all()
+    queryset = Emprestimo.objects.all().order_by('-data_emprestimo') # CORREÇÃO: Adicionado order_by
     serializer_class = EmprestimoSerializer
-    permission_classes = [IsAuthenticated, EhDonoOuAdmin] # EhDonoOuAdmin deve verificar se é o dono ou admin
+    permission_classes = [IsAuthenticated, EhDonoOuAdmin]
 
     def get_queryset(self):
         """
         Retorna o queryset de empréstimos com base no tipo de usuário.
         """
         user = self.request.user
-        # Admin e professor podem ver todos os empréstimos.
         if user.is_authenticated and user.tipo in ['admin', 'professor']:
-            return Emprestimo.objects.all()
-        # Alunos só podem ver seus próprios empréstimos.
-        return Emprestimo.objects.filter(usuario=user)
+            return Emprestimo.objects.all().order_by('-data_emprestimo') # CORREÇÃO: Adicionado order_by
+        return Emprestimo.objects.filter(usuario=user).order_by('-data_emprestimo') # CORREÇÃO: Adicionado order_by
 
     def perform_create(self, serializer):
         """
@@ -216,29 +235,48 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
         devolvido_antes = instance.devolvido
         emprestimo = serializer.save()
 
-        # Se o status mudou para devolvido, chama o método para marcar devolução
         if not devolvido_antes and emprestimo.devolvido:
-            emprestimo.marcar_devolucao() # Este método já atualiza o livro e notifica a fila
+            # A lógica de marcar_devolucao já está no modelo Emprestimo e usa timezone.now()
+            emprestimo.marcar_devolucao()
+
+    @action(detail=False, methods=['get'], url_path='recent-reads')
+    def recent_reads(self, request):
+        """
+        Retorna os 3 últimos livros lidos (emprestados e devolvidos) pelo usuário autenticado.
+        """
+        user = self.request.user
+        if not user.is_authenticated:
+            return Response({"detail": "Autenticação necessária."}, status=status.HTTP_401_UNAUTHORIZED)
+
+        # Filtra empréstimos do usuário que foram devolvidos
+        # Ordena pela data de devolução em ordem decrescente (mais recente primeiro)
+        # Limita aos 3 primeiros resultados
+        recent_reads_queryset = Emprestimo.objects.filter(
+            usuario=user,
+            devolvido=True,
+            data_devolucao__isnull=False # Garante que a data de devolução não seja nula
+        ).order_by('-data_devolucao')[:3] # Limita aos 3 mais recentes
+
+        serializer = self.get_serializer(recent_reads_queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 class DevolverEmprestimoView(APIView):
     """
     Endpoint para marcar um empréstimo como devolvido.
     Dispara a notificação para o próximo da fila de reserva.
     """
-    permission_classes = [IsAuthenticated] # Apenas usuários autenticados podem devolver
+    permission_classes = [IsAuthenticated, EhDonoOuAdmin]
 
     def post(self, request, pk):
         try:
             emprestimo = Emprestimo.objects.get(pk=pk)
-            # Verifica se o usuário tem permissão para devolver (dono do empréstimo ou admin/professor)
-            if request.user.tipo not in ['admin', 'professor'] and emprestimo.usuario != request.user:
-                return Response({'erro': 'Você não tem permissão para devolver este empréstimo.'}, status=status.HTTP_403_FORBIDDEN)
 
             if emprestimo.devolvido:
                 return Response({"erro": "Esse empréstimo já foi devolvido."}, status=status.HTTP_400_BAD_REQUEST)
 
             emprestimo.devolvido = True
-            emprestimo.save() # O método save do modelo Emprestimo já lida com a disponibilidade do livro e notificação
+            emprestimo.save() # O save do modelo Emprestimo já chama marcar_devolucao() se 'devolvido' mudar para True
 
             return Response({"mensagem": "Livro devolvido com sucesso e fila notificada."})
 
@@ -249,92 +287,94 @@ class DevolverEmprestimoView(APIView):
 # Views de Reservas
 # -----------------------------------------------------------------------------
 
-class CriarReservaAPIView(generics.CreateAPIView):
-    """
-    Endpoint para criar uma nova reserva.
-    Verifica a disponibilidade do livro e se o usuário já tem uma reserva ativa.
-    """
-    serializer_class = ReservaSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-    def post(self, request, *args, **kwargs):
-        livro_id = request.data.get("livro")
-
-        try:
-            livro = Livro.objects.get(id=livro_id)
-        except Livro.DoesNotExist:
-            return Response({"erro": "Livro não encontrado."}, status=status.HTTP_404_NOT_FOUND)
-
-        if livro.disponivel:
-            return Response(
-                {"erro": "O livro está disponível. Você pode fazer o empréstimo em vez de reservar."},
-                status=status.HTTP_400_BAD_REQUEST # Use status.HTTP_400_BAD_REQUEST para erros de cliente
-            )
-
-        ja_reservado = Reserva.objects.filter(
-            livro=livro,
-            aluno=request.user,
-            status__in=['na_fila', 'aguardando_confirmacao'] # Removido 'notificado' pois é um status transitório
-        ).exists()
-        if ja_reservado:
-            return Response({"erro": "Você já possui uma reserva ativa para este livro."}, status=status.HTTP_400_BAD_REQUEST)
-
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save(aluno=request.user) # Associa a reserva ao usuário logado
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-
 class ReservaViewSet(viewsets.ModelViewSet):
     """
     Viewset para gerenciar reservas.
-    Admin pode ver todas. Alunos veem apenas suas próprias reservas.
+    Admin pode ver todas. Alunos e professores veem apenas suas próprias reservas.
     """
-    queryset = Reserva.objects.all()
+    queryset = Reserva.objects.all().order_by('-data_reserva') # CORREÇÃO: Adicionado order_by
     serializer_class = ReservaSerializer
-    permission_classes = [IsAuthenticated, EhDonoOuAdmin] # EhDonoOuAdmin deve verificar se é o dono ou admin
+    permission_classes = [IsAuthenticated, EhDonoOuAdmin]
 
     def get_queryset(self):
         """
         Retorna o queryset de reservas com base no tipo de usuário.
+        Alunos e professores veem apenas suas próprias reservas.
+        Admin pode ver todas.
         """
         user = self.request.user
-        # Admin pode ver todas as reservas.
-        if user.is_authenticated and user.tipo == 'admin':
-            return Reserva.objects.all()
-        # Alunos só podem ver suas próprias reservas.
-        return Reserva.objects.filter(aluno=user)
+        if user.is_authenticated:
+            if user.tipo == 'admin':
+                return Reserva.objects.all().order_by('-data_reserva') # CORREÇÃO: Adicionado order_by
+            elif user.tipo in ['aluno', 'professor']:
+                return Reserva.objects.filter(aluno=user).order_by('-data_reserva') # CORREÇÃO: Adicionado order_by
+        return Reserva.objects.none()
 
-    @action(detail=True, methods=['post'], url_path='confirmar')
-    def confirmar_reserva(self, request, pk=None):
+    def perform_create(self, serializer):
         """
-        Confirma uma reserva e cria um empréstimo.
-        Apenas o aluno que fez a reserva pode confirmá-la.
+        Cria uma nova reserva, associando-a ao usuário logado.
+        A validação de conflitos e status inicial é feita no serializer.
+        """
+        reserva = serializer.save(aluno=self.request.user)
+        registrar_acao(self.request.user, reserva, 'CRIACAO', descricao='Reserva criada.')
+
+    def perform_update(self, serializer):
+        """
+        Atualiza uma reserva existente e registra a ação.
+        """
+        reserva = serializer.save()
+        registrar_acao(self.request.user, reserva, 'EDICAO', descricao='Reserva atualizada.')
+
+    def destroy(self, request, *args, **kwargs):
+        """
+        Cancela (soft delete ou muda status para 'cancelada') uma reserva e registra a ação.
         """
         reserva = self.get_object()
-
-        # Verifica se a reserva pertence ao usuário logado
-        if reserva.aluno != request.user:
-            return Response({'erro': 'Reserva não pertence a este usuário.'}, status=status.HTTP_403_FORBIDDEN)
-
-        # Verifica o status da reserva
-        if reserva.status != 'aguardando_confirmacao':
-            return Response({'erro': 'Reserva não está aguardando confirmação.'}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Verifica a disponibilidade do livro novamente
-        if not reserva.livro.disponivel:
-            return Response({'erro': 'Livro não está mais disponível.'}, status=status.HTTP_400_BAD_REQUEST)
-
-        # Criar empréstimo
-        emprestimo = Emprestimo.objects.create(
-            livro=reserva.livro,
-            usuario=reserva.aluno
-        )
-
-        # Atualizar status da reserva para 'concluido'
-        reserva.status = 'concluido'
+        reserva.status = 'cancelada'
         reserva.save()
+        registrar_acao(request.user, reserva, 'DESATIVACAO', descricao=f'Reserva do livro {reserva.livro.titulo} cancelada.')
+        return Response({'mensagem': 'Reserva cancelada com sucesso.'}, status=status.HTTP_200_OK)
 
-        return Response({'mensagem': 'Reserva confirmada e empréstimo criado com sucesso.'}, status=status.HTTP_200_OK)
+
+    @action(detail=True, methods=['post'], url_path='efetivar-emprestimo', permission_classes=[IsAuthenticated, EhProfessorOuAdmin])
+    def efetivar_emprestimo(self, request, pk=None):
+        """
+        Efetiva uma reserva (com status 'aguardando_retirada') criando um empréstimo.
+        Apenas professores e administradores podem disparar esta ação.
+        """
+        try:
+            reserva = self.get_object()
+        except Reserva.DoesNotExist:
+            return Response({'erro': 'Reserva não encontrada.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if reserva.status != 'aguardando_retirada':
+            return Response(
+                {'erro': f'Esta reserva não está no status correto para efetivar empréstimo. Status atual: {reserva.status}.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        if not reserva.livro.disponivel:
+            return Response(
+                {'erro': 'O livro não está disponível para empréstimo no momento. Ele pode estar emprestado ou indisponível.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        try:
+            emprestimo = Emprestimo.objects.create(
+                livro=reserva.livro,
+                usuario=reserva.aluno,
+                data_emprestimo=timezone.now()
+            )
+            reserva.status = 'emprestado'
+            reserva.save()
+            registrar_acao(request.user, reserva, 'EDICAO', descricao=f'Reserva do livro {reserva.livro.titulo} efetivada como empréstimo.')
+
+            return Response(
+                {'mensagem': 'Reserva efetivada e empréstimo criado com sucesso.', 'emprestimo_id': emprestimo.id},
+                status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            return Response({'erro': f'Erro ao criar empréstimo: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # -----------------------------------------------------------------------------
 # Views de Notificações e Lembretes por E-mail
@@ -345,7 +385,7 @@ class LembreteDevolucaoView(APIView):
     Endpoint para enviar lembretes de devolução de livros.
     Apenas administradores podem disparar esta ação.
     """
-    permission_classes = [IsAuthenticated, EhAdmin] # Apenas admin pode disparar isso
+    permission_classes = [IsAuthenticated, EhAdmin]
 
     def get(self, request):
         enviar_lembretes_de_devolucao()
@@ -356,7 +396,7 @@ class AvisoReservaExpirandoView(APIView):
     Endpoint para enviar avisos de reservas prestes a expirar.
     Apenas administradores podem disparar esta ação.
     """
-    permission_classes = [IsAuthenticated, EhAdmin] # Apenas admin pode disparar isso
+    permission_classes = [IsAuthenticated, EhAdmin]
 
     def get(self, request):
         enviar_avisos_reserva_expirando()
@@ -367,11 +407,11 @@ class TesteEmailView(APIView):
     Endpoint para testar o envio de e-mails.
     Apenas administradores podem disparar esta ação.
     """
-    permission_classes = [IsAuthenticated, EhAdmin] # Apenas admin pode disparar isso
+    permission_classes = [IsAuthenticated, EhAdmin]
 
     def get(self, request):
         enviar_email(
-            destinatario='contaescola338@gmail.com',  # Ou qualquer outro e-mail de teste
+            destinatario='guilherme1920x@gmail.com',
             assunto='Teste de E-mail da Biblioteca Brivo',
             mensagem='Este é um teste do sistema de e-mails da biblioteca. Se você recebeu este e-mail, a configuração está funcionando corretamente.'
         )
@@ -386,14 +426,9 @@ class DashboardAdminView(APIView):
     Endpoint para o dashboard administrativo com estatísticas da biblioteca.
     Apenas administradores podem acessar.
     """
-    permission_classes = [IsAuthenticated] # Permissão inicial para garantir que o usuário está logado
+    permission_classes = [IsAuthenticated, EhAdmin]
 
     def get(self, request):
-        # Verifica o tipo de usuário explicitamente para o dashboard
-        if request.user.tipo != 'admin':
-            return Response({'erro': 'Acesso negado. Apenas administradores podem acessar o dashboard.'}, status=status.HTTP_403_FORBIDDEN)
-
-        # 🗓️ Filtro por período (query param ?periodo=ultimos_7_dias ou mes_atual)
         periodo = request.query_params.get('periodo')
         agora = timezone.now()
 
@@ -413,25 +448,36 @@ class DashboardAdminView(APIView):
             filtro_emprestimos = {'data_emprestimo__gte': inicio_mes}
             filtro_reservas = {'data_reserva__gte': inicio_mes}
 
-        # 📊 Estatísticas básicas
         total_livros = Livro.objects.count()
         livros_ativos = Livro.objects.filter(ativo=True).count()
         livros_inativos = Livro.objects.filter(ativo=False).count()
 
-        total_usuarios = Usuario.objects.filter(ativo=True, **filtro_usuarios).count()
+        total_usuarios_ativos_geral = Usuario.objects.filter(ativo=True).count()
+
+        total_usuarios_filtrados = Usuario.objects.filter(ativo=True, **filtro_usuarios).count()
+
         total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno', **filtro_usuarios).count()
         total_professores = Usuario.objects.filter(ativo=True, tipo='professor', **filtro_usuarios).count()
         total_admins = Usuario.objects.filter(ativo=True, tipo='admin', **filtro_usuarios).count()
 
+        hoje = date.today()
+        reservas_hoje = Reserva.objects.filter(
+            data_reserva__date=hoje,
+            status__in=['na_fila', 'aguardando_retirada', 'emprestado']
+        ).count()
+
         reservas_na_fila = Reserva.objects.filter(status='na_fila', **filtro_reservas).count()
-        reservas_aguardando = Reserva.objects.filter(status='aguardando_confirmacao', **filtro_reservas).count()
-        reservas_concluidas = Reserva.objects.filter(status='concluido', **filtro_reservas).count()
-        reservas_expiradas = Reserva.objects.filter(status='expirado', **filtro_reservas).count()
+        reservas_aguardando_retirada = Reserva.objects.filter(status='aguardando_retirada', **filtro_reservas).count()
+        reservas_emprestadas = Reserva.objects.filter(status='emprestado', **filtro_reservas).count()
+        reservas_concluidas = Reserva.objects.filter(status='concluida', **filtro_reservas).count()
+        reservas_expiradas = Reserva.objects.filter(status='expirada', **filtro_reservas).count()
+        reservas_canceladas = Reserva.objects.filter(status='cancelada', **filtro_reservas).count()
+
+        total_emprestimos_geral = Emprestimo.objects.count()
 
         emprestimos_ativos = Emprestimo.objects.filter(devolvido=False, **filtro_emprestimos).count()
         emprestimos_concluidos = Emprestimo.objects.filter(devolvido=True, **filtro_emprestimos).count()
 
-        # 📈 Gráficos (gerais, sem filtro de data, ou com filtro se a lógica for adicionada)
         emprestimos_por_mes = (
             Emprestimo.objects.annotate(mes=TruncMonth('data_emprestimo'))
             .values('mes')
@@ -446,6 +492,25 @@ class DashboardAdminView(APIView):
             .order_by('mes')
         )
 
+        # --- NOVOS DADOS PARA O DASHBOARD ---
+
+        # Top Livros Mais Emprestados (considerando apenas empréstimos concluídos ou ativos)
+        # Agrupa por livro e conta o número de empréstimos, depois pega os 5 primeiros
+        top_livros_emprestados = Emprestimo.objects.filter(
+            livro__ativo=True # Considera apenas livros ativos
+        ).values('livro__titulo').annotate(
+            total_emprestimos=Count('id')
+        ).order_by('-total_emprestimos')[:5] # Top 5 livros
+
+        # Reservas por Gênero/Categoria (assumindo que Livro tem um campo 'genero')
+        # Agrupa por gênero do livro e conta o número de reservas
+        reservas_por_genero = Reserva.objects.filter(
+            livro__ativo=True, # Considera apenas livros ativos
+            livro__genero__isnull=False # Garante que o gênero não seja nulo
+        ).values('livro__genero').annotate(
+            total_reservas=Count('id')
+        ).order_by('-total_reservas')
+
         return Response({
             'filtro_aplicado': periodo or 'todos',
             'livros': {
@@ -454,23 +519,178 @@ class DashboardAdminView(APIView):
                 'inativos': livros_inativos,
             },
             'usuarios': {
-                'total': total_usuarios,
+                'total_geral_ativos': total_usuarios_ativos_geral,
+                'total_filtrado': total_usuarios_filtrados,
                 'alunos': total_alunos,
-                'professores': total_professores,
+                'total_professores': total_professores,
                 'admins': total_admins,
             },
             'reservas': {
+                'hoje': reservas_hoje,
                 'na_fila': reservas_na_fila,
-                'aguardando': reservas_aguardando,
+                'aguardando_retirada': reservas_aguardando_retirada,
+                'emprestadas': reservas_emprestadas,
                 'concluidas': reservas_concluidas,
                 'expiradas': reservas_expiradas,
+                'canceladas': reservas_canceladas,
             },
             'emprestimos': {
+                'total_geral': total_emprestimos_geral,
                 'ativos': emprestimos_ativos,
                 'devolvidos': emprestimos_concluidos,
             },
             'graficos': {
                 'emprestimos_por_mes': list(emprestimos_por_mes),
                 'reservas_por_mes': list(reservas_por_mes),
+                'top_livros_emprestados': list(top_livros_emprestados),
+                'reservas_por_genero': list(reservas_por_genero),
             }
         })
+
+# -----------------------------------------------------------------------------
+# Views de Alertas do Sistema
+# -----------------------------------------------------------------------------
+
+class AlertaSistemaViewSet(viewsets.ModelViewSet):
+    """
+    Viewset para gerenciar Alertas do Sistema.
+    Apenas administradores podem criar, listar, atualizar e deletar alertas.
+    """
+    queryset = AlertaSistema.objects.all().order_by('-data_criacao') # Adicionado order_by para consistência
+    serializer_class = AlertaSistemaSerializer
+    permission_classes = [IsAuthenticated, EhAdmin] # Apenas admins podem gerenciar alertas
+
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['tipo', 'resolvido', 'visibilidade']
+    search_fields = ['titulo', 'mensagem']
+    ordering_fields = ['data_criacao', 'tipo', 'expira_em', 'data_publicacao']
+    ordering = ['-data_criacao'] # Ordenação padrão: mais novos primeiro
+
+    def get_queryset(self):
+        """
+        Retorna o queryset de alertas.
+        Admins podem ver todos os alertas.
+        """
+        queryset = super().get_queryset()
+        return queryset
+
+    def perform_create(self, serializer):
+        """
+        Cria um novo alerta, registra a ação e, se for público e com envio de e-mail,
+        dispara a notificação.
+        """
+        alerta = serializer.save()
+        registrar_acao(self.request.user, alerta, 'CRIACAO', descricao=f'Alerta "{alerta.titulo}" criado.')
+
+        # [INTEGRAÇÃO BACKEND] Disparar envio de e-mail/notificação se for público e marcado para envio
+        # A lógica para enviar o email e marcar email_enviado=True será feita na função utilitária
+        # A verificação de `alerta.email_enviado` aqui é para o caso de o admin já marcar como enviado
+        # na criação, mas a função utilitária fará a marcação final após o envio.
+        if alerta.visibilidade == 'publico' and alerta.email_enviado:
+            enviar_notificacao_alerta_publico(alerta.id)
+            print(f"Disparando notificação para o alerta público: {alerta.titulo}")
+
+
+    def perform_update(self, serializer):
+        """
+        Atualiza um alerta existente, registra a ação e, se houver mudança relevante
+        para alertas públicos, dispara a notificação.
+        """
+        # Obter o estado original do objeto antes da atualização
+        original_alerta = self.get_object()
+
+        alerta = serializer.save() # Salva as alterações
+        registrar_acao(self.request.user, alerta, 'EDICAO', descricao=f'Alerta "{alerta.titulo}" editado.')
+
+        # [INTEGRAÇÃO BACKEND] Lógica para disparar envio de e-mail/notificação em caso de atualização
+        should_send_email = False
+
+        # Cenário 1: Alerta se tornou público e ainda não foi enviado
+        if (original_alerta.visibilidade == 'admin_only' and alerta.visibilidade == 'publico' and not alerta.email_enviado):
+            should_send_email = True
+        # Cenário 2: Alerta já era público, não foi enviado e o admin o marcou para enviar (ou re-enviar)
+        elif (alerta.visibilidade == 'publico' and not original_alerta.email_enviado and alerta.email_enviado):
+            should_send_email = True
+        # Cenário 3: Alerta já era público, não foi enviado e foi atualizado de alguma forma (re-tentar envio)
+        # Este cenário pode ser mais agressivo, dependendo da sua necessidade.
+        # Por enquanto, vamos focar nos cenários 1 e 2.
+        # elif (alerta.visibilidade == 'publico' and not alerta.email_enviado):
+        #     should_send_email = True
+
+        if should_send_email:
+            enviar_notificacao_alerta_publico(alerta.id)
+            print(f"Disparando notificação para o alerta público (atualizado): {alerta.titulo}")
+
+
+    def perform_destroy(self, instance):
+        """
+        Deleta um alerta e registra a ação.
+        """
+        registrar_acao(self.request.user, instance, 'DESATIVACAO', descricao=f'Alerta "{instance.titulo}" deletado.')
+        instance.delete()
+
+    @action(detail=False, methods=['get'], url_path='summary', permission_classes=[IsAuthenticated, EhAdmin])
+    def get_alert_summary(self, request):
+        """
+        Retorna um resumo das contagens de alertas para a tela de dashboard/alertas.
+        Inclui contagens de pendentes, alta prioridade e resolvidos.
+        """
+        # Alertas pendentes (não resolvidos e não expirados ou expirados mas ainda não marcados como resolvidos)
+        pendentes_queryset = AlertaSistema.objects.filter(resolvido=False)
+
+        total_pendentes = pendentes_queryset.count()
+        alta_prioridade = pendentes_queryset.filter(tipo__in=['critical', 'error']).count()
+        total_resolvidos = AlertaSistema.objects.filter(resolvido=True).count()
+
+        return Response({
+            'total_pendentes': total_pendentes,
+            'alta_prioridade': alta_prioridade,
+            'total_resolvidos': total_resolvidos,
+        }, status=status.HTTP_200_OK)
+
+    @action(detail=True, methods=['post'], url_path='mark-resolved', permission_classes=[IsAuthenticated, EhAdmin])
+    def mark_resolved(self, request, pk=None):
+        """
+        Marca um alerta específico como resolvido.
+        """
+        try:
+            alerta = self.get_object()
+            if alerta.resolvido:
+                return Response({'mensagem': 'Alerta já está resolvido.'}, status=status.HTTP_200_OK)
+
+            alerta.resolvido = True
+            alerta.resolvido_em = timezone.now()
+            alerta.save()
+            registrar_acao(request.user, alerta, 'EDICAO', descricao=f'Alerta "{alerta.titulo}" marcado como resolvido.')
+            return Response({'mensagem': 'Alerta marcado como resolvido com sucesso.'}, status=status.HTTP_200_OK)
+        except AlertaSistema.DoesNotExist:
+            return Response({'erro': 'Alerta não encontrado.'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({'erro': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class PublicAlertaSistemaListView(generics.ListAPIView):
+    """
+    View para listar alertas do sistema públicos e ativos.
+    Qualquer usuário autenticado pode acessar.
+    """
+    serializer_class = AlertaSistemaSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    search_fields = ['titulo', 'mensagem']
+    ordering_fields = ['data_publicacao', 'tipo']
+    ordering = ['-data_publicacao'] # Ordena pelos mais recentes primeiro
+
+    def get_queryset(self):
+        """
+        Retorna apenas alertas públicos, não resolvidos,
+        com data de publicação no passado/presente e data de expiração no futuro ou nula.
+        """
+        now = timezone.now()
+        queryset = AlertaSistema.objects.filter(
+            visibilidade='publico',
+            resolvido=False,
+            data_publicacao__lte=now
+        ).filter(
+            Q(expira_em__isnull=True) | Q(expira_em__gt=now)
+        ).order_by('-data_publicacao') # CORREÇÃO: Adicionado order_by explícito para consistência
+        return queryset

@@ -7,10 +7,17 @@ For more information on this file, see
 https://docs.djangoproject.com/en/5.2/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/5.2/ref/settings/#f-list-of-settings
+https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
+import os
+from dotenv import load_dotenv # Importar para carregar variáveis de ambiente
+
+# Carrega as variáveis de ambiente do arquivo .env
+# Certifique-se de que o arquivo .env esteja na raiz do seu projeto (ao lado de manage.py)
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +27,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-cz@z3!zy40$nhe+az@@a3e*%cg4)c67^^9+l*2h^87=p%clv=7'
+# RECOMENDADO: Obtenha a SECRET_KEY de uma variável de ambiente em produção.
+# Crie uma variável no seu .env: DJANGO_SECRET_KEY='sua_chave_secreta_aqui'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-cz@z3!zy40$nhe+az@@a3e*%cg4)c67^^9+l*2h^87=p%clv=7')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# RECOMENDADO: Em produção, defina DEBUG para False.
+# Crie uma variável no seu .env: DJANGO_DEBUG=False
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = ['*']
-# isso   ['*'] faz o servidor aceitar qualuqer ip
+# RECOMENDADO: Em produção, defina ALLOWED_HOSTS para os domínios do seu site.
+# '*' é aceitável apenas para desenvolvimento local.
+# Crie uma variável no seu .env: DJANGO_ALLOWED_HOSTS='127.0.0.1,localhost,192.168.100.235'
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost,10.246.108.163,192.168.100.235').split(',')
+# Remove strings vazias que podem surgir de um split com vírgula extra no final
+ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
 
 
 # Application definition
@@ -38,34 +53,43 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'brivo',    # App customizado para usuários e livros
-    'biblioteca',    # Seu app principal
-    'corsheaders',
-    'rest_framework',    # Adicionar Django Rest Framework
-    'django_filters',
+    'brivo',             # Seu app customizado para usuários e livros
+    # 'biblioteca',      # Se 'biblioteca' for um app Django e não apenas o nome do projeto
+    'corsheaders',       # Adicionado para CORS
+    'rest_framework',    # Adicionado Django Rest Framework
+    'rest_framework_simplejwt', # Importante para JWT
+    'django_filters',    # Para filtros do DRF
 ]
 
 
 # biblioteca/settings.py
-AUTH_USER_MODEL = 'brivo.Usuario'
+AUTH_USER_MODEL = 'brivo.Usuario' # Certifique-se de que 'brivo' é o nome do seu app
 
 
-CORS_ALLOW_ALL_ORIGINS = True    # Para teste local
-
+# Configurações de CORS
+# ATENÇÃO: CORS_ALLOW_ALL_ORIGINS = True é para desenvolvimento.
+# Em produção, use CORS_ALLOWED_ORIGINS ou CORS_ALLOWED_ORIGIN_REGEXES.
+CORS_ALLOW_ALL_ORIGINS = True
+# Exemplo para produção:
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://127.0.0.1:3000",
+#     "https://seu-dominio-frontend.com",
+# ]
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware', # Deve vir antes de CommonMiddleware
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'biblioteca.urls'
+ROOT_URLCONF = 'biblioteca.urls' # Mantido 'biblioteca' conforme seu arquivo
 
 TEMPLATES = [
     {
@@ -74,6 +98,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug', # Adicionado de volta para DEBUG
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -87,14 +112,50 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny', # <-- ALTERADO PARA AllowAny
+        'rest_framework.permissions.AllowAny', # Permissões são gerenciadas nas Views
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10, # Exemplo: 10 itens por página
 }
 
+# --- Configurações do Django REST Framework Simple JWT ---
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60), # Tempo de vida do token de acesso (ajustado para 60 minutos, comum)
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=365),  # Tempo de vida do token de refresh: 1 ano
+
+    'ROTATE_REFRESH_TOKENS': True, # Rotaciona o refresh token a cada uso para maior segurança
+    'BLACKLIST_AFTER_ROTATION': True, # Invalida o refresh token antigo após a rotação
+    'UPDATE_LAST_LOGIN': True, # Atualiza o campo last_login do usuário no login
+
+    'ALGORITHM': 'HS256',
+    'SIGNING_KEY': SECRET_KEY,
+    'VERIFYING_KEY': None,
+    'AUDIENCE': None,
+    'ISSUER': None,
+    'JWK_URL': None,
+    'LEEWAY': 0,
+
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+    'USER_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
+
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM': 'token_type',
+    'TOKEN_USER_CLASS': 'rest_framework_simplejwt.models.TokenUser',
+
+    'JTI_CLAIM': 'jti',
+
+    # Configurações de Sliding Tokens (se não usa, pode remover, mas mantive por segurança)
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+}
+# -----------------------------------------------------------------------------
 
 
-WSGI_APPLICATION = 'biblioteca.wsgi.application'
+WSGI_APPLICATION = 'biblioteca.wsgi.application' # Mantido 'biblioteca' conforme seu arquivo
 
 
 # Database
@@ -130,35 +191,90 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br' # Alterado para Português (Brasil)
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo' # Alterado para o fuso horário de São Paulo
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = True # Usar fusos horários (essencial para timezone.now())
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Onde os arquivos estáticos serão coletados em produção
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import os
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Configurações de envio de e-mail via Gmail
+# -----------------------------------------------------------------------------
+# Configurações de envio de e-mail (ATUALIZADO PARA VARIÁVEIS DE AMBIENTE)
+# -----------------------------------------------------------------------------
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'guilherme1920x@gmail.com'             # <-- aqui você coloca o SEU GMAIL
-EMAIL_HOST_PASSWORD = 'yqeg eser phpo kqhh'             # <-- aqui você cola a senha de app
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() == 'true'
+# RECOMENDADO: Use variáveis de ambiente para suas credenciais de e-mail
+# Crie as seguintes variáveis no seu arquivo .env:
+# EMAIL_HOST_USER='seu_email@gmail.com'
+# EMAIL_HOST_PASSWORD='sua_senha_de_app_de_16_caracteres'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'seu_email@example.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'sua_senha_de_app_do_email')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'Biblioteca Escolar <noreply@example.com>')
+
+# -----------------------------------------------------------------------------
+# Configuração de Logging
+# -----------------------------------------------------------------------------
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO', # Nível mínimo de log para o console
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'level': 'INFO', # Nível mínimo de log para o arquivo
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR / 'django_debug.log', # Caminho para o arquivo de log
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO', # Logs do Django
+            'propagate': False,
+        },
+        'brivo': { # Logger para o seu aplicativo 'brivo'
+            'handlers': ['console', 'file'],
+            'level': 'INFO', # Nível de log para as suas funções utilitárias
+            'propagate': False,
+        },
+        '': { # Logger raiz (captura logs de outras bibliotecas/módulos)
+            'handlers': ['console', 'file'],
+            'level': 'WARNING', # Nível padrão para outros logs
+            'propagate': False,
+        },
+    },
+}

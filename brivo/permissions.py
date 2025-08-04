@@ -1,5 +1,3 @@
-# brivo/permissions.py
-
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 class EhAdmin(BasePermission):
@@ -23,8 +21,8 @@ class EhProfessorOuAdmin(BasePermission):
 class EhDonoOuAdmin(BasePermission):
     """
     Permite acesso se o usuário for o dono do objeto OU um administrador.
-    Esta permissão é flexível para objetos que têm um campo 'usuario' (como Emprestimo, Reserva)
-    e para o próprio objeto Usuario (onde o obj é o request.user).
+    Esta permissão é flexível para objetos que têm um campo 'usuario' (como Emprestimo)
+    ou um campo 'aluno' (como Reserva), e para o próprio objeto Usuario.
     """
     def has_permission(self, request, view):
         # O usuário deve estar autenticado para qualquer verificação de objeto
@@ -36,12 +34,18 @@ class EhDonoOuAdmin(BasePermission):
             return True
         
         # Se o objeto é uma instância de Usuario, verifica se é o próprio usuário logado
-        if isinstance(obj, request.user.__class__): # Compara o tipo do objeto com o tipo do usuário
-            return obj == request.user # Verifica se o objeto é o próprio usuário logado
+        if isinstance(obj, request.user.__class__):
+            return obj == request.user
         
-        # Para outros objetos (como Emprestimo, Reserva) que têm um atributo 'usuario'
-        # Verifica se o atributo 'usuario' do objeto corresponde ao usuário logado
-        return getattr(obj, 'usuario', None) == request.user
+        # Tenta verificar se o usuário é o dono através do campo 'usuario' (para Emprestimo)
+        if hasattr(obj, 'usuario') and obj.usuario == request.user:
+            return True
+            
+        # Tenta verificar se o usuário é o dono através do campo 'aluno' (para Reserva)
+        if hasattr(obj, 'aluno') and obj.aluno == request.user:
+            return True
+            
+        return False # Nenhuma das condições acima foi atendida
 
 
 class SomenteLeituraOuAdmin(BasePermission):
