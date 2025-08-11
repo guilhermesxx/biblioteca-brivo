@@ -1,0 +1,1643 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-07-21T03:12:13.165Z",
+      "user": 11,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Empr\u00e9stimo de O Alquimista para lebinha",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-07-22T00:23:14.400Z",
+      "user": 11,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "[Cr\u00edtico] ola (Pendente - Apenas para Administrador)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-07-22T00:25:02.349Z",
+      "user": 11,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "[Cr\u00edtico] sdaaaaaaaa (Pendente - Apenas para Administrador)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-07-27T01:58:21.152Z",
+      "user": 11,
+      "content_type": 13,
+      "object_id": "4",
+      "object_repr": "[Aviso] TESTANDO (Pendente - P\u00fablico (para Alunos e Professores))",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-07-27T01:59:24.093Z",
+      "user": 11,
+      "content_type": 13,
+      "object_id": "5",
+      "object_repr": "[Erro] TESTE (Pendente - Apenas para Administrador)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-07-27T01:59:49.046Z",
+      "user": 11,
+      "content_type": 13,
+      "object_id": "6",
+      "object_repr": "[Informa\u00e7\u00e3o] TESTANDO (Pendente - Apenas para Administrador)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4isl9y5apoiyz6mz2j4wppgc2dxi1hnt",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1uXnog:sVA2oOT82rO1f9vMRgf7ImzPF_7-e_e2wq8ZnmtI3Ws",
+      "expire_date": "2025-07-18T21:19:30.699Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "59w09o5tqsmmbzv19ivsikkmr4ydyp4j",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1uZhMY:i1cIzWUZ3B3CGkpZGws76Bywql4I3Lk2EMvukJmkexE",
+      "expire_date": "2025-07-24T02:50:18.518Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6vtgl485vdy08ojc3r5ce9tzfgxn4tew",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1uZhVx:ACMakI0ZwGF4nRN-Mm9Hh1woZdO-yk9IqRhQyWYH-VI",
+      "expire_date": "2025-07-24T03:00:01.287Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "d3zc47lf0wefy307zhw1r05a5g97tuyw",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1uXoq5:X3GGtZXKV4NawOuXOTaVivoGJ-ItHhxzjyNUJW-Ip64",
+      "expire_date": "2025-07-18T22:25:01.904Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "dgyyaupr453haccqbngp5d5rc29wxtcg",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1uZfup:9EXzoUlstT5WXi6bdXb7lli6DlRoFd7lngQuW_T6nfo",
+      "expire_date": "2025-07-24T01:17:35.979Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ewv6ubevso8dnyvth82t6aq37z4o6jji",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1ufqdq:qducXriLWweS9CjGpO-GJfqrn6y4Pqv8PFeCR8fbjS8",
+      "expire_date": "2025-08-10T01:57:34.663Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "mrh979h7uz76rmo9bfvhbzp6gxdk89u6",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnadbAtSnrOYO3H4ACypXyqiLvjSCmgfTPzNpNoXUpa5zylUc3FAJjT78gkr1x3ok-qj2al1WUa2e6KPehsb03z-3q4fweF5tJrYYwOCTSEu3fE5HJ0wsrxTFlRxaPP5KMCIMiAQbrBSJGkBwOazxctkDkI:1uWNDw:EmvGk_ZVhSdOHGrSRF5zQehjgb_mLzzzJa_jnwxQ19I",
+      "expire_date": "2025-07-14T22:43:40.352Z"
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 1,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "CRIACAO",
+      "data": "2025-06-24T10:38:22.265Z",
+      "descricao": "Livro criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 2,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "EDICAO",
+      "data": "2025-06-24T10:38:41.780Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 3,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "EDICAO",
+      "data": "2025-06-24T10:38:46.029Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 4,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "DESATIVACAO",
+      "data": "2025-06-24T10:39:11.414Z",
+      "descricao": "Livro desativado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 5,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 13,
+      "acao": "CRIACAO",
+      "data": "2025-06-24T13:44:00.592Z",
+      "descricao": "Livro criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 6,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:40:54.715Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 7,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:42:02.953Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 8,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 1,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:44:56.628Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 9,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 3,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:45:45.670Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 10,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 4,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:46:33.863Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 11,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 5,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:47:11.457Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 12,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 7,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:47:24.768Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 13,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 8,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:47:44.002Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 14,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 9,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:48:00.981Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 15,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 10,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:48:24.035Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 16,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 11,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:48:37.934Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 17,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:48:46.837Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 18,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 1,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:51:09.918Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 19,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 4,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:54:16.130Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 20,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 9,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:56:11.108Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 21,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 10,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:57:08.445Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 22,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 11,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:57:57.540Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 23,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 12,
+      "acao": "EDICAO",
+      "data": "2025-06-28T01:58:35.150Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 24,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 13,
+      "acao": "EDICAO",
+      "data": "2025-06-28T02:00:07.122Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 25,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Livro",
+      "objeto_id": 3,
+      "acao": "EDICAO",
+      "data": "2025-06-28T02:01:47.745Z",
+      "descricao": "Livro editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 26,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 13,
+      "acao": "CRIACAO",
+      "data": "2025-07-01T01:35:17.280Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 27,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 14,
+      "acao": "CRIACAO",
+      "data": "2025-07-01T01:39:54.676Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 28,
+    "fields": {
+      "usuario": 13,
+      "objeto_tipo": "Livro",
+      "objeto_id": 14,
+      "acao": "CRIACAO",
+      "data": "2025-07-01T01:46:11.563Z",
+      "descricao": "Livro criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 29,
+    "fields": {
+      "usuario": 13,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 13,
+      "acao": "EDICAO",
+      "data": "2025-07-01T23:51:24.397Z",
+      "descricao": "Usu\u00e1rio editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 30,
+    "fields": {
+      "usuario": 13,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 13,
+      "acao": "EDICAO",
+      "data": "2025-07-01T23:51:28.622Z",
+      "descricao": "Usu\u00e1rio editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 31,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 11,
+      "acao": "EDICAO",
+      "data": "2025-07-02T20:04:54.576Z",
+      "descricao": "Usu\u00e1rio editado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 32,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 15,
+      "acao": "CRIACAO",
+      "data": "2025-07-04T21:02:31.083Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 33,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 16,
+      "acao": "CRIACAO",
+      "data": "2025-07-10T04:47:22.776Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 34,
+    "fields": {
+      "usuario": null,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 18,
+      "acao": "CRIACAO",
+      "data": "2025-07-13T02:17:01.554Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 35,
+    "fields": {
+      "usuario": 18,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 19,
+      "acao": "CRIACAO",
+      "data": "2025-07-13T02:27:39.933Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 36,
+    "fields": {
+      "usuario": null,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 20,
+      "acao": "CRIACAO",
+      "data": "2025-07-13T02:33:56.275Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 37,
+    "fields": {
+      "usuario": null,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 21,
+      "acao": "CRIACAO",
+      "data": "2025-07-15T00:42:50.023Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 38,
+    "fields": {
+      "usuario": 15,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 5,
+      "acao": "CRIACAO",
+      "data": "2025-07-18T04:18:01.323Z",
+      "descricao": "Reserva criada."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 39,
+    "fields": {
+      "usuario": null,
+      "objeto_tipo": "Usuario",
+      "objeto_id": 22,
+      "acao": "CRIACAO",
+      "data": "2025-07-18T04:30:57.288Z",
+      "descricao": "Usu\u00e1rio criado."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 40,
+    "fields": {
+      "usuario": 15,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 6,
+      "acao": "CRIACAO",
+      "data": "2025-07-18T06:11:38.287Z",
+      "descricao": "Reserva criada."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 41,
+    "fields": {
+      "usuario": 16,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 7,
+      "acao": "CRIACAO",
+      "data": "2025-07-18T20:43:09.278Z",
+      "descricao": "Reserva criada."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 42,
+    "fields": {
+      "usuario": 16,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 8,
+      "acao": "CRIACAO",
+      "data": "2025-07-18T20:43:17.698Z",
+      "descricao": "Reserva criada."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 43,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 8,
+      "acao": "EDICAO",
+      "data": "2025-07-20T00:05:26.491Z",
+      "descricao": "Reserva do livro Dom Casmurro efetivada como empr\u00e9stimo."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 44,
+    "fields": {
+      "usuario": 11,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 7,
+      "acao": "DESATIVACAO",
+      "data": "2025-07-20T00:05:52.056Z",
+      "descricao": "Reserva do livro O Senhor dos An\u00e9is cancelada."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 45,
+    "fields": {
+      "usuario": 16,
+      "objeto_tipo": "Reserva",
+      "objeto_id": 9,
+      "acao": "CRIACAO",
+      "data": "2025-07-21T02:54:56.822Z",
+      "descricao": "Reserva criada."
+    }
+  },
+  {
+    "model": "brivo.historicoacao",
+    "pk": 46,
+    "fields": {
+      "usuario": 23,
+      "objeto_tipo": "AlertaSistema",
+      "objeto_id": 1,
+      "acao": "EDICAO",
+      "data": "2025-07-21T03:23:24.780Z",
+      "descricao": "Alerta \"Livro: O Alquimista - Esgotado\" marcado como resolvido."
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$how2pqW4cD2KLtIOijDVI4$LOuhz6FALT4cyNbLvQ+FxQ9T3KhvLD150WmgNPPIYeQ=",
+      "last_login": null,
+      "ra": "123456",
+      "nome": "Maria Souza Atualizada",
+      "email": "maria@example.com",
+      "turma": "3DS",
+      "tipo": "aluno",
+      "data_cadastro": "2025-05-13T11:06:39.468Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$M7fjgQwE5D8mkWmskpR3K6$doxTthKTOQa6QxCu/xT2DSn7fSeZz5mlR9pGKxGUyBQ=",
+      "last_login": null,
+      "ra": "20231234B",
+      "nome": "Aluno Teste Atualizado",
+      "email": "aluno1novo@email.com",
+      "turma": "3B",
+      "tipo": "aluno",
+      "data_cadastro": "2025-05-14T11:51:47.996Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$i2qqhZmCUwmjB9GINyPRLW$PYPk7VUYuT0Mb2+hORa8FqfuISYJihWAzvZBdaWNwj8=",
+      "last_login": null,
+      "ra": "123465",
+      "nome": "Maria Soza",
+      "email": "marisa123@example.com",
+      "turma": "3DS",
+      "tipo": "aluno",
+      "data_cadastro": "2025-05-14T11:57:37.983Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$9K1kYFRdPt09sudmIMHXCQ$NJeA8VmOJ3mGr5NYo8OtvkrnGxj9TgzD6ud7N1MtaXw=",
+      "last_login": null,
+      "ra": "20259876",
+      "nome": "Carlos Lima",
+      "email": "carlos.lima@escola.com",
+      "turma": "2C",
+      "tipo": "professor",
+      "data_cadastro": "2025-05-15T01:25:10.593Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$xFzABxYRiVBWWaBr7wzhoz$l4PaL7ggutK7dgh5TfR49ogITdMjeXDGK+fMcG0rXOs=",
+      "last_login": null,
+      "ra": "20251234",
+      "nome": "Ana Souza",
+      "email": "ana.souza@email.com",
+      "turma": "3A",
+      "tipo": "aluno",
+      "data_cadastro": "2025-05-15T01:31:04.646Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$UPje3qfj13MofDRlLTj3of$57PYxuy1KpXyMkfAKTfUOgfk8enrDwYvfmqUOtZLksU=",
+      "last_login": null,
+      "ra": "789012",
+      "nome": "Fernanda Lima",
+      "email": "fernanda.lima@escola.com",
+      "turma": "3C",
+      "tipo": "professor",
+      "data_cadastro": "2025-05-15T10:47:09.185Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$rOI34eYDcXgPD6QICUmMsX$7GdtJVCw4k/oFiKfi3oKEFmvVGSVGcMjzCaXFif2aYY=",
+      "last_login": null,
+      "ra": "9999",
+      "nome": "Maria",
+      "email": "maria@teste.com",
+      "turma": "3B",
+      "tipo": "aluno",
+      "data_cadastro": "2025-05-27T15:09:05.143Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$2kuJxBgM1P1zuYNhr37CFd$2IlykMRiDSJEmrN8LmmEtgwbldpHvgacqs0FhjLRPNc=",
+      "last_login": null,
+      "ra": "1001",
+      "nome": "Jo\u00e3o da Silva",
+      "email": "joao@example.com",
+      "turma": "2A",
+      "tipo": "aluno",
+      "data_cadastro": "2025-05-27T15:10:52.964Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$wBBDnoTt9aqfDq2IynN3Ix$NqUGtjIqqBPrJBCx9l61CZrSOZEDLwwyPnyvTB6+B0U=",
+      "last_login": "2025-07-28T01:03:05.856Z",
+      "ra": "1103338989",
+      "nome": "guilherme",
+      "email": "guilherme1920x@gmail.com",
+      "turma": "2ds",
+      "tipo": "admin",
+      "data_cadastro": "2025-05-28T21:30:41.825Z",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$ZjtLYbv06k2LtmCLK73B3W$uNgiUhheOOhz3SvumZlW+nyTkY46vCLMlnlhJcCevug=",
+      "last_login": null,
+      "ra": "11033379813",
+      "nome": "guilherme",
+      "email": "contaescola338@gmail.com",
+      "turma": "ADM",
+      "tipo": "admin",
+      "data_cadastro": "2025-06-28T02:09:02.886Z",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$mVpZ0b5MpRpWNuVH1U6IIb$x0FGMA1M2bjhf9Qh+y/3MjcDoIRUAKDY7sD3nXRCA8A=",
+      "last_login": null,
+      "ra": "000001",
+      "nome": "Admin Master",
+      "email": "admin@exemplo.com",
+      "turma": "ADM",
+      "tipo": "admin",
+      "data_cadastro": "2025-07-01T01:35:17.256Z",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$ODKaCMVXbxfOcZMSMHAOyA$y2t00XKPB2xGOIKy5h4PtVLVQuNrFjbNaJtua0JiXHA=",
+      "last_login": null,
+      "ra": "000002",
+      "nome": "Professora Clara",
+      "email": "prof.clara@exemplo.com",
+      "turma": "3B",
+      "tipo": "professor",
+      "data_cadastro": "2025-07-01T01:39:54.670Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$aboNjChgL25plhbziWYTvs$XIk91C6Fhyg4asp9lTCJtT6cYiNVayO/WoFmRVPvohk=",
+      "last_login": "2025-07-28T01:03:50.960Z",
+      "ra": "0023312",
+      "nome": "Bolsonaro",
+      "email": "lula11@gmail.com",
+      "turma": "3b",
+      "tipo": "aluno",
+      "data_cadastro": "2025-07-04T21:02:31.045Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$9ILdgqtXgajxqRDMASIWxs$flCM96kMhXILOO5rm8cM+MkGIKwikl8YafV9nXDZ0N0=",
+      "last_login": "2025-07-28T01:12:30.423Z",
+      "ra": "00255312",
+      "nome": "lebinha",
+      "email": "bolsominion1@gmail.com",
+      "turma": "professor",
+      "tipo": "professor",
+      "data_cadastro": "2025-07-10T04:47:22.713Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 17,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$6QzUjRbfw9ZQ6phi2cJT0V$167AukpDhhF78zJvcmApZktLLCOytjay24gCMXYz1l8=",
+      "last_login": null,
+      "ra": "12932312",
+      "nome": "ivaldo",
+      "email": "ivaldo12@gmail.com",
+      "turma": "3d",
+      "tipo": "aluno",
+      "data_cadastro": "2025-07-13T02:03:36.500Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 18,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$rvjULBBeESCQ8OaPShT4CU$EPWSfx5Jj9iWWYESAvIzdvQ6b6ts0C4DNN61u94MWUw=",
+      "last_login": null,
+      "ra": "2112132",
+      "nome": "dilma",
+      "email": "dilma13@gmail.com",
+      "turma": "prof",
+      "tipo": "aluno",
+      "data_cadastro": "2025-07-13T02:17:01.537Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 19,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$xJ3HJBUq74JmLiNxQNuZzV$A6NS0FLIuYFvZlXVZiwY4qtU95MM2y/EoS8Qx3k0j1E=",
+      "last_login": null,
+      "ra": "21121323",
+      "nome": "fatima",
+      "email": "fatima23@gmail.com",
+      "turma": "2d",
+      "tipo": "aluno",
+      "data_cadastro": "2025-07-13T02:27:39.920Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 20,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$B2O9zm1Xhh5O6pjZSEW847$9QObVoXvk1ds3vLNn9yU7OxRv9EnljmXYigJH7/qzqY=",
+      "last_login": null,
+      "ra": "1324324234",
+      "nome": "fernando",
+      "email": "fernandoz32@gmail.com",
+      "turma": "admin",
+      "tipo": "admin",
+      "data_cadastro": "2025-07-13T02:33:56.268Z",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 21,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$OKoj844ncMLQ57iHDhBTO1$ZXuCJYeNUSlPD9v+gr1aH7cGZ3e6RK+sD0+hTC1dJUs=",
+      "last_login": null,
+      "ra": "13283223",
+      "nome": "alexandre de morais",
+      "email": "alexandre13@gmail.com",
+      "turma": "professor",
+      "tipo": "professor",
+      "data_cadastro": "2025-07-15T00:42:50.004Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 22,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$ktJ3nh7DsMWJc8AEHSJgsx$t+KcJA0kfqRpPdfdZXkkGPg36yuyJoVFeKfTYWc4JWE=",
+      "last_login": null,
+      "ra": "20323231",
+      "nome": "marleide",
+      "email": "marleide12@gmail.com",
+      "turma": "professor",
+      "tipo": "professor",
+      "data_cadastro": "2025-07-18T04:30:57.273Z",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.usuario",
+    "pk": 23,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$MzkIKZcXGPTph5gUPuoA6u$Xb8xxs5Cw7RTKIC0FN2MXLdWlbI8Lb4R5iQyo3BCKgw=",
+      "last_login": "2025-07-21T02:39:18.291Z",
+      "ra": "1389234234",
+      "nome": "guilherme",
+      "email": "guizin2339@gmail.com",
+      "turma": "admin",
+      "tipo": "admin",
+      "data_cadastro": "2025-07-21T02:36:21.713Z",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "ativo": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 1,
+    "fields": {
+      "titulo": "Mem\u00f3rias P\u00f3stumas de Br\u00e1s Cubas",
+      "autor": "Machado de Assis",
+      "editora": "Penguin-Companhia",
+      "data_publicacao": "1881-01-01",
+      "numero_paginas": 198,
+      "tipo": "fisico",
+      "genero": "Romance",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/91BsZhxCRjL.jpg",
+      "descricao": "Narrativa inovadora de um defunto-autor que conta sua vida e reflex\u00f5es sobre a exist\u00eancia.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 3,
+    "fields": {
+      "titulo": "Dom Casmurro",
+      "autor": "Machado de Assis",
+      "editora": "Editora \u00c1tica",
+      "data_publicacao": "1899-01-01",
+      "numero_paginas": 256,
+      "tipo": "fisico",
+      "genero": "Romance",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://images.tcdn.com.br/img/img_prod/783226/dom_casmurro_1115_1_20200630174117.png",
+      "descricao": "Cl\u00e1ssico da literatura brasileira que explora temas como ci\u00fames e d\u00favida na narrativa de Bentinho.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 4,
+    "fields": {
+      "titulo": "O Alquimista",
+      "autor": "Paulo Coelho",
+      "editora": "Rocco",
+      "data_publicacao": "1988-05-01",
+      "numero_paginas": 197,
+      "tipo": "fisico",
+      "genero": "Fic\u00e7\u00e3o / Filosofia",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 1,
+      "capa": "https://m.media-amazon.com/images/I/81slUinjTlS._SY385_.jpg",
+      "descricao": "A jornada de Santiago em busca do seu destino e da realiza\u00e7\u00e3o pessoal, um best-seller mundial.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 5,
+    "fields": {
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "editora": "Companhia das Letras",
+      "data_publicacao": "1949-06-08",
+      "numero_paginas": 328,
+      "tipo": "fisico",
+      "genero": "Distopia",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://images-na.ssl-images-amazon.com/images/I/71kxa1-0mfL.jpg",
+      "descricao": "Um romance dist\u00f3pico que retrata um futuro totalit\u00e1rio onde o governo vigia todos os aspectos da vida.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 7,
+    "fields": {
+      "titulo": "O Hobbit",
+      "autor": "J.R.R. Tolkien",
+      "editora": "HarperCollins",
+      "data_publicacao": "1937-09-21",
+      "numero_paginas": 310,
+      "tipo": "fisico",
+      "genero": "Fantasia",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/91M9xPIf10L.jpg",
+      "descricao": "A aventura de Bilbo Bolseiro em uma jornada \u00e9pica pela Terra-m\u00e9dia.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 8,
+    "fields": {
+      "titulo": "O Senhor dos An\u00e9is",
+      "autor": "J.R.R. Tolkien",
+      "editora": "Martins Fontes",
+      "data_publicacao": "1954-07-29",
+      "numero_paginas": 1178,
+      "tipo": "fisico",
+      "genero": "Fantasia \u00c9pica",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://upload.wikimedia.org/wikipedia/en/8/8e/The_Fellowship_of_the_Ring_cover.gif",
+      "descricao": "Uma das maiores obras de fantasia \u00e9pica j\u00e1 escritas, que narra a luta para destruir o Um Anel.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 9,
+    "fields": {
+      "titulo": "O Pequeno Pr\u00edncipe",
+      "autor": "Antoine de Saint-Exup\u00e9ry",
+      "editora": "Agir",
+      "data_publicacao": "1943-04-06",
+      "numero_paginas": 96,
+      "tipo": "fisico",
+      "genero": "Literatura Infantil",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://img.travessa.com.br/livro/GR/af/af8b1452-7d36-49b8-bd9f-d26efae179a2.jpg",
+      "descricao": "Uma f\u00e1bula po\u00e9tica e filos\u00f3fica sobre a vis\u00e3o do mundo e as rela\u00e7\u00f5es humanas.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 10,
+    "fields": {
+      "titulo": "Cem Anos de Solid\u00e3o",
+      "autor": "Gabriel Garc\u00eda M\u00e1rquez",
+      "editora": "Record",
+      "data_publicacao": "1967-05-30",
+      "numero_paginas": 417,
+      "tipo": "fisico",
+      "genero": "Realismo M\u00e1gico",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/819vfB2BjyL._SY385_.jpg",
+      "descricao": "A saga da fam\u00edlia Buend\u00eda e a hist\u00f3ria da m\u00edtica cidade de Macondo.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 11,
+    "fields": {
+      "titulo": "O C\u00f3digo Da Vinci",
+      "autor": "Dan Brown",
+      "editora": "Sextante",
+      "data_publicacao": "2003-03-18",
+      "numero_paginas": 454,
+      "tipo": "fisico",
+      "genero": "Suspense",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/41aVasi7pML._SY445_SX342_.jpg",
+      "descricao": "Um thriller de mist\u00e9rio que mistura hist\u00f3ria, arte e conspira\u00e7\u00f5es.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 12,
+    "fields": {
+      "titulo": "Mem\u00f3rias P\u00f3stumas de Br\u00e1s Cubas",
+      "autor": "Machado de Assis",
+      "editora": "Penguin-Companhia",
+      "data_publicacao": "1881-01-01",
+      "numero_paginas": 198,
+      "tipo": "fisico",
+      "genero": "Romance",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/51FwHerjYKL._SY445_SX342_.jpg",
+      "descricao": "Narrativa inovadora de um defunto-autor que conta sua vida e reflex\u00f5es sobre a exist\u00eancia.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 13,
+    "fields": {
+      "titulo": "Harry Potter e a Pedra Filosofal",
+      "autor": "J.K. Rowling",
+      "editora": "Rocco",
+      "data_publicacao": "1997-06-26",
+      "numero_paginas": 223,
+      "tipo": "fisico",
+      "genero": "Fantasia",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/41897yAI4LL._SY445_SX342_.jpg",
+      "descricao": "O in\u00edcio da saga do jovem bruxo Harry Potter, que descobre seu legado m\u00e1gico e enfrenta desafios em Hogwarts.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.livro",
+    "pk": 14,
+    "fields": {
+      "titulo": "Grande Sert\u00e3o: Vereda",
+      "autor": "Jo\u00e3o Guimar\u00e3es Rosa",
+      "editora": "Jos\u00e9 Olympio",
+      "data_publicacao": "2025-07-01",
+      "numero_paginas": 496,
+      "tipo": "fisico",
+      "genero": "literatura",
+      "quantidade_total": 1,
+      "quantidade_emprestada": 0,
+      "capa": "https://m.media-amazon.com/images/I/91TxMwdCA8L._UF1000,1000_QL80_.jpg",
+      "descricao": "Obra-prima da literatura brasileira, um romance que explora a complexidade do sert\u00e3o e da alma humana.",
+      "ativo": true
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 2,
+    "fields": {
+      "livro": 5,
+      "aluno": 11,
+      "data_reserva": "2025-05-30T12:32:30.198Z",
+      "data_retirada_prevista": null,
+      "hora_retirada_prevista": null,
+      "status": "na_fila",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 4,
+    "fields": {
+      "livro": 4,
+      "aluno": 11,
+      "data_reserva": "2025-06-27T18:38:51.080Z",
+      "data_retirada_prevista": null,
+      "hora_retirada_prevista": null,
+      "status": "na_fila",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 5,
+    "fields": {
+      "livro": 14,
+      "aluno": 15,
+      "data_reserva": "2025-07-18T04:18:01.317Z",
+      "data_retirada_prevista": "2025-07-22",
+      "hora_retirada_prevista": "09:00:00",
+      "status": "aguardando_retirada",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 6,
+    "fields": {
+      "livro": 13,
+      "aluno": 15,
+      "data_reserva": "2025-07-18T06:11:38.281Z",
+      "data_retirada_prevista": "2025-07-22",
+      "hora_retirada_prevista": "14:00:00",
+      "status": "aguardando_retirada",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 7,
+    "fields": {
+      "livro": 8,
+      "aluno": 16,
+      "data_reserva": "2025-07-18T20:43:09.274Z",
+      "data_retirada_prevista": "2025-07-23",
+      "hora_retirada_prevista": "14:00:00",
+      "status": "cancelada",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 8,
+    "fields": {
+      "livro": 3,
+      "aluno": 16,
+      "data_reserva": "2025-07-18T20:43:17.690Z",
+      "data_retirada_prevista": "2025-07-29",
+      "hora_retirada_prevista": "15:00:00",
+      "status": "emprestado",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.reserva",
+    "pk": 9,
+    "fields": {
+      "livro": 5,
+      "aluno": 16,
+      "data_reserva": "2025-07-21T02:54:56.819Z",
+      "data_retirada_prevista": "2025-07-25",
+      "hora_retirada_prevista": "16:00:00",
+      "status": "aguardando_retirada",
+      "notificado_em": null
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 2,
+    "fields": {
+      "livro": 3,
+      "usuario": 2,
+      "data_emprestimo": "2025-05-15T01:46:36.869Z",
+      "data_devolucao": "2025-05-27T15:04:11.191Z",
+      "devolvido": true
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 3,
+    "fields": {
+      "livro": 1,
+      "usuario": 1,
+      "data_emprestimo": "2025-05-15T11:00:06.343Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 4,
+    "fields": {
+      "livro": 1,
+      "usuario": 1,
+      "data_emprestimo": "2025-05-15T11:41:39.492Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 5,
+    "fields": {
+      "livro": 4,
+      "usuario": 2,
+      "data_emprestimo": "2025-05-15T11:50:51.342Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 6,
+    "fields": {
+      "livro": 1,
+      "usuario": 3,
+      "data_emprestimo": "2025-05-27T14:49:50.420Z",
+      "data_devolucao": "2025-05-27T15:00:00Z",
+      "devolvido": true
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 7,
+    "fields": {
+      "livro": 7,
+      "usuario": 9,
+      "data_emprestimo": "2025-05-27T15:09:05.195Z",
+      "data_devolucao": "2025-05-27T15:09:05.217Z",
+      "devolvido": true
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 8,
+    "fields": {
+      "livro": 8,
+      "usuario": 10,
+      "data_emprestimo": "2025-05-27T15:10:53.027Z",
+      "data_devolucao": "2025-05-27T15:10:53.047Z",
+      "devolvido": true
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 9,
+    "fields": {
+      "livro": 10,
+      "usuario": 11,
+      "data_emprestimo": "2025-05-30T11:32:31.341Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 10,
+    "fields": {
+      "livro": 8,
+      "usuario": 11,
+      "data_emprestimo": "2025-05-30T11:33:06.413Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 11,
+    "fields": {
+      "livro": 5,
+      "usuario": 11,
+      "data_emprestimo": "2025-05-30T11:52:36.989Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 12,
+    "fields": {
+      "livro": 3,
+      "usuario": 16,
+      "data_emprestimo": "2025-07-20T00:05:26.472Z",
+      "data_devolucao": null,
+      "devolvido": false
+    }
+  },
+  {
+    "model": "brivo.emprestimo",
+    "pk": 13,
+    "fields": {
+      "livro": 4,
+      "usuario": 16,
+      "data_emprestimo": "2025-07-21T03:12:13.164Z",
+      "data_devolucao": null,
+      "devolvido": true
+    }
+  },
+  {
+    "model": "brivo.alertasistema",
+    "pk": 1,
+    "fields": {
+      "titulo": "Livro: O Alquimista - Esgotado",
+      "mensagem": "O livro 'O Alquimista' n\u00e3o possui exemplares dispon\u00edveis para empr\u00e9stimo.",
+      "tipo": "critical",
+      "data_criacao": "2025-07-21T03:12:13.160Z",
+      "resolvido": true,
+      "resolvido_em": "2025-07-21T03:23:24.774Z",
+      "visibilidade": "admin_only",
+      "data_publicacao": null,
+      "expira_em": null,
+      "email_enviado": false
+    }
+  },
+  {
+    "model": "brivo.alertasistema",
+    "pk": 2,
+    "fields": {
+      "titulo": "ola",
+      "mensagem": "sadasdsa",
+      "tipo": "critical",
+      "data_criacao": "2025-07-22T00:23:14.396Z",
+      "resolvido": false,
+      "resolvido_em": null,
+      "visibilidade": "admin_only",
+      "data_publicacao": null,
+      "expira_em": null,
+      "email_enviado": false
+    }
+  },
+  {
+    "model": "brivo.alertasistema",
+    "pk": 3,
+    "fields": {
+      "titulo": "sdaaaaaaaa",
+      "mensagem": "sdas",
+      "tipo": "critical",
+      "data_criacao": "2025-07-22T00:25:02.347Z",
+      "resolvido": false,
+      "resolvido_em": null,
+      "visibilidade": "admin_only",
+      "data_publicacao": null,
+      "expira_em": null,
+      "email_enviado": false
+    }
+  },
+  {
+    "model": "brivo.alertasistema",
+    "pk": 4,
+    "fields": {
+      "titulo": "TESTANDO",
+      "mensagem": "ola alunos",
+      "tipo": "warning",
+      "data_criacao": "2025-07-27T01:58:21.150Z",
+      "resolvido": false,
+      "resolvido_em": null,
+      "visibilidade": "publico",
+      "data_publicacao": "2025-07-27T01:59:00Z",
+      "expira_em": null,
+      "email_enviado": false
+    }
+  },
+  {
+    "model": "brivo.alertasistema",
+    "pk": 5,
+    "fields": {
+      "titulo": "TESTE",
+      "mensagem": "TESTANDO",
+      "tipo": "error",
+      "data_criacao": "2025-07-27T01:59:24.088Z",
+      "resolvido": false,
+      "resolvido_em": null,
+      "visibilidade": "admin_only",
+      "data_publicacao": "2025-07-27T01:59:50Z",
+      "expira_em": null,
+      "email_enviado": false
+    }
+  },
+  {
+    "model": "brivo.alertasistema",
+    "pk": 6,
+    "fields": {
+      "titulo": "TESTANDO",
+      "mensagem": "SEDADAS",
+      "tipo": "info",
+      "data_criacao": "2025-07-27T01:59:49.045Z",
+      "resolvido": false,
+      "resolvido_em": null,
+      "visibilidade": "admin_only",
+      "data_publicacao": null,
+      "expira_em": null,
+      "email_enviado": false
+    }
+  }
+]
