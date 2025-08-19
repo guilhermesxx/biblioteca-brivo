@@ -4743,3 +4743,244 @@ INFO 2025-08-18 22:59:12,760 basehttp 13872 24740 "GET /api/livros/ HTTP/1.1" 20
 INFO 2025-08-18 22:59:13,371 basehttp 13872 24740 "GET /api/livros/ HTTP/1.1" 200 4686
 INFO 2025-08-18 22:59:33,981 basehttp 13872 24740 "GET /api/dashboard/ HTTP/1.1" 200 1301
 INFO 2025-08-18 22:59:34,003 basehttp 13872 24740 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-19 07:16:12,679 autoreload 6612 9980 Watching for file changes with StatReloader
+INFO 2025-08-19 07:16:48,895 autoreload 6612 9980 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-08-19 07:16:58,237 autoreload 3452 16564 Watching for file changes with StatReloader
+INFO 2025-08-19 07:22:49,078 basehttp 3452 3556 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-08-19 07:22:50,190 log 3452 3556 Invalid HTTP_HOST header: '172.30.0.188:8000'. You may need to add '172.30.0.188' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.0.188:8000'. You may need to add '172.30.0.188' to ALLOWED_HOSTS.
+WARNING 2025-08-19 07:22:50,220 basehttp 3452 3556 "POST /api/token/ HTTP/1.1" 400 73762
+ERROR 2025-08-19 07:22:52,472 log 3452 7936 Invalid HTTP_HOST header: '172.30.0.188:8000'. You may need to add '172.30.0.188' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.0.188:8000'. You may need to add '172.30.0.188' to ALLOWED_HOSTS.
+WARNING 2025-08-19 07:22:52,505 basehttp 3452 7936 "POST /api/token/ HTTP/1.1" 400 73762
+INFO 2025-08-19 07:35:01,431 autoreload 8908 12816 Watching for file changes with StatReloader
+INFO 2025-08-19 07:37:30,866 basehttp 8908 3536 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:32,992 basehttp 8908 3536 "POST /api/usuarios/ HTTP/1.1" 201 101
+INFO 2025-08-19 07:37:32,997 basehttp 8908 3536 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:34,767 basehttp 8908 3536 "POST /api/token/ HTTP/1.1" 200 566
+INFO 2025-08-19 07:37:34,780 basehttp 8908 3536 "OPTIONS /api/usuarios/24/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:34,802 basehttp 8908 3536 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+INFO 2025-08-19 07:37:35,112 basehttp 8908 3536 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:35,124 basehttp 8908 3536 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:35,126 basehttp 8908 3536 "OPTIONS /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:35,147 basehttp 8908 12164 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+WARNING 2025-08-19 07:37:35,149 log 8908 3536 Forbidden: /api/lembrete-devolucao/
+INFO 2025-08-19 07:37:35,149 basehttp 8908 16828 "OPTIONS /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:35,157 basehttp 8908 10624 "OPTIONS /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 0
+WARNING 2025-08-19 07:37:35,164 basehttp 8908 3536 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-08-19 07:37:35,170 basehttp 8908 18884 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:35,177 basehttp 8908 18644 "OPTIONS /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 0
+WARNING 2025-08-19 07:37:35,193 log 8908 10624 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-08-19 07:37:35,197 basehttp 8908 16828 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-08-19 07:37:35,207 basehttp 8908 10624 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 07:37:35,216 basehttp 8908 12164 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+INFO 2025-08-19 07:37:35,218 basehttp 8908 3536 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 07:37:35,218 basehttp 8908 18644 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 07:37:35,227 basehttp 8908 10624 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+INFO 2025-08-19 07:37:35,239 basehttp 8908 12164 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 07:37:45,609 basehttp 8908 12164 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+WARNING 2025-08-19 07:37:45,786 log 8908 12164 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 07:37:45,800 basehttp 8908 12164 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-19 07:37:45,813 log 8908 10624 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-08-19 07:37:45,814 basehttp 8908 3536 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 07:37:45,821 basehttp 8908 18644 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+WARNING 2025-08-19 07:37:45,825 basehttp 8908 10624 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 07:37:45,828 basehttp 8908 16828 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 07:37:54,296 basehttp 8908 18644 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:37:54,316 basehttp 8908 18644 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 07:38:01,903 basehttp 8908 18644 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 07:38:26,728 basehttp 8908 18644 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:38:26,735 basehttp 8908 18644 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-08-19 07:38:28,948 basehttp 8908 16828 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 07:38:28,953 basehttp 8908 10624 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 07:38:28,953 basehttp 8908 18644 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+INFO 2025-08-19 07:38:32,537 basehttp 8908 18644 "OPTIONS /api/alertas/publicos/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-08-19 07:38:32,597 basehttp 8908 18644 "GET /api/alertas/publicos/?resolvido=false HTTP/1.1" 200 319
+INFO 2025-08-19 07:38:40,403 basehttp 8908 18644 "OPTIONS /api/livros/15/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:38:40,412 basehttp 8908 18644 "GET /api/livros/15/ HTTP/1.1" 200 585
+INFO 2025-08-19 07:38:40,511 basehttp 8908 18644 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 07:39:04,156 basehttp 8908 18644 "OPTIONS /api/livros/1/ HTTP/1.1" 200 0
+INFO 2025-08-19 07:39:04,173 basehttp 8908 18644 "GET /api/livros/1/ HTTP/1.1" 200 444
+INFO 2025-08-19 07:39:04,249 basehttp 8908 18644 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 07:40:01,686 basehttp 8908 18644 "GET /api/livros/1/ HTTP/1.1" 200 444
+INFO 2025-08-19 07:40:01,741 basehttp 8908 18644 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 07:40:08,489 basehttp 8908 18644 "GET /api/livros/1/ HTTP/1.1" 200 444
+INFO 2025-08-19 07:40:08,600 basehttp 8908 18644 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:39:10,775 basehttp 8908 22192 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-08-19 11:39:10,933 basehttp 8908 22192 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-08-19 11:39:10,941 basehttp 8908 22192 "OPTIONS /api/usuarios/24/ HTTP/1.1" 200 0
+INFO 2025-08-19 11:39:10,992 basehttp 8908 22192 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+INFO 2025-08-19 11:39:11,127 basehttp 8908 22192 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-19 11:39:11,137 basehttp 8908 36496 "OPTIONS /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 0
+INFO 2025-08-19 11:39:11,196 basehttp 8908 36228 "OPTIONS /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 0
+WARNING 2025-08-19 11:39:11,200 log 8908 36496 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 11:39:11,202 basehttp 8908 36496 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-08-19 11:39:11,218 basehttp 8908 33084 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-08-19 11:39:11,226 basehttp 8908 22192 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 11:39:11,229 basehttp 8908 36228 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 11:39:11,295 basehttp 8908 4092 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-08-19 11:39:11,319 basehttp 8908 33084 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+WARNING 2025-08-19 11:39:11,323 log 8908 36228 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-19 11:39:11,331 basehttp 8908 36228 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 11:41:56,705 basehttp 8908 36228 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-19 11:41:56,746 basehttp 8908 36228 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:42:01,392 basehttp 8908 36228 "OPTIONS /api/reservas/?aluno=24 HTTP/1.1" 200 0
+INFO 2025-08-19 11:42:01,400 basehttp 8908 36228 "GET /api/reservas/?aluno=24 HTTP/1.1" 200 52
+INFO 2025-08-19 11:42:02,673 basehttp 8908 36228 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:44:31,238 basehttp 8908 31068 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-19 11:44:31,444 basehttp 8908 31068 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-19 11:44:34,000 basehttp 8908 31068 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-19 11:44:34,088 basehttp 8908 37488 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:44:34,209 basehttp 8908 31068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4721
+INFO 2025-08-19 11:44:39,477 basehttp 8908 31068 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:44:43,412 basehttp 8908 31068 "GET /api/livros/ HTTP/1.1" 200 4683
+ERROR 2025-08-19 11:44:55,161 utils 8908 37444 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:44:55,163 utils 8908 37444 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+WARNING 2025-08-19 11:45:00,228 log 8908 31068 Bad Request: /api/livros/
+WARNING 2025-08-19 11:45:00,230 basehttp 8908 31068 "POST /api/livros/ HTTP/1.1" 400 35
+ERROR 2025-08-19 11:45:16,195 utils 8908 37444 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:45:16,197 utils 8908 37444 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-19 11:45:37,253 utils 8908 37444 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:45:37,262 utils 8908 37444 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-19 11:45:37,268 basehttp 8908 37444 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-19 11:46:11,006 basehttp 8908 31068 "POST /api/livros/ HTTP/1.1" 201 375
+INFO 2025-08-19 11:46:11,295 basehttp 8908 31068 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:46:20,971 basehttp 8908 36228 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+WARNING 2025-08-19 11:46:21,172 log 8908 36228 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 11:46:21,174 log 8908 37548 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-19 11:46:21,175 basehttp 8908 36228 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-19 11:46:21,176 basehttp 8908 37548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 11:46:22,634 basehttp 8908 36228 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 11:46:22,639 basehttp 8908 37548 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+INFO 2025-08-19 11:46:22,657 basehttp 8908 37000 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 11:46:25,036 basehttp 8908 37000 "OPTIONS /api/livros/14/ HTTP/1.1" 200 0
+INFO 2025-08-19 11:46:25,051 basehttp 8908 37000 "GET /api/livros/14/ HTTP/1.1" 200 467
+INFO 2025-08-19 11:46:25,142 basehttp 8908 37000 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:46:27,108 basehttp 8908 37548 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 11:46:27,109 basehttp 8908 37000 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+INFO 2025-08-19 11:46:27,113 basehttp 8908 36228 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 11:46:29,476 basehttp 8908 36228 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:46:34,628 basehttp 8908 37000 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-19 11:46:34,629 basehttp 8908 37548 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-19 11:46:34,633 basehttp 8908 36228 "GET /api/livros/?page_size=6 HTTP/1.1" 200 4695
+INFO 2025-08-19 11:46:36,826 basehttp 8908 36228 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:46:46,042 basehttp 8908 36228 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:46:58,562 basehttp 8908 31068 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:46:58,621 basehttp 8908 31068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4721
+INFO 2025-08-19 11:47:03,645 basehttp 8908 31068 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:47:03,645 basehttp 8908 37488 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:47:03,679 basehttp 8908 28420 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:47:03,880 basehttp 8908 31068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4721
+INFO 2025-08-19 11:47:20,972 basehttp 8908 31068 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:47:20,975 basehttp 8908 37488 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:47:24,148 basehttp 8908 31068 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:47:24,204 basehttp 8908 31068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4721
+INFO 2025-08-19 11:47:28,853 basehttp 8908 31068 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:47:55,478 basehttp 8908 36228 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:50:53,578 basehttp 8908 36228 "OPTIONS /api/livros/?page_size=9999 HTTP/1.1" 200 0
+INFO 2025-08-19 11:50:53,657 basehttp 8908 37548 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+INFO 2025-08-19 11:50:53,663 basehttp 8908 36228 "GET /api/livros/?page_size=9999 HTTP/1.1" 200 4698
+WARNING 2025-08-19 11:50:53,763 log 8908 36228 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 11:50:53,765 log 8908 37548 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-19 11:50:53,769 basehttp 8908 36228 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-19 11:50:53,772 basehttp 8908 37548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 11:51:01,032 basehttp 8908 37548 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+INFO 2025-08-19 11:51:01,090 basehttp 8908 36840 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-19 11:51:01,389 basehttp 8908 37548 "GET /api/livros/ HTTP/1.1" 200 4683
+WARNING 2025-08-19 11:51:01,391 log 8908 36228 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 11:51:01,393 log 8908 37000 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-19 11:51:01,566 basehttp 8908 36228 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-19 11:51:01,593 basehttp 8908 37000 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 11:51:03,412 basehttp 8908 36840 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-19 11:51:03,752 basehttp 8908 36912 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:51:03,866 basehttp 8908 36840 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4721
+INFO 2025-08-19 11:51:04,434 basehttp 8908 37000 "GET /api/livros/?page_size=9999 HTTP/1.1" 200 4698
+INFO 2025-08-19 11:51:09,609 basehttp 8908 37000 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:51:14,256 basehttp 8908 37000 "GET /api/livros/ HTTP/1.1" 200 4683
+INFO 2025-08-19 11:51:14,259 basehttp 8908 36228 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+WARNING 2025-08-19 11:51:14,470 log 8908 36228 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 11:51:14,471 log 8908 37000 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-19 11:51:14,473 basehttp 8908 36228 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-19 11:51:14,474 basehttp 8908 37000 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+ERROR 2025-08-19 11:51:24,531 utils 8908 35280 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:51:24,533 utils 8908 35280 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-19 11:51:24,969 basehttp 8908 33180 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-19 11:51:27,192 basehttp 8908 33180 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-19 11:51:27,281 basehttp 8908 25568 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:51:27,375 basehttp 8908 33180 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4721
+ERROR 2025-08-19 11:51:45,571 utils 8908 35280 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:51:45,574 utils 8908 35280 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-19 11:51:48,301 utils 8908 37860 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:51:48,302 utils 8908 37860 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-19 11:52:06,606 utils 8908 35280 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:52:06,608 utils 8908 35280 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-19 11:52:06,609 basehttp 8908 35280 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+ERROR 2025-08-19 11:52:09,332 utils 8908 37860 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:52:09,335 utils 8908 37860 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-19 11:52:30,385 utils 8908 37860 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-19 11:52:30,387 utils 8908 37860 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-19 11:52:30,388 basehttp 8908 37860 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-19 11:54:50,899 autoreload 8908 12816 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-08-19 11:54:54,676 autoreload 32248 19524 Watching for file changes with StatReloader
+INFO 2025-08-19 11:55:20,323 autoreload 35676 26792 Watching for file changes with StatReloader
+INFO 2025-08-19 11:55:33,449 basehttp 35676 37868 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+INFO 2025-08-19 11:55:33,470 basehttp 35676 23876 "GET /api/livros/ HTTP/1.1" 200 8565
+WARNING 2025-08-19 11:55:33,502 log 35676 37868 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-19 11:55:33,507 basehttp 35676 37868 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-19 11:55:33,543 log 35676 37600 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-19 11:55:33,558 basehttp 35676 37600 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-19 11:55:44,035 basehttp 35676 2996 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-19 11:55:46,953 basehttp 35676 2996 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-19 11:55:46,996 basehttp 35676 2996 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 8565
+INFO 2025-08-19 11:55:51,328 basehttp 35676 2996 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-19 11:55:52,165 basehttp 35676 2996 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-19 11:55:57,879 basehttp 35676 2996 "GET /api/livros/17/ HTTP/1.1" 200 375
+INFO 2025-08-19 11:55:57,896 basehttp 35676 30816 "GET /api/livros/17/ HTTP/1.1" 200 375
+INFO 2025-08-19 11:55:58,141 basehttp 35676 2996 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-19 11:55:58,164 basehttp 35676 2996 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-19 11:56:42,180 basehttp 35676 30816 "GET /api/livros/16/ HTTP/1.1" 200 2228
+INFO 2025-08-19 11:56:42,184 basehttp 35676 2996 "GET /api/livros/16/ HTTP/1.1" 200 2228
+INFO 2025-08-19 11:56:42,418 basehttp 35676 2996 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-19 11:56:42,426 basehttp 35676 30816 "GET /api/livros/ HTTP/1.1" 200 8565
