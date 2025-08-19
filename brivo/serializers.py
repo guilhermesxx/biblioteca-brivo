@@ -242,21 +242,34 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
 # Serializers para os Livros
 class LivroSerializer(serializers.ModelSerializer):
-    capa = serializers.URLField(required=False)
-    # Adicionado para expor a propriedade 'disponivel' do modelo
+    def validate(self, data):
+        erros = {}
+        # Validação dos campos obrigatórios
+        if not data.get('titulo'):
+            erros['titulo'] = 'O título é obrigatório.'
+        if not data.get('autor'):
+            erros['autor'] = 'O autor é obrigatório.'
+        if not data.get('data_publicacao'):
+            erros['data_publicacao'] = 'A data de publicação é obrigatória.'
+        if not data.get('tipo'):
+            erros['tipo'] = "O tipo do livro é obrigatório ('fisico' ou 'pdf')."
+        if erros:
+            raise serializers.ValidationError(erros)
+        return data
+    capa = serializers.URLField(required=False, allow_null=True, allow_blank=True)
     disponivel = serializers.BooleanField(read_only=True)
-    # Adicionados os novos campos de quantidade
-    quantidade_total = serializers.IntegerField()
-    quantidade_emprestada = serializers.IntegerField()
-
+    quantidade_total = serializers.IntegerField(required=False)
+    quantidade_emprestada = serializers.IntegerField(required=False)
 
     titulo = serializers.CharField(
+        required=True,
         error_messages={
             "blank": "O título é obrigatório.",
             "required": "O título é obrigatório."
         }
     )
     autor = serializers.CharField(
+        required=True,
         error_messages={
             "blank": "O autor é obrigatório.",
             "required": "O autor é obrigatório."
@@ -265,8 +278,11 @@ class LivroSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Livro
-        # Inclui os novos campos e a propriedade 'disponivel'
-        fields = '__all__'
+        fields = [
+            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero',
+            'quantidade_total', 'quantidade_emprestada', 'capa', 'descricao', 'ativo', 'disponivel'
+        ]
+        read_only_fields = ['id', 'disponivel', 'ativo']
 
 
 # Serializers para Empréstimos
