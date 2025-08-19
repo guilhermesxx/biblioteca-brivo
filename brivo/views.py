@@ -199,7 +199,7 @@ class LivroViewSet(viewsets.ModelViewSet):
         return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
 
 # -----------------------------------------------------------------------------
-# Views de Empréstimos
+# Views de Empréstimzs
 # -----------------------------------------------------------------------------
 
 class EmprestimoViewSet(viewsets.ModelViewSet):

@@ -4592,3 +4592,154 @@ WARNING 2025-08-18 21:54:54,935 log 5820 24228 Unauthorized: /api/lembrete-devol
 WARNING 2025-08-18 21:54:54,940 log 5820 38844 Unauthorized: /api/avisar-reservas-expirando/
 WARNING 2025-08-18 21:54:54,942 basehttp 5820 24228 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
 WARNING 2025-08-18 21:54:54,950 basehttp 5820 38844 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+INFO 2025-08-18 22:25:12,297 basehttp 5820 36844 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:12,699 basehttp 5820 36844 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-08-18 22:25:12,704 basehttp 5820 36844 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:12,711 basehttp 5820 36844 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:25:12,769 basehttp 5820 36844 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:12,777 basehttp 5820 36916 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:12,781 basehttp 5820 36844 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:12,801 basehttp 5820 36916 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-18 22:25:12,819 basehttp 5820 22856 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:25:12,825 basehttp 5820 22856 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:12,832 basehttp 5820 22856 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:25:14,225 basehttp 5820 22856 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-08-18 22:25:15,087 utils 5820 36844 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3242433f986sm310012a91.0 - gsmtp')
+WARNING 2025-08-18 22:25:15,088 utils 5820 36844 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-18 22:25:15,884 basehttp 5820 22856 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:15,917 basehttp 5820 22856 "GET /api/livros/ HTTP/1.1" 200 4686
+ERROR 2025-08-18 22:25:17,267 utils 5820 36844 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b472d5e019esm9282846a12.21 - gsmtp')
+WARNING 2025-08-18 22:25:17,267 utils 5820 36844 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-08-18 22:25:18,680 basehttp 5820 22856 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:25:18,688 basehttp 5820 22856 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+ERROR 2025-08-18 22:25:18,778 utils 5820 36844 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d59da39sm91944765ad.163 - gsmtp')
+WARNING 2025-08-18 22:25:18,779 utils 5820 36844 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:25:18,782 basehttp 5820 36844 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:25:21,324 basehttp 5820 36844 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-08-18 22:25:21,369 basehttp 5820 36844 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-18 22:25:22,267 basehttp 5820 36844 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:25:22,978 basehttp 5820 36844 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:25:23,007 basehttp 5820 36844 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:25:26,603 basehttp 5820 36844 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:41:14,673 autoreload 32560 21808 Watching for file changes with StatReloader
+INFO 2025-08-18 22:41:26,238 basehttp 32560 35984 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-08-18 22:41:26,245 basehttp 32560 35984 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:41:26,326 basehttp 32560 35984 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:41:26,336 basehttp 32560 35984 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+WARNING 2025-08-18 22:41:26,589 log 32560 32484 Not Found: /api/api/avisar-reservas-expirando/
+WARNING 2025-08-18 22:41:26,590 log 32560 32392 Not Found: /api/api/lembrete-devolucao/
+WARNING 2025-08-18 22:41:26,591 basehttp 32560 32484 "GET /api/api/avisar-reservas-expirando/ HTTP/1.1" 404 16994
+WARNING 2025-08-18 22:41:26,591 basehttp 32560 32392 "GET /api/api/lembrete-devolucao/ HTTP/1.1" 404 16973
+WARNING 2025-08-18 22:41:31,233 log 32560 32392 Not Found: /api/api/livros/
+WARNING 2025-08-18 22:41:31,234 basehttp 32560 32392 "GET /api/api/livros/ HTTP/1.1" 404 16937
+WARNING 2025-08-18 22:41:42,537 log 32560 32392 Not Found: /api/api/livros/
+WARNING 2025-08-18 22:41:42,538 basehttp 32560 32392 "GET /api/api/livros/ HTTP/1.1" 404 16937
+INFO 2025-08-18 22:41:45,627 basehttp 32560 13748 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-18 22:41:45,627 basehttp 32560 35984 "GET /api/livros/ HTTP/1.1" 200 4686
+ERROR 2025-08-18 22:41:48,052 utils 32560 31688 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b475028dcffsm1638116a12.23 - gsmtp')
+WARNING 2025-08-18 22:41:48,053 utils 32560 31688 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-18 22:41:49,738 utils 32560 31688 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d5533c4sm92312655ad.140 - gsmtp')
+WARNING 2025-08-18 22:41:49,739 utils 32560 31688 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:41:51,279 utils 32560 31688 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d53c6e1sm92314085ad.115 - gsmtp')
+WARNING 2025-08-18 22:41:51,279 utils 32560 31688 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:41:51,280 basehttp 32560 31688 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:41:52,500 basehttp 32560 31688 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:41:52,510 basehttp 32560 31688 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:41:55,130 basehttp 32560 31688 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:42:06,600 basehttp 32560 31688 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:42:06,635 basehttp 32560 31688 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:43:28,573 basehttp 32560 31688 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:43:39,222 autoreload 21692 26572 Watching for file changes with StatReloader
+INFO 2025-08-18 22:43:42,263 basehttp 21692 31632 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:43:42,450 basehttp 21692 31632 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-18 22:43:42,457 basehttp 21692 6940 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:43:42,470 basehttp 21692 6940 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+ERROR 2025-08-18 22:43:44,727 utils 21692 8548 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76e7d52c7f2sm857278b3a.87 - gsmtp')
+WARNING 2025-08-18 22:43:44,728 utils 21692 8548 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-18 22:43:46,330 basehttp 21692 6940 "GET /api/livros/ HTTP/1.1" 200 4686
+ERROR 2025-08-18 22:43:46,805 utils 21692 8548 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3237e3dbbbasm1176045a91.13 - gsmtp')
+WARNING 2025-08-18 22:43:46,805 utils 21692 8548 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:43:48,289 utils 21692 8548 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d516a30sm92232095ad.95 - gsmtp')
+WARNING 2025-08-18 22:43:48,289 utils 21692 8548 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:43:48,290 basehttp 21692 8548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:43:50,081 basehttp 21692 8548 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:43:50,112 basehttp 21692 8548 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:43:52,676 basehttp 21692 8548 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:44:01,070 basehttp 21692 8548 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:44:01,089 basehttp 21692 8548 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:44:06,078 basehttp 21692 8548 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:45:18,935 autoreload 21692 26572 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-08-18 22:45:20,571 autoreload 26208 2276 Watching for file changes with StatReloader
+INFO 2025-08-18 22:48:59,920 basehttp 26208 38524 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:48:59,923 basehttp 26208 36264 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:50:00,549 basehttp 26208 38524 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:50:00,560 basehttp 26208 36264 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:50:50,989 basehttp 26208 36500 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:50:50,991 basehttp 26208 16524 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:50:51,180 basehttp 26208 36500 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:50:51,199 basehttp 26208 16524 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:50:51,202 basehttp 26208 36500 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-18 22:50:53,418 utils 26208 36652 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d577f31sm92256055ad.152 - gsmtp')
+WARNING 2025-08-18 22:50:53,418 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-18 22:50:54,920 utils 26208 36652 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446cb0f007sm92521325ad.69 - gsmtp')
+WARNING 2025-08-18 22:50:54,921 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:50:56,371 utils 26208 36652 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d54fe22sm92547205ad.133 - gsmtp')
+WARNING 2025-08-18 22:50:56,371 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:50:56,372 basehttp 26208 36652 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:51:27,962 basehttp 26208 36500 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:51:27,962 basehttp 26208 36652 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:51:45,180 basehttp 26208 36500 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:51:45,180 basehttp 26208 36652 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:51:45,226 basehttp 26208 36500 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:51:45,237 basehttp 26208 36652 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:51:45,252 basehttp 26208 36652 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-18 22:51:47,271 utils 26208 36500 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76e7d0d98dfsm922371b3a.17 - gsmtp')
+WARNING 2025-08-18 22:51:47,271 utils 26208 36500 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-18 22:51:48,763 utils 26208 36500 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76e7d11c8bcsm917410b3a.33 - gsmtp')
+WARNING 2025-08-18 22:51:48,763 utils 26208 36500 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:51:50,751 utils 26208 36500 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3237e3dd1d3sm1207530a91.14 - gsmtp')
+WARNING 2025-08-18 22:51:50,752 utils 26208 36500 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:51:50,752 basehttp 26208 36500 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:53:00,671 basehttp 26208 36652 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:53:00,672 basehttp 26208 36500 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:53:00,740 basehttp 26208 36500 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:53:00,740 basehttp 26208 36652 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:53:00,821 basehttp 26208 36500 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-18 22:53:02,848 utils 26208 36652 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b472d5a8f7asm9201930a12.12 - gsmtp')
+WARNING 2025-08-18 22:53:02,848 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-18 22:53:04,305 utils 26208 36652 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76e7d524c95sm867337b3a.81 - gsmtp')
+WARNING 2025-08-18 22:53:04,306 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:53:05,871 utils 26208 36652 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2446d50f6f6sm93447795ad.92 - gsmtp')
+WARNING 2025-08-18 22:53:05,872 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:53:05,872 basehttp 26208 36652 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:53:47,125 basehttp 26208 36652 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:53:47,132 basehttp 26208 36500 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:53:47,247 basehttp 26208 36500 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-18 22:53:48,712 utils 26208 36652 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-76e7ccfa8d1sm938875b3a.0 - gsmtp')
+WARNING 2025-08-18 22:53:48,714 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-18 22:53:50,802 utils 26208 36652 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3237e402d51sm1202776a91.23 - gsmtp')
+WARNING 2025-08-18 22:53:50,804 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:53:52,827 utils 26208 36652 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-32331123914sm12624417a91.17 - gsmtp')
+WARNING 2025-08-18 22:53:52,827 utils 26208 36652 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:53:52,829 basehttp 26208 36652 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:54:51,762 autoreload 13872 36804 Watching for file changes with StatReloader
+INFO 2025-08-18 22:58:48,709 basehttp 13872 24740 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-08-18 22:58:48,826 basehttp 13872 24740 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-18 22:58:51,228 basehttp 13872 24740 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-18 22:58:51,251 basehttp 13872 32228 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:58:51,312 basehttp 13872 24740 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+ERROR 2025-08-18 22:58:52,894 utils 13872 36960 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3237e40469bsm1214060a91.27 - gsmtp')
+WARNING 2025-08-18 22:58:52,895 utils 13872 36960 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-18 22:58:55,128 utils 13872 36960 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b472d736466sm9265382a12.32 - gsmtp')
+WARNING 2025-08-18 22:58:55,128 utils 13872 36960 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-18 22:58:56,653 utils 13872 36960 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-32330fc3676sm12681784a91.9 - gsmtp')
+WARNING 2025-08-18 22:58:56,654 utils 13872 36960 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-18 22:58:56,654 basehttp 13872 36960 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-18 22:58:57,492 basehttp 13872 24740 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:59:04,759 basehttp 13872 24740 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:59:08,493 basehttp 13872 24740 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:59:08,533 basehttp 13872 24740 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
+INFO 2025-08-18 22:59:12,760 basehttp 13872 24740 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:59:13,371 basehttp 13872 24740 "GET /api/livros/ HTTP/1.1" 200 4686
+INFO 2025-08-18 22:59:33,981 basehttp 13872 24740 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-18 22:59:34,003 basehttp 13872 24740 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4724
