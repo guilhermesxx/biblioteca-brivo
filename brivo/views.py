@@ -9,6 +9,16 @@ from django.db.models.functions import TruncMonth
 from django.db.models import Count, Sum, F, Q
 from django.utils import timezone # Importação essencial para lidar com fusos horários
 from datetime import timedelta, date
+from django.db.models import Count
+from datetime import timedelta
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
+
+# Replace with your actual models and permissions
+from .models import Livro, Usuario, Emprestimo, Reserva
+from .permissions import EhAdmin
+from django.utils import timezone
 
 # Importações de modelos e serializers
 from .models import Livro, Usuario, Emprestimo, Reserva, AlertaSistema
@@ -694,3 +704,113 @@ class PublicAlertaSistemaListView(generics.ListAPIView):
             Q(expira_em__isnull=True) | Q(expira_em__gt=now)
         ).order_by('-data_publicacao') # CORREÇÃO: Adicionado order_by explícito para consistência
         return queryset
+
+
+# ... (restante do código)
+
+# -----------------------------------------------------------------------------
+# Views de Relatórios Pedagógicos
+# -----------------------------------------------------------------------------
+
+class RelatoriosPedagogicosView(APIView):
+    """
+    Endpoint para gerar relatórios pedagógicos.
+    Apenas administradores podem acessar.
+    """
+    permission_classes = [IsAuthenticated, EhAdmin]
+
+    def get(self, request):
+        agora = timezone.now()
+        
+        # 1. Total de Livros e Empréstimos Ativos
+        total_livros = Livro.objects.count()
+        total_emprestimos_ativos = Emprestimo.objects.filter(devolvido=False).count()
+        
+        # 2. Média de Leitura por Aluno
+        total_emprestimos_concluidos = Emprestimo.objects.filter(devolvido=True).count()
+        total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno').count()
+        media_leitura_aluno = total_emprestimos_concluidos / total_alunos if total_alunos > 0 else 0
+
+        # 3. Top 5 Alunos Mais Ativos (Empréstimos + Reservas)
+        # Combinações de Contagem de Empréstimos e Reservas
+        emprestimos_alunos = Emprestimo.objects.filter(
+            usuario__tipo='aluno', usuario__ativo=True
+        ).values('usuario__nome').annotate(
+            total_atividades=Count('id')
+        )
+        
+        reservas_alunos = Reserva.objects.filter(
+            aluno__tipo='aluno', aluno__ativo=True, status__in=['emprestado', 'na_fila', 'aguardando_retirada', 'concluida']
+        ).values('aluno__nome').annotate(
+            total_atividades=Count('id')
+        )
+
+        # Junta os dois querysets em um dicionário para somar as atividades
+        atividades_por_aluno = {}
+        for item in list(emprestimos_alunos) + list(reservas_alunos):
+            nome = item['usuario__nome'] if 'usuario__nome' in item else item['aluno__nome']
+            if nome not in atividades_por_aluno:
+                atividades_por_aluno[nome] = 0
+            atividades_por_aluno[nome] += item['total_atividades']
+        
+        # Ordena e pega o top 5
+        top_alunos = sorted(atividades_por_aluno.items(), key=lambda item: item[1], reverse=True)[:5]
+        top_alunos_formatado = [{'nome': nome, 'total_atividades': atividades} for nome, atividades in top_alunos]
+
+        # 4. Top 5 Livros Mais Populares (Empréstimos + Reservas)
+        # Combinações de Contagem de Empréstimos e Reservas
+        emprestimos_livros = Emprestimo.objects.filter(
+            livro__ativo=True
+        ).values('livro__titulo').annotate(
+            total_popularidade=Count('id')
+        )
+
+        reservas_livros = Reserva.objects.filter(
+            livro__ativo=True, status__in=['na_fila', 'aguardando_retirada', 'emprestado', 'concluida']
+        ).values('livro__titulo').annotate(
+            total_popularidade=Count('id')
+        )
+        
+        # Junta e soma as atividades por livro
+        popularidade_por_livro = {}
+        for item in list(emprestimos_livros) + list(reservas_livros):
+            titulo = item['livro__titulo']
+            if titulo not in popularidade_por_livro:
+                popularidade_por_livro[titulo] = 0
+            popularidade_por_livro[titulo] += item['total_popularidade']
+            
+        # Ordena e pega o top 5
+        top_livros = sorted(popularidade_por_livro.items(), key=lambda item: item[1], reverse=True)[:5]
+        top_livros_formatado = [{'titulo': titulo, 'total_popularidade': popularidade} for titulo, popularidade in top_livros]
+
+        # 5. Horário de Pico de Empréstimos (últimos 30 dias)
+        data_limite = agora - timedelta(days=30)
+        picos_por_hora = (
+            Emprestimo.objects.filter(data_emprestimo__gte=data_limite)
+            .values('data_emprestimo__hour')
+            .annotate(total=Count('id'))
+            .order_by('-total')
+        )
+        horario_pico = None
+        if picos_por_hora.exists():
+            horario_pico = picos_por_hora.first()
+        else:
+            horario_pico = {'message': 'Sem dados de empréstimos nos últimos 30 dias'} # ALTERAÇÃO AQUI
+
+        # 6. Distribuição de Livros por Gênero
+        distribuicao_genero = (
+            Livro.objects.filter(ativo=True)
+            .values('genero')
+            .annotate(total=Count('id'))
+            .order_by('-total')
+        )
+        
+        return Response({
+            'total_livros': total_livros,
+            'total_emprestimos_ativos': total_emprestimos_ativos,
+            'media_leitura_aluno': round(media_leitura_aluno, 2),
+            'top_5_alunos_mais_ativos': top_alunos_formatado,
+            'top_5_livros_mais_populares': top_livros_formatado,
+            'horario_pico_emprestimos': horario_pico,
+            'distribuicao_genero': list(distribuicao_genero)
+        })

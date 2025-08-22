@@ -5,7 +5,8 @@ from .views import (
     UsuarioViewSet, LivroViewSet, EmprestimoViewSet, ReservaViewSet, 
     TesteEmailView, LembreteDevolucaoView, DashboardAdminView, 
     AvisoReservaExpirandoView, usuario_me_view, AlertaSistemaViewSet,
-    PublicAlertaSistemaListView # IMPORTADO: Nova view para alertas públicos
+    PublicAlertaSistemaListView,
+    RelatoriosPedagogicosView # NOVO: Importe a nova view
 )
 
 
@@ -18,14 +19,11 @@ router.register(r'alertas-sistema', AlertaSistemaViewSet) # NOVO: Registro do Vi
 
 urlpatterns = [
     path('', include(router.urls)),
-    # Removidas rotas redundantes de token, pois já estão no urls.py principal
-    # path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('teste-email/', TesteEmailView.as_view()),
     path('dashboard/', DashboardAdminView.as_view(), name='dashboard-admin'),
     path('usuarios/me/', usuario_me_view, name='usuario-me'),
-    # NOVA ROTA: Para listar alertas públicos
-    path('alertas/publicos/', PublicAlertaSistemaListView.as_view(), name='alertas_publicos'), 
+    path('alertas/publicos/', PublicAlertaSistemaListView.as_view(), name='alertas_publicos'),
+    path('relatorios/pedagogicos/', RelatoriosPedagogicosView.as_view(), name='relatorios-pedagogicos'), # NOVO: Rota para a nova view
 ]
 
 urlpatterns += [
