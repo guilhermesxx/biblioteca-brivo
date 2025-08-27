@@ -4984,3 +4984,1373 @@ INFO 2025-08-19 11:56:42,180 basehttp 35676 30816 "GET /api/livros/16/ HTTP/1.1"
 INFO 2025-08-19 11:56:42,184 basehttp 35676 2996 "GET /api/livros/16/ HTTP/1.1" 200 2228
 INFO 2025-08-19 11:56:42,418 basehttp 35676 2996 "GET /api/livros/ HTTP/1.1" 200 8565
 INFO 2025-08-19 11:56:42,426 basehttp 35676 30816 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-25 07:39:27,349 autoreload 19920 20352 Watching for file changes with StatReloader
+INFO 2025-08-25 07:40:36,269 basehttp 19920 20132 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:36,392 basehttp 19920 20132 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-08-25 07:40:36,406 basehttp 19920 20132 "OPTIONS /api/usuarios/24/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:36,431 basehttp 19920 20132 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+INFO 2025-08-25 07:40:36,674 basehttp 19920 20132 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:36,684 basehttp 19920 20292 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:36,684 basehttp 19920 20132 "OPTIONS /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:36,694 basehttp 19920 14940 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:36,704 basehttp 19920 15388 "OPTIONS /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 0
+WARNING 2025-08-25 07:40:36,754 log 19920 20132 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-25 07:40:36,768 basehttp 19920 20132 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-08-25 07:40:36,756 log 19920 19568 Forbidden: /api/lembrete-devolucao/
+INFO 2025-08-25 07:40:36,783 basehttp 19920 15388 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-25 07:40:36,810 basehttp 19920 20292 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-08-25 07:40:36,812 basehttp 19920 19568 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-08-25 07:40:36,817 basehttp 19920 14940 "GET /api/livros/?page_size=6 HTTP/1.1" 200 8565
+INFO 2025-08-25 07:40:49,697 basehttp 19920 19568 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:40:49,714 basehttp 19920 19568 "GET /api/livros/ HTTP/1.1" 200 8565
+INFO 2025-08-25 07:40:59,058 basehttp 19920 19568 "GET /api/livros/?page_size=6 HTTP/1.1" 200 8565
+INFO 2025-08-25 07:40:59,061 basehttp 19920 20292 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-25 07:40:59,062 basehttp 19920 14940 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-25 07:41:55,664 basehttp 19920 12744 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:41:57,445 basehttp 19920 12744 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-25 07:41:57,456 basehttp 19920 12744 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:41:57,479 basehttp 19920 12744 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:41:57,637 basehttp 19920 12744 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:41:57,646 basehttp 19920 20288 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:41:57,653 basehttp 19920 19512 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:41:57,802 basehttp 19920 12744 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:41:57,849 basehttp 19920 20288 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:41:57,859 basehttp 19920 20288 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-08-25 07:41:57,879 basehttp 19920 20288 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 8565
+INFO 2025-08-25 07:42:15,270 basehttp 19920 20288 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-08-25 07:42:18,972 utils 19920 19512 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:42:18,977 utils 19920 19512 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 07:42:21,182 basehttp 19920 20288 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:42:21,308 basehttp 19920 12744 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:42:21,342 basehttp 19920 18128 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:42:29,489 basehttp 19920 18128 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:42:29,572 basehttp 19920 18128 "GET /api/livros/ HTTP/1.1" 200 8565
+ERROR 2025-08-25 07:42:40,140 utils 19920 19512 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:42:40,143 utils 19920 19512 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 07:42:42,544 utils 19920 20288 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:42:42,549 utils 19920 20288 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-25 07:43:01,549 utils 19920 19512 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:43:01,553 utils 19920 19512 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:43:01,568 basehttp 19920 19512 - Broken pipe from ('172.30.0.212', 54020)
+ERROR 2025-08-25 07:43:04,152 utils 19920 20288 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:43:04,155 utils 19920 20288 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 07:43:25,481 utils 19920 20288 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:43:25,483 utils 19920 20288 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:43:25,490 basehttp 19920 20288 - Broken pipe from ('172.30.0.212', 54019)
+INFO 2025-08-25 07:43:48,367 basehttp 19920 18128 "POST /api/livros/ HTTP/1.1" 201 1483
+INFO 2025-08-25 07:43:48,402 basehttp 19920 18128 "GET /api/livros/ HTTP/1.1" 200 10049
+INFO 2025-08-25 07:43:55,091 basehttp 19920 18128 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:43:55,135 basehttp 19920 18128 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 10049
+INFO 2025-08-25 07:43:57,960 basehttp 19920 18128 "GET /api/livros/ HTTP/1.1" 200 10049
+INFO 2025-08-25 07:44:01,820 basehttp 19920 18128 "OPTIONS /api/livros/18/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:44:01,844 basehttp 19920 18128 "GET /api/livros/18/ HTTP/1.1" 200 1483
+INFO 2025-08-25 07:44:01,880 basehttp 19920 18128 "GET /api/livros/ HTTP/1.1" 200 10049
+INFO 2025-08-25 07:44:40,956 basehttp 19920 21348 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-08-25 07:44:40,987 basehttp 19920 21348 "GET /api/usuarios/24/ HTTP/1.1" 200 101
+WARNING 2025-08-25 07:44:41,370 log 19920 21348 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-08-25 07:44:41,372 basehttp 19920 21348 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-08-25 07:44:41,389 log 19920 21364 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-08-25 07:44:41,405 basehttp 19920 21364 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-08-25 07:44:41,411 basehttp 19920 21372 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-25 07:44:41,420 basehttp 19920 21368 "GET /api/livros/?page_size=6 HTTP/1.1" 200 10049
+INFO 2025-08-25 07:44:41,423 basehttp 19920 21376 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-25 07:44:44,627 basehttp 19920 21348 "GET /api/livros/17/ HTTP/1.1" 200 375
+INFO 2025-08-25 07:44:44,697 basehttp 19920 21348 "GET /api/livros/ HTTP/1.1" 200 10049
+INFO 2025-08-25 07:44:46,103 basehttp 19920 21364 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-25 07:44:46,110 basehttp 19920 21368 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-25 07:44:46,117 basehttp 19920 21348 "GET /api/livros/?page_size=6 HTTP/1.1" 200 10049
+INFO 2025-08-25 07:44:48,537 basehttp 19920 21348 "GET /api/livros/ HTTP/1.1" 200 10049
+INFO 2025-08-25 07:44:52,327 basehttp 19920 21364 "GET /api/reservas/?aluno__id=24&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-08-25 07:44:52,330 basehttp 19920 21368 "GET /api/emprestimos/?usuario__id=24&devolvido=false HTTP/1.1" 200 52
+INFO 2025-08-25 07:44:52,335 basehttp 19920 21348 "GET /api/livros/?page_size=6 HTTP/1.1" 200 10049
+INFO 2025-08-25 07:45:05,930 basehttp 19920 21348 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-25 07:45:05,998 basehttp 19920 21348 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:45:06,400 basehttp 19920 21348 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:45:06,425 basehttp 19920 21368 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:45:06,449 basehttp 19920 21348 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 10049
+INFO 2025-08-25 07:45:08,795 basehttp 19920 21348 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:45:11,258 basehttp 19920 21348 "GET /api/livros/ HTTP/1.1" 200 10049
+INFO 2025-08-25 07:45:18,565 basehttp 19920 21348 "DELETE /api/livros/17/ HTTP/1.1" 204 44
+INFO 2025-08-25 07:45:18,616 basehttp 19920 21368 "GET /api/livros/ HTTP/1.1" 200 10050
+ERROR 2025-08-25 07:45:27,605 utils 19920 21364 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:45:27,610 utils 19920 21364 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 07:45:28,430 basehttp 19920 12744 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:45:28,441 basehttp 19920 18128 "GET /api/livros/ HTTP/1.1" 200 10050
+INFO 2025-08-25 07:45:28,631 basehttp 19920 12744 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:45:47,264 basehttp 19920 21368 "DELETE /api/livros/17/ HTTP/1.1" 204 44
+INFO 2025-08-25 07:45:47,336 basehttp 19920 20288 "GET /api/livros/ HTTP/1.1" 200 10050
+ERROR 2025-08-25 07:45:48,843 utils 19920 21364 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:45:48,846 utils 19920 21364 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 07:45:49,825 utils 19920 18128 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:45:49,828 utils 19920 18128 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 07:45:57,348 basehttp 19920 12744 "GET /api/livros/ HTTP/1.1" 200 10050
+INFO 2025-08-25 07:45:57,357 basehttp 19920 13156 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:45:57,612 basehttp 19920 12744 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:46:02,237 basehttp 19920 12744 "OPTIONS /api/livros/17/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:46:02,288 basehttp 19920 12744 "GET /api/livros/17/ HTTP/1.1" 200 376
+INFO 2025-08-25 07:46:02,393 basehttp 19920 12744 "GET /api/livros/ HTTP/1.1" 200 10050
+ERROR 2025-08-25 07:46:09,871 utils 19920 21364 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:46:09,882 utils 19920 21364 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:46:09,886 basehttp 19920 21364 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+ERROR 2025-08-25 07:46:10,874 utils 19920 18128 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:46:10,878 utils 19920 18128 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 07:46:18,665 utils 19920 13156 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:46:18,675 utils 19920 13156 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-25 07:46:31,940 utils 19920 18128 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:46:31,943 utils 19920 18128 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:46:31,946 basehttp 19920 18128 - Broken pipe from ('172.30.0.212', 54089)
+INFO 2025-08-25 07:46:37,268 basehttp 19920 6428 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:46:37,295 basehttp 19920 19984 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-08-25 07:46:39,722 utils 19920 13156 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:46:39,726 utils 19920 13156 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-08-25 07:46:45,204 basehttp 19920 6428 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:46:45,239 basehttp 19920 6428 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 10050
+INFO 2025-08-25 07:46:47,756 basehttp 19920 6428 "GET /api/livros/ HTTP/1.1" 200 10050
+ERROR 2025-08-25 07:47:00,757 utils 19920 13156 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:47:00,761 utils 19920 13156 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:47:00,765 basehttp 19920 13156 - Broken pipe from ('172.30.0.212', 54485)
+INFO 2025-08-25 07:48:53,254 basehttp 19920 12744 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-25 07:48:53,266 basehttp 19920 20680 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:48:53,536 basehttp 19920 12744 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:49:01,937 basehttp 19920 11996 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:49:01,966 basehttp 19920 11996 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-25 07:49:03,595 basehttp 19920 11996 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:49:03,606 basehttp 19920 10736 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:49:08,433 basehttp 19920 11996 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-08-25 07:49:14,649 utils 19920 20680 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:49:14,652 utils 19920 20680 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 07:49:23,602 basehttp 19920 12744 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 07:49:23,862 basehttp 19920 19120 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 07:49:23,921 basehttp 19920 12116 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:49:23,949 basehttp 19920 12116 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-25 07:49:35,692 utils 19920 20680 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:49:35,700 utils 19920 20680 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-08-25 07:49:39,676 basehttp 19920 12116 "OPTIONS /api/livros/5/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:49:39,690 basehttp 19920 12116 "GET /api/livros/5/ HTTP/1.1" 200 440
+INFO 2025-08-25 07:49:39,751 basehttp 19920 12116 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-25 07:49:41,300 basehttp 19920 12116 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:49:41,315 basehttp 19920 12116 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-25 07:49:43,718 basehttp 19920 12116 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-08-25 07:49:43,777 basehttp 19920 12116 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+ERROR 2025-08-25 07:49:44,832 utils 19920 12744 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:49:44,834 utils 19920 12744 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 07:49:54,792 basehttp 19920 12116 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 07:49:54,855 basehttp 19920 12116 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-25 07:49:56,742 utils 19920 20680 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:49:56,744 utils 19920 20680 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:49:56,748 basehttp 19920 20680 - Broken pipe from ('172.30.0.212', 54750)
+ERROR 2025-08-25 07:50:06,081 utils 19920 12744 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:50:06,084 utils 19920 12744 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 07:50:27,138 utils 19920 12744 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 07:50:27,139 utils 19920 12744 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 07:50:27,140 basehttp 19920 12744 - Broken pipe from ('172.30.0.212', 54013)
+INFO 2025-08-25 08:19:24,507 basehttp 19920 16360 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-25 08:19:45,832 utils 19920 11104 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 08:19:45,834 utils 19920 11104 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-25 08:20:06,977 utils 19920 11104 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 08:20:06,980 utils 19920 11104 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 08:20:28,209 utils 19920 11104 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 08:20:28,212 utils 19920 11104 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 08:20:28,215 basehttp 19920 11104 - Broken pipe from ('172.30.0.212', 57611)
+INFO 2025-08-25 08:27:42,663 basehttp 19920 22324 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-08-25 08:27:42,682 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:44,298 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:46,493 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:46,531 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:47,293 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:47,315 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:49,974 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:50,025 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:50,455 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:50,505 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:51,034 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:51,082 basehttp 19920 22324 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 08:27:52,374 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:52,483 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:54,615 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 08:27:54,673 basehttp 19920 22324 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 10:32:12,920 autoreload 27196 28588 Watching for file changes with StatReloader
+INFO 2025-08-25 10:34:11,088 basehttp 27196 24392 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-08-25 10:34:11,115 basehttp 27196 24392 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 10:34:11,587 basehttp 27196 24392 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 10:34:11,609 basehttp 27196 27016 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 10:34:11,648 basehttp 27196 24392 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-25 10:34:25,652 basehttp 27196 24392 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-25 10:34:25,714 basehttp 27196 24392 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 10:34:26,128 basehttp 27196 24392 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 10:34:26,180 basehttp 27196 29084 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 10:34:26,209 basehttp 27196 24392 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-25 10:34:32,625 utils 27196 25588 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:34:32,627 utils 27196 25588 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 10:34:37,234 basehttp 27196 24392 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-25 10:34:37,305 basehttp 27196 24392 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 10:34:37,704 basehttp 27196 24392 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 10:34:37,789 basehttp 27196 25092 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 10:34:37,812 basehttp 27196 24392 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-25 10:34:47,174 utils 27196 27016 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:34:47,177 utils 27196 27016 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-25 10:34:51,287 basehttp 27196 25092 - Broken pipe from ('172.30.0.242', 59227)
+INFO 2025-08-25 10:34:51,287 basehttp 27196 24392 - Broken pipe from ('172.30.0.242', 59217)
+ERROR 2025-08-25 10:34:53,671 utils 27196 25588 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:34:53,673 utils 27196 25588 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 10:34:58,743 utils 27196 29084 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:34:58,746 utils 27196 29084 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-25 10:35:08,208 utils 27196 27016 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:35:08,211 utils 27196 27016 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 10:35:14,712 utils 27196 25588 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:35:14,715 utils 27196 25588 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 10:35:14,718 basehttp 27196 25588 - Broken pipe from ('172.30.0.242', 59218)
+ERROR 2025-08-25 10:35:19,792 utils 27196 29084 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:35:19,793 utils 27196 29084 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-25 10:35:29,250 utils 27196 27016 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:35:29,252 utils 27196 27016 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 10:35:29,254 basehttp 27196 27016 - Broken pipe from ('172.30.0.242', 59219)
+ERROR 2025-08-25 10:35:40,818 utils 27196 29084 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:35:40,818 utils 27196 29084 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 10:35:40,818 basehttp 27196 29084 - Broken pipe from ('172.30.0.242', 59225)
+INFO 2025-08-25 10:36:59,437 basehttp 27196 13044 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-25 10:36:59,504 basehttp 27196 13044 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-25 10:36:59,903 basehttp 27196 13044 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-25 10:36:59,959 basehttp 27196 5368 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 10:36:59,987 basehttp 27196 13044 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-25 10:37:20,973 utils 27196 24444 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:37:20,976 utils 27196 24444 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-25 10:37:42,029 utils 27196 24444 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:37:42,032 utils 27196 24444 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-08-25 10:37:47,888 basehttp 27196 29676 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-08-25 10:38:03,073 utils 27196 24444 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-25 10:38:03,075 utils 27196 24444 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-25 10:38:03,078 basehttp 27196 24444 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-08-25 10:38:04,164 basehttp 27196 29676 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 10:38:10,664 basehttp 27196 29676 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-08-25 10:38:13,014 basehttp 27196 29676 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-25 10:38:13,155 basehttp 27196 29676 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-25 10:38:13,196 basehttp 27196 29676 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-25 10:38:13,234 basehttp 27196 29676 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-25 10:38:34,243 basehttp 27196 29676 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-25 10:38:34,343 basehttp 27196 29676 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-25 10:38:37,297 basehttp 27196 29676 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2719
+INFO 2025-08-25 10:38:51,208 basehttp 27196 29676 - Broken pipe from ('172.30.0.242', 59240)
+INFO 2025-08-26 11:30:05,730 autoreload 14568 27096 Watching for file changes with StatReloader
+INFO 2025-08-26 11:37:55,301 autoreload 11160 31276 Watching for file changes with StatReloader
+INFO 2025-08-26 11:38:01,378 basehttp 11160 11588 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-08-26 11:38:01,638 log 11160 11588 Invalid HTTP_HOST header: '172.30.1.47:8000'. You may need to add '172.30.1.47' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.47:8000'. You may need to add '172.30.1.47' to ALLOWED_HOSTS.
+WARNING 2025-08-26 11:38:01,661 basehttp 11160 11588 "POST /api/token/ HTTP/1.1" 400 73765
+ERROR 2025-08-26 11:38:02,961 log 11160 30308 Invalid HTTP_HOST header: '172.30.1.47:8000'. You may need to add '172.30.1.47' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.47:8000'. You may need to add '172.30.1.47' to ALLOWED_HOSTS.
+WARNING 2025-08-26 11:38:02,966 basehttp 11160 30308 "POST /api/token/ HTTP/1.1" 400 73765
+INFO 2025-08-26 11:38:30,964 autoreload 15668 13392 Watching for file changes with StatReloader
+INFO 2025-08-26 11:38:33,109 basehttp 15668 19292 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-26 11:38:33,111 basehttp 15668 19292 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:38:33,120 basehttp 15668 19292 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 11:38:33,181 basehttp 15668 19292 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:38:33,184 basehttp 15668 14904 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:38:33,188 basehttp 15668 8316 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:38:33,233 basehttp 15668 14904 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:38:33,244 basehttp 15668 19292 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:38:33,248 basehttp 15668 19292 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-08-26 11:38:33,257 basehttp 15668 19292 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-26 11:38:35,995 basehttp 15668 19292 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:38:36,856 basehttp 15668 19292 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:38:36,910 basehttp 15668 19292 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-26 11:38:39,019 basehttp 15668 19292 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:38:39,041 basehttp 15668 14904 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-08-26 11:38:54,265 utils 15668 8316 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:38:54,266 utils 15668 8316 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:39:15,304 utils 15668 8316 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:39:15,310 utils 15668 8316 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:39:36,366 utils 15668 8316 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:39:36,368 utils 15668 8316 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:39:36,370 basehttp 15668 8316 - Broken pipe from ('172.30.1.47', 54361)
+INFO 2025-08-26 11:42:10,822 basehttp 15668 14904 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:42:10,843 basehttp 15668 14904 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-26 11:42:12,937 basehttp 15668 14904 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-08-26 11:42:12,979 basehttp 15668 14904 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2719
+INFO 2025-08-26 11:43:12,405 basehttp 15668 14904 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 11:43:12,517 basehttp 15668 14904 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:43:12,540 basehttp 15668 31516 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:43:12,556 basehttp 15668 31516 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-26 11:43:33,584 utils 15668 19292 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:43:33,637 utils 15668 19292 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-26 11:43:44,986 basehttp 15668 31516 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 11:43:45,249 basehttp 15668 29412 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:43:45,268 basehttp 15668 14904 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:43:45,467 basehttp 15668 14904 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-26 11:43:54,676 utils 15668 19292 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:43:54,676 utils 15668 19292 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:44:06,241 utils 15668 31516 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:44:06,243 utils 15668 31516 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:44:15,726 utils 15668 19292 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:44:15,731 utils 15668 19292 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:44:15,734 basehttp 15668 19292 - Broken pipe from ('172.30.1.47', 54359)
+ERROR 2025-08-26 11:44:27,303 utils 15668 31516 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:44:27,303 utils 15668 31516 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:44:48,360 utils 15668 31516 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:44:48,361 utils 15668 31516 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:44:48,621 basehttp 15668 31516 - Broken pipe from ('172.30.1.47', 54636)
+INFO 2025-08-26 11:47:58,426 basehttp 15668 14904 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-26 11:47:58,454 basehttp 15668 14904 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 11:47:58,648 basehttp 15668 29412 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:47:58,750 basehttp 15668 29488 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-26 11:47:58,832 basehttp 15668 29488 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-26 11:48:00,837 basehttp 15668 29488 "OPTIONS /api/usuarios/?tipo=aluno HTTP/1.1" 200 0
+INFO 2025-08-26 11:48:00,907 basehttp 15668 29488 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-26 11:48:00,925 basehttp 15668 29488 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:48:01,021 basehttp 15668 29488 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-26 11:48:01,131 basehttp 15668 29488 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:48:01,187 basehttp 15668 29488 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-26 11:48:01,262 basehttp 15668 29488 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-26 11:48:01,298 basehttp 15668 29488 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-26 11:48:09,721 basehttp 15668 29488 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 11:48:10,138 basehttp 15668 29412 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-26 11:48:10,156 basehttp 15668 12696 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:48:10,337 basehttp 15668 12696 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-26 11:48:10,493 basehttp 15668 12696 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-26 11:48:10,551 basehttp 15668 12696 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-08-26 11:48:19,714 utils 15668 14904 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:48:19,715 utils 15668 14904 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:48:31,185 utils 15668 29488 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:48:31,186 utils 15668 29488 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:48:40,753 utils 15668 14904 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:48:40,755 utils 15668 14904 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:48:52,234 utils 15668 29488 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:48:52,235 utils 15668 29488 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:49:01,804 utils 15668 14904 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:49:01,804 utils 15668 14904 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:49:01,804 basehttp 15668 14904 - Broken pipe from ('172.30.1.47', 54360)
+ERROR 2025-08-26 11:49:13,293 utils 15668 29488 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:49:13,295 utils 15668 29488 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:49:13,296 basehttp 15668 29488 - Broken pipe from ('172.30.1.47', 57296)
+INFO 2025-08-26 11:51:33,887 basehttp 15668 32044 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:51:33,889 basehttp 15668 27124 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 11:51:33,890 basehttp 15668 29412 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-26 11:51:33,973 basehttp 15668 27124 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 11:51:33,979 basehttp 15668 32044 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-26 11:51:33,989 basehttp 15668 29412 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-26 11:51:34,031 basehttp 15668 29412 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-26 11:51:34,040 basehttp 15668 32044 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-26 11:51:34,051 basehttp 15668 29412 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-26 11:51:34,066 basehttp 15668 32044 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-26 11:51:34,088 basehttp 15668 32044 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-08-26 11:51:54,935 utils 15668 12696 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:51:54,937 utils 15668 12696 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:52:09,919 utils 15668 32044 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:52:09,920 utils 15668 32044 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:52:15,988 utils 15668 12696 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:52:15,991 utils 15668 12696 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:52:30,991 utils 15668 32044 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:52:30,993 utils 15668 32044 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:52:37,042 utils 15668 12696 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:52:37,047 utils 15668 12696 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:52:37,050 basehttp 15668 12696 - Broken pipe from ('172.30.1.47', 57315)
+ERROR 2025-08-26 11:52:52,051 utils 15668 32044 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:52:52,052 utils 15668 32044 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:52:52,054 basehttp 15668 32044 - Broken pipe from ('172.30.1.47', 57573)
+INFO 2025-08-26 11:53:23,232 basehttp 15668 4076 "OPTIONS /api/relatorios?periodo=mes_atual HTTP/1.1" 200 0
+WARNING 2025-08-26 11:53:23,368 log 15668 4076 Not Found: /api/relatorios
+WARNING 2025-08-26 11:53:23,371 basehttp 15668 4076 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 11:53:39,367 basehttp 15668 4076 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+WARNING 2025-08-26 11:53:39,732 log 15668 4076 Not Found: /api/relatorios
+WARNING 2025-08-26 11:53:39,740 basehttp 15668 4076 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 11:53:39,799 basehttp 15668 25052 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-26 11:54:00,851 utils 15668 33248 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:54:00,853 utils 15668 33248 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 11:54:21,902 utils 15668 33248 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:54:21,905 utils 15668 33248 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 11:54:42,940 utils 15668 33248 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 11:54:42,941 utils 15668 33248 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 11:54:42,943 basehttp 15668 33248 - Broken pipe from ('172.30.1.47', 57884)
+INFO 2025-08-26 12:05:05,673 basehttp 15668 10148 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+WARNING 2025-08-26 12:05:05,814 log 15668 31552 Not Found: /api/relatorios
+INFO 2025-08-26 12:05:05,816 basehttp 15668 31360 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-08-26 12:05:05,816 basehttp 15668 31552 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:05:16,204 basehttp 15668 31552 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-26 12:05:16,252 basehttp 15668 31552 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-26 12:05:16,281 basehttp 15668 31552 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-26 12:05:16,300 basehttp 15668 31552 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-08-26 12:05:26,872 utils 15668 10148 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:05:26,874 utils 15668 10148 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 12:05:47,922 utils 15668 10148 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:05:47,923 utils 15668 10148 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 12:06:08,968 utils 15668 10148 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:06:08,970 utils 15668 10148 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 12:06:08,973 basehttp 15668 10148 - Broken pipe from ('172.30.1.47', 58479)
+WARNING 2025-08-26 12:12:25,082 log 15668 33876 Not Found: /api/relatorios
+WARNING 2025-08-26 12:12:25,086 basehttp 15668 33876 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:12:34,205 basehttp 15668 33876 "OPTIONS /api/relatorios?periodo=semana HTTP/1.1" 200 0
+WARNING 2025-08-26 12:12:34,215 log 15668 33876 Not Found: /api/relatorios
+WARNING 2025-08-26 12:12:34,216 basehttp 15668 33876 "GET /api/relatorios?periodo=semana HTTP/1.1" 404 17242
+WARNING 2025-08-26 12:13:34,841 log 15668 33876 Not Found: /api/relatorios
+WARNING 2025-08-26 12:13:34,848 basehttp 15668 33876 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:13:34,855 basehttp 15668 8876 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 12:13:34,869 basehttp 15668 31168 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-08-26 12:13:34,927 log 15668 31168 Not Found: /api/relatorios
+INFO 2025-08-26 12:13:34,930 basehttp 15668 8876 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-08-26 12:13:34,941 basehttp 15668 31168 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+WARNING 2025-08-26 12:13:36,922 log 15668 31168 Not Found: /api/relatorios
+WARNING 2025-08-26 12:13:36,927 basehttp 15668 31168 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:13:36,931 basehttp 15668 8876 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-26 12:13:36,933 basehttp 15668 33876 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+WARNING 2025-08-26 12:13:37,041 log 15668 33876 Not Found: /api/relatorios
+WARNING 2025-08-26 12:13:37,042 basehttp 15668 33876 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:13:37,043 basehttp 15668 8876 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-26 12:13:55,895 utils 15668 15328 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:13:55,898 utils 15668 15328 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-26 12:14:01,950 basehttp 15668 33228 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 12:14:02,212 basehttp 15668 26136 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-08-26 12:14:02,234 log 15668 25356 Not Found: /api/relatorios
+WARNING 2025-08-26 12:14:02,238 basehttp 15668 25356 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+ERROR 2025-08-26 12:14:10,886 utils 15668 8876 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:10,887 utils 15668 8876 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 12:14:10,962 utils 15668 33876 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:10,965 utils 15668 33876 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 12:14:13,097 utils 15668 31168 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:13,100 utils 15668 31168 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-26 12:14:17,094 utils 15668 15328 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:17,099 utils 15668 15328 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 12:14:23,244 utils 15668 33228 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:23,247 utils 15668 33228 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+WARNING 2025-08-26 12:14:24,574 log 15668 26136 Not Found: /api/relatorios
+WARNING 2025-08-26 12:14:24,586 basehttp 15668 26136 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:14:24,602 basehttp 15668 6864 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-26 12:14:24,604 basehttp 15668 33772 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-08-26 12:14:24,767 log 15668 33772 Not Found: /api/relatorios
+WARNING 2025-08-26 12:14:24,769 basehttp 15668 33772 "GET /api/relatorios?periodo=mes_atual HTTP/1.1" 404 17245
+INFO 2025-08-26 12:14:24,775 basehttp 15668 26136 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-26 12:14:31,923 utils 15668 8876 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:31,925 utils 15668 8876 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 12:14:32,001 utils 15668 33876 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:32,003 utils 15668 33876 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 12:14:34,147 utils 15668 31168 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:34,157 utils 15668 31168 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-26 12:14:38,158 utils 15668 15328 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-26 12:14:38,158 utils 15668 15328 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-26 12:14:38,158 basehttp 15668 15328 - Broken pipe from ('172.30.1.47', 58734)
+INFO 2025-08-27 10:39:23,120 autoreload 20348 17312 Watching for file changes with StatReloader
+INFO 2025-08-27 10:39:39,645 basehttp 20348 7516 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:39,706 basehttp 20348 7516 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-08-27 10:39:39,716 basehttp 20348 7516 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:39,734 basehttp 20348 7516 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 10:39:39,866 basehttp 20348 7516 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:39,870 basehttp 20348 7516 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:39,872 basehttp 20348 7516 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:39,944 basehttp 20348 7516 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-27 10:39:39,973 basehttp 20348 7516 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-27 10:39:39,978 basehttp 20348 7516 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:39,993 basehttp 20348 7516 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-27 10:39:47,874 basehttp 20348 7516 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 10:39:48,054 basehttp 20348 1092 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-27 10:39:48,090 basehttp 20348 19808 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-27 10:39:48,138 basehttp 20348 19808 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-08-27 10:39:50,894 basehttp 20348 19808 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:50,942 basehttp 20348 19808 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-27 10:39:51,609 basehttp 20348 19808 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-27 10:39:54,190 basehttp 20348 19808 "OPTIONS /api/usuarios/?tipo=aluno HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:54,213 basehttp 20348 19808 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-27 10:39:54,223 basehttp 20348 19808 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:54,293 basehttp 20348 19808 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-27 10:39:54,334 basehttp 20348 19808 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-27 10:39:54,347 basehttp 20348 19808 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-08-27 10:39:54,365 basehttp 20348 19808 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-08-27 10:40:01,036 utils 20348 8852 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 10:40:01,036 utils 20348 8852 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 10:40:09,081 utils 20348 7516 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 10:40:09,081 utils 20348 7516 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 10:40:22,101 utils 20348 8852 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 10:40:22,103 utils 20348 8852 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 10:40:30,123 utils 20348 7516 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 10:40:30,125 utils 20348 7516 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 10:40:43,137 utils 20348 8852 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 10:40:43,138 utils 20348 8852 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 10:40:43,139 basehttp 20348 8852 - Broken pipe from ('127.0.0.1', 51633)
+ERROR 2025-08-27 10:40:51,157 utils 20348 7516 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 10:40:51,159 utils 20348 7516 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 10:40:51,162 basehttp 20348 7516 - Broken pipe from ('127.0.0.1', 51628)
+WARNING 2025-08-27 10:46:07,611 log 20348 16548 Bad Request: /api/token/
+WARNING 2025-08-27 10:46:07,619 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 400 44
+WARNING 2025-08-27 10:46:20,947 log 20348 16548 Unauthorized: /api/token/
+WARNING 2025-08-27 10:46:20,949 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 401 45
+WARNING 2025-08-27 10:46:34,719 log 20348 16548 Unauthorized: /api/token/
+WARNING 2025-08-27 10:46:34,722 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 401 45
+WARNING 2025-08-27 10:46:51,454 log 20348 16548 Bad Request: /api/token/
+WARNING 2025-08-27 10:46:51,456 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 400 41
+WARNING 2025-08-27 10:46:57,174 log 20348 16548 Unauthorized: /api/token/
+WARNING 2025-08-27 10:46:57,181 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 401 45
+WARNING 2025-08-27 10:47:19,639 log 20348 16548 Unauthorized: /api/token/
+WARNING 2025-08-27 10:47:19,640 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 401 45
+WARNING 2025-08-27 10:48:09,301 log 20348 16548 Unauthorized: /api/token/
+WARNING 2025-08-27 10:48:09,302 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-08-27 10:48:38,477 basehttp 20348 16548 "POST /api/token/ HTTP/1.1" 200 577
+INFO 2025-08-27 10:49:13,454 basehttp 20348 16548 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+INFO 2025-08-27 10:50:26,957 basehttp 20348 9592 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-27 10:50:27,016 basehttp 20348 9592 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-27 10:50:27,066 basehttp 20348 9592 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-27 10:50:27,095 basehttp 20348 9592 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-27 10:50:27,343 basehttp 20348 9592 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-27 10:50:27,385 basehttp 20348 9592 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-27 10:50:27,427 basehttp 20348 9592 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-27 10:50:27,457 basehttp 20348 9592 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-27 10:50:28,268 basehttp 20348 9592 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-27 10:50:28,306 basehttp 20348 9592 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-27 10:50:28,333 basehttp 20348 9592 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-27 10:50:28,359 basehttp 20348 9592 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-27 10:50:28,737 basehttp 20348 9592 "GET /api/usuarios/?tipo=aluno HTTP/1.1" 200 1175
+INFO 2025-08-27 10:50:28,780 basehttp 20348 9592 "GET /api/emprestimos/ HTTP/1.1" 200 3829
+INFO 2025-08-27 10:50:28,811 basehttp 20348 9592 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-08-27 10:50:28,829 basehttp 20348 9592 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-08-27 11:00:54,953 basehttp 20348 16672 "OPTIONS /api/relatorios/pedagogicos/ HTTP/1.1" 200 0
+INFO 2025-08-27 11:00:55,075 basehttp 20348 16672 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+INFO 2025-08-27 11:01:02,510 basehttp 20348 16672 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:01:02,767 basehttp 20348 4136 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+INFO 2025-08-27 11:01:02,782 basehttp 20348 4136 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:01:23,811 utils 20348 16672 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:01:23,817 utils 20348 16672 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:01:44,869 utils 20348 16672 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:01:44,871 utils 20348 16672 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:02:05,926 utils 20348 16672 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:02:05,930 utils 20348 16672 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:02:05,933 basehttp 20348 16672 - Broken pipe from ('127.0.0.1', 52956)
+INFO 2025-08-27 11:02:27,207 basehttp 20348 4136 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:02:27,641 basehttp 20348 4136 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+INFO 2025-08-27 11:02:27,691 basehttp 20348 4136 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-27 11:02:32,795 basehttp 20348 18276 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:02:32,943 basehttp 20348 21184 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-27 11:02:32,973 basehttp 20348 18276 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+ERROR 2025-08-27 11:02:48,888 utils 20348 4136 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:02:48,891 utils 20348 4136 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-27 11:02:52,530 basehttp 20348 18276 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:02:52,665 basehttp 20348 18276 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+INFO 2025-08-27 11:02:52,680 basehttp 20348 18276 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:02:54,096 utils 20348 21184 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:02:54,098 utils 20348 21184 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:03:09,932 utils 20348 4136 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:09,933 utils 20348 4136 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:03:13,701 utils 20348 17296 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:13,704 utils 20348 17296 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:03:15,140 utils 20348 21184 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:15,146 utils 20348 21184 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:03:31,110 utils 20348 4136 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:31,110 utils 20348 4136 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:03:31,110 basehttp 20348 4136 - Broken pipe from ('127.0.0.1', 52957)
+ERROR 2025-08-27 11:03:34,921 utils 20348 17296 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:34,930 utils 20348 17296 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:03:36,200 utils 20348 21184 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:36,204 utils 20348 21184 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:03:36,208 basehttp 20348 21184 - Broken pipe from ('127.0.0.1', 53012)
+ERROR 2025-08-27 11:03:55,982 utils 20348 17296 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:03:55,984 utils 20348 17296 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:03:55,987 basehttp 20348 17296 - Broken pipe from ('127.0.0.1', 53032)
+INFO 2025-08-27 11:04:35,091 basehttp 20348 18276 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:04:35,885 basehttp 20348 20752 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-27 11:04:35,930 basehttp 20348 3008 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1111
+ERROR 2025-08-27 11:04:56,657 utils 20348 18276 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:04:56,660 utils 20348 18276 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:05:17,709 utils 20348 18276 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:05:17,712 utils 20348 18276 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:05:38,902 utils 20348 18276 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:05:38,904 utils 20348 18276 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:05:38,907 basehttp 20348 18276 - Broken pipe from ('127.0.0.1', 53013)
+INFO 2025-08-27 11:07:48,121 autoreload 20348 17312 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-08-27 11:07:49,575 autoreload 7336 7640 Watching for file changes with StatReloader
+INFO 2025-08-27 11:08:53,214 basehttp 7336 20708 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:08:53,841 basehttp 7336 19936 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:08:54,435 log 7336 19092 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 744, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimos' into field. Choices are: ativo, data_cadastro, email, emprestimo, groups, historicoacao, id, is_active, is_staff, is_superuser, last_login, logentry, nome, password, ra, reservas, tipo, turma, user_permissions
+ERROR 2025-08-27 11:08:54,482 basehttp 7336 19092 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 157077
+ERROR 2025-08-27 11:08:56,649 log 7336 19092 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 744, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimos' into field. Choices are: ativo, data_cadastro, email, emprestimo, groups, historicoacao, id, is_active, is_staff, is_superuser, last_login, logentry, nome, password, ra, reservas, tipo, turma, user_permissions
+ERROR 2025-08-27 11:08:56,665 basehttp 7336 19092 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 157077
+ERROR 2025-08-27 11:09:14,611 utils 7336 20708 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:09:14,614 utils 7336 20708 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:09:35,708 utils 7336 20708 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:09:35,710 utils 7336 20708 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:09:56,795 utils 7336 20708 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:09:56,797 utils 7336 20708 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:09:56,802 basehttp 7336 20708 - Broken pipe from ('127.0.0.1', 53304)
+INFO 2025-08-27 11:12:35,730 autoreload 7336 7640 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\models.py changed, reloading.
+INFO 2025-08-27 11:12:36,698 autoreload 5380 20880 Watching for file changes with StatReloader
+INFO 2025-08-27 11:12:42,265 autoreload 5380 20880 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\models.py changed, reloading.
+INFO 2025-08-27 11:12:46,435 autoreload 20104 18512 Watching for file changes with StatReloader
+INFO 2025-08-27 11:13:06,147 autoreload 22468 22472 Watching for file changes with StatReloader
+ERROR 2025-08-27 11:13:13,783 log 22468 21888 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 762, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimos' into field. Choices are: ativo, autor, capa, data_publicacao, descricao, editora, emprestimo, genero, id, numero_paginas, quantidade_emprestada, quantidade_total, reservas, tipo, titulo
+ERROR 2025-08-27 11:13:13,943 basehttp 22468 21888 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 160148
+ERROR 2025-08-27 11:13:14,670 log 22468 21888 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 762, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimos' into field. Choices are: ativo, autor, capa, data_publicacao, descricao, editora, emprestimo, genero, id, numero_paginas, quantidade_emprestada, quantidade_total, reservas, tipo, titulo
+ERROR 2025-08-27 11:13:14,689 basehttp 22468 21888 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 160148
+ERROR 2025-08-27 11:13:33,006 log 22468 21888 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 762, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimos' into field. Choices are: ativo, autor, capa, data_publicacao, descricao, editora, emprestimo, genero, id, numero_paginas, quantidade_emprestada, quantidade_total, reservas, tipo, titulo
+ERROR 2025-08-27 11:13:33,043 basehttp 22468 21888 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 160148
+ERROR 2025-08-27 11:13:33,814 log 22468 21888 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 762, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimos' into field. Choices are: ativo, autor, capa, data_publicacao, descricao, editora, emprestimo, genero, id, numero_paginas, quantidade_emprestada, quantidade_total, reservas, tipo, titulo
+ERROR 2025-08-27 11:13:33,925 basehttp 22468 21888 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 160148
+INFO 2025-08-27 11:15:46,060 autoreload 22468 22472 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\models.py changed, reloading.
+INFO 2025-08-27 11:15:47,818 autoreload 22448 21096 Watching for file changes with StatReloader
+INFO 2025-08-27 11:17:14,758 autoreload 21156 13056 Watching for file changes with StatReloader
+INFO 2025-08-27 11:17:25,516 basehttp 21156 9392 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+ERROR 2025-08-27 11:17:25,887 log 21156 21632 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 742, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimo' into field. Choices are: ativo, data_cadastro, email, emprestimos, groups, historicoacao, id, is_active, is_staff, is_superuser, last_login, logentry, nome, password, ra, reservas, tipo, turma, user_permissions
+ERROR 2025-08-27 11:17:25,915 basehttp 21156 21632 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 156984
+INFO 2025-08-27 11:17:25,962 basehttp 21156 21632 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:17:46,732 utils 21156 9392 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:17:46,733 utils 21156 9392 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:18:07,772 utils 21156 9392 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:18:07,774 utils 21156 9392 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:18:28,814 utils 21156 9392 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:18:28,815 utils 21156 9392 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:18:28,817 basehttp 21156 9392 - Broken pipe from ('127.0.0.1', 53642)
+INFO 2025-08-27 11:19:40,231 autoreload 21156 13056 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-08-27 11:19:41,864 autoreload 21664 21892 Watching for file changes with StatReloader
+INFO 2025-08-27 11:19:50,332 basehttp 21664 20740 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+ERROR 2025-08-27 11:19:50,880 log 21664 22140 Internal Server Error: /api/relatorios/pedagogicos/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 759, in get
+    ).annotate(
+      ^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1649, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1701, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1218, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 176, in resolve_expression
+    result = super().resolve_expression(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\aggregates.py", line 63, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 298, in resolve_expression
+    source_expressions = [
+                         ^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 300, in <listcomp>
+    expr.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\expressions.py", line 902, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 2049, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1900, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\query.py", line 1805, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'emprestimo' into field. Choices are: ativo, autor, capa, data_publicacao, descricao, editora, emprestimos, genero, id, numero_paginas, quantidade_emprestada, quantidade_total, reservas, tipo, titulo
+INFO 2025-08-27 11:19:50,928 basehttp 21664 21960 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:19:50,978 basehttp 21664 22140 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 500 160225
+ERROR 2025-08-27 11:20:11,680 utils 21664 20740 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:20:11,685 utils 21664 20740 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:20:32,726 utils 21664 20740 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:20:32,727 utils 21664 20740 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:20:53,760 utils 21664 20740 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:20:53,762 utils 21664 20740 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:20:53,765 basehttp 21664 20740 - Broken pipe from ('127.0.0.1', 53741)
+INFO 2025-08-27 11:23:22,812 autoreload 21664 21892 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-08-27 11:23:24,153 autoreload 20212 21836 Watching for file changes with StatReloader
+INFO 2025-08-27 11:26:05,568 autoreload 20212 21836 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-08-27 11:26:07,199 autoreload 21984 3212 Watching for file changes with StatReloader
+INFO 2025-08-27 11:26:14,479 autoreload 21984 3212 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-08-27 11:26:16,702 autoreload 19680 3300 Watching for file changes with StatReloader
+INFO 2025-08-27 11:26:20,710 basehttp 19680 7892 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:26:21,054 basehttp 19680 21128 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-08-27 11:26:21,123 basehttp 19680 21128 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-08-27 11:26:34,377 basehttp 19680 21128 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:26:34,522 basehttp 19680 21128 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-08-27 11:26:34,534 basehttp 19680 21128 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:26:42,216 utils 19680 7892 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:26:42,230 utils 19680 7892 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-08-27 11:26:54,815 basehttp 19680 21128 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-08-27 11:26:54,844 basehttp 19680 21128 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-08-27 11:26:55,546 utils 19680 4296 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:26:55,548 utils 19680 4296 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:27:03,274 utils 19680 7892 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:27:03,276 utils 19680 7892 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:27:16,581 utils 19680 4296 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:27:16,584 utils 19680 4296 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:27:24,313 utils 19680 7892 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:27:24,314 utils 19680 7892 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:27:24,317 basehttp 19680 7892 - Broken pipe from ('127.0.0.1', 53927)
+ERROR 2025-08-27 11:27:37,624 utils 19680 4296 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:27:37,628 utils 19680 4296 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:27:37,631 basehttp 19680 4296 - Broken pipe from ('127.0.0.1', 53931)
+WARNING 2025-08-27 11:43:30,780 log 19680 24308 Unauthorized: /api/relatorios/pedagogicos/
+WARNING 2025-08-27 11:43:30,946 basehttp 19680 24308 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 401 191
+INFO 2025-08-27 11:43:31,389 basehttp 19680 24308 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-08-27 11:43:31,477 basehttp 19680 24308 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-08-27 11:43:34,433 basehttp 19680 24308 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-08-27 11:43:42,517 basehttp 19680 24308 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-08-27 11:43:49,049 basehttp 19680 24308 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-08-27 11:43:49,494 basehttp 19680 24028 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-08-27 11:43:49,677 basehttp 19680 24028 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-08-27 11:44:10,542 utils 19680 24308 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:44:10,542 utils 19680 24308 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-08-27 11:44:31,581 utils 19680 24308 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:44:31,583 utils 19680 24308 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-08-27 11:44:52,627 utils 19680 24308 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-08-27 11:44:52,628 utils 19680 24308 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-08-27 11:44:52,631 basehttp 19680 24308 - Broken pipe from ('127.0.0.1', 55182)

@@ -296,8 +296,8 @@ class Reserva(models.Model):
 
 
 class Emprestimo(models.Model):
-    livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
-    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    livro = models.ForeignKey(Livro, on_delete=models.CASCADE, related_name='emprestimos')
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='emprestimos')
     data_emprestimo = models.DateTimeField(auto_now_add=True)
     data_devolucao = models.DateTimeField(null=True, blank=True)
     devolvido = models.BooleanField(default=False)
