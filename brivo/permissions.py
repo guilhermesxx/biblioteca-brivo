@@ -48,6 +48,33 @@ class EhDonoOuAdmin(BasePermission):
         return False # Nenhuma das condições acima foi atendida
 
 
+class ApenasAdminPodeEditar(BasePermission):
+    """
+    Permite leitura para usuários autenticados, mas apenas admins podem editar.
+    """
+    def has_permission(self, request, view):
+        if not request.user or not request.user.is_authenticated:
+            return False
+        
+        # Para métodos de leitura, permite qualquer usuário autenticado
+        if request.method in SAFE_METHODS:
+            return True
+        
+        # Para métodos de escrita, apenas admins
+        return getattr(request.user, 'tipo', None) == "admin"
+    
+    def has_object_permission(self, request, view, obj):
+        if not request.user or not request.user.is_authenticated:
+            return False
+        
+        # Para métodos de leitura, permite qualquer usuário autenticado
+        if request.method in SAFE_METHODS:
+            return True
+        
+        # Para métodos de escrita, apenas admins
+        return getattr(request.user, 'tipo', None) == "admin"
+
+
 class SomenteLeituraOuAdmin(BasePermission):
     """
     Permite leitura (GET, HEAD, OPTIONS) para todos autenticados,

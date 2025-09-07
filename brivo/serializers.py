@@ -218,6 +218,39 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuario
         # Incluímos 'avatar' nos campos para que o serializer o reconheça
         fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo', 'avatar']
+    
+    def validate_email(self, value):
+        # Validação de email único apenas se estiver sendo alterado
+        if self.instance and self.instance.email == value:
+            return value
+        if Usuario.objects.filter(email=value).exists():
+            raise serializers.ValidationError("Este email já está em uso.")
+        return value
+    
+    def validate_ra(self, value):
+        # Validação de RA único apenas se estiver sendo alterado
+        if self.instance and self.instance.ra == value:
+            return value
+        if Usuario.objects.filter(ra=value).exists():
+            raise serializers.ValidationError("Este RA já está em uso.")
+        return value
+    
+    def validate(self, data):
+        # Validação adicional para campos obrigatórios
+        errors = {}
+        
+        # Verifica se nome está vazio
+        if 'nome' in data and not data['nome'].strip():
+            errors['nome'] = 'O nome não pode estar vazio.'
+        
+        # Verifica se turma está vazia
+        if 'turma' in data and not data['turma'].strip():
+            errors['turma'] = 'A turma não pode estar vazia.'
+        
+        if errors:
+            raise serializers.ValidationError(errors)
+        
+        return data
 
     def create(self, validated_data):
         # Remove o avatar de validated_data antes de criar o usuário,

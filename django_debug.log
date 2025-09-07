@@ -6883,3 +6883,991 @@ corretamente após um período de tempo ou a conexão estabelecida falhou
 porque o host conectado não respondeu
 WARNING 2025-08-28 10:44:27,218 utils 25380 22488 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
 INFO 2025-08-28 10:44:27,221 basehttp 25380 22488 - Broken pipe from ('127.0.0.1', 61538)
+INFO 2025-09-06 22:03:39,034 autoreload 22740 2108 Watching for file changes with StatReloader
+INFO 2025-09-06 22:03:51,169 basehttp 22740 19584 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-09-06 22:03:51,314 log 22740 19584 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-09-06 22:03:51,316 basehttp 22740 19584 "POST /api/token/refresh/ HTTP/1.1" 500 120849
+INFO 2025-09-06 22:04:02,312 basehttp 22740 1740 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:02,590 basehttp 22740 1740 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-09-06 22:04:02,593 basehttp 22740 1740 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:02,597 basehttp 22740 1740 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:04:02,633 basehttp 22740 1740 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:02,638 basehttp 22740 27196 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:02,638 basehttp 22740 1740 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:02,655 basehttp 22740 27196 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:04:02,671 basehttp 22740 27196 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:04:02,673 basehttp 22740 27196 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:02,679 basehttp 22740 27196 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-09-06 22:04:04,332 utils 22740 1740 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-319b5fcbc67sm5091358fac.16 - gsmtp')
+WARNING 2025-09-06 22:04:04,334 utils 22740 1740 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-09-06 22:04:05,752 basehttp 22740 27196 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-06 22:04:05,873 utils 22740 1740 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-319b60b8c90sm5086860fac.31 - gsmtp')
+WARNING 2025-09-06 22:04:05,874 utils 22740 1740 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 22:04:07,373 utils 22740 1740 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-31d56cd32a6sm4385567fac.32 - gsmtp')
+WARNING 2025-09-06 22:04:07,375 utils 22740 1740 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:04:07,377 basehttp 22740 1740 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-06 22:04:15,810 basehttp 22740 1740 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:04:15,997 basehttp 22740 23556 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:04:15,999 basehttp 22740 1740 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-09-06 22:04:18,015 utils 22740 27196 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-437ffea7d07sm4453797b6e.1 - gsmtp')
+WARNING 2025-09-06 22:04:18,016 utils 22740 27196 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-09-06 22:04:19,373 basehttp 22740 1740 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:19,390 basehttp 22740 1740 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-09-06 22:04:19,550 utils 22740 27196 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-43836abece4sm2631004b6e.28 - gsmtp')
+WARNING 2025-09-06 22:04:19,551 utils 22740 27196 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-09-06 22:04:21,190 basehttp 22740 1740 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:04:21,271 basehttp 22740 23556 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:04:21,277 basehttp 22740 1740 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:04:21,285 basehttp 22740 1740 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+ERROR 2025-09-06 22:04:21,579 utils 22740 27196 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-319b6063050sm5142218fac.25 - gsmtp')
+WARNING 2025-09-06 22:04:21,580 utils 22740 27196 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:04:21,581 basehttp 22740 27196 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-06 22:04:23,235 basehttp 22740 27196 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-06 22:04:23,766 utils 22740 1740 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-7458e848c23sm4110749a34.43 - gsmtp')
+WARNING 2025-09-06 22:04:23,767 utils 22740 1740 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-06 22:04:25,426 utils 22740 1740 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-31d86b825d0sm3301544fac.29 - gsmtp')
+WARNING 2025-09-06 22:04:25,427 utils 22740 1740 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 22:04:27,113 utils 22740 1740 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-437ffea7d07sm4453852b6e.1 - gsmtp')
+WARNING 2025-09-06 22:04:27,113 utils 22740 1740 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:04:27,115 basehttp 22740 1740 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-06 22:04:28,978 basehttp 22740 1740 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:28,988 basehttp 22740 1740 "GET /api/alertas-sistema/ HTTP/1.1" 200 3115
+INFO 2025-09-06 22:04:50,453 basehttp 22740 1740 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:04:50,463 basehttp 22740 27196 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:04:52,904 basehttp 22740 27196 "OPTIONS /api/relatorios/pedagogicos/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:04:52,915 basehttp 22740 27196 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-09-06 22:05:12,940 basehttp 22740 28308 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:12,951 basehttp 22740 28308 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:29,028 basehttp 22740 28308 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:35,056 basehttp 22740 33872 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:35,067 basehttp 22740 33872 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:50,209 basehttp 22740 33872 "OPTIONS /api/usuarios/counts/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:05:50,216 basehttp 22740 33872 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:05:50,219 basehttp 22740 33872 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:05:50,228 basehttp 22740 33872 "GET /api/usuarios/ HTTP/1.1" 200 2413
+INFO 2025-09-06 22:05:55,915 basehttp 22740 33872 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:55,937 basehttp 22740 31788 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:05:57,163 basehttp 22740 31788 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-06 22:06:02,361 basehttp 22740 31788 "OPTIONS /api/livros/5/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:06:02,396 basehttp 22740 31788 "PUT /api/livros/5/ HTTP/1.1" 200 440
+INFO 2025-09-06 22:06:02,405 basehttp 22740 31788 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-06 22:06:06,073 basehttp 22740 31788 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:06:06,103 basehttp 22740 31788 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-06 22:06:10,225 basehttp 22740 31788 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:06:10,233 basehttp 22740 33872 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:07:19,831 basehttp 22740 33872 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:07:19,849 basehttp 22740 31788 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:07:20,908 basehttp 22740 31788 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-06 22:08:55,530 basehttp 22740 31788 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:08:55,540 basehttp 22740 33872 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:10:06,585 basehttp 22740 33872 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:10:06,595 basehttp 22740 33872 "GET /api/usuarios/ HTTP/1.1" 200 2413
+INFO 2025-09-06 22:10:16,679 basehttp 22740 33872 "OPTIONS /api/usuarios/13/ HTTP/1.1" 200 0
+WARNING 2025-09-06 22:10:16,686 log 22740 33872 Bad Request: /api/usuarios/13/
+WARNING 2025-09-06 22:10:16,687 basehttp 22740 33872 "PUT /api/usuarios/13/ HTTP/1.1" 400 157
+WARNING 2025-09-06 22:10:17,671 log 22740 33872 Bad Request: /api/usuarios/13/
+WARNING 2025-09-06 22:10:17,671 basehttp 22740 33872 "PUT /api/usuarios/13/ HTTP/1.1" 400 157
+WARNING 2025-09-06 22:10:17,980 log 22740 33872 Bad Request: /api/usuarios/13/
+WARNING 2025-09-06 22:10:17,981 basehttp 22740 33872 "PUT /api/usuarios/13/ HTTP/1.1" 400 157
+WARNING 2025-09-06 22:10:18,347 log 22740 33872 Bad Request: /api/usuarios/13/
+WARNING 2025-09-06 22:10:18,347 basehttp 22740 33872 "PUT /api/usuarios/13/ HTTP/1.1" 400 157
+WARNING 2025-09-06 22:10:21,597 log 22740 33872 Bad Request: /api/usuarios/13/
+WARNING 2025-09-06 22:10:21,597 basehttp 22740 33872 "PUT /api/usuarios/13/ HTTP/1.1" 400 157
+INFO 2025-09-06 22:15:28,964 basehttp 22740 35536 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:15:28,989 basehttp 22740 35536 "GET /api/usuarios/ HTTP/1.1" 200 2413
+INFO 2025-09-06 22:15:53,564 basehttp 22740 35536 "OPTIONS /api/usuarios/2/ HTTP/1.1" 200 0
+WARNING 2025-09-06 22:15:53,595 log 22740 35536 Bad Request: /api/usuarios/2/
+WARNING 2025-09-06 22:15:53,596 basehttp 22740 35536 "PUT /api/usuarios/2/ HTTP/1.1" 400 119
+INFO 2025-09-06 22:19:04,565 autoreload 22740 2108 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:19:05,224 autoreload 10048 24060 Watching for file changes with StatReloader
+INFO 2025-09-06 22:19:57,458 autoreload 10048 24060 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:19:57,909 autoreload 29164 20888 Watching for file changes with StatReloader
+INFO 2025-09-06 22:20:17,271 autoreload 29164 20888 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:20:17,930 autoreload 15388 22316 Watching for file changes with StatReloader
+INFO 2025-09-06 22:20:35,500 autoreload 15388 22316 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:20:36,186 autoreload 3004 3132 Watching for file changes with StatReloader
+INFO 2025-09-06 22:21:15,668 autoreload 3004 3132 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:21:16,227 autoreload 33596 32232 Watching for file changes with StatReloader
+INFO 2025-09-06 22:21:17,922 autoreload 33596 32232 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:21:18,459 autoreload 33620 29728 Watching for file changes with StatReloader
+INFO 2025-09-06 22:21:19,969 autoreload 33620 29728 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:21:20,467 autoreload 16308 19648 Watching for file changes with StatReloader
+ERROR 2025-09-06 22:21:27,421 log 16308 18160 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Usuario' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `nome` on serializer `UsuarioSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Usuario` instance.
+Original exception text was: 'Usuario' object has no attribute 'first_name'.
+ERROR 2025-09-06 22:21:27,425 basehttp 16308 18160 "GET /api/usuarios/11/ HTTP/1.1" 500 131917
+INFO 2025-09-06 22:21:45,241 basehttp 16308 18160 "POST /api/token/ HTTP/1.1" 200 572
+ERROR 2025-09-06 22:21:45,263 log 16308 18160 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Usuario' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `nome` on serializer `UsuarioSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Usuario` instance.
+Original exception text was: 'Usuario' object has no attribute 'first_name'.
+ERROR 2025-09-06 22:21:45,265 basehttp 16308 18160 "GET /api/usuarios/11/ HTTP/1.1" 500 131917
+INFO 2025-09-06 22:21:48,757 basehttp 16308 18160 "POST /api/token/ HTTP/1.1" 200 572
+ERROR 2025-09-06 22:21:48,777 log 16308 18160 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Usuario' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `nome` on serializer `UsuarioSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Usuario` instance.
+Original exception text was: 'Usuario' object has no attribute 'first_name'.
+ERROR 2025-09-06 22:21:48,779 basehttp 16308 18160 "GET /api/usuarios/11/ HTTP/1.1" 500 131917
+INFO 2025-09-06 22:21:49,419 basehttp 16308 18160 "POST /api/token/ HTTP/1.1" 200 572
+ERROR 2025-09-06 22:21:49,471 log 16308 18160 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Usuario' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `nome` on serializer `UsuarioSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Usuario` instance.
+Original exception text was: 'Usuario' object has no attribute 'first_name'.
+ERROR 2025-09-06 22:21:49,474 basehttp 16308 18160 "GET /api/usuarios/11/ HTTP/1.1" 500 131917
+INFO 2025-09-06 22:21:57,657 basehttp 16308 18160 "POST /api/token/ HTTP/1.1" 200 572
+ERROR 2025-09-06 22:21:57,677 log 16308 18160 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Usuario' object has no attribute 'first_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `nome` on serializer `UsuarioSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Usuario` instance.
+Original exception text was: 'Usuario' object has no attribute 'first_name'.
+ERROR 2025-09-06 22:21:57,679 basehttp 16308 18160 "GET /api/usuarios/11/ HTTP/1.1" 500 131917
+INFO 2025-09-06 22:21:58,068 autoreload 16308 19648 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:21:58,582 autoreload 31520 29292 Watching for file changes with StatReloader
+INFO 2025-09-06 22:21:59,167 basehttp 31520 23980 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-09-06 22:21:59,176 basehttp 31520 23980 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:21:59,244 basehttp 31520 23980 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:21:59,259 basehttp 31520 23980 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:21:59,268 basehttp 31520 23980 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-06 22:22:00,625 basehttp 31520 23980 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-06 22:22:01,525 utils 31520 26632 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a1e0cc1a2514c-8943bba6b6asm8971444241.19 - gsmtp')
+WARNING 2025-09-06 22:22:01,525 utils 31520 26632 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-06 22:22:03,019 utils 31520 26632 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 71dfb90a1353d-54521bac78bsm6041564e0c.30 - gsmtp')
+WARNING 2025-09-06 22:22:03,020 utils 31520 26632 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 22:22:04,531 utils 31520 26632 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 71dfb90a1353d-544afcfe32dsm8423025e0c.23 - gsmtp')
+WARNING 2025-09-06 22:22:04,533 utils 31520 26632 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:22:04,534 basehttp 31520 26632 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-06 22:22:13,042 basehttp 31520 26632 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:22:13,051 basehttp 31520 26632 "GET /api/usuarios/ HTTP/1.1" 200 2413
+WARNING 2025-09-06 22:24:01,020 log 31520 26632 Bad Request: /api/usuarios/2/
+WARNING 2025-09-06 22:24:01,020 basehttp 31520 26632 "PUT /api/usuarios/2/ HTTP/1.1" 400 119
+INFO 2025-09-06 22:25:25,099 autoreload 31520 29292 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:25:25,751 autoreload 35564 34036 Watching for file changes with StatReloader
+INFO 2025-09-06 22:25:28,370 autoreload 35564 34036 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:25:28,827 autoreload 31548 35064 Watching for file changes with StatReloader
+INFO 2025-09-06 22:26:01,899 autoreload 31548 35064 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:26:02,390 autoreload 14476 12960 Watching for file changes with StatReloader
+INFO 2025-09-06 22:26:14,399 autoreload 14476 12960 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:26:14,901 autoreload 24840 29228 Watching for file changes with StatReloader
+INFO 2025-09-06 22:26:27,646 basehttp 24840 8744 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:26:27,849 basehttp 24840 8744 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:26:27,866 basehttp 24840 8744 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:26:27,904 basehttp 24840 24164 "GET /api/usuarios/ HTTP/1.1" 200 2413
+ERROR 2025-09-06 22:26:30,466 utils 24840 8744 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 006d021491bc7-61e31f1cd24sm3125225eaf.7 - gsmtp')
+WARNING 2025-09-06 22:26:30,468 utils 24840 8744 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-06 22:26:32,700 utils 24840 8744 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-319b606a155sm5082104fac.27 - gsmtp')
+WARNING 2025-09-06 22:26:32,701 utils 24840 8744 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 22:26:34,533 utils 24840 8744 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-43836abed32sm2698840b6e.29 - gsmtp')
+WARNING 2025-09-06 22:26:34,535 utils 24840 8744 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:26:34,538 basehttp 24840 8744 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-06 22:26:38,419 basehttp 24840 8744 "OPTIONS /api/usuarios/5/ HTTP/1.1" 200 0
+WARNING 2025-09-06 22:26:38,453 log 24840 8744 Bad Request: /api/usuarios/5/
+WARNING 2025-09-06 22:26:38,453 basehttp 24840 8744 "PUT /api/usuarios/5/ HTTP/1.1" 400 119
+INFO 2025-09-06 22:26:47,297 autoreload 24840 29228 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:26:47,789 autoreload 36128 21708 Watching for file changes with StatReloader
+INFO 2025-09-06 22:26:50,291 autoreload 36128 21708 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:26:50,751 autoreload 8416 32012 Watching for file changes with StatReloader
+INFO 2025-09-06 22:26:52,326 autoreload 8416 32012 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:26:52,876 autoreload 31916 33620 Watching for file changes with StatReloader
+INFO 2025-09-06 22:28:06,288 autoreload 31916 33620 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:28:06,851 autoreload 13664 28452 Watching for file changes with StatReloader
+ERROR 2025-09-06 22:28:10,336 log 13664 36748 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    for field in fields:
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `nome_completo` is not valid for model `Usuario` in `brivo.serializers.UsuarioSerializer`.
+ERROR 2025-09-06 22:28:10,339 basehttp 13664 36748 "GET /api/usuarios/11/ HTTP/1.1" 500 150466
+INFO 2025-09-06 22:28:22,617 basehttp 13664 36748 "POST /api/token/ HTTP/1.1" 200 572
+ERROR 2025-09-06 22:28:22,645 log 13664 36748 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    for field in fields:
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `nome_completo` is not valid for model `Usuario` in `brivo.serializers.UsuarioSerializer`.
+ERROR 2025-09-06 22:28:22,647 basehttp 13664 36748 "GET /api/usuarios/11/ HTTP/1.1" 500 150466
+INFO 2025-09-06 22:28:24,856 basehttp 13664 36748 "POST /api/token/ HTTP/1.1" 200 572
+ERROR 2025-09-06 22:28:24,889 log 13664 36748 Internal Server Error: /api/usuarios/11/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 525, in to_representation
+    for field in fields:
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `nome_completo` is not valid for model `Usuario` in `brivo.serializers.UsuarioSerializer`.
+ERROR 2025-09-06 22:28:24,891 basehttp 13664 36748 "GET /api/usuarios/11/ HTTP/1.1" 500 150466
+INFO 2025-09-06 22:28:28,639 autoreload 13664 28452 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:28:29,113 autoreload 31344 23204 Watching for file changes with StatReloader
+INFO 2025-09-06 22:32:26,143 autoreload 31344 23204 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:32:26,664 autoreload 37044 36960 Watching for file changes with StatReloader
+INFO 2025-09-06 22:32:30,583 basehttp 37044 36952 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-09-06 22:32:30,591 basehttp 37044 36952 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:32:30,667 basehttp 37044 36952 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:32:30,681 basehttp 37044 36952 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:32:30,692 basehttp 37044 36952 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-06 22:32:32,002 basehttp 37044 36952 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-06 22:32:33,082 utils 37044 13560 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b4fb7d391casm8824659a12.7 - gsmtp')
+WARNING 2025-09-06 22:32:33,083 utils 37044 13560 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-09-06 22:32:33,727 basehttp 37044 36952 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:32:33,734 basehttp 37044 36952 "GET /api/usuarios/ HTTP/1.1" 200 2413
+ERROR 2025-09-06 22:32:34,780 utils 37044 13560 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2490648c89bsm249494665ad.109 - gsmtp')
+WARNING 2025-09-06 22:32:34,781 utils 37044 13560 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 22:32:36,283 utils 37044 13560 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7722a4e1d4fsm25303917b3a.73 - gsmtp')
+WARNING 2025-09-06 22:32:36,284 utils 37044 13560 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:32:36,285 basehttp 37044 13560 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-06 22:32:40,428 log 37044 13560 Bad Request: /api/usuarios/5/
+WARNING 2025-09-06 22:32:40,429 basehttp 37044 13560 "PUT /api/usuarios/5/ HTTP/1.1" 400 80
+INFO 2025-09-06 22:32:47,504 autoreload 37044 36960 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:32:48,118 autoreload 31416 36176 Watching for file changes with StatReloader
+INFO 2025-09-06 22:35:16,883 autoreload 31416 36176 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:35:17,538 autoreload 36112 22212 Watching for file changes with StatReloader
+INFO 2025-09-06 22:36:30,930 autoreload 36112 22212 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 22:36:31,536 autoreload 9336 34084 Watching for file changes with StatReloader
+INFO 2025-09-06 22:36:36,660 basehttp 9336 36576 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:36:36,861 basehttp 9336 36576 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:36:36,870 basehttp 9336 36576 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:36:36,914 basehttp 9336 25240 "GET /api/usuarios/ HTTP/1.1" 200 2413
+ERROR 2025-09-06 22:36:39,102 utils 9336 36576 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-319b6057f21sm5055564fac.22 - gsmtp')
+WARNING 2025-09-06 22:36:39,103 utils 9336 36576 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-06 22:36:40,771 utils 9336 36576 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-745743cd46bsm5546779a34.40 - gsmtp')
+WARNING 2025-09-06 22:36:40,772 utils 9336 36576 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 22:36:42,998 utils 9336 36576 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-4383d9886bbsm2328266b6e.32 - gsmtp')
+WARNING 2025-09-06 22:36:42,998 utils 9336 36576 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:36:43,000 basehttp 9336 36576 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-06 22:36:44,809 log 9336 36576 Bad Request: /api/usuarios/2/
+WARNING 2025-09-06 22:36:44,810 basehttp 9336 36576 "PUT /api/usuarios/2/ HTTP/1.1" 400 119
+WARNING 2025-09-06 22:36:49,431 log 9336 36576 Bad Request: /api/usuarios/2/
+WARNING 2025-09-06 22:36:49,431 basehttp 9336 36576 "PUT /api/usuarios/2/ HTTP/1.1" 400 119
+WARNING 2025-09-06 22:36:50,366 log 9336 36576 Bad Request: /api/usuarios/2/
+WARNING 2025-09-06 22:36:50,367 basehttp 9336 36576 "PUT /api/usuarios/2/ HTTP/1.1" 400 119
+INFO 2025-09-06 22:38:55,528 basehttp 9336 36576 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-06 22:38:55,881 basehttp 9336 36576 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:38:55,905 basehttp 9336 36576 "GET /api/reservas/ HTTP/1.1" 200 1824
+INFO 2025-09-06 22:38:57,335 basehttp 9336 36576 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-09-06 22:38:57,354 basehttp 9336 36576 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-06 22:38:59,830 basehttp 9336 36576 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 2130
+INFO 2025-09-06 22:39:00,935 basehttp 9336 36576 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-06 22:58:18,173 basehttp 9336 16272 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-06 22:58:18,300 basehttp 9336 16272 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-06 22:58:18,306 basehttp 9336 16272 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-06 22:58:20,483 basehttp 9336 18668 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-06 22:58:20,540 utils 9336 16272 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b4f8a0a2851sm14760660a12.37 - gsmtp')
+WARNING 2025-09-06 22:58:20,541 utils 9336 16272 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-06 22:58:22,199 utils 9336 16272 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24905da2896sm250397235ad.81 - gsmtp')
+WARNING 2025-09-06 22:58:22,199 utils 9336 16272 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-09-06 22:58:23,223 basehttp 9336 18668 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 22:58:23,241 basehttp 9336 18668 "GET /api/usuarios/ HTTP/1.1" 200 2413
+ERROR 2025-09-06 22:58:24,165 utils 9336 16272 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24afcbf0268sm150135315ad.8 - gsmtp')
+WARNING 2025-09-06 22:58:24,165 utils 9336 16272 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 22:58:24,167 basehttp 9336 16272 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-06 22:58:26,704 log 9336 16272 Bad Request: /api/usuarios/2/
+WARNING 2025-09-06 22:58:26,704 basehttp 9336 16272 "PUT /api/usuarios/2/ HTTP/1.1" 400 119
+INFO 2025-09-06 23:02:24,948 autoreload 9336 34084 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-06 23:02:25,851 autoreload 21680 35196 Watching for file changes with StatReloader
+INFO 2025-09-06 23:02:33,952 basehttp 21680 24444 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 23:02:33,969 basehttp 21680 24444 "GET /api/usuarios/ HTTP/1.1" 200 2413
+INFO 2025-09-06 23:02:38,256 basehttp 21680 24444 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-06 23:02:38,269 basehttp 21680 24444 "GET /api/usuarios/ HTTP/1.1" 200 2413
+INFO 2025-09-06 23:28:19,131 basehttp 21680 36480 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-09-06 23:28:21,012 utils 21680 11428 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-319b5886e78sm5065997fac.4 - gsmtp')
+WARNING 2025-09-06 23:28:21,013 utils 21680 11428 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-06 23:28:22,856 utils 21680 11428 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-74eccc66e71sm516905a34.6 - gsmtp')
+WARNING 2025-09-06 23:28:22,856 utils 21680 11428 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-06 23:28:25,155 utils 21680 11428 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 586e51a60fabf-31d7119337dsm4010638fac.5 - gsmtp')
+WARNING 2025-09-06 23:28:25,156 utils 21680 11428 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-06 23:28:25,158 basehttp 21680 11428 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-06 23:58:19,108 log 21680 10928 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-06 23:58:19,109 log 21680 36228 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-06 23:58:19,111 basehttp 21680 10928 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 193
+WARNING 2025-09-06 23:58:19,111 basehttp 21680 36228 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 193
+ERROR 2025-09-06 23:58:19,374 log 21680 10928 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-09-06 23:58:19,375 log 21680 36228 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-09-06 23:58:19,380 basehttp 21680 10928 "POST /api/token/refresh/ HTTP/1.1" 500 120191
+ERROR 2025-09-06 23:58:19,381 basehttp 21680 36228 "POST /api/token/refresh/ HTTP/1.1" 500 120191
+INFO 2025-09-07 00:19:19,822 autoreload 21680 35196 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-07 00:19:20,443 autoreload 35724 31672 Watching for file changes with StatReloader
+INFO 2025-09-07 00:19:31,426 basehttp 35724 15972 "OPTIONS /api/usuarios/2/ HTTP/1.1" 200 0
+WARNING 2025-09-07 00:19:31,435 log 35724 15972 Unauthorized: /api/usuarios/2/
+WARNING 2025-09-07 00:19:31,436 basehttp 35724 15972 "PUT /api/usuarios/2/ HTTP/1.1" 401 68
+INFO 2025-09-07 00:21:15,353 basehttp 35724 15972 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:15,727 basehttp 35724 15972 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-09-07 00:21:15,730 basehttp 35724 15972 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:15,737 basehttp 35724 15972 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-07 00:21:15,805 basehttp 35724 15972 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:15,811 basehttp 35724 15972 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:15,815 basehttp 35724 15972 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:15,824 basehttp 35724 15972 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-07 00:21:16,131 basehttp 35724 32572 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 00:21:16,139 basehttp 35724 32572 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:16,152 basehttp 35724 32572 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-07 00:21:17,234 basehttp 35724 32572 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-07 00:21:17,630 utils 35724 15972 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24b0a4514f8sm144654925ad.143 - gsmtp')
+WARNING 2025-09-07 00:21:17,630 utils 35724 15972 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+INFO 2025-09-07 00:21:18,525 basehttp 35724 32572 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:18,534 basehttp 35724 32572 "GET /api/livros/ HTTP/1.1" 200 9673
+ERROR 2025-09-07 00:21:19,685 utils 35724 15972 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-32b95d31976sm8815096a91.22 - gsmtp')
+WARNING 2025-09-07 00:21:19,685 utils 35724 15972 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-09-07 00:21:20,103 basehttp 35724 32572 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 00:21:20,119 basehttp 35724 27744 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 00:21:20,997 basehttp 35724 27744 "OPTIONS /api/usuarios/counts/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:21,009 basehttp 35724 27744 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 00:21:21,014 basehttp 35724 27744 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-07 00:21:21,021 basehttp 35724 27744 "GET /api/usuarios/ HTTP/1.1" 200 2413
+ERROR 2025-09-07 00:21:21,729 utils 35724 15972 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-437ffed9f15sm4405854b6e.10 - gsmtp')
+WARNING 2025-09-07 00:21:21,729 utils 35724 15972 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-07 00:21:21,729 basehttp 35724 15972 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-07 00:21:38,878 basehttp 35724 15972 "OPTIONS /api/usuarios/17/ HTTP/1.1" 200 0
+WARNING 2025-09-07 00:21:38,907 log 35724 15972 Bad Request: /api/usuarios/17/
+WARNING 2025-09-07 00:21:38,907 basehttp 35724 15972 "PUT /api/usuarios/17/ HTTP/1.1" 400 79
+INFO 2025-09-07 00:21:44,986 basehttp 35724 15972 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 00:21:45,000 basehttp 35724 15972 "GET /api/usuarios/ HTTP/1.1" 200 2413
+INFO 2025-09-07 00:29:39,558 autoreload 35724 31672 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-07 00:29:40,262 autoreload 27744 23848 Watching for file changes with StatReloader
+INFO 2025-09-07 00:30:27,864 autoreload 27744 23848 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-07 00:30:28,412 autoreload 13348 11320 Watching for file changes with StatReloader
+INFO 2025-09-07 00:31:23,988 basehttp 13348 29140 "OPTIONS /api/usuarios/13/ HTTP/1.1" 200 0
+WARNING 2025-09-07 00:31:24,036 log 13348 29140 Bad Request: /api/usuarios/13/
+WARNING 2025-09-07 00:31:24,037 basehttp 13348 29140 "PUT /api/usuarios/13/ HTTP/1.1" 400 119
+INFO 2025-09-07 00:34:00,951 autoreload 13348 11320 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-07 00:34:01,531 autoreload 4344 32732 Watching for file changes with StatReloader
+WARNING 2025-09-07 00:50:18,952 log 4620 19124 Forbidden: /api/usuarios/3/
+ERROR 2025-09-07 00:58:11,548 log 23736 28368 Internal Server Error: /api/usuarios/2/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 421, in initial
+    self.check_permissions(request)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 337, in check_permissions
+    for permission in self.get_permissions():
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py", line 88, in get_permissions
+    return [IsAuthenticated(), ApenasAdminPodeEditar()]
+                               ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'ApenasAdminPodeEditar' is not defined
+WARNING 2025-09-07 00:58:34,718 log 19300 25868 Forbidden: /api/usuarios/2/
+WARNING 2025-09-07 00:58:43,712 log 37768 36224 Forbidden: /api/usuarios/2/
+WARNING 2025-09-07 00:58:51,427 log 30096 36336 Forbidden: /api/usuarios/2/
+WARNING 2025-09-07 00:59:25,405 log 33416 20252 Forbidden: /api/usuarios/2/
+WARNING 2025-09-07 01:00:24,781 log 8224 31212 Forbidden: /api/usuarios/2/
+WARNING 2025-09-07 01:00:53,990 log 12092 26084 Forbidden: /api/usuarios/2/
+INFO 2025-09-07 01:01:11,398 autoreload 35328 21084 Watching for file changes with StatReloader
+INFO 2025-09-07 01:01:14,950 basehttp 35328 34896 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:01:14,996 basehttp 35328 34896 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:01:29,903 basehttp 35328 34896 "OPTIONS /api/usuarios/18/ HTTP/1.1" 200 0
+WARNING 2025-09-07 01:01:29,942 log 35328 34896 Bad Request: /api/usuarios/18/
+WARNING 2025-09-07 01:01:29,944 basehttp 35328 34896 "PUT /api/usuarios/18/ HTTP/1.1" 400 119
+ERROR 2025-09-07 01:04:11,006 exception 23256 26000 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2025-09-07 01:04:11,401 log 23256 26000 Bad Request: /api/usuarios/1/
+ERROR 2025-09-07 01:04:35,129 exception 32436 19592 Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 186, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+WARNING 2025-09-07 01:04:35,286 log 32436 19592 Bad Request: /api/usuarios/1/
+INFO 2025-09-07 01:09:41,355 autoreload 32748 34196 Watching for file changes with StatReloader
+INFO 2025-09-07 01:09:43,181 basehttp 32748 17916 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-09-07 01:09:43,190 basehttp 32748 17916 "GET /api/usuarios/11/ HTTP/1.1" 200 110
+INFO 2025-09-07 01:09:43,278 basehttp 32748 17916 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-07 01:09:43,303 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:09:43,317 basehttp 32748 17916 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-07 01:09:44,482 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-07 01:09:45,016 utils 32748 7020 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24cb28c3147sm90581295ad.73 - gsmtp')
+WARNING 2025-09-07 01:09:45,017 utils 32748 7020 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-07 01:09:46,887 utils 32748 7020 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-32d3a7a921fsm3836313a91.25 - gsmtp')
+WARNING 2025-09-07 01:09:46,888 utils 32748 7020 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-09-07 01:09:47,512 basehttp 32748 17916 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 01:09:47,534 basehttp 32748 17916 "GET /api/usuarios/ HTTP/1.1" 200 2413
+ERROR 2025-09-07 01:09:48,411 utils 32748 7020 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7722a26a3e3sm26166829b3a.13 - gsmtp')
+WARNING 2025-09-07 01:09:48,412 utils 32748 7020 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-07 01:09:48,412 basehttp 32748 7020 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-07 01:09:56,510 basehttp 32748 7020 "OPTIONS /api/usuarios/9/ HTTP/1.1" 200 0
+INFO 2025-09-07 01:09:56,558 basehttp 32748 7020 "PUT /api/usuarios/9/ HTTP/1.1" 200 90
+INFO 2025-09-07 01:09:56,569 basehttp 32748 7020 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 01:09:56,592 basehttp 32748 7020 "GET /api/usuarios/ HTTP/1.1" 200 2414
+INFO 2025-09-07 01:10:15,290 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:15,327 basehttp 32748 7020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-07 01:10:17,331 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:17,353 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:18,529 basehttp 32748 17916 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-07 01:10:21,416 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:21,437 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:41,544 basehttp 32748 7020 "PUT /api/usuarios/11/ HTTP/1.1" 200 116
+INFO 2025-09-07 01:10:41,554 basehttp 32748 7020 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 01:10:41,579 basehttp 32748 7020 "GET /api/usuarios/ HTTP/1.1" 200 2420
+INFO 2025-09-07 01:10:47,701 basehttp 32748 7020 "GET /api/usuarios/11/ HTTP/1.1" 200 116
+INFO 2025-09-07 01:10:47,832 basehttp 32748 7020 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-09-07 01:10:49,319 utils 32748 17916 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24ccc79a345sm76288235ad.132 - gsmtp')
+WARNING 2025-09-07 01:10:49,320 utils 32748 17916 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-07 01:10:51,394 utils 32748 17916 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b4cd3670e5csm22612954a12.53 - gsmtp')
+WARNING 2025-09-07 01:10:51,395 utils 32748 17916 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+INFO 2025-09-07 01:10:51,692 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+ERROR 2025-09-07 01:10:52,898 utils 32748 17916 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24cb28c3147sm90600045ad.73 - gsmtp')
+WARNING 2025-09-07 01:10:52,899 utils 32748 17916 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-07 01:10:52,903 basehttp 32748 17916 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-07 01:10:53,700 basehttp 32748 17916 "GET /api/livros/ HTTP/1.1" 200 9673
+INFO 2025-09-07 01:10:55,724 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:55,741 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:10:56,739 basehttp 32748 7020 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 01:10:56,766 basehttp 32748 7020 "GET /api/usuarios/ HTTP/1.1" 200 2420
+INFO 2025-09-07 01:11:00,632 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:00,662 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:03,149 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:04,008 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:04,026 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:05,871 basehttp 32748 7020 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-09-07 01:11:05,903 basehttp 32748 7020 "GET /api/alertas-sistema/ HTTP/1.1" 200 3425
+INFO 2025-09-07 01:11:09,183 basehttp 32748 7020 "OPTIONS /api/alertas-sistema/11/ HTTP/1.1" 200 0
+INFO 2025-09-07 01:11:09,199 basehttp 32748 7020 "DELETE /api/alertas-sistema/11/ HTTP/1.1" 204 0
+INFO 2025-09-07 01:11:09,214 basehttp 32748 7020 "GET /api/alertas-sistema/ HTTP/1.1" 200 3115
+INFO 2025-09-07 01:11:23,262 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:23,284 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:26,255 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:26,268 basehttp 32748 17916 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-07 01:11:36,575 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:36,591 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:39,113 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:39,180 basehttp 32748 7020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9673
+INFO 2025-09-07 01:11:42,035 basehttp 32748 7020 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:11:42,050 basehttp 32748 17916 "GET /api/dashboard/ HTTP/1.1" 200 1301
+INFO 2025-09-07 01:12:42,082 basehttp 32748 34060 "PUT /api/usuarios/11/ HTTP/1.1" 200 121
+INFO 2025-09-07 01:12:42,092 basehttp 32748 34060 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-07 01:12:42,111 basehttp 32748 34060 "GET /api/usuarios/ HTTP/1.1" 200 2425
+INFO 2025-09-07 01:12:47,897 basehttp 32748 34060 "GET /api/usuarios/11/ HTTP/1.1" 200 121
+INFO 2025-09-07 01:12:48,147 basehttp 32748 34060 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+ERROR 2025-09-07 01:12:50,354 utils 32748 21252 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-745a10341f7sm3397221a34.33 - gsmtp')
+WARNING 2025-09-07 01:12:50,355 utils 32748 21252 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 5).
+ERROR 2025-09-07 01:12:52,670 utils 32748 21252 Falha ao enviar e-mail para lula11@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5614622812f47-43800082f5asm4498423b6e.26 - gsmtp')
+WARNING 2025-09-07 01:12:52,670 utils 32748 21252 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 6).
+ERROR 2025-09-07 01:12:54,774 utils 32748 21252 Falha ao enviar e-mail para bolsominion1@gmail.com (Assunto: Sua reserva está prestes a expirar): (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 46e09a7af769-746e98292fdsm2074938a34.17 - gsmtp')
+WARNING 2025-09-07 01:12:54,774 utils 32748 21252 Falha ao enviar e-mail de aviso de reserva expirando para bolsominion1@gmail.com (Reserva: 9).
+INFO 2025-09-07 01:12:54,775 basehttp 32748 21252 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
