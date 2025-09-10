@@ -159,9 +159,9 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 class LivroViewSet(viewsets.ModelViewSet):
     """
     Viewset para gerenciar livros.
-    Admin pode criar, editar, desativar. Outros usuários podem apenas visualizar livros ativos.
+    Admin pode criar, editar, deletar. Outros usuários podem apenas visualizar livros ativos.
     """
-    queryset = Livro.objects.all().order_by('titulo') # CORREÇÃO: Adicionado order_by para paginação consistente
+    queryset = Livro.objects.all().order_by('titulo')
     serializer_class = LivroSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['titulo', 'autor', 'genero']
@@ -181,8 +181,8 @@ class LivroViewSet(viewsets.ModelViewSet):
         """
         user = self.request.user
         if user.is_authenticated and user.tipo == 'admin':
-            return Livro.objects.all().order_by('titulo') # CORREÇÃO: Adicionado order_by
-        return Livro.objects.filter(ativo=True).order_by('titulo') # CORREÇÃO: Adicionado order_by
+            return Livro.objects.all().order_by('titulo')
+        return Livro.objects.filter(ativo=True).order_by('titulo')
 
     def perform_create(self, serializer):
         """
@@ -200,13 +200,26 @@ class LivroViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         """
-        Desativa (soft delete) um livro e registra a ação.
+        Deleta completamente um livro (hard delete) removendo todas as dependências.
         """
         livro = self.get_object()
-        livro.ativo = False
-        livro.save()
-        registrar_acao(request.user, livro, 'DESATIVACAO', descricao='Livro desativado.')
-        return Response({'mensagem': 'Livro desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+        
+        # Remove todas as reservas relacionadas ao livro
+        Reserva.objects.filter(livro=livro).delete()
+        
+        # Remove todos os empréstimos relacionados ao livro
+        Emprestimo.objects.filter(livro=livro).delete()
+        
+        # Remove todos os alertas relacionados ao livro
+        AlertaSistema.objects.filter(titulo__icontains=livro.titulo).delete()
+        
+        # Registra a ação antes de deletar
+        registrar_acao(request.user, livro, 'DESATIVACAO', descricao=f'Livro "{livro.titulo}" e todas suas dependências deletados permanentemente.')
+        
+        # HARD DELETE - remove completamente do banco
+        livro.delete()
+        
+        return Response({'mensagem': 'Livro e todas suas dependências deletados permanentemente.'}, status=status.HTTP_204_NO_CONTENT)
 
 # -----------------------------------------------------------------------------
 # Views de Empréstimzs
