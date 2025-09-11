@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-cz@z3!zy40$nhe
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() == 'true'
 
 # Domínios permitidos, lidos do .env.
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost,192.168.100.235,172.30.1.47,10.133.196.163').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost,192.168.100.235,172.30.1.47,10.133.196.163,172.30.1.87').split(',')
 ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS if host.strip()]
 
 
