@@ -135,7 +135,7 @@ Seu empréstimo foi registrado com sucesso!
 📋 LEMBRE-SE:
 • Cuide bem do livro
 • Devolva na data correta
-• Multa por atraso: R$ 1,00/dia
+• Prazo de 15 dias para devolução
 
 📱 Acompanhe seu empréstimo no sistema!
 
@@ -159,7 +159,7 @@ Seu prazo de devolução está chegando!
 • Renovar empréstimo (se disponível)
 • Solicitar prorrogação
 
-⚠️ Atraso gera multa de R$ 1,00/dia
+⚠️ Lembre-se de devolver no prazo
 
 📱 Gerencie seu empréstimo no sistema!
 
@@ -176,7 +176,7 @@ Seu livro está em atraso desde ontem.
 
 📚 Livro: {titulo}
 📅 Deveria ter sido devolvido: {data_deveria_devolver}
-💰 Multa atual: R$ {multa}
+⚠️ Status: Em atraso
 
 🏃‍♂️ AÇÃO NECESSÁRIA:
 Devolva o livro hoje mesmo na biblioteca.
@@ -199,7 +199,7 @@ Obrigado por devolver o livro! 📚
 
 📖 Livro: {titulo}
 📅 Data de Devolução: {data_devolucao}
-💰 Multa: R$ 0,00
+✅ Status: Devolvido com sucesso
 
 ⭐ Que tal avaliar sua experiência?
 Acesse o sistema e deixe sua avaliação!
@@ -428,8 +428,8 @@ RODAPE_PADRAO = """
 # Configurações de horário de funcionamento
 HORARIO_FUNCIONAMENTO = "Segunda a Sexta: 8h às 17h"
 
-# Valor da multa por dia de atraso
-MULTA_POR_DIA = 1.00
+# Configurações de empréstimo
+# MULTA_POR_DIA = 1.00  # Removido - não há multa no sistema escolar
 
 # Prazo padrão de empréstimo em dias
 PRAZO_EMPRESTIMO_DIAS = 15

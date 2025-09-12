@@ -14,7 +14,7 @@ from .email_templates import (
     EMAIL_LIVRO_ATRASO, EMAIL_DEVOLUCAO_CONFIRMADA, EMAIL_ENTRADA_FILA,
     EMAIL_SUA_VEZ_FILA, EMAIL_NOVOS_LIVROS, EMAIL_RECOMENDACOES,
     EMAIL_RELATORIO_MENSAL, EMAIL_ALERTA_ADMIN, EMAIL_DICAS_LEITURA,
-    EMAIL_CONVITE_EVENTO, NOME_ESCOLA, ASSINATURA_PADRAO, MULTA_POR_DIA, PRAZO_EMPRESTIMO_DIAS
+    EMAIL_CONVITE_EVENTO, NOME_ESCOLA, ASSINATURA_PADRAO, PRAZO_EMPRESTIMO_DIAS
 )
 
 # Configura o logger
@@ -377,7 +377,6 @@ def enviar_email_livro_atraso(emprestimo):
     # TEMPLATE DE LIVRO EM ATRASO - Editável aqui
     data_deveria_devolver = (emprestimo.data_emprestimo + timedelta(days=15)).strftime('%d/%m/%Y')
     dias_atraso = (now().date() - (emprestimo.data_emprestimo + timedelta(days=15)).date()).days
-    multa = dias_atraso * 1.00  # R$ 1,00 por dia
     
     mensagem = f"""
 Olá {emprestimo.usuario.nome},
