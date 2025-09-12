@@ -6,7 +6,9 @@ from .views import (
     TesteEmailView, LembreteDevolucaoView, DashboardAdminView, 
     AvisoReservaExpirandoView, usuario_me_view, AlertaSistemaViewSet,
     PublicAlertaSistemaListView,
-    RelatoriosPedagogicosView # NOVO: Importe a nova view
+    RelatoriosPedagogicosView, # NOVO: Importe a nova view
+    # 📧 NOVAS VIEWS DE EMAIL
+    EnviarEmailManualView, EnviarEmailGrupoView, EnviarEmailsPredefinidosView, ListarTiposEmailView
 )
 
 
@@ -23,7 +25,12 @@ urlpatterns = [
     path('dashboard/', DashboardAdminView.as_view(), name='dashboard-admin'),
     path('usuarios/me/', usuario_me_view, name='usuario-me'),
     path('alertas/publicos/', PublicAlertaSistemaListView.as_view(), name='alertas_publicos'),
-    path('relatorios/pedagogicos/', RelatoriosPedagogicosView.as_view(), name='relatorios-pedagogicos'), # NOVO: Rota para a nova view
+    path('relatorios/pedagogicos/', RelatoriosPedagogicosView.as_view(), name='relatorios-pedagogicos'),
+    # 📧 NOVAS ROTAS PARA SISTEMA DE EMAILS
+    path('emails/enviar-manual/', EnviarEmailManualView.as_view(), name='enviar-email-manual'),
+    path('emails/enviar-grupo/', EnviarEmailGrupoView.as_view(), name='enviar-email-grupo'),
+    path('emails/predefinidos/', EnviarEmailsPredefinidosView.as_view(), name='emails-predefinidos'),
+    path('emails/tipos/', ListarTiposEmailView.as_view(), name='listar-tipos-email'),
 ]
 
 urlpatterns += [

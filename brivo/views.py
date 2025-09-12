@@ -37,6 +37,10 @@ from .utils import (
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import CustomTokenObtainPairSerializer
 
+# Logger
+import logging
+logger = logging.getLogger(__name__)
+
 # -----------------------------------------------------------------------------
 # Views de Autenticação e Usuário
 # -----------------------------------------------------------------------------
@@ -111,10 +115,18 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """
         Salva um novo usuário e registra a ação.
+        DISPARA EMAIL DE BOAS-VINDAS AUTOMATICAMENTE
         """
         usuario = serializer.save()
         user_for_log = self.request.user if self.request.user.is_authenticated else None
         registrar_acao(user_for_log, usuario, 'CRIACAO', descricao='Usuário criado.')
+        
+        # ENVIAR EMAIL DE BOAS-VINDAS AUTOMATICAMENTE (NÃO QUEBRA SE FALHAR)
+        try:
+            from .utils import enviar_email_boas_vindas
+            enviar_email_boas_vindas(usuario)
+        except Exception as e:
+            logger.warning(f"Email de boas-vindas nao enviado para {usuario.email}: {str(e)}")
 
     def perform_update(self, serializer):
         """
@@ -246,8 +258,16 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """
         Cria um novo empréstimo, associando-o ao usuário logado.
+        DISPARA EMAIL DE CONFIRMAÇÃO DE EMPRÉSTIMO AUTOMATICAMENTE
         """
-        serializer.save(usuario=self.request.user)
+        emprestimo = serializer.save(usuario=self.request.user)
+        
+        # ENVIAR EMAIL DE CONFIRMAÇÃO DE EMPRÉSTIMO AUTOMATICAMENTE (NÃO QUEBRA SE FALHAR)
+        try:
+            from .utils import enviar_email_emprestimo_confirmado
+            enviar_email_emprestimo_confirmado(emprestimo)
+        except Exception as e:
+            logger.warning(f"Email de emprestimo nao enviado para {emprestimo.usuario.email}: {str(e)}")
 
     def perform_update(self, serializer):
         """
@@ -261,6 +281,13 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
         if not devolvido_antes and emprestimo.devolvido:
             # A lógica de marcar_devolucao já está no modelo Emprestimo e usa timezone.now()
             emprestimo.marcar_devolucao()
+            
+            # ENVIAR EMAIL DE DEVOLUÇÃO CONFIRMADA AUTOMATICAMENTE (NÃO QUEBRA SE FALHAR)
+            try:
+                from .utils import enviar_email_devolucao_confirmada
+                enviar_email_devolucao_confirmada(emprestimo)
+            except Exception as e:
+                logger.warning(f"Email de devolucao nao enviado para {emprestimo.usuario.email}: {str(e)}")
 
     @action(detail=False, methods=['get'], url_path='recent-reads')
     def recent_reads(self, request):
@@ -337,9 +364,21 @@ class ReservaViewSet(viewsets.ModelViewSet):
         """
         Cria uma nova reserva, associando-a ao usuário logado.
         A validação de conflitos e status inicial é feita no serializer.
+        DISPARA EMAILS AUTOMATICAMENTE CONFORME O TIPO DE RESERVA
         """
         reserva = serializer.save(aluno=self.request.user)
         registrar_acao(self.request.user, reserva, 'CRIACAO', descricao='Reserva criada.')
+        
+        # ENVIAR EMAILS AUTOMATICAMENTE CONFORME O STATUS DA RESERVA (NÃO QUEBRA SE FALHAR)
+        try:
+            from .utils import enviar_email_confirmacao_reserva, enviar_email_entrada_fila
+            
+            if reserva.status == 'aguardando_retirada':
+                enviar_email_confirmacao_reserva(reserva)
+            elif reserva.status == 'na_fila':
+                enviar_email_entrada_fila(reserva)
+        except Exception as e:
+            logger.warning(f"Email de reserva nao enviado para {reserva.aluno.email}: {str(e)}")
 
     def perform_update(self, serializer):
         """
@@ -434,11 +473,267 @@ class TesteEmailView(APIView):
 
     def get(self, request):
         enviar_email(
-            destinatario='guilherme1920x@gmail.com',
+            destinatario='brivo1652@gmail.com',
             assunto='Teste de E-mail da Biblioteca Brivo',
             mensagem='Este é um teste do sistema de e-mails da biblioteca. Se você recebeu este e-mail, a configuração está funcionando corretamente.'
         )
         return Response({'mensagem': 'E-mail de teste enviado com sucesso'})
+
+# -----------------------------------------------------------------------------
+# 📧 VIEWS PARA ENVIO MANUAL DE EMAILS
+# -----------------------------------------------------------------------------
+
+class EnviarEmailManualView(APIView):
+    """
+    📧 Endpoint para envio manual de emails
+    Permite que administradores enviem emails personalizados
+    """
+    permission_classes = [IsAuthenticated, EhAdmin]
+
+    def post(self, request):
+        # DADOS NECESSÁRIOS PARA ENVIO MANUAL
+        destinatario = request.data.get('destinatario')
+        assunto = request.data.get('assunto')
+        mensagem = request.data.get('mensagem')
+        
+        # VALIDAÇÕES BÁSICAS
+        if not destinatario or not assunto or not mensagem:
+            return Response({
+                'erro': 'Destinatário, assunto e mensagem são obrigatórios'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # ENVIAR EMAIL MANUAL
+        from .utils import enviar_email_manual
+        sucesso = enviar_email_manual(
+            destinatario_email=destinatario,
+            assunto_personalizado=assunto,
+            mensagem_personalizada=mensagem,
+            remetente_usuario=request.user
+        )
+        
+        if sucesso:
+            return Response({
+                'mensagem': f'Email enviado com sucesso para {destinatario}'
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response({
+                'erro': 'Falha ao enviar email'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class EnviarEmailGrupoView(APIView):
+    """
+    📧 Endpoint para envio de emails em grupo
+    Permite enviar para múltiplos usuários ou tipos específicos
+    """
+    permission_classes = [IsAuthenticated, EhAdmin]
+
+    def post(self, request):
+        # DADOS PARA ENVIO EM GRUPO
+        tipo_usuarios = request.data.get('tipo_usuarios', [])  # ['aluno', 'professor']
+        usuarios_especificos = request.data.get('usuarios_ids', [])  # [1, 2, 3]
+        assunto = request.data.get('assunto')
+        mensagem = request.data.get('mensagem')
+        
+        if not assunto or not mensagem:
+            return Response({
+                'erro': 'Assunto e mensagem são obrigatórios'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # BUSCAR USUÁRIOS PARA ENVIO
+        usuarios_para_envio = []
+        
+        # Por tipo de usuário
+        if tipo_usuarios:
+            usuarios_por_tipo = Usuario.objects.filter(
+                ativo=True,
+                tipo__in=tipo_usuarios
+            )
+            usuarios_para_envio.extend(usuarios_por_tipo)
+        
+        # Usuários específicos
+        if usuarios_especificos:
+            usuarios_especificos_obj = Usuario.objects.filter(
+                id__in=usuarios_especificos,
+                ativo=True
+            )
+            usuarios_para_envio.extend(usuarios_especificos_obj)
+        
+        if not usuarios_para_envio:
+            return Response({
+                'erro': 'Nenhum usuário encontrado para envio'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # ENVIAR EMAILS
+        from .utils import enviar_email_manual
+        emails_enviados = 0
+        emails_falharam = 0
+        
+        for usuario in usuarios_para_envio:
+            sucesso = enviar_email_manual(
+                destinatario_email=usuario.email,
+                assunto_personalizado=assunto,
+                mensagem_personalizada=mensagem,
+                remetente_usuario=request.user
+            )
+            
+            if sucesso:
+                emails_enviados += 1
+            else:
+                emails_falharam += 1
+        
+        return Response({
+            'mensagem': f'Envio concluído: {emails_enviados} enviados, {emails_falharam} falharam',
+            'emails_enviados': emails_enviados,
+            'emails_falharam': emails_falharam
+        }, status=status.HTTP_200_OK)
+
+class EnviarEmailsPredefinidosView(APIView):
+    """
+    📧 Endpoint para disparar emails automáticos predefinidos
+    Permite testar e enviar emails automáticos manualmente
+    """
+    permission_classes = [IsAuthenticated, EhAdmin]
+
+    def post(self, request):
+        tipo_email = request.data.get('tipo_email')
+        usuario_id = request.data.get('usuario_id')
+        
+        if not tipo_email:
+            return Response({
+                'erro': 'Tipo de email é obrigatório'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # IMPORTAR FUNÇÕES DE EMAIL
+        from .utils import (
+            enviar_email_boas_vindas,
+            enviar_email_novos_livros,
+            enviar_email_dicas_leitura,
+            enviar_email_convite_evento
+        )
+        
+        try:
+            # EMAIL DE BOAS-VINDAS
+            if tipo_email == 'boas_vindas' and usuario_id:
+                usuario = Usuario.objects.get(id=usuario_id)
+                sucesso = enviar_email_boas_vindas(usuario)
+                
+            # EMAIL DE NOVOS LIVROS
+            elif tipo_email == 'novos_livros':
+                usuarios = Usuario.objects.filter(ativo=True, tipo__in=['aluno', 'professor'])
+                livros_novos = Livro.objects.filter(ativo=True).order_by('-id')[:3]
+                enviar_email_novos_livros(usuarios, livros_novos)
+                sucesso = True
+                
+            # EMAIL DE DICAS DE LEITURA
+            elif tipo_email == 'dicas_leitura':
+                usuarios = Usuario.objects.filter(ativo=True, tipo__in=['aluno', 'professor'])
+                dica_titulo = "Faça anotações enquanto lê"
+                dica_conteudo = "Anotar ideias importantes ajuda na compreensão e memorização."
+                livro_sugerido = Livro.objects.filter(ativo=True).first()
+                enviar_email_dicas_leitura(usuarios, dica_titulo, dica_conteudo, livro_sugerido)
+                sucesso = True
+                
+            # EMAIL DE CONVITE PARA EVENTO
+            elif tipo_email == 'convite_evento':
+                usuarios = Usuario.objects.filter(ativo=True, tipo__in=['aluno', 'professor'])
+                nome_evento = "Semana Literária"
+                data_evento = "25/12/2024"
+                horario = "14h às 17h"
+                local = "Biblioteca da Escola"
+                programacao = ["Roda de leitura", "Contação de histórias", "Troca de livros"]
+                enviar_email_convite_evento(usuarios, nome_evento, data_evento, horario, local, programacao)
+                sucesso = True
+                
+            else:
+                return Response({
+                    'erro': 'Tipo de email inválido ou dados insuficientes'
+                }, status=status.HTTP_400_BAD_REQUEST)
+            
+            if sucesso:
+                return Response({
+                    'mensagem': f'Email predefinido "{tipo_email}" enviado com sucesso'
+                }, status=status.HTTP_200_OK)
+            else:
+                return Response({
+                    'erro': 'Falha ao enviar email predefinido'
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                
+        except Usuario.DoesNotExist:
+            return Response({
+                'erro': 'Usuário não encontrado'
+            }, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({
+                'erro': f'Erro interno: {str(e)}'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class ListarTiposEmailView(APIView):
+    """
+    📧 Endpoint para listar tipos de emails disponíveis
+    Retorna todos os tipos de emails que podem ser enviados
+    """
+    permission_classes = [IsAuthenticated, EhAdmin]
+
+    def get(self, request):
+        tipos_email = {
+            'emails_automaticos': {
+                'boas_vindas': {
+                    'nome': 'Email de Boas-vindas',
+                    'descricao': 'Enviado quando um novo usuário é criado',
+                    'requer_usuario': True,
+                    'automatico': True
+                },
+                'confirmacao_reserva': {
+                    'nome': 'Confirmação de Reserva',
+                    'descricao': 'Enviado quando uma reserva é criada',
+                    'automatico': True
+                },
+                'emprestimo_confirmado': {
+                    'nome': 'Empréstimo Confirmado',
+                    'descricao': 'Enviado quando um empréstimo é registrado',
+                    'automatico': True
+                },
+                'devolucao_confirmada': {
+                    'nome': 'Devolução Confirmada',
+                    'descricao': 'Enviado quando um livro é devolvido',
+                    'automatico': True
+                }
+            },
+            'emails_predefinidos': {
+                'novos_livros': {
+                    'nome': 'Novos Livros',
+                    'descricao': 'Notifica sobre novos livros adicionados',
+                    'manual': True
+                },
+                'dicas_leitura': {
+                    'nome': 'Dicas de Leitura',
+                    'descricao': 'Envia dicas educacionais semanais',
+                    'manual': True
+                },
+                'convite_evento': {
+                    'nome': 'Convite para Evento',
+                    'descricao': 'Convida para eventos da biblioteca',
+                    'manual': True
+                }
+            },
+            'emails_manuais': {
+                'individual': {
+                    'nome': 'Email Individual',
+                    'descricao': 'Envio personalizado para um usuário',
+                    'endpoint': '/api/emails/enviar-manual/'
+                },
+                'grupo': {
+                    'nome': 'Email em Grupo',
+                    'descricao': 'Envio para múltiplos usuários',
+                    'endpoint': '/api/emails/enviar-grupo/'
+                }
+            }
+        }
+        
+        return Response({
+            'tipos_email': tipos_email,
+            'total_tipos': sum(len(categoria) for categoria in tipos_email.values())
+        }, status=status.HTTP_200_OK)
 
 # -----------------------------------------------------------------------------
 # Views de Dashboard e Estatísticas

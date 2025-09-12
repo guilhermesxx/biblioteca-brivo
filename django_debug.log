@@ -9218,3 +9218,135 @@ porque o host conectado não respondeu
 WARNING 2025-09-11 11:03:53,981 utils 22940 17564 Falha ao enviar e-mail de aviso de reserva expirando para lula11@gmail.com (Reserva: 10).
 INFO 2025-09-11 11:03:53,983 basehttp 22940 17564 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
 INFO 2025-09-11 11:04:03,974 basehttp 22940 496 - Broken pipe from ('172.30.1.109', 52139)
+INFO 2025-09-11 23:40:46,668 autoreload 34712 32992 Watching for file changes with StatReloader
+INFO 2025-09-11 23:45:07,924 basehttp 34712 27108 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,428 basehttp 34712 27108 "POST /api/usuarios/ HTTP/1.1" 201 113
+INFO 2025-09-11 23:45:10,431 basehttp 34712 27108 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,735 basehttp 34712 27108 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-09-11 23:45:10,737 basehttp 34712 27108 "OPTIONS /api/usuarios/25/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,742 basehttp 34712 27108 "GET /api/usuarios/25/ HTTP/1.1" 200 113
+INFO 2025-09-11 23:45:10,827 basehttp 34712 27108 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,830 basehttp 34712 27476 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,831 basehttp 34712 1620 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,842 basehttp 34712 1620 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-11 23:45:10,873 basehttp 34712 27476 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-11 23:45:10,884 basehttp 34712 27108 "GET /api/dashboard/ HTTP/1.1" 200 657
+INFO 2025-09-11 23:45:10,889 basehttp 34712 27108 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-11 23:45:10,895 basehttp 34712 27108 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 712
+INFO 2025-09-11 23:46:29,436 autoreload 34712 32992 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-11 23:46:30,250 autoreload 34888 34896 Watching for file changes with StatReloader
+INFO 2025-09-11 23:46:37,171 autoreload 34888 34896 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-09-11 23:46:37,742 autoreload 28816 31708 Watching for file changes with StatReloader
+INFO 2025-09-11 23:47:00,520 autoreload 28816 31708 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-11 23:47:01,152 autoreload 17600 35408 Watching for file changes with StatReloader
+INFO 2025-09-11 23:48:13,582 autoreload 17600 35408 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-11 23:48:14,078 autoreload 22984 36508 Watching for file changes with StatReloader
+INFO 2025-09-11 23:49:51,445 basehttp 22984 35020 "GET /api/dashboard/ HTTP/1.1" 200 657
+INFO 2025-09-11 23:49:53,652 basehttp 22984 35020 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-11 23:49:53,661 basehttp 22984 35020 "GET /api/livros/ HTTP/1.1" 200 712
+INFO 2025-09-11 23:49:58,440 basehttp 22984 35020 "GET /api/dashboard/ HTTP/1.1" 200 657
+INFO 2025-09-11 23:49:58,452 basehttp 22984 35020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 712
+INFO 2025-09-11 23:51:09,194 autoreload 22984 36508 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-11 23:51:09,901 autoreload 28188 31388 Watching for file changes with StatReloader
+WARNING 2025-09-11 23:52:49,194 log 28188 36596 Unauthorized: /api/teste-email/
+WARNING 2025-09-11 23:52:49,194 basehttp 28188 36596 "GET /api/teste-email/ HTTP/1.1" 401 9966
+INFO 2025-09-11 23:52:49,439 basehttp 28188 7732 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-09-11 23:52:49,455 basehttp 28188 36596 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-09-11 23:52:49,457 basehttp 28188 424 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-09-11 23:52:49,460 basehttp 28188 2780 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-09-11 23:52:49,474 basehttp 28188 7732 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-09-11 23:52:49,481 basehttp 28188 9280 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-09-11 23:52:49,486 basehttp 28188 2780 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-09-11 23:52:49,489 basehttp 28188 7732 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-09-11 23:52:49,492 basehttp 28188 9280 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-09-11 23:52:49,502 basehttp 28188 424 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-09-11 23:52:49,523 basehttp 28188 36596 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-09-11 23:52:49,566 basehttp 28188 23156 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+WARNING 2025-09-11 23:52:50,370 log 28188 23156 Not Found: /favicon.ico
+WARNING 2025-09-11 23:52:50,371 basehttp 28188 23156 "GET /favicon.ico HTTP/1.1" 404 2890
+INFO 2025-09-11 23:53:06,585 basehttp 28188 24104 "POST /api/token/ HTTP/1.1" 200 574
+ERROR 2025-09-11 23:53:51,877 utils 28188 24104 Falha ao enviar email para guilhermegs.dev@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-32dd630cd30sm1855647a91.3 - gsmtp')
+INFO 2025-09-11 23:53:51,879 basehttp 28188 24104 "GET /api/teste-email/ HTTP/1.1" 200 83
+INFO 2025-09-11 23:55:34,001 autoreload 2492 2556 Watching for file changes with StatReloader
+INFO 2025-09-11 23:55:36,387 utils 2492 33084 Email enviado para guilhermegs.dev@gmail.com
+INFO 2025-09-11 23:55:36,387 basehttp 2492 33084 "GET /api/teste-email/ HTTP/1.1" 200 83
+INFO 2025-09-12 00:03:47,492 autoreload 2492 2556 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-12 00:03:48,066 autoreload 12276 10808 Watching for file changes with StatReloader
+INFO 2025-09-12 00:05:03,756 utils 12276 31184 Email enviado para guilhermegs.dev@gmail.com
+INFO 2025-09-12 00:05:03,758 basehttp 12276 31184 "GET /api/teste-email/ HTTP/1.1" 200 83
+INFO 2025-09-12 00:06:25,153 basehttp 12276 20456 "GET /api/dashboard/ HTTP/1.1" 200 657
+INFO 2025-09-12 00:06:26,979 basehttp 12276 20456 "OPTIONS /api/usuarios/counts/ HTTP/1.1" 200 0
+INFO 2025-09-12 00:06:26,993 basehttp 12276 20456 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-12 00:06:27,014 basehttp 12276 20456 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:07:35,262 basehttp 12276 35252 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-09-12 00:07:35,329 basehttp 12276 35252 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-12 00:07:35,534 basehttp 12276 35252 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-12 00:07:35,540 basehttp 12276 36120 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-12 00:07:35,558 basehttp 12276 32296 "GET /api/dashboard/ HTTP/1.1" 200 657
+INFO 2025-09-12 00:07:35,613 basehttp 12276 35252 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 712
+INFO 2025-09-12 00:07:36,738 basehttp 12276 35252 "GET /api/dashboard/ HTTP/1.1" 200 657
+INFO 2025-09-12 00:07:39,639 basehttp 12276 35252 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-12 00:07:39,662 basehttp 12276 35252 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:07:43,186 basehttp 12276 35252 "DELETE /api/usuarios/13/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:07:43,306 basehttp 12276 36120 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-12 00:07:43,395 basehttp 12276 36120 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:07:45,504 basehttp 12276 36120 "DELETE /api/usuarios/13/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:07:45,633 basehttp 12276 32296 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-12 00:07:45,738 basehttp 12276 32296 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:07:48,604 basehttp 12276 32296 "DELETE /api/usuarios/2/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:07:48,729 basehttp 12276 26964 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-12 00:07:48,827 basehttp 12276 26964 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:07:53,641 basehttp 12276 26964 "DELETE /api/usuarios/22/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:07:53,765 basehttp 12276 2500 "GET /api/usuarios/counts/ HTTP/1.1" 200 67
+INFO 2025-09-12 00:07:53,853 basehttp 12276 2500 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:07:57,022 basehttp 12276 2500 "DELETE /api/usuarios/24/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:07:57,148 basehttp 12276 36568 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:07:57,239 basehttp 12276 36568 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:03,120 basehttp 12276 36568 "DELETE /api/usuarios/16/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:03,243 basehttp 12276 23496 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:03,336 basehttp 12276 23496 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:05,828 basehttp 12276 23496 "DELETE /api/usuarios/17/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:05,951 basehttp 12276 33428 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:06,043 basehttp 12276 33428 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:14,056 basehttp 12276 33428 "DELETE /api/usuarios/19/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:14,175 basehttp 12276 33320 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:14,264 basehttp 12276 33320 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:16,943 basehttp 12276 33320 "DELETE /api/usuarios/18/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:17,071 basehttp 12276 25360 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:17,160 basehttp 12276 25360 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:19,797 basehttp 12276 25360 "DELETE /api/usuarios/21/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:19,929 basehttp 12276 32584 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:20,022 basehttp 12276 32584 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:23,314 basehttp 12276 32584 "DELETE /api/usuarios/14/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:23,440 basehttp 12276 36788 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:23,534 basehttp 12276 36788 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:27,010 basehttp 12276 36788 "DELETE /api/usuarios/9/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:27,137 basehttp 12276 30800 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:27,229 basehttp 12276 30800 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:31,712 basehttp 12276 30800 "DELETE /api/usuarios/10/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:31,839 basehttp 12276 32304 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:31,934 basehttp 12276 32304 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:34,969 basehttp 12276 32304 "DELETE /api/usuarios/6/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:35,096 basehttp 12276 32484 "GET /api/usuarios/counts/ HTTP/1.1" 200 66
+INFO 2025-09-12 00:08:35,198 basehttp 12276 32484 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:38,395 basehttp 12276 32484 "DELETE /api/usuarios/4/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:38,518 basehttp 12276 36396 "GET /api/usuarios/counts/ HTTP/1.1" 200 65
+INFO 2025-09-12 00:08:38,611 basehttp 12276 36396 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:41,026 basehttp 12276 36396 "DELETE /api/usuarios/15/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:41,152 basehttp 12276 15300 "GET /api/usuarios/counts/ HTTP/1.1" 200 65
+INFO 2025-09-12 00:08:41,245 basehttp 12276 15300 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:44,997 basehttp 12276 15300 "DELETE /api/usuarios/5/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:45,115 basehttp 12276 36484 "GET /api/usuarios/counts/ HTTP/1.1" 200 65
+INFO 2025-09-12 00:08:45,207 basehttp 12276 36484 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:48,464 basehttp 12276 36484 "DELETE /api/usuarios/2/ HTTP/1.1" 204 47
+INFO 2025-09-12 00:08:48,589 basehttp 12276 21764 "GET /api/usuarios/counts/ HTTP/1.1" 200 65
+INFO 2025-09-12 00:08:48,683 basehttp 12276 21764 "GET /api/usuarios/ HTTP/1.1" 200 2532
+INFO 2025-09-12 00:08:50,393 basehttp 12276 21764 "GET /api/dashboard/ HTTP/1.1" 200 654
+INFO 2025-09-12 00:08:52,254 basehttp 12276 21764 "GET /api/livros/ HTTP/1.1" 200 712
+INFO 2025-09-12 00:08:54,252 basehttp 12276 21764 "GET /api/reservas/ HTTP/1.1" 200 316
+INFO 2025-09-12 00:08:55,968 basehttp 12276 21764 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 349
+INFO 2025-09-12 00:08:55,985 basehttp 12276 21764 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 316
+INFO 2025-09-12 00:09:03,678 basehttp 12276 21764 "GET /api/reservas/ HTTP/1.1" 200 316
+INFO 2025-09-12 00:09:07,334 basehttp 12276 21764 "GET /api/dashboard/ HTTP/1.1" 200 654
+INFO 2025-09-12 00:11:30,796 autoreload 12276 10808 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-12 00:11:31,452 autoreload 30800 32060 Watching for file changes with StatReloader
