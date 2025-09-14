@@ -137,13 +137,28 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         """
-        Desativa (soft delete) um usuário e registra a ação.
+        Remove completamente um usuário do sistema (hard delete).
+        Remove todas as dependências relacionadas antes da exclusão.
         """
         usuario = self.get_object()
-        usuario.ativo = False
-        usuario.save()
-        registrar_acao(request.user, usuario, 'DESATIVACAO', descricao='Usuário desativado.')
-        return Response({'mensagem': 'Usuário desativado com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
+        
+        # Impede que o usuário delete a si mesmo
+        if usuario.id == request.user.id:
+            return Response({'erro': 'Você não pode excluir sua própria conta.'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Remove todas as reservas do usuário
+        Reserva.objects.filter(aluno=usuario).delete()
+        
+        # Remove todos os empréstimos do usuário
+        Emprestimo.objects.filter(usuario=usuario).delete()
+        
+        # Registra a ação antes de deletar
+        registrar_acao(request.user, usuario, 'DESATIVACAO', descricao=f'Usuário "{usuario.nome}" e todas suas dependências deletados permanentemente.')
+        
+        # HARD DELETE - remove completamente do banco
+        usuario.delete()
+        
+        return Response({'mensagem': 'Usuário deletado permanentemente com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=False, methods=['get'], url_path='counts', permission_classes=[IsAuthenticated, EhAdmin])
     def counts(self, request):
