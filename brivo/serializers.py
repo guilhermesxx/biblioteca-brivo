@@ -293,6 +293,7 @@ class LivroSerializer(serializers.ModelSerializer):
     disponivel = serializers.BooleanField(read_only=True)
     quantidade_total = serializers.IntegerField(required=False)
     quantidade_emprestada = serializers.IntegerField(required=False)
+    subgenero = serializers.CharField(required=False, allow_null=True, allow_blank=True)  # NOVO: Campo subgênero
 
     titulo = serializers.CharField(
         required=True,
@@ -312,7 +313,7 @@ class LivroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livro
         fields = [
-            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero',
+            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero', 'subgenero',
             'quantidade_total', 'quantidade_emprestada', 'capa', 'descricao', 'ativo', 'disponivel'
         ]
         read_only_fields = ['id', 'disponivel', 'ativo']
