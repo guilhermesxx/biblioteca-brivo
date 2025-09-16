@@ -9809,3 +9809,466 @@ INFO 2025-09-15 18:22:36,016 basehttp 35100 17868 "GET /api/alertas-sistema/summ
 INFO 2025-09-15 18:22:36,030 basehttp 35100 17868 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2459
 INFO 2025-09-15 18:22:38,231 basehttp 35100 17868 "GET /api/dashboard/ HTTP/1.1" 200 460
 INFO 2025-09-15 18:22:38,241 basehttp 35100 17868 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:30:20,104 autoreload 40592 13664 Watching for file changes with StatReloader
+INFO 2025-09-16 16:31:53,363 basehttp 40592 34860 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:31:53,389 basehttp 40592 34860 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 16:31:53,462 basehttp 40592 34860 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:31:53,467 basehttp 40592 18116 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:31:53,467 basehttp 40592 6736 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:31:53,474 basehttp 40592 6736 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 16:31:53,482 basehttp 40592 34860 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 16:31:53,489 basehttp 40592 18116 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:31:53,599 basehttp 40592 2776 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-16 16:31:53,607 basehttp 40592 2776 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:32:01,337 basehttp 40592 30908 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:32:07,267 basehttp 40592 30908 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 16:32:07,556 basehttp 40592 30908 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 16:32:07,571 basehttp 40592 17340 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 16:32:07,709 basehttp 40592 22276 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:32:46,529 basehttp 40592 17248 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:32:46,686 basehttp 40592 17248 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:40:12,345 basehttp 40592 9268 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:42:27,867 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:42:27,891 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:43:18,493 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:43:21,779 basehttp 40592 40000 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:43:21,791 basehttp 40592 40000 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-16 16:43:23,268 basehttp 40592 40000 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-09-16 16:43:23,287 basehttp 40592 40000 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-16 16:43:23,302 basehttp 40592 40000 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-09-16 16:43:23,327 basehttp 40592 40000 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-16 16:43:25,315 basehttp 40592 40000 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:43:25,331 basehttp 40592 40000 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-16 16:43:25,352 basehttp 40592 40000 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:43:25,402 basehttp 40592 40000 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-16 16:43:26,955 basehttp 40592 40000 "OPTIONS /api/relatorios/pedagogicos/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:43:26,994 basehttp 40592 40000 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+INFO 2025-09-16 16:43:28,379 basehttp 40592 40000 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:43:31,657 basehttp 40592 40000 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:45:32,311 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:45:32,336 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:45:33,606 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:45:36,412 basehttp 40592 40000 "OPTIONS /api/alertas-sistema/summary/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:45:36,464 basehttp 40592 40000 "GET /api/alertas-sistema/summary/ HTTP/1.1" 200 62
+INFO 2025-09-16 16:45:36,469 basehttp 40592 40000 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-09-16 16:45:36,484 basehttp 40592 40000 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2459
+INFO 2025-09-16 16:45:39,232 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:45:42,799 basehttp 40592 40000 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:45:42,833 basehttp 40592 40000 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 16:45:46,871 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:45:49,876 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:45:49,890 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:45:57,659 basehttp 40592 40000 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2459
+INFO 2025-09-16 16:46:04,548 basehttp 40592 40000 "OPTIONS /api/livros/20/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:46:04,582 basehttp 40592 40000 "GET /api/livros/20/ HTTP/1.1" 200 1257
+INFO 2025-09-16 16:46:04,668 basehttp 40592 40000 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:46:07,104 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:46:07,166 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:46:08,567 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:46:12,219 basehttp 40592 40000 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:46:15,657 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:46:18,150 basehttp 40592 40000 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:46:18,178 basehttp 40592 40000 "GET /api/usuarios/ HTTP/1.1" 200 605
+INFO 2025-09-16 16:46:25,894 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:46:27,949 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:46:51,197 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:46:53,422 basehttp 40592 40000 "GET /api/alertas-sistema/summary/ HTTP/1.1" 200 62
+INFO 2025-09-16 16:46:53,435 basehttp 40592 40000 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2459
+INFO 2025-09-16 16:46:54,775 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:47:20,226 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:47:22,984 basehttp 40592 40000 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 16:47:32,883 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:47:33,198 basehttp 40592 40000 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-16 16:48:38,475 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:48:38,509 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:48:45,733 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:48:48,517 basehttp 40592 40000 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-16 16:49:30,730 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:49:30,745 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:49:37,403 basehttp 40592 40000 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 2459
+INFO 2025-09-16 16:51:47,358 basehttp 40592 40000 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:52:04,050 basehttp 40592 40000 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:52:33,762 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:52:33,819 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:52:39,196 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:53:31,207 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:53:47,359 basehttp 40592 40000 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 16:53:50,563 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:53:50,575 basehttp 40592 40000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 16:53:56,151 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:54:16,722 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:54:40,827 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:54:46,710 basehttp 40592 40000 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 16:58:41,444 basehttp 40592 39824 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,389 utils 40592 39824 Email enviado para contamax20203@gmail.com
+INFO 2025-09-16 16:58:45,396 basehttp 40592 39824 "POST /api/usuarios/ HTTP/1.1" 201 112
+INFO 2025-09-16 16:58:45,399 basehttp 40592 39824 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,691 basehttp 40592 39824 "POST /api/token/ HTTP/1.1" 200 572
+INFO 2025-09-16 16:58:45,694 basehttp 40592 39824 "OPTIONS /api/usuarios/27/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,698 basehttp 40592 39824 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+INFO 2025-09-16 16:58:45,771 basehttp 40592 39824 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,774 basehttp 40592 41820 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,777 basehttp 40592 42660 "OPTIONS /api/reservas/?aluno__id=27&status=aguardando_retirada HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,785 basehttp 40592 39824 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-09-16 16:58:45,793 basehttp 40592 40060 "OPTIONS /api/emprestimos/?usuario__id=27&devolvido=false HTTP/1.1" 200 0
+WARNING 2025-09-16 16:58:45,801 log 40592 41820 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 16:58:45,802 basehttp 40592 41820 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 16:58:45,810 log 40592 21020 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 16:58:45,823 basehttp 40592 39824 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 16:58:45,825 basehttp 40592 40060 "GET /api/emprestimos/?usuario__id=27&devolvido=false HTTP/1.1" 200 52
+INFO 2025-09-16 16:58:45,826 basehttp 40592 42660 "GET /api/reservas/?aluno__id=27&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 16:58:45,826 basehttp 40592 21020 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 16:58:48,625 basehttp 40592 21020 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+WARNING 2025-09-16 16:58:48,781 log 40592 42660 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 16:58:48,785 log 40592 21020 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 16:58:48,792 basehttp 40592 42660 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 16:58:48,792 basehttp 40592 39824 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 16:58:48,792 basehttp 40592 41820 "GET /api/emprestimos/?usuario__id=27&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 16:58:48,794 basehttp 40592 21020 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 16:58:48,798 basehttp 40592 40060 "GET /api/reservas/?aluno__id=27&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-09-16 16:59:18,146 basehttp 40592 42092 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-09-16 16:59:18,466 log 40592 42092 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-09-16 16:59:18,471 basehttp 40592 42092 "POST /api/token/refresh/ HTTP/1.1" 500 120811
+INFO 2025-09-16 16:59:21,954 basehttp 40592 22256 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 16:59:23,758 basehttp 40592 22256 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:00:07,834 basehttp 40592 22304 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:08,154 basehttp 40592 22304 "POST /api/token/ HTTP/1.1" 200 568
+INFO 2025-09-16 17:00:08,158 basehttp 40592 22304 "OPTIONS /api/usuarios/26/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:08,168 basehttp 40592 22304 "GET /api/usuarios/26/ HTTP/1.1" 200 108
+INFO 2025-09-16 17:00:08,240 basehttp 40592 22304 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:08,245 basehttp 40592 476 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:08,250 basehttp 40592 3368 "OPTIONS /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:08,250 basehttp 40592 22304 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:08,255 basehttp 40592 39592 "OPTIONS /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 0
+WARNING 2025-09-16 17:00:08,271 log 40592 476 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:00:08,275 basehttp 40592 476 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:00:08,278 log 40592 39592 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:00:08,280 basehttp 40592 3368 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-09-16 17:00:08,281 basehttp 40592 25244 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:00:08,285 basehttp 40592 39592 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:00:08,286 basehttp 40592 22304 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+INFO 2025-09-16 17:00:56,197 basehttp 40592 37724 "OPTIONS /api/relatorios/pedagogicos/ HTTP/1.1" 200 0
+WARNING 2025-09-16 17:00:56,210 log 40592 37724 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:00:56,214 basehttp 40592 37724 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:00:57,866 basehttp 40592 30844 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:00:57,871 basehttp 40592 30844 "GET /api/livros/ HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:01:00,499 log 40592 30844 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:01:00,499 basehttp 40592 30844 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:01:00,839 log 40592 30844 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:01:00,840 basehttp 40592 30844 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:01:02,744 basehttp 40592 30844 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+WARNING 2025-09-16 17:01:02,838 log 40592 30844 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:01:02,839 log 40592 30276 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:01:02,839 log 40592 38872 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:01:02,840 basehttp 40592 30844 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:01:02,840 basehttp 40592 30276 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:01:02,841 basehttp 40592 38872 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:01:03,781 basehttp 40592 38872 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:01:03,787 basehttp 40592 38872 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-16 17:01:03,794 basehttp 40592 38872 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:01:03,801 basehttp 40592 38872 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-16 17:01:04,910 basehttp 40592 38872 "OPTIONS /api/reservas/?aluno=27 HTTP/1.1" 200 0
+INFO 2025-09-16 17:01:04,917 basehttp 40592 38872 "GET /api/reservas/?aluno=27 HTTP/1.1" 200 52
+INFO 2025-09-16 17:01:05,246 basehttp 40592 38872 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 17:01:05,246 basehttp 40592 30276 "GET /api/reservas/?aluno__id=27&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-09-16 17:01:05,246 basehttp 40592 30844 "GET /api/emprestimos/?usuario__id=27&devolvido=false HTTP/1.1" 200 52
+INFO 2025-09-16 17:02:07,496 basehttp 40592 43680 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:02:07,498 basehttp 40592 37092 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:02:10,195 basehttp 40592 16848 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 17:03:13,409 basehttp 40592 43280 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:03:13,415 basehttp 40592 43280 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 17:03:14,561 basehttp 40592 43280 "OPTIONS /api/reservas/?aluno=26 HTTP/1.1" 200 0
+INFO 2025-09-16 17:03:14,577 basehttp 40592 43280 "GET /api/reservas/?aluno=26 HTTP/1.1" 200 52
+INFO 2025-09-16 17:03:15,772 basehttp 40592 43280 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:03:15,782 basehttp 40592 43280 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-16 17:03:15,792 basehttp 40592 43280 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:03:15,799 basehttp 40592 43280 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-16 17:03:17,159 basehttp 40592 43280 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-09-16 17:03:17,164 basehttp 40592 43280 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-16 17:03:17,175 basehttp 40592 43280 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-09-16 17:03:17,180 basehttp 40592 43280 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-16 17:04:41,771 basehttp 40592 38212 "GET /api/usuarios/26/ HTTP/1.1" 200 108
+WARNING 2025-09-16 17:04:41,993 log 40592 38212 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:04:42,001 log 40592 31452 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:04:42,002 basehttp 40592 38212 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:04:42,007 basehttp 40592 31452 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:04:42,008 basehttp 40592 38924 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 17:04:42,011 basehttp 40592 38036 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-09-16 17:04:42,013 basehttp 40592 37048 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 17:05:36,050 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:36,051 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:36,275 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:36,276 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:36,468 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:36,469 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:36,657 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:36,658 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:36,825 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:36,826 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:36,976 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:36,977 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:37,152 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:37,153 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:37,316 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:37,317 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:37,483 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:37,484 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:37,675 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:37,676 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:39,306 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:39,306 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:39,481 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:39,481 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:39,670 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:39,671 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:39,841 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:39,842 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:40,747 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:40,749 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:05:41,175 log 40592 7740 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:05:41,177 basehttp 40592 7740 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:05:57,018 basehttp 40592 14452 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:05:57,042 basehttp 40592 14452 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 17:06:02,346 basehttp 40592 41508 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:06:07,538 basehttp 40592 41508 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:07:36,446 basehttp 40592 5372 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:07:36,502 basehttp 40592 5372 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:07:52,684 log 40592 37980 Forbidden: /api/relatorios/pedagogicos/
+WARNING 2025-09-16 17:07:52,685 basehttp 40592 37980 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:09:36,942 autoreload 40592 13664 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-16 17:09:38,015 autoreload 31280 37344 Watching for file changes with StatReloader
+INFO 2025-09-16 17:09:49,847 basehttp 31280 40948 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+INFO 2025-09-16 17:09:56,539 basehttp 31280 40948 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+WARNING 2025-09-16 17:09:56,630 log 31280 38792 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:09:56,631 log 31280 41540 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:09:56,634 basehttp 31280 40948 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+WARNING 2025-09-16 17:09:56,634 basehttp 31280 38792 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:09:56,635 basehttp 31280 41540 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:12:59,899 basehttp 31280 21980 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:13:02,105 basehttp 31280 21980 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:15:03,123 basehttp 31280 21980 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:15:23,209 basehttp 31280 21980 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:15:33,183 basehttp 31280 21980 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+WARNING 2025-09-16 17:15:40,031 log 31280 38680 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:15:40,037 basehttp 31280 38680 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:15:40,038 log 31280 28292 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:15:40,042 basehttp 31280 43196 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+WARNING 2025-09-16 17:15:40,045 basehttp 31280 28292 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:15:40,082 basehttp 31280 25984 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+INFO 2025-09-16 17:15:40,110 basehttp 31280 27508 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 17:15:40,117 basehttp 31280 15400 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:15:40,324 log 31280 28292 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:15:40,333 log 31280 43196 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:15:40,336 basehttp 31280 21980 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-09-16 17:15:40,337 log 31280 4004 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:15:40,337 basehttp 31280 28292 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:15:40,338 log 31280 41992 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:15:40,339 basehttp 31280 22688 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 17:15:40,341 basehttp 31280 43196 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:15:40,352 basehttp 31280 10880 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 17:15:40,360 basehttp 31280 38136 "GET /api/usuarios/26/ HTTP/1.1" 200 108
+INFO 2025-09-16 17:15:40,360 basehttp 31280 20212 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-16 17:15:40,364 basehttp 31280 4004 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:15:40,366 basehttp 31280 39968 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:15:40,368 basehttp 31280 25984 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+WARNING 2025-09-16 17:15:40,371 basehttp 31280 41992 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:15:40,546 basehttp 31280 39968 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:15:40,556 basehttp 31280 20212 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-16 17:15:40,557 log 31280 22688 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:15:40,559 basehttp 31280 22688 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:15:40,564 basehttp 31280 4004 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:15:40,566 log 31280 15400 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:15:40,566 basehttp 31280 38136 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+INFO 2025-09-16 17:15:40,569 basehttp 31280 41992 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:15:40,570 basehttp 31280 15400 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:18:22,452 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:18:33,377 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:18:39,534 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:18:44,752 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:19:00,711 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:19:09,055 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:20:00,676 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:20:07,027 basehttp 31280 31472 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:21:00,155 basehttp 31280 16400 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:21:19,037 basehttp 31280 16400 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:21:26,085 basehttp 31280 16400 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:21:40,495 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+WARNING 2025-09-16 17:24:33,901 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:33,902 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 193
+INFO 2025-09-16 17:24:33,907 basehttp 31280 22308 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-09-16 17:24:33,946 log 31280 22308 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-09-16 17:24:33,948 basehttp 31280 22308 "POST /api/token/refresh/ HTTP/1.1" 500 120689
+WARNING 2025-09-16 17:24:41,392 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:41,393 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:41,754 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:41,754 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:41,931 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:41,932 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:42,105 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:42,106 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:42,271 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:42,271 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:42,435 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:42,436 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:42,597 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:42,597 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:42,769 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:42,770 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:42,934 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:42,935 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:43,099 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:43,100 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:43,313 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:43,314 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:24:43,490 log 31280 22308 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:24:43,491 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:13,641 log 31280 22308 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:28:13,642 basehttp 31280 22308 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:13,648 log 31280 42744 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:13,650 log 31280 2908 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:28:13,651 basehttp 31280 42744 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:13,651 basehttp 31280 2908 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+INFO 2025-09-16 17:28:13,757 basehttp 31280 22920 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-09-16 17:28:13,758 basehttp 31280 18092 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:28:13,762 log 31280 36928 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:28:13,769 basehttp 31280 31036 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 17:28:13,770 log 31280 37068 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:28:13,774 basehttp 31280 476 "GET /api/usuarios/26/ HTTP/1.1" 200 108
+WARNING 2025-09-16 17:28:13,784 basehttp 31280 36928 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:28:13,785 basehttp 31280 37068 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:28:13,918 log 31280 31036 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:28:13,919 log 31280 18092 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:28:13,920 basehttp 31280 31036 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:28:13,922 basehttp 31280 36928 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:28:13,925 basehttp 31280 18092 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:28:13,925 basehttp 31280 37068 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 17:28:13,927 basehttp 31280 476 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 17:28:16,440 log 31280 2908 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:16,441 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:16,823 log 31280 2908 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:16,823 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:17,001 log 31280 2908 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:17,001 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:17,162 log 31280 2908 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:17,164 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:17,337 log 31280 2908 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:17,339 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:17,514 log 31280 2908 Unauthorized: /api/alertas-sistema/
+WARNING 2025-09-16 17:28:17,514 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:18,450 log 31280 2908 Unauthorized: /api/dashboard/
+WARNING 2025-09-16 17:28:18,450 basehttp 31280 2908 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:19,568 log 31280 2908 Unauthorized: /api/dashboard/
+WARNING 2025-09-16 17:28:19,569 basehttp 31280 2908 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:19,909 log 31280 2908 Unauthorized: /api/dashboard/
+WARNING 2025-09-16 17:28:19,909 basehttp 31280 2908 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:20,109 log 31280 2908 Unauthorized: /api/dashboard/
+WARNING 2025-09-16 17:28:20,110 basehttp 31280 2908 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-09-16 17:28:20,357 log 31280 2908 Unauthorized: /api/dashboard/
+WARNING 2025-09-16 17:28:20,358 basehttp 31280 2908 "GET /api/dashboard/ HTTP/1.1" 401 68
+INFO 2025-09-16 17:28:23,842 basehttp 31280 41696 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+WARNING 2025-09-16 17:28:23,937 log 31280 18492 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:28:23,939 basehttp 31280 18492 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:28:23,944 log 31280 26312 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:28:23,944 basehttp 31280 41696 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+WARNING 2025-09-16 17:28:23,946 basehttp 31280 26312 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:28:42,322 basehttp 31280 2908 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:28:42,698 basehttp 31280 2908 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-09-16 17:28:42,707 basehttp 31280 2908 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 17:28:42,790 basehttp 31280 2908 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:28:42,794 basehttp 31280 42744 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:28:42,815 basehttp 31280 22308 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:28:42,825 basehttp 31280 22308 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 17:28:45,025 basehttp 31280 22308 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:28:46,791 basehttp 31280 22308 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:29:01,008 basehttp 31280 22308 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 17:29:01,286 basehttp 31280 22308 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:29:01,287 basehttp 31280 42744 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:29:01,289 basehttp 31280 2908 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:29:20,537 basehttp 31280 13544 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:29:20,547 basehttp 31280 13544 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-16 17:29:23,053 basehttp 31280 13544 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:29:26,030 basehttp 31280 13544 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-16 17:29:26,050 basehttp 31280 13544 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-16 17:31:02,518 basehttp 31280 8080 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:31:05,414 basehttp 31280 8080 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:31:52,049 basehttp 31280 35516 "GET /api/alertas-sistema/ HTTP/1.1" 200 3262
+INFO 2025-09-16 17:32:31,260 basehttp 31280 35516 "OPTIONS /api/alertas-sistema/14/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:32:31,284 basehttp 31280 35516 "DELETE /api/alertas-sistema/14/ HTTP/1.1" 204 0
+INFO 2025-09-16 17:32:31,305 basehttp 31280 35516 "GET /api/alertas-sistema/ HTTP/1.1" 200 2901
+INFO 2025-09-16 17:32:51,196 basehttp 31280 35516 "OPTIONS /api/alertas-sistema/15/resolver/ HTTP/1.1" 200 0
+WARNING 2025-09-16 17:32:51,235 log 31280 35516 Not Found: /api/alertas-sistema/15/resolver/
+WARNING 2025-09-16 17:32:51,236 basehttp 31280 35516 "PATCH /api/alertas-sistema/15/resolver/ HTTP/1.1" 404 18419

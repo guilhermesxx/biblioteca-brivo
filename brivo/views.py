@@ -1080,9 +1080,9 @@ from .serializers import CustomTokenObtainPairSerializer
 class RelatoriosPedagogicosView(APIView):
     """
     Endpoint para gerar relatórios pedagógicos com a estrutura correta para o frontend.
-    Apenas administradores podem acessar.
+    Professores e administradores podem acessar.
     """
-    permission_classes = [IsAuthenticated, EhAdmin]
+    permission_classes = [IsAuthenticated, EhProfessorOuAdmin]
 
     def get(self, request):
         agora = timezone.now()
