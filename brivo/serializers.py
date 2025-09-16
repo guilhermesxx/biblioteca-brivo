@@ -12,7 +12,7 @@ class AlertaSistemaSerializer(serializers.ModelSerializer):
         # Inclui todos os campos do modelo AlertaSistema, incluindo os novos
         fields = '__all__'
         # Campos que não devem ser modificados via API (exceto 'resolvido')
-        read_only_fields = ['id', 'data_criacao', 'resolvido_em', 'email_enviado']
+        read_only_fields = ['id', 'data_criacao', 'resolvido_em']
 
     def validate(self, data):
         """
@@ -53,10 +53,10 @@ class AlertaSistemaSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
-        # Lógica de criação pode ser adicionada aqui se necessário
-        # O campo email_enviado será gerenciado por uma tarefa em background ou na view
-        # e não deve ser definido diretamente na criação via API pelo usuário.
-        validated_data['email_enviado'] = False # Garante que seja False na criação
+        # O campo email_enviado pode ser definido pelo frontend para indicar se deve enviar notificação
+        # Mas inicialmente sempre começa como False, sendo atualizado após o envio bem-sucedido
+        should_send = validated_data.get('email_enviado', False)
+        validated_data['email_enviado'] = False # Sempre começa como False
         return super().create(validated_data)
 
     def update(self, instance, validated_data):

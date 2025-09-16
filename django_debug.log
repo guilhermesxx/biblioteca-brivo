@@ -10272,3 +10272,89 @@ INFO 2025-09-16 17:32:31,305 basehttp 31280 35516 "GET /api/alertas-sistema/ HTT
 INFO 2025-09-16 17:32:51,196 basehttp 31280 35516 "OPTIONS /api/alertas-sistema/15/resolver/ HTTP/1.1" 200 0
 WARNING 2025-09-16 17:32:51,235 log 31280 35516 Not Found: /api/alertas-sistema/15/resolver/
 WARNING 2025-09-16 17:32:51,236 basehttp 31280 35516 "PATCH /api/alertas-sistema/15/resolver/ HTTP/1.1" 404 18419
+WARNING 2025-09-16 17:39:46,091 log 31280 42676 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:39:46,098 basehttp 31280 39888 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:39:46,101 log 31280 5356 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:39:46,102 basehttp 31280 34752 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 17:39:46,102 basehttp 31280 42676 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:39:46,119 log 31280 40240 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:39:46,120 basehttp 31280 31552 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+INFO 2025-09-16 17:39:46,122 basehttp 31280 20600 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+INFO 2025-09-16 17:39:46,123 basehttp 31280 22924 "GET /api/usuarios/26/ HTTP/1.1" 200 108
+WARNING 2025-09-16 17:39:46,124 log 31280 38044 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:39:46,126 basehttp 31280 23764 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:39:46,129 basehttp 31280 5356 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:39:46,137 basehttp 31280 40240 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:39:46,142 basehttp 31280 38664 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:39:46,149 basehttp 31280 41820 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-16 17:39:46,151 basehttp 31280 38044 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:39:46,156 basehttp 31280 41284 "GET /api/alertas-sistema/ HTTP/1.1" 200 2901
+INFO 2025-09-16 17:39:46,171 basehttp 31280 37308 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+WARNING 2025-09-16 17:39:46,198 log 31280 40240 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:39:46,198 log 31280 20600 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:39:46,200 basehttp 31280 40240 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:39:46,201 basehttp 31280 20600 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:39:46,204 basehttp 31280 38044 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+WARNING 2025-09-16 17:39:46,333 log 31280 42676 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:39:46,335 basehttp 31280 23764 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:39:46,339 log 31280 34752 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:39:46,340 basehttp 31280 22924 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+WARNING 2025-09-16 17:39:46,341 basehttp 31280 42676 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:39:46,344 basehttp 31280 34752 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:39:46,344 basehttp 31280 5356 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+INFO 2025-09-16 17:39:46,411 basehttp 31280 37308 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:39:46,412 basehttp 31280 41284 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:40:02,944 basehttp 31280 40324 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:40:02,954 basehttp 31280 41724 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:40:02,972 basehttp 31280 35728 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+INFO 2025-09-16 17:40:02,977 basehttp 31280 24056 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:40:02,985 log 31280 25784 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:40:02,996 basehttp 31280 25784 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:40:03,001 log 31280 24040 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:40:03,012 basehttp 31280 24040 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:40:03,012 log 31280 37028 Forbidden: /api/lembrete-devolucao/
+INFO 2025-09-16 17:40:03,012 basehttp 31280 39688 "GET /api/alertas-sistema/ HTTP/1.1" 200 2901
+INFO 2025-09-16 17:40:03,016 basehttp 31280 41008 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+INFO 2025-09-16 17:40:03,017 basehttp 31280 41808 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:40:03,018 log 31280 37044 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:40:03,023 basehttp 31280 37028 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:40:03,027 basehttp 31280 36960 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 17:40:03,027 basehttp 31280 42380 "GET /api/usuarios/27/ HTTP/1.1" 200 112
+INFO 2025-09-16 17:40:03,029 basehttp 31280 19264 "GET /api/usuarios/26/ HTTP/1.1" 200 108
+WARNING 2025-09-16 17:40:03,030 basehttp 31280 37044 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:40:03,122 log 31280 24040 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:40:03,123 log 31280 25784 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-09-16 17:40:03,125 basehttp 31280 24040 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-09-16 17:40:03,128 basehttp 31280 25784 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:40:03,129 basehttp 31280 42380 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1123
+WARNING 2025-09-16 17:40:03,203 log 31280 41008 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-09-16 17:40:03,203 basehttp 31280 19264 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-09-16 17:40:03,203 log 31280 41808 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-09-16 17:40:03,207 basehttp 31280 41008 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:40:03,207 basehttp 31280 37028 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 52
+INFO 2025-09-16 17:40:03,209 basehttp 31280 37044 "GET /api/livros/?page_size=6 HTTP/1.1" 200 1987
+WARNING 2025-09-16 17:40:03,209 basehttp 31280 41808 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-09-16 17:40:03,278 basehttp 31280 36960 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:40:03,278 basehttp 31280 39688 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:40:15,974 basehttp 31280 6412 "OPTIONS /api/alertas-sistema/15/mark-resolved/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:40:15,985 basehttp 31280 6412 "POST /api/alertas-sistema/15/mark-resolved/ HTTP/1.1" 200 57
+INFO 2025-09-16 17:40:15,996 basehttp 31280 6412 "GET /api/alertas-sistema/ HTTP/1.1" 200 2930
+INFO 2025-09-16 17:42:15,638 basehttp 31280 30676 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:42:17,384 basehttp 31280 30676 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-16 17:42:18,516 basehttp 31280 30676 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:42:20,123 basehttp 31280 30676 "GET /api/usuarios/ HTTP/1.1" 200 718
+INFO 2025-09-16 17:42:32,655 basehttp 31280 30676 "OPTIONS /api/usuarios/20/ HTTP/1.1" 200 0
+INFO 2025-09-16 17:42:32,675 basehttp 31280 30676 "DELETE /api/usuarios/20/ HTTP/1.1" 204 61
+INFO 2025-09-16 17:42:32,697 basehttp 31280 36452 "GET /api/usuarios/ HTTP/1.1" 200 609
+INFO 2025-09-16 17:42:45,345 basehttp 31280 36452 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-16 17:42:48,642 basehttp 31280 36452 "GET /api/alertas-sistema/ HTTP/1.1" 200 2930
+INFO 2025-09-16 17:43:17,679 autoreload 31280 37344 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-16 17:43:18,838 autoreload 18092 25804 Watching for file changes with StatReloader
+INFO 2025-09-16 17:43:22,757 autoreload 18092 25804 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-16 17:43:23,487 autoreload 31972 40724 Watching for file changes with StatReloader
+INFO 2025-09-16 17:43:36,293 basehttp 31972 34044 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-16 17:43:36,697 basehttp 31972 30728 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-16 17:43:36,701 basehttp 31972 34044 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-16 17:43:36,712 basehttp 31972 43688 "GET /api/alertas-sistema/ HTTP/1.1" 200 2930
+WARNING 2025-09-16 17:44:11,490 log 31972 19776 Bad Request: /api/alertas-sistema/
+WARNING 2025-09-16 17:44:11,490 basehttp 31972 19776 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
