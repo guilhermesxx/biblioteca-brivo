@@ -79,7 +79,14 @@ def usuario_me_view(request):
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-    permission_classes = [permissions.AllowAny]
+    
+    def get_permissions(self):
+        """
+        Define as permissões para as ações de usuários.
+        """
+        if self.action == 'create':
+            return [permissions.AllowAny()]
+        return [IsAuthenticated(), EhAdmin()]
     
     def create(self, request, *args, **kwargs):
         logger.info(f"=== CRIAR USUARIO ===")
@@ -94,6 +101,46 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         except Exception as e:
             logger.error(f"Erro ao criar usuario: {str(e)}")
             raise
+    
+    def destroy(self, request, *args, **kwargs):
+        """
+        Deleta completamente um usuário (hard delete) removendo todas as dependências.
+        """
+        usuario = self.get_object()
+        
+        # Verifica se não é o próprio usuário tentando se deletar
+        if usuario.id == request.user.id:
+            return Response({'erro': 'Você não pode excluir sua própria conta'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Remove todas as reservas do usuário
+        Reserva.objects.filter(aluno=usuario).delete()
+        
+        # Remove todos os empréstimos do usuário
+        emprestimos = Emprestimo.objects.filter(usuario=usuario)
+        for emprestimo in emprestimos:
+            if not emprestimo.devolvido:
+                # Se há empréstimo ativo, decrementa a quantidade emprestada do livro
+                emprestimo.livro.quantidade_emprestada -= 1
+                emprestimo.livro.save()
+        emprestimos.delete()
+        
+        # Remove todos os alertas relacionados ao usuário
+        AlertaSistema.objects.filter(titulo__icontains=usuario.nome).delete()
+        
+        # Registra a ação antes de deletar
+        registrar_acao(request.user, usuario, 'DESATIVACAO', descricao=f'Usuário "{usuario.nome}" e todas suas dependências deletados permanentemente.')
+        
+        # HARD DELETE - remove completamente do banco
+        usuario.delete()
+        
+        return Response({'mensagem': 'Usuário e todas suas dependências deletados permanentemente.'}, status=status.HTTP_204_NO_CONTENT)
+    
+    def perform_update(self, serializer):
+        """
+        Atualiza um usuário existente e registra a ação.
+        """
+        usuario = serializer.save()
+        registrar_acao(self.request.user, usuario, 'EDICAO', descricao=f'Usuário "{usuario.nome}" editado.')
 
 
 

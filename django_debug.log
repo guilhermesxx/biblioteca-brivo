@@ -11691,3 +11691,448 @@ ERROR 2025-09-17 10:45:34,139 utils 11308 13208 Falha ao enviar email para conta
 corretamente após um período de tempo ou a conexão estabelecida falhou
 porque o host conectado não respondeu
 WARNING 2025-09-17 10:45:34,140 utils 11308 13208 Falha ao enviar e-mail de alerta para contamax20203@gmail.com (Alerta: as).
+INFO 2025-09-17 10:56:36,957 autoreload 9988 12604 Watching for file changes with StatReloader
+INFO 2025-09-17 10:57:00,297 basehttp 9988 9524 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:00,406 basehttp 9988 9524 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 10:57:00,475 basehttp 9988 9524 "OPTIONS /api/usuarios/41/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:00,552 basehttp 9988 9524 "GET /api/usuarios/41/ HTTP/1.1" 200 100
+INFO 2025-09-17 10:57:00,696 basehttp 9988 9524 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:00,715 basehttp 9988 3692 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:00,720 basehttp 9988 13976 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:00,808 basehttp 9988 9524 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:57:00,811 basehttp 9988 3692 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:57:00,842 basehttp 9988 13976 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:57:47,733 basehttp 9988 10976 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:47,777 basehttp 9988 10976 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 10:57:48,149 basehttp 9988 10976 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:48,193 basehttp 9988 13600 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:48,202 basehttp 9988 10976 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:57:48,204 basehttp 9988 8968 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:48,241 basehttp 9988 13600 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:57:48,350 basehttp 9988 13600 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:57:48,460 basehttp 9988 13600 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 10:57:48,606 basehttp 9988 13600 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:58:51,522 basehttp 9988 18204 "OPTIONS /api/livros/24/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:58:51,543 basehttp 9988 18204 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 10:58:51,622 basehttp 9988 18204 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:58:51,644 basehttp 9988 18204 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 10:58:54,442 basehttp 9988 18204 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:58:54,502 basehttp 9988 18204 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:58:57,883 basehttp 9988 18204 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 10:59:02,481 basehttp 9988 18204 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:59:04,330 basehttp 9988 18204 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 10:59:08,445 basehttp 9988 18204 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:59:08,457 basehttp 9988 18204 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:59:10,861 basehttp 9988 18204 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 10:59:10,885 basehttp 9988 18204 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 10:59:25,875 basehttp 9988 13976 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:59:25,956 basehttp 9988 13976 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 10:59:38,766 basehttp 9988 18204 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:59:38,811 basehttp 9988 18204 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:59:40,669 basehttp 9988 18204 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:59:42,260 basehttp 9988 18204 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 11:02:59,791 basehttp 9988 18204 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:02:59,838 basehttp 9988 18204 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 11:03:02,429 basehttp 9988 18204 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 11:03:02,493 basehttp 9988 18204 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 11:04:37,475 basehttp 9988 11180 "POST /api/livros/ HTTP/1.1" 201 1993
+INFO 2025-09-17 11:04:37,496 basehttp 9988 11180 "GET /api/livros/ HTTP/1.1" 200 8366
+INFO 2025-09-17 11:04:39,836 basehttp 9988 11180 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:04:39,912 basehttp 9988 11180 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 11:04:39,987 basehttp 9988 11180 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 8366
+INFO 2025-09-17 11:04:42,930 basehttp 9988 11180 "OPTIONS /api/livros/28/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:04:43,008 basehttp 9988 11180 "GET /api/livros/28/ HTTP/1.1" 200 1993
+INFO 2025-09-17 11:04:43,069 basehttp 9988 11180 "GET /api/livros/ HTTP/1.1" 200 8366
+INFO 2025-09-17 11:04:54,119 basehttp 9988 11180 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:04:54,215 basehttp 9988 11180 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 8366
+INFO 2025-09-17 11:04:56,768 basehttp 9988 11180 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:04:59,364 basehttp 9988 11180 "GET /api/livros/ HTTP/1.1" 200 8366
+INFO 2025-09-17 11:08:32,078 basehttp 9988 11180 "POST /api/livros/ HTTP/1.1" 201 1496
+INFO 2025-09-17 11:08:32,100 basehttp 9988 11180 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:08:34,361 basehttp 9988 11180 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:08:34,438 basehttp 9988 11180 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9863
+INFO 2025-09-17 11:08:40,755 basehttp 9988 11180 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:08:50,213 basehttp 9988 11180 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:08:58,711 basehttp 9988 7508 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 11:08:58,760 basehttp 9988 7508 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:09:05,630 basehttp 9988 7508 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 11:09:05,686 basehttp 9988 17788 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 11:09:05,728 basehttp 9988 17788 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:09:05,751 basehttp 9988 7508 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 11:09:05,800 basehttp 9988 4000 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:09:05,825 basehttp 9988 13680 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:09:05,849 basehttp 9988 16276 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:09:05,867 basehttp 9988 13680 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:10:28,605 basehttp 9988 13680 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 11:10:28,816 basehttp 9988 16276 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:10:28,816 basehttp 9988 13680 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:10:28,843 basehttp 9988 4000 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:10:28,859 basehttp 9988 4000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9863
+INFO 2025-09-17 11:10:30,531 basehttp 9988 4000 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:10:38,575 basehttp 9988 4000 "GET /api/livros/ HTTP/1.1" 200 9863
+INFO 2025-09-17 11:12:07,235 basehttp 9988 11544 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:12:07,246 basehttp 9988 11544 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 9863
+INFO 2025-09-17 11:12:09,044 basehttp 9988 10332 "POST /api/livros/ HTTP/1.1" 201 1452
+INFO 2025-09-17 11:12:09,081 basehttp 9988 10332 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:10,140 basehttp 9988 11544 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 11:12:10,180 basehttp 9988 11544 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:13,137 basehttp 9988 11544 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:12:13,188 basehttp 9988 11544 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:13,990 basehttp 9988 10332 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:12:14,125 basehttp 9988 10332 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:16,094 basehttp 9988 11544 "OPTIONS /api/livros/28/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:12:16,106 basehttp 9988 11544 "GET /api/livros/28/ HTTP/1.1" 200 1993
+INFO 2025-09-17 11:12:16,145 basehttp 9988 11544 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:18,107 basehttp 9988 11544 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:12:18,137 basehttp 9988 11544 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:21,212 basehttp 9988 10332 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:22,377 basehttp 9988 11544 "GET /api/livros/28/ HTTP/1.1" 200 1993
+INFO 2025-09-17 11:12:22,420 basehttp 9988 11544 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:25,775 basehttp 9988 10332 "GET /api/livros/24/ HTTP/1.1" 200 1264
+INFO 2025-09-17 11:12:25,848 basehttp 9988 10332 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:31,035 basehttp 9988 10332 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:12:31,130 basehttp 9988 10332 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:36,538 basehttp 9988 10332 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:41,751 basehttp 9988 10332 "GET /api/livros/28/ HTTP/1.1" 200 1993
+INFO 2025-09-17 11:12:41,799 basehttp 9988 10332 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:12:45,252 basehttp 9988 10332 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:12:45,356 basehttp 9988 10332 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 11316
+INFO 2025-09-17 11:13:11,950 basehttp 9988 17916 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:13:11,983 basehttp 9988 17916 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 11316
+INFO 2025-09-17 11:14:01,212 basehttp 9988 17916 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:14:02,178 basehttp 9988 7124 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:14:04,658 basehttp 9988 7124 "GET /api/livros/ HTTP/1.1" 200 11316
+INFO 2025-09-17 11:15:17,395 basehttp 9988 16540 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:17,444 basehttp 9988 16540 "GET /api/usuarios/ HTTP/1.1" 200 1710
+INFO 2025-09-17 11:15:37,901 basehttp 9988 4880 "POST /api/livros/ HTTP/1.1" 201 1819
+INFO 2025-09-17 11:15:37,952 basehttp 9988 4880 "GET /api/livros/ HTTP/1.1" 200 13136
+INFO 2025-09-17 11:15:38,949 basehttp 9988 1592 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:39,062 views 9988 1592 === CRIAR USUARIO ===
+INFO 2025-09-17 11:15:39,065 views 9988 1592 Dados recebidos: {'nome': 'Bruno correia de oliveira', 'email': 'brunocor3iab20@gmail.com', 'ra': '00001121654654', 'turma': 'admin', 'senha': 'Bru123@200', 'tipo': 'admin'}
+INFO 2025-09-17 11:15:39,067 views 9988 1592 Content-Type: application/json
+INFO 2025-09-17 11:15:39,070 views 9988 1592 Method: POST
+INFO 2025-09-17 11:15:40,701 basehttp 9988 4880 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:15:40,794 basehttp 9988 4880 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 13136
+INFO 2025-09-17 11:15:40,927 views 9988 1592 Usuario criado com sucesso: {'id': 42, 'ra': '00001121654654', 'nome': 'Bruno correia de oliveira', 'email': 'brunocor3iab20@gmail.com', 'turma': 'admin', 'tipo': 'admin'}
+INFO 2025-09-17 11:15:40,931 basehttp 9988 1592 "POST /api/usuarios/ HTTP/1.1" 201 132
+INFO 2025-09-17 11:15:41,007 basehttp 9988 1592 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:41,091 views 9988 1592 === LOGIN ATTEMPT ===
+INFO 2025-09-17 11:15:41,093 views 9988 1592 Dados recebidos: {'email': 'brunocor3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+INFO 2025-09-17 11:15:42,771 views 9988 1592 Login bem-sucedido
+INFO 2025-09-17 11:15:42,774 basehttp 9988 1592 "POST /api/token/ HTTP/1.1" 200 593
+INFO 2025-09-17 11:15:42,862 basehttp 9988 1592 "OPTIONS /api/usuarios/42/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:42,968 basehttp 9988 1592 "GET /api/usuarios/42/ HTTP/1.1" 200 132
+INFO 2025-09-17 11:15:43,653 basehttp 9988 1592 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:43,677 basehttp 9988 2772 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:43,679 basehttp 9988 17416 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:43,799 basehttp 9988 1592 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:15:43,804 basehttp 9988 2772 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:15:43,851 basehttp 9988 17416 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:15:44,027 basehttp 9988 17416 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 11:15:44,163 basehttp 9988 17416 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 13136
+INFO 2025-09-17 11:15:49,399 basehttp 9988 4880 "GET /api/livros/ HTTP/1.1" 200 13136
+INFO 2025-09-17 11:16:01,007 basehttp 9988 4880 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:16:01,194 basehttp 9988 4880 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 13136
+INFO 2025-09-17 11:16:03,759 basehttp 9988 4880 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:16:08,228 basehttp 9988 4880 "GET /api/livros/ HTTP/1.1" 200 13136
+INFO 2025-09-17 11:18:30,233 basehttp 9988 10964 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 11:18:32,945 basehttp 9988 10964 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:18:33,068 basehttp 9988 10964 "GET /api/livros/ HTTP/1.1" 200 13136
+INFO 2025-09-17 11:20:15,424 basehttp 9988 10964 "POST /api/livros/ HTTP/1.1" 201 687
+INFO 2025-09-17 11:20:15,565 basehttp 9988 10964 "GET /api/livros/ HTTP/1.1" 200 13825
+INFO 2025-09-17 11:20:17,725 basehttp 9988 10964 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:20:17,935 basehttp 9988 10964 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 13825
+INFO 2025-09-17 11:20:22,574 basehttp 9988 10964 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:21:06,200 basehttp 9988 12108 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:21:06,288 basehttp 9988 12108 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+WARNING 2025-09-17 11:21:06,304 log 9988 14420 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-17 11:21:06,306 basehttp 9988 14420 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-17 11:21:06,364 log 9988 12108 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-17 11:21:06,365 basehttp 9988 12108 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-17 11:21:06,471 basehttp 9988 12108 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:21:06,471 basehttp 9988 14420 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:21:06,568 basehttp 9988 14420 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 11:21:06,568 basehttp 9988 12108 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 11:21:06,659 basehttp 9988 12108 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:21:06,659 basehttp 9988 14420 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:21:17,228 basehttp 9988 11424 "POST /api/livros/ HTTP/1.1" 201 370
+INFO 2025-09-17 11:21:17,312 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:21:17,565 basehttp 9988 7768 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:21:19,520 basehttp 9988 7768 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:21:19,816 basehttp 9988 11424 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:21:19,914 basehttp 9988 11424 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 14196
+INFO 2025-09-17 11:21:39,654 basehttp 9988 11424 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:21:42,534 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:21:45,635 basehttp 9988 10964 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:22:59,776 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:22:59,828 basehttp 9988 7768 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:01,168 basehttp 9988 10964 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:06,071 basehttp 9988 7768 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:06,109 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:06,598 basehttp 9988 10964 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:12,886 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:12,893 basehttp 9988 7768 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:23:13,560 basehttp 9988 10964 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:24:25,795 basehttp 9988 11424 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:24:25,901 basehttp 9988 11424 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 14196
+INFO 2025-09-17 11:24:35,275 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:24:46,784 basehttp 9988 11424 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:24:46,877 basehttp 9988 11424 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 14196
+INFO 2025-09-17 11:24:47,799 basehttp 9988 11424 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:24:50,735 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 14196
+INFO 2025-09-17 11:26:24,191 basehttp 9988 11424 "POST /api/livros/ HTTP/1.1" 201 1295
+INFO 2025-09-17 11:26:24,230 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 15492
+INFO 2025-09-17 11:26:26,628 basehttp 9988 11424 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:26:26,796 basehttp 9988 11424 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 15492
+INFO 2025-09-17 11:26:32,479 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 15492
+INFO 2025-09-17 11:26:42,442 basehttp 9988 11424 "OPTIONS /api/livros/34/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:26:42,517 basehttp 9988 11424 "GET /api/livros/34/ HTTP/1.1" 200 1295
+INFO 2025-09-17 11:26:42,574 basehttp 9988 11424 "GET /api/livros/ HTTP/1.1" 200 15492
+INFO 2025-09-17 11:27:00,696 basehttp 9988 11424 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:27:00,705 basehttp 9988 13020 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:28:07,785 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:28:07,887 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 15492
+INFO 2025-09-17 11:28:09,128 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:28:12,161 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 15492
+INFO 2025-09-17 11:29:11,203 basehttp 9988 14100 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:29:11,229 basehttp 9988 14100 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 15492
+INFO 2025-09-17 11:29:38,641 basehttp 9988 13020 "POST /api/livros/ HTTP/1.1" 201 2110
+INFO 2025-09-17 11:29:38,680 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 17603
+INFO 2025-09-17 11:29:40,826 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:29:40,920 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 17603
+INFO 2025-09-17 11:31:16,739 basehttp 9988 17712 "POST /api/livros/ HTTP/1.1" 201 1194
+INFO 2025-09-17 11:31:16,781 basehttp 9988 17712 "GET /api/livros/ HTTP/1.1" 200 18798
+INFO 2025-09-17 11:31:21,460 basehttp 9988 17712 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:31:21,556 basehttp 9988 17712 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 18798
+INFO 2025-09-17 11:31:21,974 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:31:25,815 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 18798
+INFO 2025-09-17 11:31:26,348 basehttp 9988 17712 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:31:31,645 basehttp 9988 17712 "GET /api/livros/ HTTP/1.1" 200 18798
+INFO 2025-09-17 11:31:37,201 basehttp 9988 14100 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-09-17 11:31:37,258 basehttp 9988 14100 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 9928
+INFO 2025-09-17 11:31:48,754 basehttp 9988 14100 "GET /api/livros/ HTTP/1.1" 200 18798
+INFO 2025-09-17 11:31:53,713 basehttp 9988 14100 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:31:53,740 basehttp 9988 14100 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 11:31:56,145 basehttp 9988 14100 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:31:56,160 basehttp 9988 14100 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-17 11:31:56,167 basehttp 9988 14100 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:31:56,189 basehttp 9988 14100 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-17 11:31:57,014 basehttp 9988 14100 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:32:01,828 basehttp 9988 14100 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:32:06,082 basehttp 9988 14100 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:34:28,857 basehttp 9988 13020 "POST /api/livros/ HTTP/1.1" 201 1386
+INFO 2025-09-17 11:34:28,903 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 20185
+INFO 2025-09-17 11:34:33,053 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:34:33,151 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 20185
+INFO 2025-09-17 11:34:40,457 basehttp 9988 13020 "OPTIONS /api/livros/37/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:34:40,535 basehttp 9988 13020 "GET /api/livros/37/ HTTP/1.1" 200 1386
+INFO 2025-09-17 11:34:40,601 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 20185
+INFO 2025-09-17 11:34:47,367 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:34:47,555 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 20185
+INFO 2025-09-17 11:35:24,229 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:35:26,562 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 20185
+INFO 2025-09-17 11:35:38,507 basehttp 9988 17712 "POST /api/livros/ HTTP/1.1" 201 1335
+INFO 2025-09-17 11:35:38,561 basehttp 9988 17712 "GET /api/livros/ HTTP/1.1" 200 21521
+INFO 2025-09-17 11:37:11,548 basehttp 9988 13020 "POST /api/livros/ HTTP/1.1" 201 1850
+INFO 2025-09-17 11:37:11,575 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:37:13,741 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:37:13,814 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 23372
+INFO 2025-09-17 11:37:20,488 basehttp 9988 13020 "OPTIONS /api/livros/39/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:37:20,566 basehttp 9988 13020 "GET /api/livros/39/ HTTP/1.1" 200 1850
+INFO 2025-09-17 11:37:20,611 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:37:45,522 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:37:45,611 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 23372
+INFO 2025-09-17 11:37:49,643 basehttp 9988 13020 "GET /api/livros/37/ HTTP/1.1" 200 1386
+INFO 2025-09-17 11:37:49,709 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:37:51,472 basehttp 9988 17712 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:37:52,839 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:37:52,949 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 23372
+INFO 2025-09-17 11:38:00,757 basehttp 9988 13020 "GET /api/livros/39/ HTTP/1.1" 200 1850
+INFO 2025-09-17 11:38:00,810 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:38:03,131 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:38:03,220 basehttp 9988 13020 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 23372
+INFO 2025-09-17 11:38:58,786 basehttp 9988 17484 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:40:28,666 basehttp 9988 17484 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:40:28,671 basehttp 9988 10968 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:40:30,184 basehttp 9988 13020 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:40:33,047 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 23372
+INFO 2025-09-17 11:43:33,662 basehttp 9988 13020 "POST /api/livros/ HTTP/1.1" 201 1743
+INFO 2025-09-17 11:43:33,696 basehttp 9988 13020 "GET /api/livros/ HTTP/1.1" 200 25116
+INFO 2025-09-17 11:44:15,760 autoreload 9988 12604 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 11:44:18,056 autoreload 14252 14532 Watching for file changes with StatReloader
+INFO 2025-09-17 11:44:28,631 autoreload 14252 14532 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 11:44:30,448 autoreload 1984 8380 Watching for file changes with StatReloader
+INFO 2025-09-17 11:44:38,790 autoreload 1984 8380 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 11:44:40,746 autoreload 16560 4024 Watching for file changes with StatReloader
+INFO 2025-09-17 11:45:19,225 basehttp 16560 3472 "POST /api/livros/ HTTP/1.1" 201 687
+INFO 2025-09-17 11:45:19,330 basehttp 16560 3472 "GET /api/livros/ HTTP/1.1" 200 25804
+INFO 2025-09-17 11:45:23,113 basehttp 16560 3472 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:45:23,252 basehttp 16560 3472 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 25804
+INFO 2025-09-17 11:45:31,172 basehttp 16560 3472 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:45:36,888 basehttp 16560 3472 "GET /api/livros/ HTTP/1.1" 200 25804
+INFO 2025-09-17 11:45:43,341 basehttp 16560 3472 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:45:43,355 basehttp 16560 19028 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:47:15,105 basehttp 16560 6100 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+WARNING 2025-09-17 11:47:15,114 log 16560 6100 Unauthorized: /api/generos-subgeneros/
+WARNING 2025-09-17 11:47:15,116 basehttp 16560 6100 "GET /api/generos-subgeneros/ HTTP/1.1" 401 191
+INFO 2025-09-17 11:47:15,126 basehttp 16560 6100 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-09-17 11:47:15,139 log 16560 18812 Unauthorized: /api/livros/
+WARNING 2025-09-17 11:47:15,141 basehttp 16560 18812 "GET /api/livros/ HTTP/1.1" 401 191
+INFO 2025-09-17 11:47:15,145 basehttp 16560 6100 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 11:47:15,163 basehttp 16560 6100 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 11:47:15,166 basehttp 16560 18812 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4719
+INFO 2025-09-17 11:47:15,188 basehttp 16560 6100 "GET /api/livros/ HTTP/1.1" 200 25804
+INFO 2025-09-17 11:47:15,250 basehttp 16560 3472 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:47:15,291 basehttp 16560 19028 "GET /api/livros/ HTTP/1.1" 200 25804
+INFO 2025-09-17 11:47:15,327 basehttp 16560 3472 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4719
+INFO 2025-09-17 11:47:16,149 basehttp 16560 3320 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:47:16,183 basehttp 16560 18980 "GET /api/livros/ HTTP/1.1" 200 25804
+INFO 2025-09-17 11:47:16,235 basehttp 16560 3320 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4719
+INFO 2025-09-17 11:49:09,080 basehttp 16560 3320 "POST /api/livros/ HTTP/1.1" 201 2165
+INFO 2025-09-17 11:49:09,125 basehttp 16560 3320 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:12,637 basehttp 16560 3320 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:49:12,741 basehttp 16560 3320 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:21,231 basehttp 16560 6100 "OPTIONS /api/livros/41/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:49:21,319 basehttp 16560 6100 "PUT /api/livros/41/ HTTP/1.1" 200 687
+INFO 2025-09-17 11:49:21,349 basehttp 16560 6100 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:25,504 basehttp 16560 6100 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:49:25,531 basehttp 16560 6100 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:35,455 basehttp 16560 6100 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 11:49:35,770 basehttp 16560 6100 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:49:35,784 basehttp 16560 18812 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:49:35,857 basehttp 16560 16068 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:49:35,938 basehttp 16560 16068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:39,516 basehttp 16560 16068 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:40,748 basehttp 16560 3320 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:49:44,308 basehttp 16560 3320 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:49,432 basehttp 16560 16068 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:49:55,890 basehttp 16560 16068 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:50:58,858 basehttp 16560 16068 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:51:06,150 basehttp 16560 19356 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:51:06,244 basehttp 16560 19356 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:52:39,521 basehttp 16560 18812 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 11:52:39,525 basehttp 16560 16068 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:52:39,543 basehttp 16560 16068 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:52:39,544 basehttp 16560 18812 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:53:20,598 basehttp 16560 18812 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:53:37,159 basehttp 16560 16068 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 11:53:37,164 basehttp 16560 18812 "GET /api/livros/ HTTP/1.1" 200 27970
+INFO 2025-09-17 11:53:37,191 basehttp 16560 16068 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:53:37,192 basehttp 16560 18812 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:54:05,433 basehttp 16560 3320 "POST /api/livros/ HTTP/1.1" 201 1918
+INFO 2025-09-17 11:54:05,494 basehttp 16560 3320 "GET /api/livros/ HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:09,727 basehttp 16560 3320 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:54:09,822 basehttp 16560 3320 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:14,245 basehttp 16560 3320 "GET /api/livros/ HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:28,944 basehttp 16560 3320 "OPTIONS /api/livros/43/ HTTP/1.1" 200 0
+INFO 2025-09-17 11:54:29,030 basehttp 16560 3320 "GET /api/livros/43/ HTTP/1.1" 200 1918
+INFO 2025-09-17 11:54:29,095 basehttp 16560 3320 "GET /api/livros/ HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:30,135 basehttp 16560 3320 "GET /api/livros/ HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:30,615 basehttp 16560 18812 "GET /api/livros/ HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:46,718 basehttp 16560 3320 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:54:46,824 basehttp 16560 3320 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 29889
+INFO 2025-09-17 11:54:47,679 basehttp 16560 3320 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:55:01,771 basehttp 16560 18812 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 11:55:02,009 basehttp 16560 18756 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:55:02,009 basehttp 16560 18812 "GET /api/livros/ HTTP/1.1" 200 29889
+INFO 2025-09-17 11:55:02,015 basehttp 16560 16068 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:55:05,977 basehttp 16560 16068 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:55:06,021 basehttp 16560 16068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 29889
+WARNING 2025-09-17 11:57:01,176 log 16560 3320 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-17 11:57:01,177 basehttp 16560 3320 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-17 11:57:01,186 log 16560 17556 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-17 11:57:01,187 basehttp 16560 17556 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-17 11:57:01,232 basehttp 16560 12496 "POST /api/livros/ HTTP/1.1" 201 748
+INFO 2025-09-17 11:57:01,246 basehttp 16560 3320 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 11:57:01,258 basehttp 16560 17556 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 11:57:01,327 basehttp 16560 12496 "GET /api/livros/ HTTP/1.1" 200 30638
+INFO 2025-09-17 11:57:01,334 basehttp 16560 3320 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 11:57:01,343 basehttp 16560 17556 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 11:57:04,930 basehttp 16560 12496 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:57:05,097 basehttp 16560 12496 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 30638
+INFO 2025-09-17 11:57:11,232 basehttp 16560 12496 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 11:57:17,199 basehttp 16560 12496 "GET /api/livros/ HTTP/1.1" 200 30638
+INFO 2025-09-17 11:57:29,986 basehttp 16560 16068 "GET /api/livros/ HTTP/1.1" 200 30638
+INFO 2025-09-17 11:59:22,210 basehttp 16560 3472 "GET /api/livros/ HTTP/1.1" 200 30638
+INFO 2025-09-17 11:59:30,679 basehttp 16560 3472 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:00:01,790 basehttp 16560 3472 "GET /api/livros/ HTTP/1.1" 200 30638
+INFO 2025-09-17 12:01:03,106 basehttp 16560 12496 "POST /api/livros/ HTTP/1.1" 201 542
+INFO 2025-09-17 12:01:03,185 basehttp 16560 12496 "GET /api/livros/ HTTP/1.1" 200 31181
+INFO 2025-09-17 12:01:10,377 basehttp 16560 12496 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:01:10,577 basehttp 16560 12496 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 31181
+INFO 2025-09-17 12:01:11,308 basehttp 16560 3472 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 12:01:13,647 basehttp 16560 12496 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:01:17,177 basehttp 16560 12496 "GET /api/livros/ HTTP/1.1" 200 31181
+INFO 2025-09-17 12:01:24,016 basehttp 16560 3472 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 12:01:27,852 basehttp 16560 3472 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:01:31,665 basehttp 16560 3472 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 12:01:48,556 basehttp 16560 3472 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-17 12:01:48,577 basehttp 16560 3472 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-17 12:01:49,860 basehttp 16560 3472 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:04:48,281 basehttp 16560 3472 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:04:48,307 basehttp 16560 3472 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 31181
+INFO 2025-09-17 12:04:56,923 basehttp 16560 11564 "GET /api/usuarios/41/ HTTP/1.1" 200 100
+INFO 2025-09-17 12:04:57,080 basehttp 16560 11564 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 12:04:57,089 basehttp 16560 20224 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 12:04:57,133 basehttp 16560 18800 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:05:04,242 basehttp 16560 18800 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-09-17 12:05:04,321 basehttp 16560 18800 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-17 12:05:04,392 basehttp 16560 18800 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-09-17 12:05:04,477 basehttp 16560 18800 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-17 12:06:07,495 basehttp 16560 12496 "POST /api/livros/ HTTP/1.1" 201 1437
+INFO 2025-09-17 12:06:07,545 basehttp 16560 12496 "GET /api/livros/ HTTP/1.1" 200 32619
+INFO 2025-09-17 12:06:11,366 basehttp 16560 12496 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:06:11,471 basehttp 16560 12496 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 32619
+INFO 2025-09-17 12:06:13,886 basehttp 16560 18800 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-17 12:06:13,967 views 16560 18800 === LOGIN ATTEMPT ===
+INFO 2025-09-17 12:06:13,971 views 16560 18800 Dados recebidos: {'email': 'failure@gmail.com', 'password': 'Takumi86', 'tipo': 'admin'}
+ERROR 2025-09-17 12:06:16,885 views 16560 18800 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-17 12:06:16,888 log 16560 18800 Unauthorized: /api/token/
+WARNING 2025-09-17 12:06:16,890 basehttp 16560 18800 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 12:06:22,295 basehttp 16560 3472 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 12:06:23,472 basehttp 16560 3472 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 12:06:23,496 views 16560 18800 === LOGIN ATTEMPT ===
+INFO 2025-09-17 12:06:23,507 views 16560 18800 Dados recebidos: {'email': 'failure@gmail.com', 'password': '13954', 'tipo': 'admin'}
+INFO 2025-09-17 12:06:23,540 basehttp 16560 19944 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 12:06:23,661 basehttp 16560 19596 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:06:23,759 basehttp 16560 19596 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 32619
+ERROR 2025-09-17 12:06:26,401 views 16560 18800 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-17 12:06:26,412 log 16560 18800 Unauthorized: /api/token/
+WARNING 2025-09-17 12:06:26,421 basehttp 16560 18800 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 12:06:31,184 views 16560 18800 === LOGIN ATTEMPT ===
+INFO 2025-09-17 12:06:31,186 views 16560 18800 Dados recebidos: {'email': 'failure@gmail.com', 'password': 'miguel', 'tipo': 'admin'}
+ERROR 2025-09-17 12:06:32,694 views 16560 18800 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-17 12:06:32,696 log 16560 18800 Unauthorized: /api/token/
+WARNING 2025-09-17 12:06:32,698 basehttp 16560 18800 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 12:06:38,639 views 16560 18800 === LOGIN ATTEMPT ===
+INFO 2025-09-17 12:06:38,640 views 16560 18800 Dados recebidos: {'email': 'failure@gmail.com', 'password': 'miguelito', 'tipo': 'admin'}
+ERROR 2025-09-17 12:06:39,326 views 16560 18800 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-17 12:06:39,328 log 16560 18800 Unauthorized: /api/token/
+WARNING 2025-09-17 12:06:39,331 basehttp 16560 18800 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 12:06:39,883 autoreload 16560 4024 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 12:06:41,344 autoreload 19008 19996 Watching for file changes with StatReloader
+INFO 2025-09-17 12:06:53,626 views 19008 20252 === LOGIN ATTEMPT ===
+INFO 2025-09-17 12:06:53,628 views 19008 20252 Dados recebidos: {'email': 'failure@gmail.com', 'password': 'Takumi86!', 'tipo': 'admin'}
+ERROR 2025-09-17 12:06:54,446 views 19008 20252 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-17 12:06:54,452 log 19008 20252 Unauthorized: /api/token/
+WARNING 2025-09-17 12:06:54,454 basehttp 19008 20252 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 12:07:22,407 autoreload 19008 19996 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 12:07:23,423 autoreload 18552 19832 Watching for file changes with StatReloader
+INFO 2025-09-17 12:08:43,627 basehttp 18552 19612 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:08:47,179 basehttp 18552 19612 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4719
+INFO 2025-09-17 12:08:47,195 basehttp 18552 19476 "GET /api/livros/ HTTP/1.1" 200 32619
+INFO 2025-09-17 12:08:49,494 basehttp 18552 19476 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:08:53,411 basehttp 18552 19476 "GET /api/usuarios/ HTTP/1.1" 200 2051
+INFO 2025-09-17 12:09:04,302 basehttp 18552 19476 "OPTIONS /api/usuarios/33/ HTTP/1.1" 200 0
+INFO 2025-09-17 12:09:04,370 basehttp 18552 19476 "DELETE /api/usuarios/33/ HTTP/1.1" 204 77
+INFO 2025-09-17 12:09:04,398 basehttp 18552 19612 "GET /api/usuarios/ HTTP/1.1" 200 1915
+INFO 2025-09-17 12:09:20,535 basehttp 18552 19612 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:09:23,285 basehttp 18552 19612 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-09-17 12:09:23,412 basehttp 18552 19612 "GET /api/alertas-sistema/ HTTP/1.1" 200 14479
+INFO 2025-09-17 12:09:33,289 basehttp 18552 19676 "GET /api/livros/ HTTP/1.1" 200 32619
+INFO 2025-09-17 12:09:46,189 basehttp 18552 19676 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:09:46,286 basehttp 18552 19676 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 32619
+INFO 2025-09-17 12:10:07,989 basehttp 18552 4064 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-17 12:10:08,698 basehttp 18552 4064 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 32619
+INFO 2025-09-17 12:11:08,941 basehttp 18552 19612 "GET /api/alertas-sistema/ HTTP/1.1" 200 14479
+INFO 2025-09-17 12:11:49,143 basehttp 18552 19612 "GET /api/alertas-sistema/ HTTP/1.1" 200 14479

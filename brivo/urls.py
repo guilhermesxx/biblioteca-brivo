@@ -10,6 +10,9 @@ from .views import (
     # 📧 NOVAS VIEWS DE EMAIL
     EnviarEmailManualView, EnviarEmailGrupoView, EnviarEmailsPredefinidosView, ListarTiposEmailView
 )
+from .views_generos import (
+    listar_generos_subgeneros, listar_generos, listar_subgeneros_por_genero
+)
 
 
 router = DefaultRouter()
@@ -33,6 +36,11 @@ urlpatterns = [
     path('emails/enviar-grupo/', EnviarEmailGrupoView.as_view(), name='enviar-email-grupo'),
     path('emails/predefinidos/', EnviarEmailsPredefinidosView.as_view(), name='emails-predefinidos'),
     path('emails/tipos/', ListarTiposEmailView.as_view(), name='listar-tipos-email'),
+    
+    # ENDPOINTS DE GÊNEROS E SUBGÊNEROS
+    path('generos-subgeneros/', listar_generos_subgeneros, name='generos-subgeneros'),
+    path('generos/', listar_generos, name='generos'),
+    path('generos/<str:genero>/subgeneros/', listar_subgeneros_por_genero, name='subgeneros-por-genero'),
 ]
 
 urlpatterns += [

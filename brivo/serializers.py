@@ -4,6 +4,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework.exceptions import AuthenticationFailed
 from django.utils import timezone
 from datetime import datetime, date, time
+from .constants import GENEROS_VALIDOS, SUBGENEROS_VALIDOS
 
 # Serializers para os Alertas do Sistema
 class AlertaSistemaSerializer(serializers.ModelSerializer):
@@ -205,18 +206,24 @@ class ReservaSerializer(serializers.ModelSerializer):
 
 # Serializers para os Usuários
 class UsuarioSerializer(serializers.ModelSerializer):
-    senha = serializers.CharField(write_only=True)
+    senha = serializers.CharField(write_only=True, required=False)
 
     class Meta:
         model = Usuario
-        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo']
+        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo', 'ativo']
 
     def validate_email(self, value):
+        # Durante atualização, permite o mesmo email se for do mesmo usuário
+        if self.instance and self.instance.email == value:
+            return value
         if Usuario.objects.filter(email=value).exists():
             raise serializers.ValidationError("Este email já está em uso.")
         return value
 
     def validate_ra(self, value):
+        # Durante atualização, permite o mesmo RA se for do mesmo usuário
+        if self.instance and self.instance.ra == value:
+            return value
         if Usuario.objects.filter(ra=value).exists():
             raise serializers.ValidationError("Este RA já está em uso.")
         return value
@@ -249,6 +256,17 @@ class LivroSerializer(serializers.ModelSerializer):
             erros['data_publicacao'] = 'A data de publicação é obrigatória.'
         if not data.get('tipo'):
             erros['tipo'] = "O tipo do livro é obrigatório ('fisico' ou 'pdf')."
+        
+        # Validação de gênero
+        genero = data.get('genero')
+        if genero and genero not in GENEROS_VALIDOS:
+            erros['genero'] = f'Gênero inválido. Gêneros válidos: {", ".join(GENEROS_VALIDOS)}'
+        
+        # Validação de subgênero
+        subgenero = data.get('subgenero')
+        if subgenero and subgenero not in SUBGENEROS_VALIDOS:
+            erros['subgenero'] = f'Subgênero inválido. Consulte a lista de subgêneros válidos.'
+        
         if erros:
             raise serializers.ValidationError(erros)
         return data
