@@ -11666,3 +11666,28 @@ INFO 2025-09-17 10:34:51,959 utils 1068 12964 Email enviado para professor@teste
 INFO 2025-09-17 10:34:51,992 utils 1068 12964 Alerta 'dsa' processado. Sucesso: 4/4
 INFO 2025-09-17 10:34:51,995 basehttp 1068 12964 "POST /api/alertas-sistema/ HTTP/1.1" 201 261
 INFO 2025-09-17 10:34:52,015 basehttp 1068 12964 "GET /api/alertas-sistema/ HTTP/1.1" 200 6788
+INFO 2025-09-17 10:44:11,211 autoreload 11308 20276 Watching for file changes with StatReloader
+INFO 2025-09-17 10:44:28,579 views 11308 13208 === LOGIN ATTEMPT ===
+INFO 2025-09-17 10:44:28,580 views 11308 13208 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-09-17 10:44:29,418 views 11308 13208 Login bem-sucedido
+INFO 2025-09-17 10:44:29,421 basehttp 11308 13208 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-09-17 10:44:29,435 basehttp 11308 13208 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 10:44:29,563 basehttp 11308 15464 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:44:29,563 basehttp 11308 13208 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:44:29,581 basehttp 11308 5452 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:44:29,597 basehttp 11308 5452 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:44:31,897 basehttp 11308 5452 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:44:34,860 basehttp 11308 5452 "GET /api/alertas-sistema/ HTTP/1.1" 200 6788
+INFO 2025-09-17 10:44:42,383 basehttp 11308 5452 "OPTIONS /api/teste-email/ HTTP/1.1" 200 0
+ERROR 2025-09-17 10:45:03,463 utils 11308 5452 Falha ao enviar email para brivo1652@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 10:45:03,468 basehttp 11308 5452 - Broken pipe from ('172.30.1.27', 53848)
+ERROR 2025-09-17 10:45:13,083 utils 11308 13208 Falha ao enviar email para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:45:13,086 utils 11308 13208 Falha ao enviar e-mail de alerta para g60511925@gmail.com (Alerta: as).
+ERROR 2025-09-17 10:45:34,139 utils 11308 13208 Falha ao enviar email para contamax20203@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:45:34,140 utils 11308 13208 Falha ao enviar e-mail de alerta para contamax20203@gmail.com (Alerta: as).
