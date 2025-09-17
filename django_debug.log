@@ -11518,3 +11518,151 @@ INFO 2025-09-17 09:32:54,175 basehttp 5144 20248 "POST /api/livros/ HTTP/1.1" 20
 INFO 2025-09-17 09:32:54,215 basehttp 5144 20248 "GET /api/livros/ HTTP/1.1" 200 6372
 INFO 2025-09-17 09:32:58,155 basehttp 5144 20248 "GET /api/dashboard/ HTTP/1.1" 200 463
 INFO 2025-09-17 09:32:58,269 basehttp 5144 20248 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+WARNING 2025-09-17 09:51:06,098 log 5144 6864 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-17 09:51:06,098 log 5144 20680 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-17 09:51:06,100 basehttp 5144 6864 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-17 09:51:06,100 basehttp 5144 20680 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-09-17 09:51:06,102 log 5144 6864 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-17 09:51:06,104 log 5144 20680 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-17 09:51:06,105 basehttp 5144 6864 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-17 09:51:06,106 basehttp 5144 20680 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-17 09:51:06,108 basehttp 5144 18888 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-17 09:51:06,109 basehttp 5144 20680 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-17 09:51:06,122 basehttp 5144 6864 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 09:51:06,125 basehttp 5144 18888 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 09:51:06,126 basehttp 5144 23892 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 09:51:06,126 basehttp 5144 20680 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-17 09:51:06,133 basehttp 5144 23892 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 09:51:06,137 basehttp 5144 20680 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 09:51:06,143 basehttp 5144 18888 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 09:51:06,145 basehttp 5144 23892 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 09:53:00,593 basehttp 5144 3932 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 09:53:00,595 basehttp 5144 1604 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 09:54:56,333 basehttp 5144 11496 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 09:54:56,553 basehttp 5144 11496 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:03:02,805 basehttp 5144 19536 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 10:03:03,006 basehttp 5144 19536 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:03:03,009 basehttp 5144 14284 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:03:03,039 basehttp 5144 23224 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:03:03,095 basehttp 5144 23224 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:03:40,279 basehttp 5144 23224 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:03:42,270 basehttp 5144 23224 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:03:42,289 basehttp 5144 23224 "GET /api/alertas-sistema/ HTTP/1.1" 200 4107
+WARNING 2025-09-17 10:06:08,842 log 5144 23224 Bad Request: /api/alertas-sistema/
+WARNING 2025-09-17 10:06:08,844 basehttp 5144 23224 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
+INFO 2025-09-17 10:09:11,591 autoreload 22908 19856 Watching for file changes with StatReloader
+INFO 2025-09-17 10:09:15,518 basehttp 22908 11228 "GET /api/alertas-sistema/ HTTP/1.1" 200 4107
+INFO 2025-09-17 10:09:20,013 basehttp 22908 11228 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:09:20,021 basehttp 22908 11228 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 10:09:20,126 basehttp 22908 11228 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:09:20,131 basehttp 22908 23468 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:09:20,148 basehttp 22908 11228 "GET /api/alertas-sistema/ HTTP/1.1" 200 4107
+INFO 2025-09-17 10:09:20,151 basehttp 22908 4440 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:09:20,161 basehttp 22908 23468 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-17 10:09:35,133 log 22908 23468 Bad Request: /api/alertas-sistema/
+WARNING 2025-09-17 10:09:35,134 basehttp 22908 23468 "POST /api/alertas-sistema/ HTTP/1.1" 400 93
+INFO 2025-09-17 10:10:21,818 basehttp 22908 23468 "GET /api/alertas-sistema/ HTTP/1.1" 200 4107
+INFO 2025-09-17 10:11:07,087 basehttp 22908 23468 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 10:11:07,302 basehttp 22908 11228 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:11:07,302 basehttp 22908 23468 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:11:07,308 basehttp 22908 4440 "GET /api/alertas-sistema/ HTTP/1.1" 200 4107
+INFO 2025-09-17 10:11:30,553 basehttp 22908 4440 "POST /api/alertas-sistema/ HTTP/1.1" 201 281
+INFO 2025-09-17 10:11:30,565 basehttp 22908 4440 "GET /api/alertas-sistema/ HTTP/1.1" 200 4389
+INFO 2025-09-17 10:12:24,838 basehttp 22908 4440 "POST /api/alertas-sistema/ HTTP/1.1" 201 260
+INFO 2025-09-17 10:12:24,862 basehttp 22908 4440 "GET /api/alertas-sistema/ HTTP/1.1" 200 4650
+INFO 2025-09-17 10:14:20,888 autoreload 24500 24180 Watching for file changes with StatReloader
+INFO 2025-09-17 10:14:35,748 basehttp 24500 23972 "POST /api/alertas-sistema/ HTTP/1.1" 201 260
+INFO 2025-09-17 10:14:35,798 basehttp 24500 23972 "GET /api/alertas-sistema/ HTTP/1.1" 200 4911
+INFO 2025-09-17 10:22:02,537 autoreload 18208 10300 Watching for file changes with StatReloader
+INFO 2025-09-17 10:23:14,401 autoreload 21036 17452 Watching for file changes with StatReloader
+INFO 2025-09-17 10:25:03,470 autoreload 23432 13748 Watching for file changes with StatReloader
+INFO 2025-09-17 10:25:05,343 views 23432 5800 === LOGIN ATTEMPT ===
+INFO 2025-09-17 10:25:05,344 views 23432 5800 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-09-17 10:25:05,982 views 23432 5800 Login bem-sucedido
+INFO 2025-09-17 10:25:05,984 basehttp 23432 5800 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-09-17 10:25:05,996 basehttp 23432 5800 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 10:25:06,158 basehttp 23432 13696 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 10:25:06,184 basehttp 23432 17944 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 10:25:06,194 basehttp 23432 5800 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 10:25:06,210 basehttp 23432 13696 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:25:06,219 basehttp 23432 13696 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 10:25:06,236 basehttp 23432 13696 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
+INFO 2025-09-17 10:25:07,914 basehttp 23432 13696 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 10:25:11,678 basehttp 23432 13696 "GET /api/alertas-sistema/ HTTP/1.1" 200 4911
+ERROR 2025-09-17 10:25:40,334 utils 23432 13696 Falha ao enviar email para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:25:40,336 utils 23432 13696 Falha ao enviar e-mail de alerta para g60511925@gmail.com (Alerta: sads).
+ERROR 2025-09-17 10:26:01,380 utils 23432 13696 Falha ao enviar email para contamax20203@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:26:01,382 utils 23432 13696 Falha ao enviar e-mail de alerta para contamax20203@gmail.com (Alerta: sads).
+ERROR 2025-09-17 10:26:22,408 utils 23432 13696 Falha ao enviar email para aluno@teste.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:26:22,409 utils 23432 13696 Falha ao enviar e-mail de alerta para aluno@teste.com (Alerta: sads).
+INFO 2025-09-17 10:26:24,811 autoreload 23432 13748 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-17 10:26:25,717 autoreload 13788 19620 Watching for file changes with StatReloader
+INFO 2025-09-17 10:26:34,351 autoreload 13788 19620 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-09-17 10:26:35,806 autoreload 20364 7708 Watching for file changes with StatReloader
+INFO 2025-09-17 10:26:47,658 autoreload 20364 7708 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-09-17 10:26:50,955 autoreload 12528 23376 Watching for file changes with StatReloader
+INFO 2025-09-17 10:26:54,421 autoreload 12528 23376 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-17 10:26:55,548 autoreload 12764 10060 Watching for file changes with StatReloader
+INFO 2025-09-17 10:27:07,264 autoreload 12764 10060 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-17 10:27:09,853 autoreload 6104 15752 Watching for file changes with StatReloader
+INFO 2025-09-17 10:27:22,252 utils 6104 5524 Email enviado para g60511925@gmail.com na tentativa 1
+INFO 2025-09-17 10:27:22,259 utils 6104 5524 Email enviado para contamax20203@gmail.com na tentativa 1
+INFO 2025-09-17 10:27:22,269 utils 6104 5524 Email enviado para aluno@teste.com na tentativa 1
+INFO 2025-09-17 10:27:22,275 utils 6104 5524 Email enviado para professor@teste.com na tentativa 1
+INFO 2025-09-17 10:27:22,305 utils 6104 5524 Alerta 'aaa' marcado como enviado. Sucesso: 4/4
+INFO 2025-09-17 10:27:22,307 basehttp 6104 5524 "POST /api/alertas-sistema/ HTTP/1.1" 201 263
+INFO 2025-09-17 10:27:22,330 basehttp 6104 5524 "GET /api/alertas-sistema/ HTTP/1.1" 200 5439
+INFO 2025-09-17 10:28:41,526 utils 6104 5524 Email enviado para g60511925@gmail.com na tentativa 1
+INFO 2025-09-17 10:28:41,532 utils 6104 5524 Email enviado para contamax20203@gmail.com na tentativa 1
+INFO 2025-09-17 10:28:41,539 utils 6104 5524 Email enviado para aluno@teste.com na tentativa 1
+INFO 2025-09-17 10:28:41,546 utils 6104 5524 Email enviado para professor@teste.com na tentativa 1
+INFO 2025-09-17 10:28:41,577 utils 6104 5524 Alerta 'sasaa' marcado como enviado. Sucesso: 4/4
+INFO 2025-09-17 10:28:41,580 basehttp 6104 5524 "POST /api/alertas-sistema/ HTTP/1.1" 201 293
+INFO 2025-09-17 10:28:41,599 basehttp 6104 5524 "GET /api/alertas-sistema/ HTTP/1.1" 200 5732
+INFO 2025-09-17 10:30:43,865 autoreload 6104 15752 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-17 10:30:44,992 autoreload 7564 20596 Watching for file changes with StatReloader
+INFO 2025-09-17 10:30:47,938 autoreload 7564 20596 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-17 10:30:49,972 autoreload 16348 20708 Watching for file changes with StatReloader
+WARNING 2025-09-17 10:31:24,218 utils 16348 21620 Tentativa 1 falhou para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:31:47,249 utils 16348 21620 Tentativa 2 falhou para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 10:32:30,053 autoreload 14844 24620 Watching for file changes with StatReloader
+WARNING 2025-09-17 10:33:02,301 utils 14844 24664 SMTP falhou para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:33:23,706 utils 14844 24664 SMTP falhou para contamax20203@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+WARNING 2025-09-17 10:33:44,807 utils 14844 24664 SMTP falhou para aluno@teste.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 10:33:45,246 autoreload 14844 24620 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-09-17 10:33:46,106 autoreload 11180 11536 Watching for file changes with StatReloader
+INFO 2025-09-17 10:33:53,289 autoreload 11180 11536 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-09-17 10:33:54,736 autoreload 25380 18056 Watching for file changes with StatReloader
+INFO 2025-09-17 10:34:02,266 autoreload 25380 18056 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-09-17 10:34:03,632 autoreload 6104 21824 Watching for file changes with StatReloader
+INFO 2025-09-17 10:34:32,460 autoreload 1068 10580 Watching for file changes with StatReloader
+INFO 2025-09-17 10:34:42,579 utils 1068 12964 Email enviado para g60511925@gmail.com
+INFO 2025-09-17 10:34:42,585 utils 1068 12964 Email enviado para contamax20203@gmail.com
+INFO 2025-09-17 10:34:42,591 utils 1068 12964 Email enviado para aluno@teste.com
+INFO 2025-09-17 10:34:42,597 utils 1068 12964 Email enviado para professor@teste.com
+INFO 2025-09-17 10:34:42,632 utils 1068 12964 Alerta 'dddd' processado. Sucesso: 4/4
+INFO 2025-09-17 10:34:42,636 basehttp 1068 12964 "POST /api/alertas-sistema/ HTTP/1.1" 201 261
+INFO 2025-09-17 10:34:42,652 basehttp 1068 12964 "GET /api/alertas-sistema/ HTTP/1.1" 200 6527
+INFO 2025-09-17 10:34:51,939 utils 1068 12964 Email enviado para g60511925@gmail.com
+INFO 2025-09-17 10:34:51,945 utils 1068 12964 Email enviado para contamax20203@gmail.com
+INFO 2025-09-17 10:34:51,952 utils 1068 12964 Email enviado para aluno@teste.com
+INFO 2025-09-17 10:34:51,959 utils 1068 12964 Email enviado para professor@teste.com
+INFO 2025-09-17 10:34:51,992 utils 1068 12964 Alerta 'dsa' processado. Sucesso: 4/4
+INFO 2025-09-17 10:34:51,995 basehttp 1068 12964 "POST /api/alertas-sistema/ HTTP/1.1" 201 261
+INFO 2025-09-17 10:34:52,015 basehttp 1068 12964 "GET /api/alertas-sistema/ HTTP/1.1" 200 6788

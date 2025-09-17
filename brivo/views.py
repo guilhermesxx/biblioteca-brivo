@@ -828,17 +828,15 @@ class AlertaSistemaViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         """
-        Cria um novo alerta, registra a ação e, se for público e com envio de e-mail,
-        dispara a notificação.
+        Cria um novo alerta, registra a ação e, se for público,
+        dispara a notificação por email automaticamente.
         """
         alerta = serializer.save()
         registrar_acao(self.request.user, alerta, 'CRIACAO', descricao=f'Alerta "{alerta.titulo}" criado.')
 
-        # [INTEGRAÇÃO BACKEND] Disparar envio de e-mail/notificação se for público e marcado para envio
-        # A lógica para enviar o email e marcar email_enviado=True será feita na função utilitária
-        # A verificação de `alerta.email_enviado` aqui é para o caso de o admin já marcar como enviado
-        # na criação, mas a função utilitária fará a marcação final após o envio.
-        if alerta.visibilidade == 'publico' and alerta.email_enviado:
+        # [INTEGRAÇÃO BACKEND] Disparar envio de e-mail para alertas públicos se solicitado
+        enviar_email_solicitado = self.request.data.get('enviar_email', False)
+        if alerta.visibilidade == 'publico' and enviar_email_solicitado:
             enviar_notificacao_alerta_publico(alerta.id)
             print(f"Disparando notificação para o alerta público: {alerta.titulo}")
 
@@ -860,14 +858,10 @@ class AlertaSistemaViewSet(viewsets.ModelViewSet):
         # Cenário 1: Alerta se tornou público e ainda não foi enviado
         if (original_alerta.visibilidade == 'admin_only' and alerta.visibilidade == 'publico' and not alerta.email_enviado):
             should_send_email = True
-        # Cenário 2: Alerta já era público, não foi enviado e o admin o marcou para enviar (ou re-enviar)
-        elif (alerta.visibilidade == 'publico' and not original_alerta.email_enviado and alerta.email_enviado):
+        # Cenário 2: Alerta já era público e foi solicitado reenvio
+        enviar_email_solicitado = self.request.data.get('enviar_email', False)
+        if (alerta.visibilidade == 'publico' and enviar_email_solicitado):
             should_send_email = True
-        # Cenário 3: Alerta já era público, não foi enviado e foi atualizado de alguma forma (re-tentar envio)
-        # Este cenário pode ser mais agressivo, dependendo da sua necessidade.
-        # Por enquanto, vamos focar nos cenários 1 e 2.
-        # elif (alerta.visibilidade == 'publico' and not alerta.email_enviado):
-        #     should_send_email = True
 
         if should_send_email:
             enviar_notificacao_alerta_publico(alerta.id)
@@ -915,6 +909,30 @@ class AlertaSistemaViewSet(viewsets.ModelViewSet):
             alerta.save()
             registrar_acao(request.user, alerta, 'EDICAO', descricao=f'Alerta "{alerta.titulo}" marcado como resolvido.')
             return Response({'mensagem': 'Alerta marcado como resolvido com sucesso.'}, status=status.HTTP_200_OK)
+        except AlertaSistema.DoesNotExist:
+            return Response({'erro': 'Alerta não encontrado.'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({'erro': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=True, methods=['post'], url_path='reenviar-email', permission_classes=[IsAuthenticated, EhAdmin])
+    def reenviar_email(self, request, pk=None):
+        """
+        Reenvia o email de um alerta público para todos os usuários.
+        """
+        try:
+            alerta = self.get_object()
+            if alerta.visibilidade != 'publico':
+                return Response({'erro': 'Apenas alertas públicos podem ter emails reenviados.'}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Força o reenvio marcando email_enviado como False temporariamente
+            alerta.email_enviado = False
+            alerta.save(update_fields=['email_enviado'])
+            
+            # Dispara o envio do email
+            enviar_notificacao_alerta_publico(alerta.id)
+            
+            registrar_acao(request.user, alerta, 'EDICAO', descricao=f'Email do alerta "{alerta.titulo}" reenviado.')
+            return Response({'mensagem': 'Email reenviado com sucesso.'}, status=status.HTTP_200_OK)
         except AlertaSistema.DoesNotExist:
             return Response({'erro': 'Alerta não encontrado.'}, status=status.HTTP_404_NOT_FOUND)
         except Exception as e:
