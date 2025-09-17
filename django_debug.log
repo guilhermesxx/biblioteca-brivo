@@ -11507,3 +11507,14 @@ INFO 2025-09-17 09:23:11,967 basehttp 10292 19684 "GET /api/dashboard/ HTTP/1.1"
 INFO 2025-09-17 09:23:11,988 basehttp 10292 19684 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 3813
 INFO 2025-09-17 09:23:14,279 basehttp 10292 19684 "GET /api/livros/25/ HTTP/1.1" 200 1059
 INFO 2025-09-17 09:23:14,320 basehttp 10292 19684 "GET /api/livros/ HTTP/1.1" 200 3813
+INFO 2025-09-17 09:23:57,316 basehttp 10292 8060 "POST /api/livros/ HTTP/1.1" 201 885
+INFO 2025-09-17 09:23:57,434 basehttp 10292 8060 "GET /api/livros/ HTTP/1.1" 200 4699
+INFO 2025-09-17 09:23:59,424 basehttp 10292 8060 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 09:23:59,539 basehttp 10292 8060 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 4699
+INFO 2025-09-17 09:28:10,385 basehttp 10292 22976 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 09:28:12,891 basehttp 10292 22976 "GET /api/livros/ HTTP/1.1" 200 4699
+INFO 2025-09-17 09:32:07,645 autoreload 5144 8540 Watching for file changes with StatReloader
+INFO 2025-09-17 09:32:54,175 basehttp 5144 20248 "POST /api/livros/ HTTP/1.1" 201 1672
+INFO 2025-09-17 09:32:54,215 basehttp 5144 20248 "GET /api/livros/ HTTP/1.1" 200 6372
+INFO 2025-09-17 09:32:58,155 basehttp 5144 20248 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 09:32:58,269 basehttp 5144 20248 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 6372
