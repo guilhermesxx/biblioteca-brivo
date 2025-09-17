@@ -10358,3 +10358,582 @@ INFO 2025-09-16 17:43:36,701 basehttp 31972 34044 "GET /api/lembrete-devolucao/ 
 INFO 2025-09-16 17:43:36,712 basehttp 31972 43688 "GET /api/alertas-sistema/ HTTP/1.1" 200 2930
 WARNING 2025-09-16 17:44:11,490 log 31972 19776 Bad Request: /api/alertas-sistema/
 WARNING 2025-09-16 17:44:11,490 basehttp 31972 19776 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
+INFO 2025-09-17 08:04:18,550 autoreload 19652 20096 Watching for file changes with StatReloader
+INFO 2025-09-17 08:06:36,131 basehttp 19652 3156 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:06:36,218 basehttp 19652 3156 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:06:36,481 basehttp 19652 3156 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:06:36,499 basehttp 19652 20248 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:06:36,500 basehttp 19652 16404 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:06:36,518 basehttp 19652 20248 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:06:36,537 basehttp 19652 3156 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:06:36,551 basehttp 19652 16404 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:06:36,558 basehttp 19652 16404 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 08:06:36,568 basehttp 19652 16404 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-17 08:06:38,759 basehttp 19652 16404 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:06:39,231 basehttp 19652 16404 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:06:39,239 basehttp 19652 3156 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:06:39,270 basehttp 19652 20248 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:06:39,297 basehttp 19652 20248 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-17 08:15:25,917 autoreload 1876 21668 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:15:57,200 log 1876 3156 Not Found: /
+WARNING 2025-09-17 08:15:57,205 basehttp 1876 3156 "GET / HTTP/1.1" 404 2841
+WARNING 2025-09-17 08:15:57,389 log 1876 3156 Not Found: /favicon.ico
+WARNING 2025-09-17 08:15:57,394 basehttp 1876 3156 "GET /favicon.ico HTTP/1.1" 404 2892
+INFO 2025-09-17 08:16:48,770 basehttp 1876 22388 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:16:49,355 basehttp 1876 22388 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-09-17 08:16:49,465 basehttp 1876 22388 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:16:49,547 basehttp 1876 22388 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:16:49,805 basehttp 1876 22388 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:16:49,813 basehttp 1876 5988 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:16:49,813 basehttp 1876 22496 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:16:49,893 basehttp 1876 22496 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:16:49,909 basehttp 1876 5988 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:16:49,921 basehttp 1876 22388 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:16:49,990 basehttp 1876 22388 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 08:16:50,066 basehttp 1876 22388 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 1987
+INFO 2025-09-17 08:16:55,876 basehttp 1876 22388 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:17:00,454 basehttp 1876 22388 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:17:00,554 basehttp 1876 22388 "GET /api/livros/ HTTP/1.1" 200 1987
+ERROR 2025-09-17 08:18:37,064 log 1876 22388 Internal Server Error: /api/livros/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 661, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 569, in __init__
+    raise TypeError(
+TypeError: Livro() got unexpected keyword arguments: 'subgenero'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 218, in perform_create
+    livro = serializer.save()
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1010, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Livro.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Livro.objects.create()`. You may need to make the field read-only, or override the LivroSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 661, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 569, in __init__
+    raise TypeError(
+TypeError: Livro() got unexpected keyword arguments: 'subgenero'
+
+ERROR 2025-09-17 08:18:37,079 basehttp 1876 22388 "POST /api/livros/ HTTP/1.1" 500 185421
+INFO 2025-09-17 08:19:03,805 basehttp 1876 22388 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:19:04,034 basehttp 1876 22388 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:19:04,038 basehttp 1876 5988 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:19:04,042 basehttp 1876 22496 "GET /api/livros/ HTTP/1.1" 200 1987
+ERROR 2025-09-17 08:19:27,874 log 1876 5988 Internal Server Error: /api/livros/
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 661, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 569, in __init__
+    raise TypeError(
+TypeError: Livro() got unexpected keyword arguments: 'subgenero'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py", line 218, in perform_create
+    livro = serializer.save()
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 1010, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Livro.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Livro.objects.create()`. You may need to make the field read-only, or override the LivroSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 661, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 569, in __init__
+    raise TypeError(
+TypeError: Livro() got unexpected keyword arguments: 'subgenero'
+
+ERROR 2025-09-17 08:19:27,887 basehttp 1876 5988 "POST /api/livros/ HTTP/1.1" 500 166814
+INFO 2025-09-17 08:19:34,948 basehttp 1876 5988 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:19:35,162 basehttp 1876 22496 "GET /api/livros/ HTTP/1.1" 200 1987
+INFO 2025-09-17 08:19:35,162 basehttp 1876 5988 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:19:35,164 basehttp 1876 22388 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:19:41,692 autoreload 1876 21668 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:19:43,666 autoreload 4552 10488 Watching for file changes with StatReloader
+INFO 2025-09-17 08:19:58,794 autoreload 6416 11032 Watching for file changes with StatReloader
+INFO 2025-09-17 08:20:04,348 basehttp 6416 1808 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:20:04,612 basehttp 6416 1808 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:20:04,622 basehttp 6416 7524 "GET /api/livros/ HTTP/1.1" 200 1953
+INFO 2025-09-17 08:20:04,685 basehttp 6416 11120 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:20:30,269 basehttp 6416 11120 "POST /api/livros/ HTTP/1.1" 201 320
+INFO 2025-09-17 08:20:30,374 basehttp 6416 11120 "GET /api/livros/ HTTP/1.1" 200 2274
+INFO 2025-09-17 08:21:07,556 basehttp 6416 11120 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:21:07,642 basehttp 6416 11120 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 2274
+INFO 2025-09-17 08:21:44,731 basehttp 6416 11120 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:21:47,374 basehttp 6416 11120 "GET /api/livros/ HTTP/1.1" 200 2274
+WARNING 2025-09-17 08:22:40,958 log 6416 4840 Not Found: /
+WARNING 2025-09-17 08:22:40,961 basehttp 6416 4840 "GET / HTTP/1.1" 404 2841
+WARNING 2025-09-17 08:22:41,069 log 6416 4840 Not Found: /favicon.ico
+WARNING 2025-09-17 08:22:41,072 basehttp 6416 4840 "GET /favicon.ico HTTP/1.1" 404 2892
+WARNING 2025-09-17 08:23:04,262 log 6416 4840 Not Found: /
+WARNING 2025-09-17 08:23:04,264 basehttp 6416 4840 "GET / HTTP/1.1" 404 2841
+WARNING 2025-09-17 08:23:17,698 log 6416 4840 Not Found: /
+WARNING 2025-09-17 08:23:17,700 basehttp 6416 4840 "GET / HTTP/1.1" 404 2841
+INFO 2025-09-17 08:25:50,454 basehttp 6416 11120 "OPTIONS /api/livros/20/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:25:50,604 basehttp 6416 11120 "DELETE /api/livros/20/ HTTP/1.1" 204 74
+INFO 2025-09-17 08:25:50,713 basehttp 6416 21572 "GET /api/livros/ HTTP/1.1" 200 1033
+INFO 2025-09-17 08:25:54,262 basehttp 6416 21572 "OPTIONS /api/livros/19/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:25:54,396 basehttp 6416 21572 "DELETE /api/livros/19/ HTTP/1.1" 204 74
+INFO 2025-09-17 08:25:54,546 basehttp 6416 20364 "GET /api/livros/ HTTP/1.1" 200 372
+INFO 2025-09-17 08:25:57,647 basehttp 6416 20364 "OPTIONS /api/livros/21/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:25:57,843 basehttp 6416 20364 "DELETE /api/livros/21/ HTTP/1.1" 204 74
+INFO 2025-09-17 08:25:58,014 basehttp 6416 12492 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:26:00,057 basehttp 6416 12492 "GET /api/dashboard/ HTTP/1.1" 200 460
+INFO 2025-09-17 08:26:00,154 basehttp 6416 12492 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:29:22,718 basehttp 6416 13228 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+ERROR 2025-09-17 08:29:45,396 utils 6416 13228 Falha ao enviar email para needblox.123@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 08:29:45,401 basehttp 6416 13228 "POST /api/usuarios/ HTTP/1.1" 201 104
+WARNING 2025-09-17 08:29:47,349 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:47,351 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:48,283 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:48,285 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:48,873 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:48,874 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:54,407 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:54,409 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:54,604 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:54,606 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:54,937 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:54,940 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:55,320 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:55,322 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:29:55,732 log 6416 19912 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:29:55,734 basehttp 6416 19912 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:32:00,969 autoreload 19364 1992 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:32:03,859 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:03,861 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-09-17 08:32:04,572 basehttp 19364 1060 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+WARNING 2025-09-17 08:32:05,216 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:05,216 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:09,554 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:09,556 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:10,183 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:10,184 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:10,615 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:10,616 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:10,894 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:10,895 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:11,071 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:11,072 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:11,269 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:11,271 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:11,432 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:11,434 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:12,904 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:12,905 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:13,439 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:13,439 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:13,640 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:13,643 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:13,855 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:13,857 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:14,047 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:14,048 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:14,264 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:14,265 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:14,455 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:14,456 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:14,661 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:14,662 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:14,851 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:14,853 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:15,029 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:15,030 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:32:15,233 log 19364 10340 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:32:15,234 basehttp 19364 10340 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-09-17 08:32:55,840 autoreload 19264 12852 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:33:14,136 log 19264 21264 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:33:14,138 basehttp 19264 21264 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-09-17 08:34:01,780 autoreload 19264 12852 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:34:03,457 autoreload 8288 14848 Watching for file changes with StatReloader
+INFO 2025-09-17 08:34:09,054 autoreload 8288 14848 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:34:11,769 autoreload 10716 18964 Watching for file changes with StatReloader
+INFO 2025-09-17 08:34:15,166 autoreload 10716 18964 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:34:16,712 autoreload 9760 20916 Watching for file changes with StatReloader
+INFO 2025-09-17 08:34:27,657 autoreload 9760 20916 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:34:29,186 autoreload 21512 22352 Watching for file changes with StatReloader
+INFO 2025-09-17 08:34:32,472 autoreload 21512 22352 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:34:36,715 autoreload 22008 4052 Watching for file changes with StatReloader
+ERROR 2025-09-17 08:35:15,362 utils 22008 19320 Falha ao enviar email para failuves@gail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 08:35:15,365 basehttp 22008 19320 "POST /api/usuarios/ HTTP/1.1" 201 93
+WARNING 2025-09-17 08:36:08,267 log 22008 3808 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:36:08,269 basehttp 22008 3808 "POST /api/usuarios/ HTTP/1.1" 400 42
+ERROR 2025-09-17 08:36:10,338 utils 22008 19756 Falha ao enviar email para fernandozaninigalletti@gmai.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 08:36:10,344 basehttp 22008 19756 "POST /api/usuarios/ HTTP/1.1" 201 116
+INFO 2025-09-17 08:36:39,212 basehttp 22008 18748 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:36:39,219 basehttp 22008 21088 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:36:39,293 basehttp 22008 21088 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:36:39,294 basehttp 22008 18748 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:37:07,096 autoreload 22008 4052 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:37:08,311 autoreload 17632 21264 Watching for file changes with StatReloader
+INFO 2025-09-17 08:37:19,116 autoreload 17632 21264 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 08:37:20,544 autoreload 21696 10716 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:37:47,500 log 21696 9488 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:37:47,500 basehttp 21696 9488 "POST /api/usuarios/ HTTP/1.1" 400 42
+WARNING 2025-09-17 08:37:57,410 log 21696 9488 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:37:57,410 basehttp 21696 9488 "POST /api/usuarios/ HTTP/1.1" 400 42
+ERROR 2025-09-17 08:38:25,062 utils 21696 9488 Falha ao enviar email para fernandozaninigalletti@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 08:38:25,064 basehttp 21696 9488 "POST /api/usuarios/ HTTP/1.1" 201 117
+INFO 2025-09-17 08:39:26,688 basehttp 21696 15940 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:39:27,161 basehttp 21696 8168 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:39:27,187 basehttp 21696 15940 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:39:27,204 basehttp 21696 9228 "GET /api/dashboard/ HTTP/1.1" 200 462
+INFO 2025-09-17 08:39:27,222 basehttp 21696 9228 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:39:29,117 basehttp 21696 9228 "GET /api/dashboard/ HTTP/1.1" 200 462
+INFO 2025-09-17 08:39:32,293 basehttp 21696 9228 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-09-17 08:39:32,304 basehttp 21696 9228 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-17 08:39:32,312 basehttp 21696 9228 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-09-17 08:39:32,323 basehttp 21696 9228 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-17 08:40:01,597 autoreload 21696 10716 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:40:06,928 autoreload 5144 18928 Watching for file changes with StatReloader
+INFO 2025-09-17 08:40:35,966 basehttp 5144 4584 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+WARNING 2025-09-17 08:40:54,719 log 5144 7252 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:40:54,727 basehttp 5144 7252 "POST /api/usuarios/ HTTP/1.1" 400 89
+ERROR 2025-09-17 08:40:57,825 utils 5144 4584 Falha ao enviar email para guilherme.gs1688@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-09-17 08:40:57,829 basehttp 5144 4584 - Broken pipe from ('172.30.1.27', 61057)
+INFO 2025-09-17 08:41:35,948 autoreload 5144 18928 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:41:37,419 autoreload 8184 19588 Watching for file changes with StatReloader
+INFO 2025-09-17 08:41:45,176 autoreload 8184 19588 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:41:47,057 autoreload 15872 21556 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:41:56,195 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:56,195 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:58,049 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:58,049 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:58,281 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:58,283 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:58,569 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:58,569 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:58,867 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:58,868 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:59,192 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:59,198 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:59,458 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:59,458 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:41:59,799 log 15872 22016 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:41:59,807 basehttp 15872 22016 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:43:07,109 autoreload 15872 21556 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:43:08,294 autoreload 6556 17212 Watching for file changes with StatReloader
+INFO 2025-09-17 08:43:12,540 autoreload 6556 17212 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 08:43:13,877 autoreload 1084 21476 Watching for file changes with StatReloader
+INFO 2025-09-17 08:43:22,280 autoreload 1084 21476 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 08:43:24,000 autoreload 6656 19876 Watching for file changes with StatReloader
+INFO 2025-09-17 08:43:41,306 autoreload 20636 1324 Watching for file changes with StatReloader
+INFO 2025-09-17 08:43:58,443 autoreload 20636 1324 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 08:44:00,094 autoreload 15232 20208 Watching for file changes with StatReloader
+INFO 2025-09-17 08:44:30,123 autoreload 17108 6284 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:44:34,512 log 17108 5532 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:44:34,513 basehttp 17108 5532 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:45:56,522 autoreload 22496 10512 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:46:05,943 log 22496 2292 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:46:05,944 basehttp 22496 2292 "POST /api/usuarios/ HTTP/1.1" 400 89
+WARNING 2025-09-17 08:46:25,825 log 22496 2292 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:46:25,826 basehttp 22496 2292 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:47:26,144 autoreload 12916 20116 Watching for file changes with StatReloader
+WARNING 2025-09-17 08:47:32,440 log 12916 11032 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:47:32,441 basehttp 12916 11032 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:48:36,933 autoreload 12916 20116 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 08:48:38,207 autoreload 19080 7492 Watching for file changes with StatReloader
+INFO 2025-09-17 08:48:46,228 autoreload 19080 7492 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-09-17 08:48:47,820 autoreload 4860 4452 Watching for file changes with StatReloader
+INFO 2025-09-17 08:49:21,826 autoreload 4860 4452 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:49:23,267 autoreload 20316 13244 Watching for file changes with StatReloader
+INFO 2025-09-17 08:50:02,100 basehttp 20316 7532 "POST /api/usuarios/ HTTP/1.1" 201 94
+INFO 2025-09-17 08:50:02,340 basehttp 20316 7532 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:02,906 basehttp 20316 7532 "POST /api/token/ HTTP/1.1" 200 560
+INFO 2025-09-17 08:50:02,991 basehttp 20316 7532 "OPTIONS /api/usuarios/40/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:03,062 basehttp 20316 7532 "GET /api/usuarios/40/ HTTP/1.1" 200 94
+INFO 2025-09-17 08:50:03,361 basehttp 20316 7532 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:03,377 basehttp 20316 22320 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:03,378 basehttp 20316 21620 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:03,490 basehttp 20316 22320 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:50:03,499 basehttp 20316 7532 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:50:03,520 basehttp 20316 21620 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:50:03,589 basehttp 20316 21620 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:03,673 basehttp 20316 21620 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:50:05,131 autoreload 20316 13244 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:50:06,551 autoreload 10928 16688 Watching for file changes with StatReloader
+INFO 2025-09-17 08:50:14,248 basehttp 10928 6520 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:14,344 basehttp 10928 6520 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:50:16,229 basehttp 10928 6520 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:50:16,333 basehttp 10928 6520 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:50:27,697 basehttp 10928 6520 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:27,776 basehttp 10928 6520 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-17 08:50:27,838 basehttp 10928 6520 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:27,924 basehttp 10928 6520 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-17 08:50:39,356 basehttp 10928 13792 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:41,078 basehttp 10928 13792 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-09-17 08:50:41,102 basehttp 10928 13792 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:50:41,324 basehttp 10928 13792 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:50:41,331 basehttp 10928 20364 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:50:41,380 basehttp 10928 7252 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:50:41,438 basehttp 10928 7252 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:50:49,386 basehttp 10928 7252 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:50:51,295 basehttp 10928 7252 "GET /api/usuarios/ HTTP/1.1" 200 1704
+INFO 2025-09-17 08:50:56,578 basehttp 10928 7252 "OPTIONS /api/usuarios/40/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:50:56,606 basehttp 10928 7252 "DELETE /api/usuarios/40/ HTTP/1.1" 204 0
+INFO 2025-09-17 08:50:56,620 basehttp 10928 7252 "GET /api/usuarios/ HTTP/1.1" 200 1609
+INFO 2025-09-17 08:51:59,450 views 10928 6520 === CRIAR USUARIO ===
+INFO 2025-09-17 08:51:59,451 views 10928 6520 Dados recebidos: {'nome': 'Miguelito', 'email': 'failure@gmail.com', 'ra': '13954', 'turma': 'Admin', 'senha': 'Miguelito!', 'tipo': 'admin'}
+INFO 2025-09-17 08:51:59,453 views 10928 6520 Content-Type: application/json
+INFO 2025-09-17 08:51:59,454 views 10928 6520 Method: POST
+INFO 2025-09-17 08:51:59,918 views 10928 6520 Usuario criado com sucesso: {'id': 41, 'ra': '13954', 'nome': 'Miguelito', 'email': 'failure@gmail.com', 'turma': 'Admin', 'tipo': 'admin'}
+INFO 2025-09-17 08:51:59,922 basehttp 10928 6520 "POST /api/usuarios/ HTTP/1.1" 201 100
+INFO 2025-09-17 08:52:00,473 basehttp 10928 6520 "POST /api/token/ HTTP/1.1" 200 570
+INFO 2025-09-17 08:52:00,545 basehttp 10928 6520 "OPTIONS /api/usuarios/41/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:52:00,627 basehttp 10928 6520 "GET /api/usuarios/41/ HTTP/1.1" 200 100
+INFO 2025-09-17 08:52:00,835 basehttp 10928 6520 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:52:00,862 basehttp 10928 8384 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:52:00,879 basehttp 10928 7156 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:52:00,971 basehttp 10928 7156 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:16,346 basehttp 10928 7156 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:54:16,434 basehttp 10928 7156 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:17,788 basehttp 10928 7156 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:24,349 basehttp 10928 7156 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:54:24,430 basehttp 10928 7156 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-17 08:54:24,508 basehttp 10928 7156 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:54:24,589 basehttp 10928 7156 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:26,715 basehttp 10928 7156 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:54:29,045 views 10928 7856 === CRIAR USUARIO ===
+INFO 2025-09-17 08:54:29,047 views 10928 7856 Dados recebidos: {'nome': 'luiz', 'email': 'gustavo.cazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'admin', 'senha': '270108', 'tipo': 'admin'}
+INFO 2025-09-17 08:54:29,048 views 10928 7856 Content-Type: application/json
+INFO 2025-09-17 08:54:29,050 views 10928 7856 Method: POST
+ERROR 2025-09-17 08:54:29,058 views 10928 7856 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')], 'email': [ErrorDetail(string='usuario com este email já existe.', code='unique')]}
+WARNING 2025-09-17 08:54:29,064 log 10928 7856 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:54:29,065 basehttp 10928 7856 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:54:29,432 basehttp 10928 7156 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:29,516 basehttp 10928 7156 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:30,839 views 10928 7856 === CRIAR USUARIO ===
+INFO 2025-09-17 08:54:30,840 views 10928 7856 Dados recebidos: {'nome': 'luiz', 'email': 'gustavo.cazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'admin', 'senha': '270108', 'tipo': 'admin'}
+INFO 2025-09-17 08:54:30,841 views 10928 7856 Content-Type: application/json
+INFO 2025-09-17 08:54:30,842 views 10928 7856 Method: POST
+ERROR 2025-09-17 08:54:30,847 views 10928 7856 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')], 'email': [ErrorDetail(string='usuario com este email já existe.', code='unique')]}
+WARNING 2025-09-17 08:54:30,850 log 10928 7856 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:54:30,851 basehttp 10928 7856 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:54:31,260 views 10928 7856 === CRIAR USUARIO ===
+INFO 2025-09-17 08:54:31,262 views 10928 7856 Dados recebidos: {'nome': 'luiz', 'email': 'gustavo.cazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'admin', 'senha': '270108', 'tipo': 'admin'}
+INFO 2025-09-17 08:54:31,263 views 10928 7856 Content-Type: application/json
+INFO 2025-09-17 08:54:31,264 views 10928 7856 Method: POST
+ERROR 2025-09-17 08:54:31,273 views 10928 7856 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')], 'email': [ErrorDetail(string='usuario com este email já existe.', code='unique')]}
+WARNING 2025-09-17 08:54:31,276 log 10928 7856 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:54:31,277 basehttp 10928 7856 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:54:31,813 views 10928 7856 === CRIAR USUARIO ===
+INFO 2025-09-17 08:54:31,815 views 10928 7856 Dados recebidos: {'nome': 'luiz', 'email': 'gustavo.cazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'admin', 'senha': '270108', 'tipo': 'admin'}
+INFO 2025-09-17 08:54:31,816 views 10928 7856 Content-Type: application/json
+INFO 2025-09-17 08:54:31,818 views 10928 7856 Method: POST
+ERROR 2025-09-17 08:54:31,824 views 10928 7856 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')], 'email': [ErrorDetail(string='usuario com este email já existe.', code='unique')]}
+WARNING 2025-09-17 08:54:31,827 log 10928 7856 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:54:31,827 basehttp 10928 7856 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:54:32,012 views 10928 7856 === CRIAR USUARIO ===
+INFO 2025-09-17 08:54:32,014 views 10928 7856 Dados recebidos: {'nome': 'luiz', 'email': 'gustavo.cazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'admin', 'senha': '270108', 'tipo': 'admin'}
+INFO 2025-09-17 08:54:32,015 views 10928 7856 Content-Type: application/json
+INFO 2025-09-17 08:54:32,015 views 10928 7856 Method: POST
+ERROR 2025-09-17 08:54:32,018 views 10928 7856 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')], 'email': [ErrorDetail(string='usuario com este email já existe.', code='unique')]}
+WARNING 2025-09-17 08:54:32,020 log 10928 7856 Bad Request: /api/usuarios/
+WARNING 2025-09-17 08:54:32,022 basehttp 10928 7856 "POST /api/usuarios/ HTTP/1.1" 400 89
+INFO 2025-09-17 08:54:35,404 basehttp 10928 7156 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:54:49,220 basehttp 10928 7156 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:55:43,053 basehttp 10928 7856 "OPTIONS /api/token/ HTTP/1.1" 200 0
+WARNING 2025-09-17 08:55:43,608 log 10928 7856 Unauthorized: /api/token/
+WARNING 2025-09-17 08:55:43,617 basehttp 10928 7856 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 08:57:04,889 basehttp 10928 12680 "GET /api/usuarios/41/ HTTP/1.1" 200 100
+INFO 2025-09-17 08:57:04,939 basehttp 10928 21632 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:05,013 basehttp 10928 11832 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:05,013 basehttp 10928 3240 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:05,051 basehttp 10928 21632 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:05,094 basehttp 10928 11832 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:05,171 basehttp 10928 14020 "GET /api/usuarios/ HTTP/1.1" 200 1710
+INFO 2025-09-17 08:57:05,250 basehttp 10928 22140 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:05,250 basehttp 10928 21984 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:05,360 basehttp 10928 7564 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:57:05,875 basehttp 10928 7564 "GET /api/usuarios/ HTTP/1.1" 200 1710
+INFO 2025-09-17 08:57:05,878 basehttp 10928 22140 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:05,878 basehttp 10928 21984 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:07,330 basehttp 10928 21984 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:07,330 basehttp 10928 7564 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:07,349 basehttp 10928 22140 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:07,350 basehttp 10928 14020 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:57:07,432 basehttp 10928 7564 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:07,437 basehttp 10928 21984 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:07,440 basehttp 10928 22140 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:07,456 basehttp 10928 14020 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:07,540 basehttp 10928 7492 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:57:07,725 basehttp 10928 14020 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:07,726 basehttp 10928 22140 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:07,747 basehttp 10928 7492 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:07,806 basehttp 10928 7492 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:07,825 basehttp 10928 7492 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:07,873 basehttp 10928 22140 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:07,885 basehttp 10928 14020 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:07,898 basehttp 10928 7492 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:07,917 basehttp 10928 7492 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:14,502 autoreload 10928 16688 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-09-17 08:57:16,075 autoreload 22092 6600 Watching for file changes with StatReloader
+INFO 2025-09-17 08:57:31,695 basehttp 22092 8620 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:31,702 basehttp 22092 19296 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:31,817 basehttp 22092 2216 "GET /api/usuarios/41/ HTTP/1.1" 200 100
+INFO 2025-09-17 08:57:31,899 basehttp 22092 10376 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:31,915 basehttp 22092 2216 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:31,973 basehttp 22092 10376 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:31,988 basehttp 22092 21220 "GET /api/usuarios/ HTTP/1.1" 200 1710
+INFO 2025-09-17 08:57:32,021 basehttp 22092 4192 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:32,037 basehttp 22092 20268 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:57:32,037 basehttp 22092 3152 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:32,614 basehttp 22092 4192 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:32,615 basehttp 22092 3152 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:32,621 basehttp 22092 20268 "GET /api/usuarios/ HTTP/1.1" 200 1710
+INFO 2025-09-17 08:57:33,476 basehttp 22092 21220 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:57:33,477 basehttp 22092 4192 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:33,480 basehttp 22092 3152 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:33,489 basehttp 22092 18448 "GET /api/usuarios/11/ HTTP/1.1" 200 114
+INFO 2025-09-17 08:57:33,508 basehttp 22092 21220 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:33,511 basehttp 22092 4192 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:33,524 basehttp 22092 20268 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:33,544 basehttp 22092 4192 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:33,617 basehttp 22092 4192 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:33,634 basehttp 22092 18448 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:33,638 basehttp 22092 4192 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:33,642 basehttp 22092 21220 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:33,657 basehttp 22092 3152 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:57:33,659 basehttp 22092 4192 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:57:33,670 basehttp 22092 20268 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:33,702 basehttp 22092 4192 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:57:33,710 basehttp 22092 20268 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:33,726 basehttp 22092 20268 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:57:39,794 autoreload 22092 6600 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-09-17 08:57:41,094 autoreload 6556 12800 Watching for file changes with StatReloader
+INFO 2025-09-17 08:58:48,030 views 6556 10504 === LOGIN ATTEMPT ===
+INFO 2025-09-17 08:58:48,031 views 6556 10504 Dados recebidos: {'email': 'gustavo.cazelatto@gmail.com', 'password': '270108', 'tipo': 'admin'}
+ERROR 2025-09-17 08:58:48,418 views 6556 10504 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-17 08:58:48,420 log 6556 10504 Unauthorized: /api/token/
+WARNING 2025-09-17 08:58:48,422 basehttp 6556 10504 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-17 08:58:56,514 views 6556 10504 === LOGIN ATTEMPT ===
+INFO 2025-09-17 08:58:56,516 views 6556 10504 Dados recebidos: {'email': 'gustavo.cazelatto@gmail.com', 'password': '270108gu', 'tipo': 'admin'}
+INFO 2025-09-17 08:58:56,999 views 6556 10504 Login bem-sucedido
+INFO 2025-09-17 08:58:57,000 basehttp 6556 10504 "POST /api/token/ HTTP/1.1" 200 583
+INFO 2025-09-17 08:58:57,080 basehttp 6556 10504 "OPTIONS /api/usuarios/29/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:58:57,166 basehttp 6556 10504 "GET /api/usuarios/29/ HTTP/1.1" 200 123
+INFO 2025-09-17 08:58:57,350 basehttp 6556 10504 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:58:57,358 basehttp 6556 21264 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:58:57,363 basehttp 6556 13752 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:58:57,444 basehttp 6556 10504 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-17 08:58:57,450 basehttp 6556 13752 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-17 08:58:57,484 basehttp 6556 21264 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:58:57,559 basehttp 6556 21264 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-17 08:58:57,644 basehttp 6556 21264 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 08:59:05,629 basehttp 6556 21264 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-09-17 08:59:05,698 basehttp 6556 21264 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 1627
+INFO 2025-09-17 08:59:15,671 basehttp 6556 21264 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 08:59:18,327 basehttp 6556 21264 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-17 08:59:18,411 basehttp 6556 21264 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 09:00:36,508 basehttp 6556 3796 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-09-17 09:00:40,998 basehttp 6556 3796 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 09:00:41,084 basehttp 6556 3796 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 52
+INFO 2025-09-17 09:00:45,169 basehttp 6556 3796 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-09-17 09:00:45,274 basehttp 6556 3796 "GET /api/emprestimos/ HTTP/1.1" 200 52
+INFO 2025-09-17 09:00:48,796 basehttp 6556 3796 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 09:00:52,549 basehttp 6556 3796 "GET /api/livros/ HTTP/1.1" 200 52
+INFO 2025-09-17 09:01:20,029 basehttp 6556 21264 "POST /api/livros/ HTTP/1.1" 201 328
+INFO 2025-09-17 09:01:20,117 basehttp 6556 21264 "GET /api/livros/ HTTP/1.1" 200 380
+INFO 2025-09-17 09:01:25,361 basehttp 6556 21264 "GET /api/dashboard/ HTTP/1.1" 200 463
+INFO 2025-09-17 09:01:25,488 basehttp 6556 21264 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 380
+INFO 2025-09-17 09:01:36,726 basehttp 6556 21264 "OPTIONS /api/livros/22/ HTTP/1.1" 200 0
+INFO 2025-09-17 09:01:36,798 basehttp 6556 21264 "GET /api/livros/22/ HTTP/1.1" 200 328
+INFO 2025-09-17 09:01:36,918 basehttp 6556 21264 "GET /api/livros/ HTTP/1.1" 200 380

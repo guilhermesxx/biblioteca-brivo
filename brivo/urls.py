@@ -24,6 +24,8 @@ urlpatterns = [
     path('teste-email/', TesteEmailView.as_view()),
     path('dashboard/', DashboardAdminView.as_view(), name='dashboard-admin'),
     path('usuarios/me/', usuario_me_view, name='usuario-me'),
+
+
     path('alertas/publicos/', PublicAlertaSistemaListView.as_view(), name='alertas_publicos'),
     path('relatorios/pedagogicos/', RelatoriosPedagogicosView.as_view(), name='relatorios-pedagogicos'),
     # 📧 NOVAS ROTAS PARA SISTEMA DE EMAILS

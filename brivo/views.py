@@ -52,6 +52,17 @@ class CustomTokenObtainPairView(TokenObtainPairView):
     do campo 'tipo' e incluir dados do usuário no token.
     """
     serializer_class = CustomTokenObtainPairSerializer
+    
+    def post(self, request, *args, **kwargs):
+        logger.info(f"=== LOGIN ATTEMPT ===")
+        logger.info(f"Dados recebidos: {request.data}")
+        try:
+            response = super().post(request, *args, **kwargs)
+            logger.info(f"Login bem-sucedido")
+            return response
+        except Exception as e:
+            logger.error(f"Erro no login: {str(e)}")
+            raise
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
@@ -63,120 +74,28 @@ def usuario_me_view(request):
     serializer = UsuarioSerializer(request.user)
     return Response(serializer.data)
 
+
+
 class UsuarioViewSet(viewsets.ModelViewSet):
-    """
-    Viewset para gerenciar usuários.
-    Permissões ajustadas:
-    - Admin: pode criar, listar, atualizar e desativar qualquer usuário.
-    - Aluno/Professor: pode visualizar e atualizar seu próprio perfil.
-    """
-    queryset = Usuario.objects.all().order_by('nome') # CORREÇÃO: Adicionado order_by para paginação consistente
+    queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
-    filterset_fields = ['tipo']
-    search_fields = ['nome', 'email', 'ra', 'turma']
-
-    def get_permissions(self):
-        """
-        Define as permissões com base na ação (list, retrieve, create, update, destroy).
-        """
-        if self.action == 'create':
-            return [permissions.AllowAny()]
-
-        # Para 'list' (listar todos os usuários) e 'counts' (obter contagens),
-        # apenas administradores autenticados têm permissão.
-        elif self.action in ['list', 'counts']:
-            return [IsAuthenticated(), EhAdmin()]
-
-        elif self.action in ['retrieve', 'update', 'partial_update']:
-            return [IsAuthenticated(), EhDonoOuAdmin()]
-
-        elif self.action == 'destroy':
-            return [IsAuthenticated(), EhAdmin()]
-
-        return [IsAuthenticated()]
-
-    def get_queryset(self):
-        """
-        Retorna o queryset de usuários ativos por padrão para listagem.
-        Admins podem ver todos.
-        """
-        user = self.request.user
-        if user.is_authenticated and user.tipo == 'admin':
-            queryset = Usuario.objects.all().order_by('nome') # CORREÇÃO: Adicionado order_by
-        else:
-            queryset = Usuario.objects.filter(ativo=True).order_by('nome') # CORREÇÃO: Adicionado order_by
-
-        # O DjangoFilterBackend e SearchFilter já aplicam os filtros automaticamente
-        # com base em filterset_fields e search_fields definidos acima.
-        return queryset
-
-
-    def perform_create(self, serializer):
-        """
-        Salva um novo usuário e registra a ação.
-        DISPARA EMAIL DE BOAS-VINDAS AUTOMATICAMENTE
-        """
-        usuario = serializer.save()
-        user_for_log = self.request.user if self.request.user.is_authenticated else None
-        registrar_acao(user_for_log, usuario, 'CRIACAO', descricao='Usuário criado.')
+    permission_classes = [permissions.AllowAny]
+    
+    def create(self, request, *args, **kwargs):
+        logger.info(f"=== CRIAR USUARIO ===")
+        logger.info(f"Dados recebidos: {request.data}")
+        logger.info(f"Content-Type: {request.content_type}")
+        logger.info(f"Method: {request.method}")
         
-        # ENVIAR EMAIL DE BOAS-VINDAS AUTOMATICAMENTE (NÃO QUEBRA SE FALHAR)
         try:
-            from .utils import enviar_email_boas_vindas
-            enviar_email_boas_vindas(usuario)
+            response = super().create(request, *args, **kwargs)
+            logger.info(f"Usuario criado com sucesso: {response.data}")
+            return response
         except Exception as e:
-            logger.warning(f"Email de boas-vindas nao enviado para {usuario.email}: {str(e)}")
+            logger.error(f"Erro ao criar usuario: {str(e)}")
+            raise
 
-    def perform_update(self, serializer):
-        """
-        Atualiza um usuário existente e registra a ação.
-        """
-        usuario = serializer.save()
-        registrar_acao(self.request.user, usuario, 'EDICAO', descricao='Usuário editado.')
 
-    def destroy(self, request, *args, **kwargs):
-        """
-        Remove completamente um usuário do sistema (hard delete).
-        Remove todas as dependências relacionadas antes da exclusão.
-        """
-        usuario = self.get_object()
-        
-        # Impede que o usuário delete a si mesmo
-        if usuario.id == request.user.id:
-            return Response({'erro': 'Você não pode excluir sua própria conta.'}, status=status.HTTP_400_BAD_REQUEST)
-        
-        # Remove todas as reservas do usuário
-        Reserva.objects.filter(aluno=usuario).delete()
-        
-        # Remove todos os empréstimos do usuário
-        Emprestimo.objects.filter(usuario=usuario).delete()
-        
-        # Registra a ação antes de deletar
-        registrar_acao(request.user, usuario, 'DESATIVACAO', descricao=f'Usuário "{usuario.nome}" e todas suas dependências deletados permanentemente.')
-        
-        # HARD DELETE - remove completamente do banco
-        usuario.delete()
-        
-        return Response({'mensagem': 'Usuário deletado permanentemente com sucesso.'}, status=status.HTTP_204_NO_CONTENT)
-
-    @action(detail=False, methods=['get'], url_path='counts', permission_classes=[IsAuthenticated, EhAdmin])
-    def counts(self, request):
-        """
-        Retorna as contagens de usuários por tipo (total, alunos, professores, admins).
-        Apenas administradores podem acessar.
-        """
-        total_usuarios_ativos = Usuario.objects.filter(ativo=True).count()
-        total_alunos = Usuario.objects.filter(ativo=True, tipo='aluno').count()
-        total_professores = Usuario.objects.filter(ativo=True, tipo='professor').count()
-        total_admins = Usuario.objects.filter(ativo=True, tipo='admin').count()
-
-        return Response({
-            'total_usuarios_ativos': total_usuarios_ativos,
-            'alunos': total_alunos,
-            'professores': total_professores,
-            'admins': total_admins,
-        }, status=status.HTTP_200_OK)
 
 
 # -----------------------------------------------------------------------------

@@ -205,65 +205,28 @@ class ReservaSerializer(serializers.ModelSerializer):
 
 # Serializers para os Usuários
 class UsuarioSerializer(serializers.ModelSerializer):
-    # Campo 'id' é read-only, garantindo que não seja enviado na requisição PUT/PATCH
-    id = serializers.IntegerField(read_only=True)
-    senha = serializers.CharField(write_only=True, required=False) # Senha é opcional para updates
-    # Adiciona o campo 'avatar' ao serializer.
-    # write_only=True: o campo é aceito na entrada, mas não incluído na saída (GET).
-    # required=False: o campo é opcional na entrada.
-    avatar = serializers.CharField(write_only=True, required=False, allow_null=True, allow_blank=True)
-
+    senha = serializers.CharField(write_only=True)
 
     class Meta:
         model = Usuario
-        # Incluímos 'avatar' nos campos para que o serializer o reconheça
-        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo', 'avatar']
-    
+        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo']
+
     def validate_email(self, value):
-        # Validação de email único apenas se estiver sendo alterado
-        if self.instance and self.instance.email == value:
-            return value
         if Usuario.objects.filter(email=value).exists():
             raise serializers.ValidationError("Este email já está em uso.")
         return value
-    
+
     def validate_ra(self, value):
-        # Validação de RA único apenas se estiver sendo alterado
-        if self.instance and self.instance.ra == value:
-            return value
         if Usuario.objects.filter(ra=value).exists():
             raise serializers.ValidationError("Este RA já está em uso.")
         return value
-    
-    def validate(self, data):
-        # Validação adicional para campos obrigatórios
-        errors = {}
-        
-        # Verifica se nome está vazio
-        if 'nome' in data and not data['nome'].strip():
-            errors['nome'] = 'O nome não pode estar vazio.'
-        
-        # Verifica se turma está vazia
-        if 'turma' in data and not data['turma'].strip():
-            errors['turma'] = 'A turma não pode estar vazia.'
-        
-        if errors:
-            raise serializers.ValidationError(errors)
-        
-        return data
 
     def create(self, validated_data):
-        # Remove o avatar de validated_data antes de criar o usuário,
-        # pois o modelo Usuario não tem esse campo.
-        avatar = validated_data.pop('avatar', None) 
         senha = validated_data.pop('senha')
         usuario = Usuario.objects.create_user(**validated_data, password=senha)
         return usuario
 
     def update(self, instance, validated_data):
-        # Remove o avatar de validated_data antes de atualizar o usuário,
-        # pois o modelo Usuario não tem esse campo.
-        avatar = validated_data.pop('avatar', None) 
         senha = validated_data.pop('senha', None)
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
@@ -293,7 +256,6 @@ class LivroSerializer(serializers.ModelSerializer):
     disponivel = serializers.BooleanField(read_only=True)
     quantidade_total = serializers.IntegerField(required=False)
     quantidade_emprestada = serializers.IntegerField(required=False)
-    subgenero = serializers.CharField(required=False, allow_null=True, allow_blank=True)  # NOVO: Campo subgênero
 
     titulo = serializers.CharField(
         required=True,
@@ -313,7 +275,7 @@ class LivroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livro
         fields = [
-            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero', 'subgenero',
+            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero',
             'quantidade_total', 'quantidade_emprestada', 'capa', 'descricao', 'ativo', 'disponivel'
         ]
         read_only_fields = ['id', 'disponivel', 'ativo']
