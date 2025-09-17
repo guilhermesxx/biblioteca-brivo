@@ -275,7 +275,7 @@ class LivroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livro
         fields = [
-            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero',
+            'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero', 'subgenero',
             'quantidade_total', 'quantidade_emprestada', 'capa', 'descricao', 'ativo', 'disponivel'
         ]
         read_only_fields = ['id', 'disponivel', 'ativo']

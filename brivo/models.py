@@ -126,6 +126,7 @@ class Livro(models.Model):
     numero_paginas = models.IntegerField(null=True, blank=True)
     tipo = models.CharField(max_length=6, choices=TIPO_LIVRO_CHOICES)
     genero = models.CharField(max_length=100, null=True, blank=True)
+    subgenero = models.CharField(max_length=100, null=True, blank=True)
     
     # NOVOS CAMPOS PARA CONTROLE DE ESTOQUE
     quantidade_total = models.IntegerField(default=1, help_text="Número total de exemplares deste livro.")
