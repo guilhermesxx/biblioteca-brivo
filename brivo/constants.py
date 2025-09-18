@@ -111,6 +111,9 @@ GENEROS_SUBGENEROS = {
         'dicionário português', 'dicionário inglês', 'enciclopédia', 'atlas',
         'gramática', 'manual técnico', 'guia de estudo', 'almanaque'
     ],
+    'dicionários': [
+        'português', 'inglês', 'espanhol', 'francês', 'técnico', 'sinônimos', 'etimológico'
+    ],
     'quadrinhos': [
         'super-heróis', 'mangá', 'graphic novel', 'quadrinhos brasileiros',
         'quadrinhos europeus', 'quadrinhos infantis', 'webcomics'
