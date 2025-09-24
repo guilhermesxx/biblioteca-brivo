@@ -12636,3 +12636,492 @@ INFO 2025-09-18 09:51:28,939 basehttp 15628 19428 "GET /api/avisar-reservas-expi
 INFO 2025-09-18 09:51:28,970 basehttp 15628 3092 "GET /api/dashboard/ HTTP/1.1" 200 465
 INFO 2025-09-18 09:51:29,010 basehttp 15628 3092 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
 INFO 2025-09-18 09:51:29,043 basehttp 15628 3092 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-18 09:53:41,926 basehttp 15628 23864 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-18 09:53:42,000 basehttp 15628 23864 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-18 09:53:42,086 basehttp 15628 23864 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-18 09:53:50,633 basehttp 15628 24136 "GET /api/usuarios/42/ HTTP/1.1" 200 145
+INFO 2025-09-18 09:53:51,102 basehttp 15628 24136 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-18 09:53:51,147 basehttp 15628 23976 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 09:53:51,174 basehttp 15628 24000 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-18 09:53:51,392 basehttp 15628 24000 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-18 10:00:05,114 basehttp 15628 21016 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+WARNING 2025-09-18 10:00:05,251 log 15628 21016 Unauthorized: /api/livros/
+WARNING 2025-09-18 10:00:05,345 basehttp 15628 21016 "GET /api/livros/ HTTP/1.1" 401 191
+INFO 2025-09-18 10:00:05,361 basehttp 15628 21016 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-18 10:00:05,373 basehttp 15628 21016 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-18 10:00:05,433 basehttp 15628 21016 "GET /api/livros/ HTTP/1.1" 200 81088
+INFO 2025-09-18 10:00:20,023 basehttp 15628 21016 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-18 10:00:20,125 basehttp 15628 21016 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-18 10:21:28,790 basehttp 15628 3888 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-18 10:21:28,792 basehttp 15628 24060 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 10:51:28,793 basehttp 15628 9728 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-18 10:51:28,794 basehttp 15628 5732 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-18 11:06:16,534 log 15628 25696 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-18 11:06:16,534 basehttp 15628 25696 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-09-18 11:06:16,616 log 15628 25696 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-18 11:06:16,618 basehttp 15628 25696 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+INFO 2025-09-18 11:06:16,642 basehttp 15628 25124 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-18 11:06:16,700 basehttp 15628 25696 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-18 11:06:16,723 basehttp 15628 25124 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 11:06:16,793 basehttp 15628 25696 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+WARNING 2025-09-18 11:21:28,777 log 15628 26292 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-18 11:21:28,783 log 15628 24944 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-18 11:21:28,789 basehttp 15628 26292 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-18 11:21:28,790 basehttp 15628 24944 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-18 11:21:28,824 basehttp 15628 26292 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-18 11:21:28,833 basehttp 15628 24944 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-18 11:21:28,859 basehttp 15628 24944 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 11:21:28,866 basehttp 15628 26292 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-18 11:23:51,909 basehttp 15628 16788 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-18 11:23:51,911 basehttp 15628 25404 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 11:51:28,788 basehttp 15628 27360 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-18 11:51:28,790 basehttp 15628 26520 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 11:53:51,371 basehttp 15628 22888 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-18 11:53:51,373 basehttp 15628 24944 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-18 11:53:51,620 basehttp 15628 22888 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-18 11:53:51,624 basehttp 15628 24944 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 07:58:24,345 autoreload 11076 13064 Watching for file changes with StatReloader
+INFO 2025-09-24 08:00:48,174 autoreload 22008 22028 Watching for file changes with StatReloader
+INFO 2025-09-24 08:01:09,975 basehttp 22008 3884 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:09,975 basehttp 22008 11720 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,032 basehttp 22008 3884 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 08:01:10,032 basehttp 22008 11720 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 08:01:10,038 basehttp 22008 3884 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,038 basehttp 22008 11720 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,047 basehttp 22008 11720 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 08:01:10,056 basehttp 22008 3884 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 08:01:10,191 basehttp 22008 3884 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,193 basehttp 22008 11720 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,195 basehttp 22008 3884 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,217 basehttp 22008 16596 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,217 basehttp 22008 11720 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:01:10,218 basehttp 22008 16916 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,223 basehttp 22008 4720 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,243 basehttp 22008 16916 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:01:10,249 basehttp 22008 3884 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:01:10,259 basehttp 22008 16916 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:01:10,289 basehttp 22008 16596 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:01:10,305 basehttp 22008 16596 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-24 08:01:10,325 basehttp 22008 16916 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:01:10,334 basehttp 22008 16596 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-24 08:01:10,354 basehttp 22008 16916 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-24 08:17:18,321 basehttp 22008 16640 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:17:18,397 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:17:18,398 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'aluno'}
+ERROR 2025-09-24 08:17:19,257 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:17:19,259 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:17:19,260 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:17:24,336 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:17:24,337 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'aluno'}
+ERROR 2025-09-24 08:17:25,287 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:17:25,294 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:17:25,305 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:17:26,850 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:17:26,852 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'aluno'}
+ERROR 2025-09-24 08:17:27,649 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:17:27,650 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:17:27,651 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:17:46,853 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:17:46,854 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'aluno'}
+ERROR 2025-09-24 08:17:47,294 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:17:47,294 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:17:47,296 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:17:48,621 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:17:48,622 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'aluno'}
+ERROR 2025-09-24 08:17:49,067 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:17:49,069 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:17:49,069 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:01,577 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:01,581 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:02,531 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:02,539 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:02,543 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:07,836 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:07,836 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:08,340 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:08,341 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:08,341 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:10,096 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:10,097 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:10,688 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:10,689 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:10,691 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:18,146 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:18,146 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:18,813 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:18,815 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:18,816 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:20,273 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:20,274 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:20,829 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:20,831 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:20,831 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:21,827 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:21,828 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:22,423 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:22,425 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:22,426 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:23,337 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:23,338 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:24,006 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:24,007 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:24,008 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:24,839 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:24,841 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:25,313 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:25,314 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:25,315 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:26,352 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:26,353 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:26,894 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:26,895 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:26,896 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:29,780 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:29,781 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:30,601 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:30,606 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:30,607 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:31,693 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:31,694 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:32,281 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:32,283 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:32,284 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:33,506 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:33,506 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:34,280 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:34,282 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:34,283 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:35,121 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:35,121 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:35,655 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:35,656 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:35,657 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:38,883 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:38,884 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:39,323 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:39,324 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:39,325 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:18:46,197 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:18:46,199 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:18:46,642 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:18:46,643 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:18:46,643 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:06,075 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:06,075 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:06,736 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:06,737 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:06,739 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:08,111 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:08,113 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:08,559 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:08,559 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:08,560 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:09,672 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:09,674 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:10,084 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:10,085 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:10,086 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:11,108 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:11,109 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:11,559 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:11,560 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:11,561 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:12,689 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:12,690 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:13,159 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:13,161 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:13,161 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:14,305 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:14,306 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:15,185 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:15,187 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:15,188 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:16,527 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:16,528 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:16,982 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:16,983 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:16,984 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:18,150 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:18,151 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:18,515 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:18,516 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:18,517 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:19,698 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:19,699 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:20,030 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:20,032 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:20,032 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:21,186 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:21,186 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:21,522 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:21,524 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:21,525 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:19:31,586 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:19:31,587 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:19:32,284 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:19:32,285 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:19:32,287 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:20:01,781 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:20:01,782 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:20:02,361 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:20:02,362 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:20:02,363 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:20:03,385 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:20:03,386 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:20:03,807 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:20:03,808 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:20:03,808 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:21:01,421 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:21:01,422 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:21:01,810 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:21:01,811 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:21:01,812 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:21:04,042 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:21:04,043 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:21:04,487 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:21:04,488 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:21:04,489 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:21:10,929 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:21:10,930 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:21:11,606 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:21:11,616 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:21:11,619 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:21:12,468 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:21:12,469 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:21:12,877 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:21:12,878 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:21:12,879 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:21:13,828 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:21:13,829 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:21:14,189 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:21:14,190 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:21:14,192 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:23:04,057 views 22008 16640 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:23:04,059 views 22008 16640 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:23:04,856 views 22008 16640 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:23:04,857 log 22008 16640 Unauthorized: /api/token/
+WARNING 2025-09-24 08:23:04,858 basehttp 22008 16640 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:28:16,254 views 22008 8072 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:28:16,255 views 22008 8072 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:28:16,553 views 22008 8072 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:28:16,554 log 22008 8072 Unauthorized: /api/token/
+WARNING 2025-09-24 08:28:16,555 basehttp 22008 8072 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:29:20,176 basehttp 22008 10324 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:29:20,238 views 22008 10324 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:29:20,240 views 22008 10324 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-09-24 08:29:20,739 views 22008 10324 Login bem-sucedido
+INFO 2025-09-24 08:29:20,741 basehttp 22008 10324 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-09-24 08:29:20,808 basehttp 22008 10324 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:29:20,908 basehttp 22008 10324 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 08:29:21,077 basehttp 22008 10324 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:29:21,117 basehttp 22008 3240 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:29:21,120 basehttp 22008 8996 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:29:21,135 basehttp 22008 10324 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:29:21,234 basehttp 22008 8996 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:29:21,238 basehttp 22008 3240 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:29:21,306 basehttp 22008 8996 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-24 08:29:21,383 basehttp 22008 8996 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-24 08:31:09,975 basehttp 22008 16912 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:31:09,976 basehttp 22008 17564 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:31:09,985 basehttp 22008 16912 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:31:09,986 basehttp 22008 17564 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:31:22,304 views 22008 8072 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:31:22,305 views 22008 8072 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:31:23,353 views 22008 8072 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:31:23,354 log 22008 8072 Unauthorized: /api/token/
+WARNING 2025-09-24 08:31:23,356 basehttp 22008 8072 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:31:24,673 views 22008 8072 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:31:24,674 views 22008 8072 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:31:25,334 views 22008 8072 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:31:25,335 log 22008 8072 Unauthorized: /api/token/
+WARNING 2025-09-24 08:31:25,336 basehttp 22008 8072 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:33:08,943 views 22008 8072 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:33:08,944 views 22008 8072 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-09-24 08:33:09,440 views 22008 8072 Login bem-sucedido
+INFO 2025-09-24 08:33:09,442 basehttp 22008 8072 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-09-24 08:33:09,536 basehttp 22008 8072 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:33:09,620 basehttp 22008 8072 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 08:33:10,314 basehttp 22008 8072 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:33:10,345 basehttp 22008 21944 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:33:10,348 basehttp 22008 22252 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:33:10,452 basehttp 22008 22252 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:33:10,526 basehttp 22008 21944 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:33:10,556 basehttp 22008 8072 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:33:10,660 basehttp 22008 8072 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-24 08:33:10,777 basehttp 22008 8072 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-24 08:34:06,118 basehttp 22008 8072 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-09-24 08:34:06,335 basehttp 22008 8072 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-09-24 08:34:06,636 basehttp 22008 8072 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-09-24 08:34:06,778 basehttp 22008 8072 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-09-24 08:35:14,319 basehttp 22008 19712 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:35:17,305 views 22008 8072 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:35:17,307 views 22008 8072 Dados recebidos: {'email': 'brunocorreiab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-09-24 08:35:18,431 views 22008 8072 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-09-24 08:35:18,433 log 22008 8072 Unauthorized: /api/token/
+WARNING 2025-09-24 08:35:18,434 basehttp 22008 8072 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-09-24 08:35:29,999 basehttp 22008 19712 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:35:30,012 basehttp 22008 9572 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:35:30,069 basehttp 22008 19712 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-09-24 08:35:30,090 basehttp 22008 9572 "GET /api/livros/ HTTP/1.1" 200 81088
+INFO 2025-09-24 08:37:11,581 basehttp 22008 8072 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:37:11,730 views 22008 8072 === CRIAR USUARIO ===
+INFO 2025-09-24 08:37:11,731 views 22008 8072 Dados recebidos: {'nome': 'bruno correia de oliveira', 'email': 'brunocorreiab20@gmail.com', 'ra': '0000112165465', 'turma': 'adimin', 'senha': 'Bru123@200', 'tipo': 'admin'}
+INFO 2025-09-24 08:37:11,732 views 22008 8072 Content-Type: application/json
+INFO 2025-09-24 08:37:11,733 views 22008 8072 Method: POST
+INFO 2025-09-24 08:37:12,486 views 22008 8072 Usuario criado com sucesso: {'id': 43, 'ra': '0000112165465', 'nome': 'bruno correia de oliveira', 'email': 'brunocorreiab20@gmail.com', 'turma': 'adimin', 'tipo': 'admin', 'ativo': True}
+INFO 2025-09-24 08:37:12,487 basehttp 22008 8072 "POST /api/usuarios/ HTTP/1.1" 201 146
+INFO 2025-09-24 08:37:12,670 views 22008 8072 === LOGIN ATTEMPT ===
+INFO 2025-09-24 08:37:12,671 views 22008 8072 Dados recebidos: {'email': 'brunocorreiab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+INFO 2025-09-24 08:37:13,362 views 22008 8072 Login bem-sucedido
+INFO 2025-09-24 08:37:13,364 basehttp 22008 8072 "POST /api/token/ HTTP/1.1" 200 594
+INFO 2025-09-24 08:37:13,538 basehttp 22008 8072 "OPTIONS /api/usuarios/43/ HTTP/1.1" 200 0
+INFO 2025-09-24 08:37:13,735 basehttp 22008 8072 "GET /api/usuarios/43/ HTTP/1.1" 200 146
+INFO 2025-09-24 08:37:14,353 basehttp 22008 21944 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 08:37:14,353 basehttp 22008 8072 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:37:14,375 basehttp 22008 22252 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:37:14,551 basehttp 22008 8072 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81088
+INFO 2025-09-24 08:52:34,903 basehttp 22008 2128 "POST /api/livros/ HTTP/1.1" 201 381
+INFO 2025-09-24 08:52:35,003 basehttp 22008 2128 "GET /api/livros/ HTTP/1.1" 200 81470
+INFO 2025-09-24 08:52:37,107 basehttp 22008 2128 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:52:37,199 basehttp 22008 2128 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 81470
+INFO 2025-09-24 08:52:42,530 basehttp 22008 2128 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:52:45,263 basehttp 22008 2128 "GET /api/livros/ HTTP/1.1" 200 81470
+INFO 2025-09-24 08:58:57,582 basehttp 22008 21508 "POST /api/livros/ HTTP/1.1" 201 416
+INFO 2025-09-24 08:58:57,687 basehttp 22008 21508 "GET /api/livros/ HTTP/1.1" 200 81887
+INFO 2025-09-24 08:59:00,558 basehttp 22008 21508 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 08:59:03,742 basehttp 22008 21508 "GET /api/livros/ HTTP/1.1" 200 81887
+INFO 2025-09-24 08:59:20,807 basehttp 22008 21508 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 08:59:20,813 basehttp 22008 4024 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-24 09:01:09,731 log 22008 15252 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-24 09:01:09,739 log 22008 10620 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-24 09:01:09,739 basehttp 22008 15252 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-24 09:01:09,742 basehttp 22008 10620 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-09-24 09:01:09,860 log 22008 10620 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-24 09:01:09,863 log 22008 15252 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-24 09:01:09,864 basehttp 22008 10620 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-24 09:01:09,866 basehttp 22008 15252 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-24 09:01:09,895 basehttp 22008 15252 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:01:09,901 basehttp 22008 10620 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:01:09,907 basehttp 22008 12516 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:01:09,909 basehttp 22008 20412 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:01:09,962 basehttp 22008 12516 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:01:09,963 basehttp 22008 20412 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:01:09,980 basehttp 22008 10620 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:01:09,984 basehttp 22008 20412 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:07:14,208 basehttp 22008 13336 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:07:14,208 basehttp 22008 596 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:10:47,232 basehttp 22008 596 - Broken pipe from ('172.30.1.250', 53906)
+INFO 2025-09-24 09:17:49,092 basehttp 22008 16336 "POST /api/livros/ HTTP/1.1" 201 369
+INFO 2025-09-24 09:17:49,213 basehttp 22008 16336 "GET /api/livros/ HTTP/1.1" 200 82257
+INFO 2025-09-24 09:25:48,360 basehttp 22008 21936 "POST /api/livros/ HTTP/1.1" 201 421
+INFO 2025-09-24 09:25:48,456 basehttp 22008 21936 "GET /api/livros/ HTTP/1.1" 200 82679
+INFO 2025-09-24 09:27:51,643 utils 21668 18884 Email enviado para guilherme1920x@gmail.com
+INFO 2025-09-24 09:27:51,645 utils 21668 18884 Email manual enviado para guilherme1920x@gmail.com
+INFO 2025-09-24 09:27:51,656 utils 21668 18884 Email enviado para contaescola338@gmail.com
+INFO 2025-09-24 09:27:51,657 utils 21668 18884 Email manual enviado para contaescola338@gmail.com
+INFO 2025-09-24 09:27:51,664 utils 21668 18884 Email enviado para guizin2339@gmail.com
+INFO 2025-09-24 09:27:51,665 utils 21668 18884 Email manual enviado para guizin2339@gmail.com
+INFO 2025-09-24 09:27:51,675 utils 21668 18884 Email enviado para g60511925@gmail.com
+INFO 2025-09-24 09:27:51,675 utils 21668 18884 Email manual enviado para g60511925@gmail.com
+INFO 2025-09-24 09:27:51,683 utils 21668 18884 Email enviado para contamax20203@gmail.com
+INFO 2025-09-24 09:27:51,684 utils 21668 18884 Email manual enviado para contamax20203@gmail.com
+INFO 2025-09-24 09:27:51,697 utils 21668 18884 Email enviado para needblox.123@gmail.com
+INFO 2025-09-24 09:27:51,699 utils 21668 18884 Email manual enviado para needblox.123@gmail.com
+INFO 2025-09-24 09:27:51,707 utils 21668 18884 Email enviado para gustavo.cazelatto@gmail.com
+INFO 2025-09-24 09:27:51,707 utils 21668 18884 Email manual enviado para gustavo.cazelatto@gmail.com
+INFO 2025-09-24 09:27:51,717 utils 21668 18884 Email enviado para failuves@gail.com
+INFO 2025-09-24 09:27:51,717 utils 21668 18884 Email manual enviado para failuves@gail.com
+INFO 2025-09-24 09:27:51,725 utils 21668 18884 Email enviado para fernandozaninigalletti@gmai.com
+INFO 2025-09-24 09:27:51,726 utils 21668 18884 Email manual enviado para fernandozaninigalletti@gmai.com
+INFO 2025-09-24 09:27:51,738 utils 21668 18884 Email enviado para fernandozaninigalletti@gmail.com
+INFO 2025-09-24 09:27:51,739 utils 21668 18884 Email manual enviado para fernandozaninigalletti@gmail.com
+INFO 2025-09-24 09:27:51,748 utils 21668 18884 Email enviado para aluno@teste.com
+INFO 2025-09-24 09:27:51,750 utils 21668 18884 Email manual enviado para aluno@teste.com
+INFO 2025-09-24 09:27:51,756 utils 21668 18884 Email enviado para professor@teste.com
+INFO 2025-09-24 09:27:51,757 utils 21668 18884 Email manual enviado para professor@teste.com
+INFO 2025-09-24 09:27:51,767 utils 21668 18884 Email enviado para admin@teste.com
+INFO 2025-09-24 09:27:51,768 utils 21668 18884 Email manual enviado para admin@teste.com
+INFO 2025-09-24 09:27:51,776 utils 21668 18884 Email enviado para failure@gmail.com
+INFO 2025-09-24 09:27:51,776 utils 21668 18884 Email manual enviado para failure@gmail.com
+INFO 2025-09-24 09:27:51,788 utils 21668 18884 Email enviado para brunocor3iab20@gmail.com
+INFO 2025-09-24 09:27:51,789 utils 21668 18884 Email manual enviado para brunocor3iab20@gmail.com
+INFO 2025-09-24 09:27:51,799 utils 21668 18884 Email enviado para brunocorreiab20@gmail.com
+INFO 2025-09-24 09:27:51,799 utils 21668 18884 Email manual enviado para brunocorreiab20@gmail.com
+WARNING 2025-09-24 09:29:20,654 log 22008 21936 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-24 09:29:20,656 basehttp 22008 21936 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-24 09:29:20,664 log 22008 19828 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-24 09:29:20,666 basehttp 22008 19828 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-24 09:29:20,733 basehttp 22008 21936 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:29:20,734 basehttp 22008 19828 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:29:20,823 basehttp 22008 21936 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:29:20,825 basehttp 22008 19828 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:29:20,907 basehttp 22008 19828 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:29:20,908 basehttp 22008 21936 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:30:16,479 basehttp 22008 21936 "POST /api/livros/ HTTP/1.1" 201 405
+INFO 2025-09-24 09:30:16,593 basehttp 22008 21936 "GET /api/livros/ HTTP/1.1" 200 83085
+INFO 2025-09-24 09:30:19,660 basehttp 22008 21936 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 09:31:10,289 basehttp 22008 22760 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:31:10,460 basehttp 22008 22760 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:31:10,909 basehttp 22008 22760 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 09:31:11,370 basehttp 22008 22760 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:31:11,410 basehttp 22008 23452 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:31:11,537 basehttp 22008 23456 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 09:31:11,597 basehttp 22008 23456 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 83085
+INFO 2025-09-24 09:31:19,441 basehttp 22008 23456 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:31:19,466 basehttp 22008 23456 "GET /api/livros/ HTTP/1.1" 200 83085
+WARNING 2025-09-24 09:37:14,145 log 22008 2672 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-24 09:37:14,152 log 22008 20308 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-24 09:37:14,152 basehttp 22008 2672 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-24 09:37:14,154 basehttp 22008 20308 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-24 09:37:14,279 basehttp 22008 2672 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:37:14,283 basehttp 22008 20308 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:37:14,350 basehttp 22008 20308 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:37:14,353 basehttp 22008 2672 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 09:37:14,450 basehttp 22008 20308 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:37:14,455 basehttp 22008 2672 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:41:05,395 basehttp 22008 22748 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 09:41:06,098 basehttp 22008 22748 "GET /api/livros/ HTTP/1.1" 200 83085
+INFO 2025-09-24 09:41:06,136 basehttp 22008 22728 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 09:41:06,180 basehttp 22008 22976 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:41:07,932 basehttp 22008 22976 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 09:41:08,040 basehttp 22008 22976 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 83085
+INFO 2025-09-24 09:42:50,124 basehttp 22008 20700 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 09:42:53,155 basehttp 22008 20700 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:42:53,168 basehttp 22008 8776 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-09-24 09:42:53,247 basehttp 22008 20700 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-09-24 09:42:53,276 basehttp 22008 8776 "GET /api/livros/ HTTP/1.1" 200 83085
+INFO 2025-09-24 09:48:54,166 basehttp 22008 4708 "POST /api/livros/ HTTP/1.1" 201 590
+INFO 2025-09-24 09:48:54,259 basehttp 22008 4708 "GET /api/livros/ HTTP/1.1" 200 83676
+INFO 2025-09-24 09:58:22,193 basehttp 22008 20308 "POST /api/livros/ HTTP/1.1" 201 1126
+INFO 2025-09-24 09:58:22,255 basehttp 22008 20308 "GET /api/livros/ HTTP/1.1" 200 84803
+INFO 2025-09-24 09:59:20,975 basehttp 22008 14060 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 09:59:20,978 basehttp 22008 21900 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-09-24 10:01:09,541 log 22008 24632 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-09-24 10:01:09,544 log 22008 26604 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-09-24 10:01:09,545 basehttp 22008 24632 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-09-24 10:01:09,546 basehttp 22008 26604 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-09-24 10:01:09,635 basehttp 22008 26604 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:09,639 basehttp 22008 24632 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:09,654 basehttp 22008 24632 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 10:01:09,654 basehttp 22008 26604 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-09-24 10:01:09,664 basehttp 22008 24632 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:09,664 basehttp 22008 26604 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:09,681 basehttp 22008 26604 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 10:01:09,681 basehttp 22008 24632 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 10:01:39,819 basehttp 22008 26604 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:39,827 basehttp 22008 26604 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 10:01:40,109 basehttp 22008 24632 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:40,119 basehttp 22008 26604 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 10:01:40,123 basehttp 22008 15492 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 10:01:40,149 basehttp 22008 24632 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 10:01:40,155 basehttp 22008 24632 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-09-24 10:01:40,169 basehttp 22008 24632 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 84803
+INFO 2025-09-24 10:06:38,663 basehttp 22008 24784 "POST /api/livros/ HTTP/1.1" 201 609
+INFO 2025-09-24 10:06:38,804 basehttp 22008 24784 "GET /api/livros/ HTTP/1.1" 200 85413
+INFO 2025-09-24 10:07:13,618 basehttp 22008 24784 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 10:07:13,628 basehttp 22008 20828 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 10:15:40,604 basehttp 22008 22340 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-09-24 10:15:40,839 basehttp 22008 22340 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-09-24 10:15:40,866 basehttp 22008 11172 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-09-24 10:15:40,912 basehttp 22008 11332 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-09-24 10:15:41,040 basehttp 22008 11332 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 85413
