@@ -10,6 +10,7 @@ from .views import (
     # 📧 NOVAS VIEWS DE EMAIL
     EnviarEmailManualView, EnviarEmailGrupoView, EnviarEmailsPredefinidosView, ListarTiposEmailView
 )
+from .ip_detector import get_current_ip
 from .views_generos import (
     listar_generos_subgeneros, listar_generos, listar_subgeneros_por_genero
 )
@@ -41,6 +42,9 @@ urlpatterns = [
     path('generos-subgeneros/', listar_generos_subgeneros, name='generos-subgeneros'),
     path('generos/', listar_generos, name='generos'),
     path('generos/<str:genero>/subgeneros/', listar_subgeneros_por_genero, name='subgeneros-por-genero'),
+    
+    # ENDPOINT PARA DETECÇÃO DE IP
+    path('current-ip/', get_current_ip, name='current-ip'),
 ]
 
 urlpatterns += [

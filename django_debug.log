@@ -13216,3 +13216,116 @@ INFO 2025-09-30 10:00:58,897 basehttp 13656 22652 "GET /api/livros/?page_size=6&
 INFO 2025-09-30 10:03:56,836 basehttp 13656 14108 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
 INFO 2025-09-30 10:03:56,836 basehttp 13656 21984 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
 INFO 2025-09-30 10:05:38,366 basehttp 13656 21984 "GET /api/livros/ HTTP/1.1" 200 86798
+INFO 2025-10-06 17:53:40,109 autoreload 37512 39052 Watching for file changes with StatReloader
+INFO 2025-10-06 17:57:59,758 basehttp 37512 37956 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-06 17:57:59,765 views 37512 37956 === LOGIN ATTEMPT ===
+INFO 2025-10-06 17:57:59,766 views 37512 37956 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-06 17:58:00,084 views 37512 37956 Login bem-sucedido
+INFO 2025-10-06 17:58:00,084 basehttp 37512 37956 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-06 17:58:00,087 basehttp 37512 37956 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-10-06 17:58:00,094 basehttp 37512 37956 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-06 17:58:00,159 basehttp 37512 37956 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-06 17:58:00,164 basehttp 37512 20484 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-06 17:58:00,164 basehttp 37512 37956 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-06 17:58:00,179 basehttp 37512 20484 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-06 17:58:00,200 basehttp 37512 37956 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-06 17:58:00,207 basehttp 37512 24660 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-06 17:58:00,210 basehttp 37512 24660 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-06 17:58:00,220 basehttp 37512 24660 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 86798
+ERROR 2025-10-06 18:04:36,430 log 37512 33864 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-10-06 18:04:36,434 basehttp 37512 33864 "POST /api/token/refresh/ HTTP/1.1" 500 120448
+INFO 2025-10-06 18:04:38,442 basehttp 37512 33864 - Broken pipe from ('192.168.100.206', 51115)
+INFO 2025-10-06 18:05:42,095 views 37512 31412 === LOGIN ATTEMPT ===
+INFO 2025-10-06 18:05:42,096 views 37512 31412 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-06 18:05:42,399 views 37512 31412 Login bem-sucedido
+INFO 2025-10-06 18:05:42,401 basehttp 37512 31412 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-06 18:05:42,643 basehttp 37512 31412 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-06 18:05:42,849 basehttp 37512 31412 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-06 18:05:42,907 basehttp 37512 38696 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-06 18:05:42,924 basehttp 37512 40496 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-06 18:05:43,079 basehttp 37512 31412 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 86798
+INFO 2025-10-06 18:06:00,962 basehttp 37512 31412 - Broken pipe from ('192.168.100.206', 51134)
+INFO 2025-10-06 18:06:00,962 basehttp 37512 38696 - Broken pipe from ('192.168.100.206', 51135)
+INFO 2025-10-06 18:21:21,017 autoreload 37512 39052 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-10-06 18:21:21,980 autoreload 26860 2400 Watching for file changes with StatReloader
+INFO 2025-10-06 18:21:26,870 autoreload 26860 2400 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-10-06 18:21:27,640 autoreload 39428 40304 Watching for file changes with StatReloader
+INFO 2025-10-06 18:22:03,124 basehttp 39428 40496 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:22:03,125 basehttp 39428 3460 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:22:32,806 basehttp 39428 40496 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:22:36,840 basehttp 39428 40496 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:22:37,094 basehttp 39428 40496 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:22:42,374 basehttp 39428 13740 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:22:56,208 basehttp 39428 27500 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-06 18:22:56,351 basehttp 39428 40232 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-06 18:22:56,353 basehttp 39428 27500 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-06 18:22:56,364 basehttp 39428 19720 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-06 18:22:56,383 basehttp 39428 27500 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 86798
+INFO 2025-10-06 18:22:58,178 basehttp 39428 27500 - Broken pipe from ('192.168.100.206', 51166)
+INFO 2025-10-06 18:22:58,178 basehttp 39428 19720 - Broken pipe from ('192.168.100.206', 51168)
+INFO 2025-10-06 18:22:58,178 basehttp 39428 40232 - Broken pipe from ('192.168.100.206', 51167)
+INFO 2025-10-06 18:23:07,099 basehttp 39428 40496 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:23:12,076 basehttp 39428 13740 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:23:37,091 basehttp 39428 40496 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:23:42,067 basehttp 39428 13740 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:24:09,096 basehttp 39428 32952 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:24:12,380 basehttp 39428 2200 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:24:32,340 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:24:37,411 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:25:02,050 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:25:07,103 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:25:32,052 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:25:37,094 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:26:02,050 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:26:07,106 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:26:32,041 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:26:37,107 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:02,046 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:07,101 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:10,438 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:10,480 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:10,607 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:10,686 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:10,827 basehttp 39428 41988 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:10,882 basehttp 39428 40592 "GET /api/current-ip/ HTTP/1.1" 200 65
+INFO 2025-10-06 18:27:39,198 basehttp 39428 43164 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:27:39,359 basehttp 39428 43200 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:28:08,907 basehttp 39428 43164 "GET /api/current-ip/ HTTP/1.1" 200 67
+INFO 2025-10-06 18:28:09,573 basehttp 39428 43200 "GET /api/current-ip/ HTTP/1.1" 200 67
