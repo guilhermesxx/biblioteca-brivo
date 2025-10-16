@@ -176,6 +176,7 @@ class LivroViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         """
         Retorna o queryset de livros com base no tipo de usuário.
+        Apenas livros ativos são mostrados para não-admins.
         """
         user = self.request.user
         if user.is_authenticated and user.tipo == 'admin':
@@ -480,9 +481,11 @@ class ReservaViewSet(viewsets.ModelViewSet):
                 ).first()
                 
                 if emprestimo_ativo:
-                    # Restaurar quantidade do livro
-                    emprestimo_ativo.livro.quantidade_emprestada -= 1
-                    emprestimo_ativo.livro.save()
+                    # Restaurar quantidade do livro antes de deletar
+                    livro = emprestimo_ativo.livro
+                    if livro.quantidade_emprestada > 0:
+                        livro.quantidade_emprestada -= 1
+                        livro.save()
                     # Remover empréstimo
                     emprestimo_ativo.delete()
             

@@ -13958,3 +13958,358 @@ INFO 2025-10-16 17:53:54,928 views 39392 30000 Reserva 14 marcada como concluída
 INFO 2025-10-16 17:53:54,935 basehttp 39392 30000 "POST /api/emprestimos/18/devolver/ HTTP/1.1" 200 43
 INFO 2025-10-16 17:53:54,965 basehttp 39392 30000 "GET /api/reservas/ HTTP/1.1" 200 800
 INFO 2025-10-16 17:53:54,982 basehttp 39392 30000 "GET /api/emprestimos/ HTTP/1.1" 200 1447
+WARNING 2025-10-16 18:00:59,600 log 39392 40584 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:00:59,601 basehttp 39392 40584 "GET /api/dashboard/ HTTP/1.1" 401 193
+ERROR 2025-10-16 18:00:59,663 log 39392 40584 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-10-16 18:00:59,665 basehttp 39392 40584 "POST /api/token/refresh/ HTTP/1.1" 500 120682
+WARNING 2025-10-16 18:01:11,140 log 39392 40584 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:01:11,142 basehttp 39392 40584 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:01:15,054 log 39392 40584 Unauthorized: /api/livros/53/
+WARNING 2025-10-16 18:01:15,055 basehttp 39392 40584 "GET /api/livros/53/ HTTP/1.1" 401 68
+INFO 2025-10-16 18:01:48,039 autoreload 15028 42672 Watching for file changes with StatReloader
+WARNING 2025-10-16 18:01:54,643 log 15028 2148 Unauthorized: /api/livros/53/
+WARNING 2025-10-16 18:01:54,645 basehttp 15028 2148 "GET /api/livros/53/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:05,586 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:05,587 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:05,812 log 15028 2148 Unauthorized: /api/emprestimos/
+WARNING 2025-10-16 18:02:05,813 basehttp 15028 2148 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:09,548 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:09,549 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:10,076 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:10,077 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:10,329 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:10,330 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:10,529 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:10,530 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:10,691 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:10,693 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:10,862 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:10,863 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:02:11,046 log 15028 2148 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 18:02:11,047 basehttp 15028 2148 "GET /api/dashboard/ HTTP/1.1" 401 68
+INFO 2025-10-16 18:03:16,455 autoreload 38944 24888 Watching for file changes with StatReloader
+INFO 2025-10-16 18:03:18,371 views 38944 31352 === LOGIN ATTEMPT ===
+INFO 2025-10-16 18:03:18,372 views 38944 31352 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-16 18:03:18,721 views 38944 31352 Login bem-sucedido
+INFO 2025-10-16 18:03:18,723 basehttp 38944 31352 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-16 18:03:18,730 basehttp 38944 31352 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-16 18:03:18,816 basehttp 38944 42172 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-16 18:03:18,825 basehttp 38944 31352 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-16 18:03:18,834 basehttp 38944 12192 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 18:03:18,846 basehttp 38944 12192 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 87986
+INFO 2025-10-16 18:03:21,360 basehttp 38944 12192 "OPTIONS /api/livros/79/ HTTP/1.1" 200 0
+INFO 2025-10-16 18:03:21,378 basehttp 38944 12192 "GET /api/livros/79/ HTTP/1.1" 200 1098
+INFO 2025-10-16 18:03:21,453 basehttp 38944 12192 "GET /api/livros/ HTTP/1.1" 200 87986
+INFO 2025-10-16 18:03:38,125 basehttp 38944 12192 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 18:03:38,144 basehttp 38944 12192 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 87986
+WARNING 2025-10-16 18:06:31,303 log 38944 39668 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 18:06:31,304 log 38944 32124 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 18:06:31,304 basehttp 38944 39668 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 193
+WARNING 2025-10-16 18:06:31,305 basehttp 38944 32124 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 193
+ERROR 2025-10-16 18:06:31,370 log 38944 32124 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-10-16 18:06:31,371 log 38944 39668 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-10-16 18:06:31,374 basehttp 38944 32124 "POST /api/token/refresh/ HTTP/1.1" 500 120672
+ERROR 2025-10-16 18:06:31,374 basehttp 38944 39668 "POST /api/token/refresh/ HTTP/1.1" 500 120672
+INFO 2025-10-16 18:20:09,017 basehttp 38944 32668 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-16 18:20:09,018 basehttp 38944 39808 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-16 18:22:11,162 basehttp 38944 39808 "GET /api/reservas/ HTTP/1.1" 200 800
+INFO 2025-10-16 18:22:11,172 basehttp 38944 39808 "GET /api/emprestimos/ HTTP/1.1" 200 1447
+INFO 2025-10-16 18:22:12,415 basehttp 38944 39808 "GET /api/livros/ HTTP/1.1" 200 87986
+INFO 2025-10-16 18:22:12,968 basehttp 38944 39808 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 18:22:12,997 basehttp 38944 39808 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 87986
+INFO 2025-10-16 18:33:19,032 basehttp 38944 36100 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-16 18:33:19,033 basehttp 38944 32016 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-10-16 18:36:31,312 log 38944 36012 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 18:36:31,317 log 38944 29652 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 18:36:31,317 basehttp 38944 36012 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 18:36:31,318 basehttp 38944 29652 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+INFO 2025-10-16 18:50:09,323 basehttp 38944 10036 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-16 18:50:09,437 basehttp 38944 10036 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-16 19:03:19,022 basehttp 38944 23112 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-16 19:03:19,024 basehttp 38944 13744 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+WARNING 2025-10-16 19:03:19,027 log 38944 23112 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 19:03:19,035 log 38944 13744 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 19:03:19,036 basehttp 38944 23112 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 193
+WARNING 2025-10-16 19:03:19,047 basehttp 38944 13744 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 193
+INFO 2025-10-16 19:03:19,086 basehttp 38944 13744 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-16 19:03:19,086 basehttp 38944 23112 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-10-16 19:03:19,179 log 38944 13744 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-10-16 19:03:19,214 log 38944 23112 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-10-16 19:03:19,218 basehttp 38944 13744 "POST /api/token/refresh/ HTTP/1.1" 500 120682
+ERROR 2025-10-16 19:03:19,227 basehttp 38944 23112 "POST /api/token/refresh/ HTTP/1.1" 500 120682
+WARNING 2025-10-16 19:06:31,307 log 38944 3332 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 19:06:31,310 basehttp 38944 3332 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:06:31,311 log 38944 39592 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 19:06:31,320 basehttp 38944 39592 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:20:09,067 log 38944 24156 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 19:20:09,069 log 38944 37732 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 19:20:09,070 basehttp 38944 24156 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:20:09,072 basehttp 38944 37732 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:33:18,750 log 38944 41132 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 19:33:18,757 basehttp 38944 41132 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:33:18,760 log 38944 40408 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 19:33:18,777 basehttp 38944 40408 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:36:31,311 log 38944 39488 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 19:36:31,313 log 38944 22624 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 19:36:31,319 basehttp 38944 39488 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:36:31,320 basehttp 38944 22624 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:50:09,014 log 38944 42436 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 19:50:09,017 basehttp 38944 42436 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 19:50:09,019 log 38944 37028 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 19:50:09,041 basehttp 38944 37028 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:03:18,749 log 38944 41352 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 20:03:18,752 log 38944 13732 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 20:03:18,754 basehttp 38944 41352 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:03:18,756 basehttp 38944 13732 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:06:31,311 log 38944 10736 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 20:06:31,313 log 38944 42224 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 20:06:31,317 basehttp 38944 10736 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:06:31,318 basehttp 38944 42224 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:17:31,823 log 38944 5472 Unauthorized: /api/emprestimos/
+WARNING 2025-10-16 20:17:31,824 basehttp 38944 5472 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 401 68
+WARNING 2025-10-16 20:17:35,133 log 38944 5472 Unauthorized: /api/dashboard/
+WARNING 2025-10-16 20:17:35,133 basehttp 38944 5472 "GET /api/dashboard/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:20:09,034 log 38944 10884 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 20:20:09,035 log 38944 38356 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 20:20:09,036 basehttp 38944 10884 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:20:09,036 basehttp 38944 38356 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+INFO 2025-10-16 20:20:58,078 basehttp 38944 38356 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:20:58,082 views 38944 38356 === LOGIN ATTEMPT ===
+INFO 2025-10-16 20:20:58,082 views 38944 38356 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-16 20:20:58,408 views 38944 38356 Login bem-sucedido
+INFO 2025-10-16 20:20:58,409 basehttp 38944 38356 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-16 20:20:58,412 basehttp 38944 38356 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:20:58,417 basehttp 38944 38356 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-16 20:20:58,491 basehttp 38944 38356 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-16 20:20:58,495 basehttp 38944 41628 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:20:58,496 basehttp 38944 10884 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-16 20:20:58,510 basehttp 38944 10884 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 20:20:58,514 basehttp 38944 10884 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-16 20:20:58,524 basehttp 38944 10884 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 87986
+INFO 2025-10-16 20:21:02,525 basehttp 38944 10884 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:21:02,542 basehttp 38944 10884 "GET /api/livros/ HTTP/1.1" 200 87986
+INFO 2025-10-16 20:21:05,070 basehttp 38944 10884 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 20:21:10,828 basehttp 38944 10884 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-10-16 20:21:10,841 basehttp 38944 10884 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 1447
+INFO 2025-10-16 20:21:10,848 basehttp 38944 10884 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-10-16 20:21:10,858 basehttp 38944 10884 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 800
+INFO 2025-10-16 20:21:56,198 basehttp 38944 10884 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:21:56,213 basehttp 38944 10884 "GET /api/reservas/ HTTP/1.1" 200 800
+INFO 2025-10-16 20:21:56,216 basehttp 38944 10884 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:21:56,226 basehttp 38944 10884 "GET /api/emprestimos/ HTTP/1.1" 200 1447
+INFO 2025-10-16 20:28:04,027 autoreload 38944 24888 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-10-16 20:28:04,995 autoreload 13480 22520 Watching for file changes with StatReloader
+INFO 2025-10-16 20:28:09,925 autoreload 13480 22520 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-10-16 20:28:10,874 autoreload 2336 42580 Watching for file changes with StatReloader
+INFO 2025-10-16 20:28:44,905 autoreload 2336 42580 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-10-16 20:28:45,589 autoreload 24616 42964 Watching for file changes with StatReloader
+INFO 2025-10-16 20:28:52,501 autoreload 24616 42964 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-10-16 20:28:53,122 autoreload 11828 12464 Watching for file changes with StatReloader
+WARNING 2025-10-16 20:36:31,326 log 11828 41804 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-16 20:36:31,329 log 11828 42036 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-16 20:36:31,329 basehttp 11828 41804 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 68
+WARNING 2025-10-16 20:36:31,330 basehttp 11828 42036 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 68
+INFO 2025-10-16 20:37:45,129 basehttp 11828 1428 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-16 20:37:45,214 basehttp 11828 33780 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-16 20:37:45,221 basehttp 11828 1428 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-16 20:37:45,231 basehttp 11828 39068 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 20:37:45,368 basehttp 11828 39068 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-16 20:37:48,180 basehttp 11828 40124 "OPTIONS /api/livros/41/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:37:48,196 basehttp 11828 40124 "GET /api/livros/41/ HTTP/1.1" 200 713
+INFO 2025-10-16 20:37:48,267 basehttp 11828 40124 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-16 20:37:55,450 basehttp 11828 40124 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 20:37:55,481 basehttp 11828 40124 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-16 20:37:58,317 basehttp 11828 25556 "OPTIONS /api/livros/37/ HTTP/1.1" 200 0
+INFO 2025-10-16 20:37:58,323 basehttp 11828 25556 "GET /api/livros/37/ HTTP/1.1" 200 1412
+INFO 2025-10-16 20:37:58,346 basehttp 11828 25556 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-16 20:38:01,530 basehttp 11828 25556 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 20:38:01,588 basehttp 11828 25556 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-16 20:38:11,052 basehttp 11828 41416 "GET /api/reservas/ HTTP/1.1" 200 800
+INFO 2025-10-16 20:38:11,069 basehttp 11828 41416 "GET /api/emprestimos/ HTTP/1.1" 200 1447
+INFO 2025-10-16 20:39:09,681 basehttp 11828 7748 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-16 20:39:11,868 basehttp 11828 7748 "GET /api/dashboard/ HTTP/1.1" 200 901

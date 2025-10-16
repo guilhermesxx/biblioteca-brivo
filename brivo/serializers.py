@@ -274,6 +274,7 @@ class LivroSerializer(serializers.ModelSerializer):
     disponivel = serializers.BooleanField(read_only=True)
     quantidade_total = serializers.IntegerField(required=False)
     quantidade_emprestada = serializers.IntegerField(required=False)
+    quantidade_disponivel = serializers.ReadOnlyField()
 
     titulo = serializers.CharField(
         required=True,
@@ -294,7 +295,7 @@ class LivroSerializer(serializers.ModelSerializer):
         model = Livro
         fields = [
             'id', 'titulo', 'autor', 'editora', 'data_publicacao', 'numero_paginas', 'tipo', 'genero', 'subgenero',
-            'quantidade_total', 'quantidade_emprestada', 'capa', 'descricao', 'ativo', 'disponivel'
+            'quantidade_total', 'quantidade_emprestada', 'quantidade_disponivel', 'capa', 'descricao', 'ativo', 'disponivel'
         ]
         read_only_fields = ['id', 'disponivel', 'ativo']
 
