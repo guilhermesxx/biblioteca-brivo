@@ -64,16 +64,20 @@ def enviar_lembretes_de_devolucao():
     # Calcular data de devolução (15 dias após empréstimo)
     data_limite_emprestimo = hoje - timedelta(days=12)  # Empréstimos que vencem em 3 dias
 
-    # Buscar empréstimos que vencem em 3 dias
-    emprestimos_vencendo = Emprestimo.objects.filter(
-        data_emprestimo__date=data_limite_emprestimo,
-        devolvido=False
-    )
+    try:
+        # Buscar empréstimos que vencem em 3 dias
+        emprestimos_vencendo = Emprestimo.objects.filter(
+            data_emprestimo__date=data_limite_emprestimo,
+            devolvido=False
+        )
 
-    for emprestimo in emprestimos_vencendo:
-        # 📧 USAR EMAIL PREDEFINIDO DE LEMBRETE 3 DIAS
-        enviar_email_lembrete_devolucao_3_dias(emprestimo)
-        registrar_acao(None, emprestimo, 'NOTIFICACAO', descricao=f'Lembrete de devolução enviado para {emprestimo.usuario.nome} sobre o livro {emprestimo.livro.titulo}.')
+        for emprestimo in emprestimos_vencendo:
+            # 📧 USAR EMAIL PREDEFINIDO DE LEMBRETE 3 DIAS
+            enviar_email_lembrete_devolucao_3_dias(emprestimo)
+            registrar_acao(None, emprestimo, 'NOTIFICACAO', descricao=f'Lembrete de devolução enviado para {emprestimo.usuario.nome} sobre o livro {emprestimo.livro.titulo}.')
+    except Exception as e:
+        logger.error(f'Erro ao enviar lembretes de devolução: {str(e)}')
+        return {'erro': 'Erro ao processar lembretes'}
 
 
 def enviar_avisos_reserva_expirando():

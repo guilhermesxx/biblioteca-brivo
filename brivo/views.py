@@ -41,6 +41,9 @@ from .serializers import CustomTokenObtainPairSerializer
 import logging
 logger = logging.getLogger(__name__)
 
+# Importação para ValidationError
+from django.core.exceptions import ValidationError
+
 # -----------------------------------------------------------------------------
 # Views de Autenticação e Usuário
 # -----------------------------------------------------------------------------
@@ -86,6 +89,8 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         """
         if self.action == 'create':
             return [permissions.AllowAny()]
+        elif self.action in ['retrieve', 'update', 'partial_update']:
+            return [IsAuthenticated(), EhDonoOuAdmin()]
         return [IsAuthenticated(), EhAdmin()]
     
     def create(self, request, *args, **kwargs):
@@ -269,6 +274,18 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
                 enviar_email_devolucao_confirmada(emprestimo)
             except Exception as e:
                 logger.warning(f"Email de devolucao nao enviado para {emprestimo.usuario.email}: {str(e)}")
+            
+            # Atualizar reserva associada para 'concluida' se existir
+            try:
+                reserva_associada = Reserva.objects.get(
+                    livro=emprestimo.livro, 
+                    aluno=emprestimo.usuario, 
+                    status='emprestado'
+                )
+                reserva_associada.status = 'concluida'
+                reserva_associada.save()
+            except Reserva.DoesNotExist:
+                pass
 
     @action(detail=False, methods=['get'], url_path='recent-reads')
     def recent_reads(self, request):
@@ -290,6 +307,57 @@ class EmprestimoViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(recent_reads_queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    @action(detail=True, methods=['post'], url_path='devolver', permission_classes=[IsAuthenticated, EhProfessorOuAdmin])
+    def devolver(self, request, pk=None):
+        """
+        Marca um empréstimo como devolvido.
+        Apenas professores e administradores podem disparar esta ação.
+        """
+        try:
+            emprestimo = self.get_object()
+        except Emprestimo.DoesNotExist:
+            return Response({'erro': 'Empréstimo não encontrado.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if emprestimo.devolvido:
+            return Response(
+                {'erro': 'Este empréstimo já foi devolvido.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        try:
+            emprestimo.devolvido = True
+            emprestimo.data_devolucao = timezone.now()
+            emprestimo.save()
+            
+            # Atualizar reserva associada para 'concluida'
+            try:
+                reserva_associada = Reserva.objects.get(
+                    livro=emprestimo.livro,
+                    aluno=emprestimo.usuario,
+                    status='emprestado'
+                )
+                reserva_associada.status = 'concluida'
+                reserva_associada.save()
+                logger.info(f'Reserva {reserva_associada.id} marcada como concluída')
+            except Reserva.DoesNotExist:
+                logger.warning(f'Reserva associada não encontrada para empréstimo {emprestimo.id}')
+            
+            # Executar limpeza automática de reservas antigas
+            try:
+                count = Reserva.limpar_antigas()
+                if count > 0:
+                    logger.info(f'Limpeza automática: {count} reservas concluídas antigas removidas')
+            except Exception as cleanup_error:
+                logger.warning(f'Erro na limpeza automática: {str(cleanup_error)}')
+            
+            return Response(
+                {'mensagem': 'Livro devolvido com sucesso.'},
+                status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            logger.error(f'Erro ao devolver empréstimo {pk}: {str(e)}')
+            return Response({'erro': f'Erro interno: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class DevolverEmprestimoView(APIView):
@@ -378,6 +446,57 @@ class ReservaViewSet(viewsets.ModelViewSet):
         registrar_acao(request.user, reserva, 'DESATIVACAO', descricao=f'Reserva do livro {reserva.livro.titulo} cancelada.')
         return Response({'mensagem': 'Reserva cancelada com sucesso.'}, status=status.HTTP_200_OK)
 
+    @action(detail=False, methods=['post'], url_path='limpar-antigas', permission_classes=[IsAuthenticated, EhAdmin])
+    def limpar_antigas(self, request):
+        """
+        Remove reservas concluídas com mais de 7 dias.
+        Apenas administradores podem executar.
+        """
+        try:
+            count = Reserva.limpar_antigas()
+            return Response(
+                {'mensagem': f'{count} reservas concluídas antigas foram removidas.'},
+                status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            logger.error(f'Erro na limpeza manual: {str(e)}')
+            return Response({'erro': f'Erro interno: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=True, methods=['delete'], url_path='forcar-remocao', permission_classes=[IsAuthenticated, EhAdmin])
+    def forcar_remocao(self, request, pk=None):
+        """
+        Força a remoção de uma reserva para testes.
+        Remove também o empréstimo associado se existir.
+        """
+        try:
+            reserva = self.get_object()
+            
+            # Se há empréstimo ativo associado, remove também
+            if reserva.status == 'emprestado':
+                emprestimo_ativo = Emprestimo.objects.filter(
+                    livro=reserva.livro,
+                    usuario=reserva.aluno,
+                    devolvido=False
+                ).first()
+                
+                if emprestimo_ativo:
+                    # Restaurar quantidade do livro
+                    emprestimo_ativo.livro.quantidade_emprestada -= 1
+                    emprestimo_ativo.livro.save()
+                    # Remover empréstimo
+                    emprestimo_ativo.delete()
+            
+            # Remover reserva
+            reserva.delete()
+            
+            return Response(
+                {'mensagem': 'Reserva e empréstimo removidos com sucesso.'},
+                status=status.HTTP_200_OK
+            )
+        except Exception as e:
+            logger.error(f'Erro ao forçar remoção: {str(e)}')
+            return Response({'erro': f'Erro interno: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
     @action(detail=True, methods=['post'], url_path='efetivar-emprestimo', permission_classes=[IsAuthenticated, EhProfessorOuAdmin])
     def efetivar_emprestimo(self, request, pk=None):
@@ -396,9 +515,17 @@ class ReservaViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        if not reserva.livro.disponivel:
+        # Verificar se há exemplares disponíveis (quantidade_disponivel > 0)
+        if reserva.livro.quantidade_disponivel <= 0:
             return Response(
-                {'erro': 'O livro não está disponível para empréstimo no momento. Ele pode estar emprestado ou indisponível.'},
+                {'erro': 'Não há exemplares disponíveis para empréstimo no momento.'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Verificar se o livro está ativo
+        if not reserva.livro.ativo:
+            return Response(
+                {'erro': 'Este livro não está ativo no sistema.'},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
@@ -416,8 +543,11 @@ class ReservaViewSet(viewsets.ModelViewSet):
                 {'mensagem': 'Reserva efetivada e empréstimo criado com sucesso.', 'emprestimo_id': emprestimo.id},
                 status=status.HTTP_200_OK
             )
+        except ValidationError as e:
+            return Response({'erro': f'Erro de validação: {str(e)}'}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
-            return Response({'erro': f'Erro ao criar empréstimo: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            logger.error(f'Erro ao efetivar empréstimo para reserva {pk}: {str(e)}')
+            return Response({'erro': f'Erro interno: {str(e)}'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 # -----------------------------------------------------------------------------
 # Views de Notificações e Lembretes por E-mail

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
-from django.core.exceptions import ValidationError 
+from django.core.exceptions import ValidationError
 
 
 # Define a constante para o limite de estoque baixo
@@ -294,17 +294,68 @@ class Reserva(models.Model):
             pass # A lógica de expiração pode ser um cron job, por exemplo.
 
     # O método save() pode ser sobrescrito para adicionar lógica, mas faremos isso no ViewSet/Serializer para validação.
+    
+    @classmethod
+    def limpar_antigas(cls):
+        """
+        Remove reservas concluídas com mais de 7 dias.
+        """
+        from datetime import timedelta
+        data_limite = timezone.now() - timedelta(days=7)
+        
+        # Buscar reservas concluídas antigas
+        reservas_antigas = cls.objects.filter(
+            status='concluida',
+            data_reserva__lt=data_limite
+        )
+        
+        count = reservas_antigas.count()
+        reservas_antigas.delete()
+        
+        return count
 
 
 class Emprestimo(models.Model):
     livro = models.ForeignKey(Livro, on_delete=models.CASCADE, related_name='emprestimos')
     usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='emprestimos')
     data_emprestimo = models.DateTimeField(auto_now_add=True)
+    data_devolucao_prevista = models.DateTimeField(null=True, blank=True)
     data_devolucao = models.DateTimeField(null=True, blank=True)
     devolvido = models.BooleanField(default=False)
+    
+    PRAZO_DIAS = 15  # Prazo padrão de 15 dias
 
     def __str__(self):
         return f"Empréstimo de {self.livro.titulo} para {self.usuario.nome}"
+    
+    @property
+    def dias_restantes(self):
+        """Calcula quantos dias restam para devolução."""
+        if self.devolvido or not self.data_devolucao_prevista:
+            return 0
+        
+        hoje = timezone.now().date()
+        data_limite = self.data_devolucao_prevista.date()
+        delta = (data_limite - hoje).days
+        return max(0, delta)
+    
+    @property
+    def esta_atrasado(self):
+        """Verifica se o empréstimo está atrasado."""
+        if self.devolvido or not self.data_devolucao_prevista:
+            return False
+        
+        return timezone.now() > self.data_devolucao_prevista
+    
+    @property
+    def dias_atraso(self):
+        """Calcula quantos dias de atraso."""
+        if not self.esta_atrasado:
+            return 0
+        
+        hoje = timezone.now().date()
+        data_limite = self.data_devolucao_prevista.date()
+        return (hoje - data_limite).days
 
     def save(self, *args, **kwargs):
         is_new_loan = self.pk is None # Verifica se é um novo empréstimo
@@ -315,6 +366,9 @@ class Emprestimo(models.Model):
             if self.livro.quantidade_disponivel > 0:
                 self.livro.quantidade_emprestada += 1
                 self.livro.save() # Isso vai disparar o _check_and_create_low_stock_alert do Livro
+                # Definir data de devolução prevista (15 dias a partir da data do empréstimo)
+                from datetime import timedelta
+                self.data_devolucao_prevista = timezone.now() + timedelta(days=self.PRAZO_DIAS)
             else:
                 # Se não há exemplares disponíveis, impede o empréstimo
                 raise ValidationError("Não há exemplares disponíveis para este livro.")
@@ -323,20 +377,29 @@ class Emprestimo(models.Model):
 
         # Lógica para gerenciar a quantidade de livros e alertas APÓS o save
         if not is_new_loan: # Se é uma atualização de um empréstimo existente
-            original = Emprestimo.objects.get(pk=self.pk)
-            if not original.devolvido and self.devolvido:
-                # Livro foi devolvido: decrementa a quantidade emprestada
-                self.livro.quantidade_emprestada -= 1
-                self.livro.save() # Isso vai disparar o _check_and_create_low_stock_alert do Livro
-                self.data_devolucao = timezone.now()
-                self._notificar_reserva() # Chama a notificação para o próximo da fila
-                # Se o empréstimo foi concluído e era resultado de uma reserva, marque a reserva como concluída
-                try:
-                    reserva_associada = Reserva.objects.get(livro=self.livro, aluno=self.usuario, status='emprestado')
-                    reserva_associada.status = 'concluida'
-                    reserva_associada.save()
-                except Reserva.DoesNotExist:
-                    pass
+            # Buscar o estado original antes da atualização
+            try:
+                original = Emprestimo.objects.get(pk=self.pk)
+                if not original.devolvido and self.devolvido:
+                    # Livro foi devolvido: decrementa a quantidade emprestada
+                    self.livro.quantidade_emprestada -= 1
+                    self.livro.save() # Isso vai disparar o _check_and_create_low_stock_alert do Livro
+                    if not self.data_devolucao:
+                        self.data_devolucao = timezone.now()
+                        # Salvar novamente para garantir que a data seja persistida
+                        super().save(update_fields=['data_devolucao'])
+                    self._notificar_reserva() # Chama a notificação para o próximo da fila
+                    # Se o empréstimo foi concluído e era resultado de uma reserva, marque a reserva como concluída
+                    try:
+                        reserva_associada = Reserva.objects.get(livro=self.livro, aluno=self.usuario, status='emprestado')
+                        reserva_associada.status = 'concluida'
+                        reserva_associada.save()
+                        print(f"Reserva {reserva_associada.id} marcada como concluída automaticamente")
+                    except Reserva.DoesNotExist:
+                        print(f"Nenhuma reserva 'emprestado' encontrada para o empréstimo {self.pk}")
+            except Emprestimo.DoesNotExist:
+                # Caso o empréstimo original não seja encontrado (situação rara)
+                pass
 
     def marcar_devolucao(self):
         """Método para uso explícito"""
@@ -428,3 +491,5 @@ class AlertaSistema(models.Model):
             self.resolvido_em = now # Define a data de resolução se expirou
 
         super().save(*args, **kwargs)
+
+

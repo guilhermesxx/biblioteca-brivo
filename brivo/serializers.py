@@ -308,13 +308,19 @@ class EmprestimoSerializer(serializers.ModelSerializer):
     # NOVOS CAMPOS: Adiciona a capa e o autor do livro diretamente no serializer do empréstimo
     livro_capa = serializers.URLField(source='livro.capa', read_only=True)
     livro_autor = serializers.CharField(source='livro.autor', read_only=True)
+    
+    # CAMPOS DE PRAZO E STATUS
+    dias_restantes = serializers.ReadOnlyField()
+    esta_atrasado = serializers.ReadOnlyField()
+    dias_atraso = serializers.ReadOnlyField()
 
     class Meta:
         model = Emprestimo
         fields = [
             'id', 'livro', 'usuario', 'usuario_nome',
             'livro_titulo', 'livro_capa', 'livro_autor', # Incluído capa e autor
-            'data_emprestimo', 'data_devolucao', 'devolvido'
+            'data_emprestimo', 'data_devolucao_prevista', 'data_devolucao', 'devolvido',
+            'dias_restantes', 'esta_atrasado', 'dias_atraso'  # Novos campos de prazo
         ]
 
     def validate(self, data):
