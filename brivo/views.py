@@ -220,6 +220,96 @@ class LivroViewSet(viewsets.ModelViewSet):
         
         return Response({'mensagem': 'Livro e todas suas dependências deletados permanentemente.'}, status=status.HTTP_204_NO_CONTENT)
 
+    @action(detail=False, methods=['post'], url_path='verificar-duplicatas')
+    def verificar_duplicatas(self, request):
+        """
+        Verifica se existem livros similares no sistema baseado em título e autor.
+        Retorna livros que podem ser duplicatas para confirmação do usuário.
+        """
+        titulo = request.data.get('titulo', '').strip()
+        autor = request.data.get('autor', '').strip()
+        
+        if not titulo or not autor:
+            return Response({
+                'livros_similares': [],
+                'tem_duplicatas': False
+            })
+        
+        # Busca por livros com título e autor similares
+        from django.db.models import Q
+        
+        # Busca exata primeiro
+        livros_exatos = Livro.objects.filter(
+            titulo__iexact=titulo,
+            autor__iexact=autor,
+            ativo=True
+        )
+        
+        # Busca por similaridade (contém palavras-chave)
+        titulo_words = titulo.lower().split()
+        autor_words = autor.lower().split()
+        
+        q_titulo = Q()
+        for word in titulo_words:
+            if len(word) > 2:  # Ignora palavras muito pequenas
+                q_titulo |= Q(titulo__icontains=word)
+        
+        q_autor = Q()
+        for word in autor_words:
+            if len(word) > 2:
+                q_autor |= Q(autor__icontains=word)
+        
+        livros_similares = Livro.objects.filter(
+            (q_titulo & q_autor) | 
+            Q(titulo__icontains=titulo) |
+            Q(autor__icontains=autor),
+            ativo=True
+        ).exclude(
+            id__in=livros_exatos.values_list('id', flat=True)
+        ).distinct()[:5]  # Limita a 5 resultados
+        
+        # Combina resultados
+        todos_similares = list(livros_exatos) + list(livros_similares)
+        
+        # Serializa os resultados
+        resultados = []
+        for livro in todos_similares:
+            # Calcula similaridade simples
+            titulo_match = titulo.lower() in livro.titulo.lower() or livro.titulo.lower() in titulo.lower()
+            autor_match = autor.lower() in livro.autor.lower() or livro.autor.lower() in autor.lower()
+            
+            if livro.titulo.lower() == titulo.lower() and livro.autor.lower() == autor.lower():
+                similaridade = 100  # Exato
+            elif titulo_match and autor_match:
+                similaridade = 85
+            elif titulo_match or autor_match:
+                similaridade = 60
+            else:
+                similaridade = 40
+            
+            resultados.append({
+                'id': livro.id,
+                'titulo': livro.titulo,
+                'autor': livro.autor,
+                'genero': livro.genero,
+                'editora': livro.editora,
+                'data_publicacao': livro.data_publicacao,
+                'quantidade_total': livro.quantidade_total,
+                'quantidade_disponivel': livro.quantidade_disponivel,
+                'capa': livro.capa,
+                'similaridade': similaridade,
+                'eh_duplicata_exata': similaridade == 100
+            })
+        
+        # Ordena por similaridade
+        resultados.sort(key=lambda x: x['similaridade'], reverse=True)
+        
+        return Response({
+            'livros_similares': resultados,
+            'tem_duplicatas': len(resultados) > 0,
+            'total_encontrados': len(resultados)
+        })
+
 # -----------------------------------------------------------------------------
 # Views de Empréstimzs
 # -----------------------------------------------------------------------------
