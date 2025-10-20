@@ -14441,3 +14441,359 @@ INFO 2025-10-19 22:24:16,972 basehttp 13732 20248 "GET /api/avisar-reservas-expi
 INFO 2025-10-19 22:24:16,972 basehttp 13732 34444 "GET /api/livros/ HTTP/1.1" 200 90302
 INFO 2025-10-19 22:24:44,009 basehttp 13732 34444 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
 INFO 2025-10-19 22:24:44,019 basehttp 13732 34444 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 384
+INFO 2025-10-20 09:02:42,329 autoreload 16900 14324 Watching for file changes with StatReloader
+ERROR 2025-10-20 09:07:10,352 log 16900 10668 Invalid HTTP_HOST header: '172.30.1.85:8000'. You may need to add '172.30.1.85' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.85:8000'. You may need to add '172.30.1.85' to ALLOWED_HOSTS.
+WARNING 2025-10-20 09:07:10,357 basehttp 16900 10668 "GET / HTTP/1.1" 400 74115
+ERROR 2025-10-20 09:07:11,197 log 16900 10060 Invalid HTTP_HOST header: '172.30.1.85:8000'. You may need to add '172.30.1.85' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.85:8000'. You may need to add '172.30.1.85' to ALLOWED_HOSTS.
+WARNING 2025-10-20 09:07:11,201 basehttp 16900 10060 "GET /favicon.ico HTTP/1.1" 400 74170
+INFO 2025-10-20 09:08:33,162 basehttp 16900 584 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-10-20 09:08:33,273 log 16900 584 Invalid HTTP_HOST header: '172.30.1.85:8000'. You may need to add '172.30.1.85' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.85:8000'. You may need to add '172.30.1.85' to ALLOWED_HOSTS.
+WARNING 2025-10-20 09:08:33,278 basehttp 16900 584 "POST /api/token/ HTTP/1.1" 400 74402
+INFO 2025-10-20 09:09:17,365 autoreload 4764 1808 Watching for file changes with StatReloader
+INFO 2025-10-20 09:10:08,969 autoreload 4764 1808 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-10-20 09:10:14,257 autoreload 3736 19528 Watching for file changes with StatReloader
+INFO 2025-10-20 09:12:18,423 autoreload 2416 6024 Watching for file changes with StatReloader
+INFO 2025-10-20 09:13:31,637 autoreload 15568 4884 Watching for file changes with StatReloader
+INFO 2025-10-20 09:15:51,274 autoreload 11748 12156 Watching for file changes with StatReloader
+INFO 2025-10-20 09:17:04,821 basehttp 11748 2552 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:04,839 views 11748 2552 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:17:04,840 views 11748 2552 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:17:05,779 views 11748 2552 Login bem-sucedido
+INFO 2025-10-20 09:17:05,781 basehttp 11748 2552 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-10-20 09:17:05,787 basehttp 11748 2552 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:05,798 basehttp 11748 2552 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-20 09:17:05,921 basehttp 11748 2552 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:05,930 basehttp 11748 11640 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:05,947 basehttp 11748 16820 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:05,962 basehttp 11748 11640 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:17:05,989 basehttp 11748 2552 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:17:06,013 basehttp 11748 16820 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:17:06,021 basehttp 11748 16820 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:06,044 basehttp 11748 16820 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:17:38,145 basehttp 11748 16820 "OPTIONS /api/livros/40/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:38,153 basehttp 11748 16820 "GET /api/livros/40/ HTTP/1.1" 200 1769
+INFO 2025-10-20 09:17:38,209 basehttp 11748 16820 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:38,229 basehttp 11748 16820 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:17:46,374 basehttp 11748 16820 "GET /api/livros/40/ HTTP/1.1" 200 1769
+INFO 2025-10-20 09:17:46,378 basehttp 11748 2552 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-20 09:17:46,663 basehttp 11748 2552 "GET /api/livros/40/ HTTP/1.1" 200 1769
+INFO 2025-10-20 09:17:46,663 basehttp 11748 11640 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:17:46,682 basehttp 11748 16820 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:17:46,687 basehttp 11748 7036 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:17:46,769 basehttp 11748 16820 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:17:56,547 basehttp 11748 16820 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-20 09:17:56,675 basehttp 11748 16820 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:17:56,675 basehttp 11748 7036 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:17:56,697 basehttp 11748 11640 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:17:56,716 basehttp 11748 11640 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:17:59,114 basehttp 11748 11640 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:17:59,279 basehttp 11748 20348 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:17:59,386 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:17:59,387 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:17:59,388 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:17:59,388 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:17:59,443 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:17:59,448 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:17:59,450 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:00,848 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:00,849 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:00,850 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:00,850 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:00,855 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:00,856 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:00,857 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:01,225 basehttp 11748 11640 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:18:01,236 basehttp 11748 11640 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:18:01,248 basehttp 11748 7036 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:18:04,484 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:04,485 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:04,487 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:04,487 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:04,494 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:04,496 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:04,497 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:04,974 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:04,975 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:04,976 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:04,977 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:04,982 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:04,983 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:04,984 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:05,359 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:05,360 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:05,361 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:05,361 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:05,367 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:05,368 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:05,369 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:05,802 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:05,802 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:05,803 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:05,804 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:05,807 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:05,809 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:05,810 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:07,255 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:07,256 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:07,257 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:07,257 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:07,262 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:07,262 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:07,264 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:07,907 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:07,908 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '000111852343xsp', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:07,909 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:07,909 views 11748 20348 Method: POST
+ERROR 2025-10-20 09:18:07,914 views 11748 20348 Erro ao criar usuario: {'ra': [ErrorDetail(string='usuario com este ra já existe.', code='unique')]}
+WARNING 2025-10-20 09:18:07,915 log 11748 20348 Bad Request: /api/usuarios/
+WARNING 2025-10-20 09:18:07,916 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 400 42
+INFO 2025-10-20 09:18:17,166 views 11748 20348 === CRIAR USUARIO ===
+INFO 2025-10-20 09:18:17,166 views 11748 20348 Dados recebidos: {'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'ra': '3213', 'turma': 'adm', 'senha': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:17,168 views 11748 20348 Content-Type: application/json
+INFO 2025-10-20 09:18:17,169 views 11748 20348 Method: POST
+INFO 2025-10-20 09:18:17,807 views 11748 20348 Usuario criado com sucesso: {'id': 45, 'ra': '3213', 'nome': 'luiz', 'email': 'gustavocazelatto@gmail.com', 'turma': 'adm', 'tipo': 'admin', 'ativo': True}
+INFO 2025-10-20 09:18:17,809 basehttp 11748 20348 "POST /api/usuarios/ HTTP/1.1" 201 114
+INFO 2025-10-20 09:18:17,986 views 11748 20348 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:18:17,987 views 11748 20348 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:18:18,518 views 11748 20348 Login bem-sucedido
+INFO 2025-10-20 09:18:18,519 basehttp 11748 20348 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-20 09:18:18,663 basehttp 11748 20348 "OPTIONS /api/usuarios/45/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:18:18,762 basehttp 11748 20348 "GET /api/usuarios/45/ HTTP/1.1" 200 114
+INFO 2025-10-20 09:18:18,945 basehttp 11748 20348 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:18:18,984 basehttp 11748 7336 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:18:18,985 basehttp 11748 7616 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:18:19,023 basehttp 11748 20348 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:18:19,062 basehttp 11748 7336 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:18:19,081 basehttp 11748 7616 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:18:19,332 basehttp 11748 7616 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:18:19,458 basehttp 11748 7616 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:19:01,205 basehttp 11748 7036 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:19:01,228 basehttp 11748 7036 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 444
+INFO 2025-10-20 09:19:25,819 basehttp 11748 7616 "GET /api/usuarios/45/ HTTP/1.1" 200 114
+INFO 2025-10-20 09:19:26,285 basehttp 11748 7336 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:19:26,297 basehttp 11748 7616 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:19:26,310 basehttp 11748 20348 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:19:26,468 basehttp 11748 7336 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:19:36,771 basehttp 11748 7336 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:19:39,964 basehttp 11748 7336 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:19:39,964 basehttp 11748 7616 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:19:40,042 basehttp 11748 7616 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:19:40,051 basehttp 11748 7336 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:21:32,806 basehttp 11748 7036 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:21:32,854 basehttp 11748 7036 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:21:37,507 basehttp 11748 7036 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:21:40,645 basehttp 11748 7036 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:21:40,669 basehttp 11748 11640 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:22:08,677 basehttp 11748 11460 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:22:08,752 views 11748 11460 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:22:08,754 views 11748 11460 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': '@Brito123', 'tipo': 'admin'}
+ERROR 2025-10-20 09:22:09,825 views 11748 11460 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-10-20 09:22:09,827 log 11748 11460 Unauthorized: /api/token/
+WARNING 2025-10-20 09:22:09,829 basehttp 11748 11460 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-10-20 09:22:13,689 views 11748 11460 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:22:13,691 views 11748 11460 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': '@Brito123', 'tipo': 'admin'}
+ERROR 2025-10-20 09:22:15,680 views 11748 11460 Erro no login: Usuário e/ou senha incorreto(s)
+WARNING 2025-10-20 09:22:15,684 log 11748 11460 Unauthorized: /api/token/
+WARNING 2025-10-20 09:22:15,687 basehttp 11748 11460 "POST /api/token/ HTTP/1.1" 401 45
+INFO 2025-10-20 09:22:45,806 views 11748 11460 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:22:45,808 views 11748 11460 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:22:46,823 views 11748 11460 Login bem-sucedido
+INFO 2025-10-20 09:22:46,825 basehttp 11748 11460 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-20 09:22:47,017 basehttp 11748 11460 "OPTIONS /api/usuarios/45/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:22:47,117 basehttp 11748 11460 "GET /api/usuarios/45/ HTTP/1.1" 200 114
+INFO 2025-10-20 09:22:47,547 basehttp 11748 11460 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:22:47,566 basehttp 11748 10084 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:22:47,568 basehttp 11748 13880 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:22:47,664 basehttp 11748 11460 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:22:47,698 basehttp 11748 13880 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:22:47,726 basehttp 11748 10084 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:22:47,818 basehttp 11748 10084 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:22:47,919 basehttp 11748 10084 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:23:53,884 basehttp 11748 10084 "OPTIONS /api/livros/38/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:54,001 basehttp 11748 10084 "GET /api/livros/38/ HTTP/1.1" 200 1361
+INFO 2025-10-20 09:23:54,080 basehttp 11748 10084 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:54,235 basehttp 11748 10084 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:23:55,439 basehttp 11748 20988 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:55,489 views 11748 20988 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:23:55,491 views 11748 20988 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:23:57,484 views 11748 20988 Login bem-sucedido
+INFO 2025-10-20 09:23:57,489 basehttp 11748 20988 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-20 09:23:57,611 basehttp 11748 20988 "OPTIONS /api/usuarios/45/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:57,705 basehttp 11748 20988 "GET /api/usuarios/45/ HTTP/1.1" 200 114
+INFO 2025-10-20 09:23:58,862 basehttp 11748 20988 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:58,886 basehttp 11748 3852 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:58,894 basehttp 11748 12920 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:58,935 basehttp 11748 20988 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:23:58,957 basehttp 11748 12920 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:23:59,002 basehttp 11748 3852 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:23:59,203 basehttp 11748 3852 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:23:59,296 basehttp 11748 3852 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:24:03,483 basehttp 11748 10084 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:24:03,579 basehttp 11748 10084 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:24:14,382 basehttp 11748 10084 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:24:19,960 basehttp 11748 10084 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:24:19,989 basehttp 11748 13880 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:24:20,063 basehttp 11748 10084 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:24:40,234 basehttp 11748 3892 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:24:51,692 basehttp 11748 668 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:24:51,692 basehttp 11748 3892 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:24:51,852 basehttp 11748 668 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:24:51,889 basehttp 11748 3892 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:25:23,784 basehttp 11748 20788 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:24,148 views 11748 20788 === CRIAR USUARIO ===
+INFO 2025-10-20 09:25:24,150 views 11748 20788 Dados recebidos: {'nome': 'Gustavo Pereira Gattinoni', 'email': 'gufuzumafu@gmail.com', 'ra': '000011166816386sp', 'turma': 'ADM', 'senha': '11082016GU', 'tipo': 'admin'}
+INFO 2025-10-20 09:25:24,152 views 11748 20788 Content-Type: application/json
+INFO 2025-10-20 09:25:24,153 views 11748 20788 Method: POST
+INFO 2025-10-20 09:25:25,130 views 11748 20788 Usuario criado com sucesso: {'id': 46, 'ra': '000011166816386sp', 'nome': 'Gustavo Pereira Gattinoni', 'email': 'gufuzumafu@gmail.com', 'turma': 'ADM', 'tipo': 'admin', 'ativo': True}
+INFO 2025-10-20 09:25:25,133 basehttp 11748 20788 "POST /api/usuarios/ HTTP/1.1" 201 142
+INFO 2025-10-20 09:25:25,479 basehttp 11748 20788 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:25,599 views 11748 20788 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:25:25,601 views 11748 20788 Dados recebidos: {'email': 'gufuzumafu@gmail.com', 'password': '11082016GU', 'tipo': 'admin'}
+INFO 2025-10-20 09:25:26,627 views 11748 20788 Login bem-sucedido
+INFO 2025-10-20 09:25:26,629 basehttp 11748 20788 "POST /api/token/ HTTP/1.1" 200 589
+INFO 2025-10-20 09:25:26,904 basehttp 11748 20788 "OPTIONS /api/usuarios/46/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:27,206 basehttp 11748 20788 "GET /api/usuarios/46/ HTTP/1.1" 200 142
+INFO 2025-10-20 09:25:27,496 basehttp 11748 20788 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:27,496 basehttp 11748 6276 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:27,527 basehttp 11748 21300 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:27,727 basehttp 11748 6276 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:25:27,731 basehttp 11748 21300 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:25:27,749 basehttp 11748 20788 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:25:27,885 basehttp 11748 20788 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:25:28,122 basehttp 11748 20788 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 90302
+INFO 2025-10-20 09:25:43,156 basehttp 11748 20788 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:25:45,254 basehttp 11748 20788 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:25:48,097 basehttp 11748 11460 - Broken pipe from ('172.30.0.243', 53356)
+INFO 2025-10-20 09:25:50,169 basehttp 11748 10084 - Broken pipe from ('172.30.0.243', 53362)
+INFO 2025-10-20 09:25:50,263 basehttp 11748 13880 - Broken pipe from ('172.30.0.243', 53363)
+INFO 2025-10-20 09:26:00,212 basehttp 11748 20788 "GET /api/dashboard/ HTTP/1.1" 200 901
+INFO 2025-10-20 09:26:03,688 basehttp 11748 6276 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:26:03,690 basehttp 11748 20788 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:26:03,861 basehttp 11748 6276 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:26:03,877 basehttp 11748 20788 "GET /api/livros/ HTTP/1.1" 200 90302
+INFO 2025-10-20 09:27:22,093 basehttp 11748 20788 "OPTIONS /api/livros/109/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:27:22,342 basehttp 11748 20788 "DELETE /api/livros/109/ HTTP/1.1" 204 74
+INFO 2025-10-20 09:27:22,566 basehttp 11748 6276 "GET /api/livros/ HTTP/1.1" 200 89986
+INFO 2025-10-20 09:27:38,719 basehttp 11748 6276 "OPTIONS /api/livros/111/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:27:38,897 basehttp 11748 6276 "DELETE /api/livros/111/ HTTP/1.1" 204 74
+INFO 2025-10-20 09:27:39,025 basehttp 11748 21300 "GET /api/livros/ HTTP/1.1" 200 89677
+INFO 2025-10-20 09:28:04,968 basehttp 11748 10132 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:05,050 views 11748 10132 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:28:05,051 views 11748 10132 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:28:06,036 views 11748 10132 Login bem-sucedido
+INFO 2025-10-20 09:28:06,038 basehttp 11748 10132 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-20 09:28:06,160 basehttp 11748 10132 "OPTIONS /api/usuarios/45/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:06,265 basehttp 11748 10132 "GET /api/usuarios/45/ HTTP/1.1" 200 114
+INFO 2025-10-20 09:28:06,473 basehttp 11748 10132 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:06,515 basehttp 11748 14944 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:06,519 basehttp 11748 13832 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:06,555 basehttp 11748 10132 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:28:06,636 basehttp 11748 13832 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:28:06,705 basehttp 11748 14944 "GET /api/dashboard/ HTTP/1.1" 200 710
+INFO 2025-10-20 09:28:06,812 basehttp 11748 14944 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:06,912 basehttp 11748 14944 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 89677
+INFO 2025-10-20 09:28:07,067 basehttp 11748 21300 "OPTIONS /api/livros/108/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:07,208 basehttp 11748 21300 "DELETE /api/livros/108/ HTTP/1.1" 204 74
+INFO 2025-10-20 09:28:07,323 basehttp 11748 21028 "GET /api/livros/ HTTP/1.1" 200 89354
+INFO 2025-10-20 09:28:21,438 basehttp 11748 21028 "OPTIONS /api/livros/110/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:21,665 basehttp 11748 21028 "DELETE /api/livros/110/ HTTP/1.1" 204 74
+INFO 2025-10-20 09:28:21,904 basehttp 11748 10572 "GET /api/livros/ HTTP/1.1" 200 89010
+INFO 2025-10-20 09:28:44,796 basehttp 11748 14944 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-20 09:28:51,696 basehttp 11748 14944 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:51,697 basehttp 11748 13832 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:28:51,941 basehttp 11748 13832 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:28:51,984 basehttp 11748 14944 "GET /api/livros/ HTTP/1.1" 200 89010
+INFO 2025-10-20 09:31:31,042 basehttp 11748 12904 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:31:31,140 basehttp 11748 12904 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-10-20 09:31:32,011 basehttp 11748 12904 "POST /api/livros/ HTTP/1.1" 201 1215
+INFO 2025-10-20 09:31:32,130 basehttp 11748 12904 "GET /api/livros/ HTTP/1.1" 200 90226
+INFO 2025-10-20 09:34:49,268 basehttp 11748 8788 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:34:49,402 basehttp 11748 8788 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-10-20 09:34:49,597 basehttp 11748 8788 "POST /api/livros/ HTTP/1.1" 201 694
+INFO 2025-10-20 09:34:49,776 basehttp 11748 8788 "GET /api/livros/ HTTP/1.1" 200 90921
+INFO 2025-10-20 09:36:33,636 basehttp 11748 20856 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-10-20 09:36:33,712 basehttp 11748 20856 "POST /api/livros/ HTTP/1.1" 201 938
+INFO 2025-10-20 09:36:33,749 basehttp 11748 20856 "GET /api/livros/ HTTP/1.1" 200 91860
+INFO 2025-10-20 09:37:14,872 basehttp 11748 8788 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 378
+INFO 2025-10-20 09:37:37,730 basehttp 11748 8788 "POST /api/livros/ HTTP/1.1" 201 724
+INFO 2025-10-20 09:37:37,876 basehttp 11748 8788 "GET /api/livros/ HTTP/1.1" 200 92585
+INFO 2025-10-20 09:37:51,941 basehttp 11748 11656 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 427
+INFO 2025-10-20 09:38:31,581 basehttp 11748 11656 "POST /api/livros/ HTTP/1.1" 201 901
+INFO 2025-10-20 09:38:31,714 basehttp 11748 11656 "GET /api/livros/ HTTP/1.1" 200 93487
+INFO 2025-10-20 09:41:56,403 basehttp 11748 19520 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-20 09:41:56,520 basehttp 11748 19520 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 93487
+INFO 2025-10-20 09:42:01,254 basehttp 11748 19520 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-10-20 09:42:01,358 basehttp 11748 19520 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 36168
+INFO 2025-10-20 09:42:12,670 basehttp 11748 19520 "GET /api/livros/ HTTP/1.1" 200 93487
+INFO 2025-10-20 09:42:18,859 basehttp 11748 19520 "GET /api/livros/ HTTP/1.1" 200 93487
+INFO 2025-10-20 09:42:24,057 basehttp 11748 20276 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-20 09:42:24,090 basehttp 11748 20276 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 93487
+INFO 2025-10-20 09:42:32,420 basehttp 11748 19520 "OPTIONS /api/livros/102/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:42:32,539 basehttp 11748 19520 "GET /api/livros/102/ HTTP/1.1" 200 431
+INFO 2025-10-20 09:42:32,673 basehttp 11748 19520 "GET /api/livros/ HTTP/1.1" 200 93487
+INFO 2025-10-20 09:42:57,739 basehttp 11748 19788 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:42:57,831 basehttp 11748 19788 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-10-20 09:42:58,851 basehttp 11748 19788 "POST /api/livros/ HTTP/1.1" 201 1599
+INFO 2025-10-20 09:42:59,120 basehttp 11748 19788 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-20 09:44:18,961 basehttp 11748 15820 "OPTIONS /api/livros/39/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:19,068 basehttp 11748 15820 "GET /api/livros/39/ HTTP/1.1" 200 1876
+INFO 2025-10-20 09:44:19,155 basehttp 11748 15820 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-20 09:44:42,138 basehttp 11748 20208 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:42,209 views 11748 20208 === LOGIN ATTEMPT ===
+INFO 2025-10-20 09:44:42,210 views 11748 20208 Dados recebidos: {'email': 'gustavocazelatto@gmail.com', 'password': 'Brito@123', 'tipo': 'admin'}
+INFO 2025-10-20 09:44:42,542 views 11748 20208 Login bem-sucedido
+INFO 2025-10-20 09:44:42,543 basehttp 11748 20208 "POST /api/token/ HTTP/1.1" 200 574
+INFO 2025-10-20 09:44:42,607 basehttp 11748 20208 "OPTIONS /api/usuarios/45/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:42,690 basehttp 11748 20208 "GET /api/usuarios/45/ HTTP/1.1" 200 114
+INFO 2025-10-20 09:44:42,880 basehttp 11748 20208 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:42,888 basehttp 11748 1704 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:42,889 basehttp 11748 20564 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:42,983 basehttp 11748 20208 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:44:42,994 basehttp 11748 20564 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:44:43,006 basehttp 11748 1704 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-20 09:44:43,065 basehttp 11748 1704 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-20 09:44:43,133 basehttp 11748 1704 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 95087
+INFO 2025-10-20 09:45:23,835 basehttp 11748 1704 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-20 09:45:28,803 basehttp 11748 1704 "OPTIONS /api/generos-subgeneros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:45:28,803 basehttp 11748 20208 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-20 09:45:28,888 basehttp 11748 20208 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
+INFO 2025-10-20 09:45:28,903 basehttp 11748 1704 "GET /api/livros/ HTTP/1.1" 200 95087
