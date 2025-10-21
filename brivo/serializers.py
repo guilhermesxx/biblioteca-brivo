@@ -265,7 +265,7 @@ class LivroSerializer(serializers.ModelSerializer):
         # Validação de subgênero
         subgenero = data.get('subgenero')
         if subgenero and subgenero not in SUBGENEROS_VALIDOS:
-            erros['subgenero'] = f'Subgênero inválido. Consulte a lista de subgêneros válidos.'
+            erros['subgenero'] = f'Subgênero inválido. Subgêneros válidos: {", ".join(SUBGENEROS_VALIDOS)}'
         
         if erros:
             raise serializers.ValidationError(erros)

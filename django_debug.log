@@ -14797,3 +14797,166 @@ INFO 2025-10-20 09:45:28,803 basehttp 11748 1704 "OPTIONS /api/generos-subgenero
 INFO 2025-10-20 09:45:28,803 basehttp 11748 20208 "OPTIONS /api/livros/ HTTP/1.1" 200 0
 INFO 2025-10-20 09:45:28,888 basehttp 11748 20208 "GET /api/generos-subgeneros/ HTTP/1.1" 200 4820
 INFO 2025-10-20 09:45:28,903 basehttp 11748 1704 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-20 09:47:06,743 basehttp 11748 20276 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:47:06,746 basehttp 11748 13976 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:47:56,590 basehttp 11748 20276 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:47:56,590 basehttp 11748 13976 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:49:26,412 basehttp 11748 6240 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:49:26,489 basehttp 11748 6240 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:52:47,443 basehttp 11748 24252 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:52:47,508 basehttp 11748 24252 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:55:27,998 basehttp 11748 4076 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:55:27,998 basehttp 11748 10168 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 09:58:06,404 basehttp 11748 23576 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 09:58:06,406 basehttp 11748 5044 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:14:42,842 basehttp 11748 20888 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:14:42,843 basehttp 11748 23484 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-10-20 10:17:06,610 log 11748 23220 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-20 10:17:06,612 log 11748 17892 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 10:17:06,612 basehttp 11748 23220 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-10-20 10:17:06,613 basehttp 11748 17892 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-10-20 10:17:06,645 basehttp 11748 17892 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:17:06,646 basehttp 11748 23220 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:17:06,658 basehttp 11748 17892 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:17:06,660 basehttp 11748 23220 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:17:06,674 basehttp 11748 23220 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:17:06,674 basehttp 11748 17892 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:17:56,615 basehttp 11748 17892 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:17:56,615 basehttp 11748 23220 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-10-20 10:19:26,396 log 11748 20808 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 10:19:26,398 log 11748 17116 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-20 10:19:26,398 basehttp 11748 20808 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-10-20 10:19:26,400 basehttp 11748 17116 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+INFO 2025-10-20 10:19:26,471 basehttp 11748 20808 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:19:26,472 basehttp 11748 17116 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:19:26,554 basehttp 11748 17116 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:19:26,554 basehttp 11748 20808 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:19:26,624 basehttp 11748 20808 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:19:26,624 basehttp 11748 17116 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-10-20 10:22:47,329 log 11748 10060 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-20 10:22:47,332 log 11748 5548 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 10:22:47,332 basehttp 11748 10060 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-10-20 10:22:47,334 basehttp 11748 5548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-10-20 10:22:47,483 basehttp 11748 10060 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:22:47,483 basehttp 11748 5548 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:22:47,561 basehttp 11748 10060 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:22:47,562 basehttp 11748 5548 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:22:47,722 basehttp 11748 10060 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:22:47,723 basehttp 11748 5548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-10-20 10:25:27,969 log 11748 17296 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 10:25:27,973 log 11748 8928 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-20 10:25:27,974 basehttp 11748 17296 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-10-20 10:25:27,975 basehttp 11748 8928 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+INFO 2025-10-20 10:25:28,061 basehttp 11748 8928 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:25:28,061 basehttp 11748 17296 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:25:28,150 basehttp 11748 8928 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:25:28,151 basehttp 11748 17296 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:25:28,234 basehttp 11748 8928 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:25:28,242 basehttp 11748 17296 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-10-20 10:28:07,015 log 11748 5008 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 10:28:07,018 log 11748 2880 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-20 10:28:07,020 basehttp 11748 5008 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-10-20 10:28:07,023 basehttp 11748 2880 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+INFO 2025-10-20 10:28:07,095 basehttp 11748 5008 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:28:07,096 basehttp 11748 2880 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:28:07,185 basehttp 11748 5008 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:28:07,187 basehttp 11748 2880 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:28:07,262 basehttp 11748 5008 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:28:07,279 basehttp 11748 2880 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:29:46,256 basehttp 11748 17296 - Broken pipe from ('172.30.1.101', 52106)
+INFO 2025-10-20 10:29:46,256 basehttp 11748 8928 - Broken pipe from ('172.30.1.101', 60851)
+INFO 2025-10-20 10:39:42,924 basehttp 11748 25812 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-20 10:39:46,837 basehttp 11748 25812 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:39:46,869 basehttp 11748 25812 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-10-20 10:39:51,599 basehttp 11748 25812 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-10-20 10:39:55,329 basehttp 11748 25812 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-10-20 10:39:55,348 basehttp 11748 25812 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-10-20 10:39:55,375 basehttp 11748 25812 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-10-20 10:39:55,401 basehttp 11748 25812 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+WARNING 2025-10-20 10:44:42,805 log 11748 24780 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-10-20 10:44:42,808 log 11748 23212 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 10:44:42,809 basehttp 11748 24780 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-10-20 10:44:42,810 basehttp 11748 23212 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-10-20 10:44:42,890 basehttp 11748 24780 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:44:42,890 basehttp 11748 23212 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-10-20 10:44:42,962 basehttp 11748 24780 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:44:42,962 basehttp 11748 23212 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 10:44:43,049 basehttp 11748 23212 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:44:43,052 basehttp 11748 24780 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:47:06,624 basehttp 11748 25876 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:47:06,624 basehttp 11748 5324 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:47:56,688 basehttp 11748 5324 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 10:47:56,690 basehttp 11748 25876 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:58:06,999 basehttp 11748 18276 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-20 10:58:07,000 basehttp 11748 24844 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 11:17:06,616 basehttp 11748 26652 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+WARNING 2025-10-20 11:17:06,623 log 11748 26652 Unauthorized: /api/lembrete-devolucao/
+INFO 2025-10-20 11:17:06,624 basehttp 11748 8324 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+WARNING 2025-10-20 11:17:06,625 basehttp 11748 26652 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-10-20 11:17:06,632 log 11748 26652 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-10-20 11:17:06,637 basehttp 11748 26652 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-10-20 11:17:06,743 basehttp 11748 26652 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 11:17:06,746 basehttp 11748 8324 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-10-20 11:17:06,765 basehttp 11748 8324 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-20 11:17:06,771 basehttp 11748 26652 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-21 12:07:45,144 autoreload 11028 14932 Watching for file changes with StatReloader
+INFO 2025-10-21 12:08:12,492 autoreload 11028 14932 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-10-21 12:08:14,079 autoreload 27864 26520 Watching for file changes with StatReloader
+INFO 2025-10-21 12:08:16,650 autoreload 27864 26520 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-10-21 12:08:18,230 autoreload 18104 15676 Watching for file changes with StatReloader
+INFO 2025-10-21 12:08:50,621 basehttp 18104 29312 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-10-21 12:08:51,056 log 18104 29312 Invalid HTTP_HOST header: '172.30.1.109:8000'. You may need to add '172.30.1.109' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.109:8000'. You may need to add '172.30.1.109' to ALLOWED_HOSTS.
+WARNING 2025-10-21 12:08:51,073 basehttp 18104 29312 "POST /api/token/ HTTP/1.1" 400 74479
+ERROR 2025-10-21 12:10:20,648 log 18104 22656 Invalid HTTP_HOST header: '172.30.1.109:8000'. You may need to add '172.30.1.109' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.109:8000'. You may need to add '172.30.1.109' to ALLOWED_HOSTS.
+WARNING 2025-10-21 12:10:20,661 basehttp 18104 22656 "POST /api/token/ HTTP/1.1" 400 74479
+INFO 2025-10-21 12:10:33,755 autoreload 31468 28568 Watching for file changes with StatReloader
+INFO 2025-10-21 12:10:34,730 views 31468 31728 === LOGIN ATTEMPT ===
+INFO 2025-10-21 12:10:34,732 views 31468 31728 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-21 12:10:35,541 views 31468 31728 Login bem-sucedido
+INFO 2025-10-21 12:10:35,543 basehttp 31468 31728 "POST /api/token/ HTTP/1.1" 200 579
+INFO 2025-10-21 12:10:35,549 basehttp 31468 31728 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:10:35,578 basehttp 31468 31728 "GET /api/usuarios/11/ HTTP/1.1" 200 127
+INFO 2025-10-21 12:10:35,721 basehttp 31468 31728 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:10:35,727 basehttp 31468 31728 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:10:35,730 basehttp 31468 31076 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:10:35,752 basehttp 31468 31728 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-21 12:10:35,775 basehttp 31468 26672 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-21 12:10:35,790 basehttp 31468 31076 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-21 12:10:35,794 basehttp 31468 31076 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-21 12:10:35,814 basehttp 31468 31076 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 95087
+INFO 2025-10-21 12:10:39,262 basehttp 31468 31076 "GET /api/dashboard/ HTTP/1.1" 200 465
+INFO 2025-10-21 12:10:41,150 basehttp 31468 31076 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:10:41,179 basehttp 31468 31076 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-21 12:12:54,561 autoreload 31468 28568 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\constants.py changed, reloading.
+INFO 2025-10-21 12:12:56,755 autoreload 21532 25424 Watching for file changes with StatReloader
+INFO 2025-10-21 12:13:10,084 autoreload 21532 25424 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-10-21 12:13:11,966 autoreload 21980 17436 Watching for file changes with StatReloader
+INFO 2025-10-21 12:13:34,489 basehttp 21980 27676 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-21 12:13:50,038 basehttp 21980 27676 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-21 12:13:59,088 basehttp 21980 27676 "GET /api/livros/ HTTP/1.1" 200 95087
