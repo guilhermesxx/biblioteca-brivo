@@ -14960,3 +14960,4 @@ INFO 2025-10-21 12:13:11,966 autoreload 21980 17436 Watching for file changes wi
 INFO 2025-10-21 12:13:34,489 basehttp 21980 27676 "GET /api/livros/ HTTP/1.1" 200 95087
 INFO 2025-10-21 12:13:50,038 basehttp 21980 27676 "GET /api/livros/ HTTP/1.1" 200 95087
 INFO 2025-10-21 12:13:59,088 basehttp 21980 27676 "GET /api/livros/ HTTP/1.1" 200 95087
+INFO 2025-10-21 20:37:48,630 autoreload 38612 36736 Watching for file changes with StatReloader
