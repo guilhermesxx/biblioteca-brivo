@@ -15377,3 +15377,97 @@ INFO 2025-10-21 21:49:49,430 basehttp 1120 11836 "GET /api/livros/ HTTP/1.1" 200
 INFO 2025-10-21 21:49:53,209 basehttp 1120 11836 "OPTIONS /api/livros/119/ HTTP/1.1" 200 0
 INFO 2025-10-21 21:49:53,248 basehttp 1120 11836 "DELETE /api/livros/119/ HTTP/1.1" 204 74
 INFO 2025-10-21 21:49:53,268 basehttp 1120 33168 "GET /api/livros/ HTTP/1.1" 200 95066
+INFO 2025-10-22 10:43:01,385 autoreload 24360 27524 Watching for file changes with StatReloader
+INFO 2025-10-22 10:45:13,431 autoreload 24360 27524 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-10-22 10:45:14,671 autoreload 10304 26380 Watching for file changes with StatReloader
+INFO 2025-10-22 10:45:29,137 autoreload 10304 26380 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-10-22 10:45:30,479 autoreload 4160 20148 Watching for file changes with StatReloader
+INFO 2025-10-22 10:45:40,358 autoreload 4160 20148 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-10-22 10:45:41,616 autoreload 26648 5656 Watching for file changes with StatReloader
+INFO 2025-10-22 10:45:45,372 autoreload 26648 5656 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\urls.py changed, reloading.
+INFO 2025-10-22 10:45:46,469 autoreload 8088 28492 Watching for file changes with StatReloader
+INFO 2025-10-22 10:48:58,911 basehttp 8088 29316 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:48:58,929 views 8088 29316 === LOGIN ATTEMPT ===
+INFO 2025-10-22 10:48:58,930 views 8088 29316 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-22 10:48:59,747 views 8088 29316 Login bem-sucedido
+INFO 2025-10-22 10:48:59,749 basehttp 8088 29316 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-10-22 10:48:59,755 basehttp 8088 29316 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:48:59,785 basehttp 8088 29316 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-10-22 10:48:59,945 basehttp 8088 29316 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:48:59,962 basehttp 8088 1372 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:48:59,967 basehttp 8088 22660 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:00,005 basehttp 8088 1372 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-22 10:49:00,035 basehttp 8088 29316 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-22 10:49:00,042 basehttp 8088 22660 "GET /api/dashboard/ HTTP/1.1" 200 619
+INFO 2025-10-22 10:49:00,050 basehttp 8088 22660 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:00,079 basehttp 8088 22660 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 95066
+INFO 2025-10-22 10:49:02,881 basehttp 8088 22660 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:02,895 basehttp 8088 22660 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 547
+INFO 2025-10-22 10:49:02,926 basehttp 8088 22660 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:02,936 basehttp 8088 22660 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-10-22 10:49:05,944 basehttp 8088 22660 "GET /api/dashboard/ HTTP/1.1" 200 619
+INFO 2025-10-22 10:49:07,674 basehttp 8088 22660 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:07,719 basehttp 8088 22660 "GET /api/usuarios/ HTTP/1.1" 200 3377
+INFO 2025-10-22 10:49:25,624 views 8088 22660 === LOGIN ATTEMPT ===
+INFO 2025-10-22 10:49:25,624 views 8088 22660 Dados recebidos: {'email': 'g60511925@gmail.com', 'password': 'brito@123', 'tipo': 'aluno'}
+INFO 2025-10-22 10:49:26,233 views 8088 22660 Login bem-sucedido
+INFO 2025-10-22 10:49:26,237 basehttp 8088 22660 "POST /api/token/ HTTP/1.1" 200 589
+INFO 2025-10-22 10:49:26,247 basehttp 8088 22660 "OPTIONS /api/usuarios/26/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:26,287 basehttp 8088 22660 "GET /api/usuarios/26/ HTTP/1.1" 200 137
+INFO 2025-10-22 10:49:26,464 basehttp 8088 29316 "OPTIONS /api/user-stats/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:26,465 basehttp 8088 1372 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+WARNING 2025-10-22 10:49:26,466 log 8088 22660 Forbidden: /api/lembrete-devolucao/
+INFO 2025-10-22 10:49:26,477 basehttp 8088 29316 "OPTIONS /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:26,480 basehttp 8088 29224 "OPTIONS /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:26,492 basehttp 8088 1372 "GET /api/user-stats/ HTTP/1.1" 200 80
+WARNING 2025-10-22 10:49:26,492 basehttp 8088 22660 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-10-22 10:49:26,520 basehttp 8088 29316 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-10-22 10:49:26,528 log 8088 28728 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-10-22 10:49:26,538 basehttp 8088 29224 "GET /api/livros/?page_size=6 HTTP/1.1" 200 95066
+WARNING 2025-10-22 10:49:26,545 basehttp 8088 28728 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-10-22 10:49:26,556 basehttp 8088 28756 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 547
+INFO 2025-10-22 10:49:38,457 basehttp 8088 28756 "OPTIONS /api/livros/114/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:38,466 basehttp 8088 28756 "GET /api/livros/114/ HTTP/1.1" 200 938
+INFO 2025-10-22 10:49:38,503 basehttp 8088 28756 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:49:38,526 basehttp 8088 28756 "GET /api/livros/ HTTP/1.1" 200 95066
+INFO 2025-10-22 10:49:41,039 basehttp 8088 29224 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-10-22 10:49:41,046 basehttp 8088 28756 "GET /api/user-stats/ HTTP/1.1" 200 80
+INFO 2025-10-22 10:49:41,063 basehttp 8088 29316 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 547
+INFO 2025-10-22 10:49:41,138 basehttp 8088 28728 "GET /api/livros/?page_size=6 HTTP/1.1" 200 95066
+INFO 2025-10-22 10:49:46,058 basehttp 8088 28728 "GET /api/usuarios/26/ HTTP/1.1" 200 137
+WARNING 2025-10-22 10:49:46,212 log 8088 28728 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-10-22 10:49:46,215 log 8088 29316 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-10-22 10:49:46,229 basehttp 8088 28728 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-10-22 10:49:46,243 basehttp 8088 22660 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+WARNING 2025-10-22 10:49:46,246 basehttp 8088 29316 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-10-22 10:49:46,246 basehttp 8088 28756 "GET /api/user-stats/ HTTP/1.1" 200 80
+INFO 2025-10-22 10:49:46,250 basehttp 8088 1372 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 547
+INFO 2025-10-22 10:49:46,269 basehttp 8088 29224 "GET /api/livros/?page_size=6 HTTP/1.1" 200 95066
+INFO 2025-10-22 10:49:51,303 basehttp 8088 29224 "GET /api/livros/ HTTP/1.1" 200 95066
+INFO 2025-10-22 10:49:58,918 basehttp 8088 28756 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-10-22 10:49:58,929 basehttp 8088 1372 "GET /api/livros/?page_size=6 HTTP/1.1" 200 95066
+INFO 2025-10-22 10:49:58,935 basehttp 8088 29224 "GET /api/user-stats/ HTTP/1.1" 200 80
+INFO 2025-10-22 10:49:58,939 basehttp 8088 29316 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 547
+INFO 2025-10-22 10:50:03,662 basehttp 8088 1372 "GET /api/livros/ HTTP/1.1" 200 95066
+INFO 2025-10-22 10:50:08,424 basehttp 8088 1372 "OPTIONS /api/livros/117/ HTTP/1.1" 200 0
+INFO 2025-10-22 10:50:08,437 basehttp 8088 1372 "GET /api/livros/117/ HTTP/1.1" 200 1599
+INFO 2025-10-22 10:50:08,473 basehttp 8088 1372 "GET /api/livros/ HTTP/1.1" 200 95066
+INFO 2025-10-22 10:50:12,752 basehttp 8088 1372 "GET /api/livros/117/ HTTP/1.1" 200 1599
+INFO 2025-10-22 10:50:12,776 basehttp 8088 1372 "GET /api/livros/ HTTP/1.1" 200 95066
+INFO 2025-10-22 10:50:32,562 basehttp 8088 1372 "GET /api/user-stats/ HTTP/1.1" 200 80
+INFO 2025-10-22 10:50:32,563 basehttp 8088 28756 "GET /api/emprestimos/?usuario__id=26&devolvido=false HTTP/1.1" 200 547
+INFO 2025-10-22 10:50:32,574 basehttp 8088 29224 "GET /api/reservas/?aluno__id=26&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-10-22 10:50:32,586 basehttp 8088 29316 "GET /api/livros/?page_size=6 HTTP/1.1" 200 95066
+INFO 2025-10-22 10:50:35,934 basehttp 8088 29316 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 547
+INFO 2025-10-22 10:50:35,943 basehttp 8088 29316 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-10-22 10:50:53,144 views 8088 29316 === LOGIN ATTEMPT ===
+INFO 2025-10-22 10:50:53,145 views 8088 29316 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-10-22 10:50:53,622 views 8088 29316 Login bem-sucedido
+INFO 2025-10-22 10:50:53,623 basehttp 8088 29316 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-10-22 10:50:53,631 basehttp 8088 29316 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-10-22 10:50:53,716 basehttp 8088 29316 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-10-22 10:50:53,723 basehttp 8088 29224 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-10-22 10:50:53,750 basehttp 8088 28756 "GET /api/dashboard/ HTTP/1.1" 200 619
+INFO 2025-10-22 10:50:53,767 basehttp 8088 28756 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 95066
+INFO 2025-10-22 10:50:56,705 basehttp 8088 28756 "GET /api/dashboard/ HTTP/1.1" 200 619
+INFO 2025-10-22 10:50:59,576 basehttp 8088 28756 "GET /api/livros/ HTTP/1.1" 200 95066

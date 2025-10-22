@@ -5,7 +5,7 @@ from .views import (
     UsuarioViewSet, LivroViewSet, EmprestimoViewSet, ReservaViewSet, 
     TesteEmailView, LembreteDevolucaoView, DashboardAdminView, 
     AvisoReservaExpirandoView, usuario_me_view, AlertaSistemaViewSet,
-    PublicAlertaSistemaListView,
+    PublicAlertaSistemaListView, UserStatsView,
     RelatoriosPedagogicosView, # NOVO: Importe a nova view
     # 📧 NOVAS VIEWS DE EMAIL
     EnviarEmailManualView, EnviarEmailGrupoView, EnviarEmailsPredefinidosView, ListarTiposEmailView
@@ -31,6 +31,7 @@ urlpatterns = [
 
 
     path('alertas/publicos/', PublicAlertaSistemaListView.as_view(), name='alertas_publicos'),
+    path('user-stats/', UserStatsView.as_view(), name='user-stats'),
     path('relatorios/pedagogicos/', RelatoriosPedagogicosView.as_view(), name='relatorios-pedagogicos'),
     # 📧 NOVAS ROTAS PARA SISTEMA DE EMAILS
     path('emails/enviar-manual/', EnviarEmailManualView.as_view(), name='enviar-email-manual'),

@@ -1281,6 +1281,47 @@ from .serializers import CustomTokenObtainPairSerializer
 
 
 # -----------------------------------------------------------------------------
+# Views de Estatísticas para Usuários
+# -----------------------------------------------------------------------------
+
+class UserStatsView(APIView):
+    """
+    Endpoint para estatísticas básicas para alunos e professores.
+    Retorna contagens corretas de livros únicos.
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        
+        # Conta apenas livros únicos ativos (não soma quantidades)
+        total_livros = Livro.objects.filter(ativo=True).count()
+        
+        # Livros disponíveis (que têm pelo menos 1 exemplar disponível)
+        livros_disponiveis = Livro.objects.filter(
+            ativo=True,
+            quantidade_total__gt=F('quantidade_emprestada')
+        ).count()
+        
+        # Estatísticas pessoais do usuário
+        minhas_reservas = Reserva.objects.filter(
+            aluno=user,
+            status__in=['na_fila', 'aguardando_retirada', 'emprestado']
+        ).count()
+        
+        livros_lidos = Emprestimo.objects.filter(
+            usuario=user,
+            devolvido=True
+        ).count()
+        
+        return Response({
+            'total_livros': total_livros,
+            'livros_disponiveis': livros_disponiveis,
+            'minhas_reservas': minhas_reservas,
+            'livros_lidos': livros_lidos
+        })
+
+# -----------------------------------------------------------------------------
 # Views de Relatórios Pedagógicos
 # -----------------------------------------------------------------------------
 
