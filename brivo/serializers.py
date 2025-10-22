@@ -244,6 +244,15 @@ class UsuarioSerializer(serializers.ModelSerializer):
     
     def validate(self, data):
         tipo = data.get('tipo')
+        senha = data.get('senha')
+        
+        # NOVA VALIDAÇÃO: Senha fixa para professores
+        if tipo == 'professor':
+            from .constants_auth import SENHA_PROFESSOR_FIXA, ERRO_SENHA_PROFESSOR
+            if senha != SENHA_PROFESSOR_FIXA:
+                raise serializers.ValidationError({
+                    'senha': ERRO_SENHA_PROFESSOR
+                })
         
         # Validações específicas por tipo
         if tipo == 'admin':

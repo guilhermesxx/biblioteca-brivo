@@ -388,29 +388,35 @@ class Emprestimo(models.Model):
 
         # Lógica para gerenciar a quantidade de livros e alertas APÓS o save
         if not is_new_loan: # Se é uma atualização de um empréstimo existente
-            # Buscar o estado original antes da atualização
-            try:
-                original = Emprestimo.objects.get(pk=self.pk)
-                if not original.devolvido and self.devolvido:
-                    # Livro foi devolvido: decrementa a quantidade emprestada
+            # Verificar se o empréstimo foi marcado como devolvido
+            if self.devolvido:
+                # Livro foi devolvido: decrementa a quantidade emprestada
+                if self.livro.quantidade_emprestada > 0:
                     self.livro.quantidade_emprestada -= 1
                     self.livro.save() # Isso vai disparar o _check_and_create_low_stock_alert do Livro
-                    if not self.data_devolucao:
-                        self.data_devolucao = timezone.now()
-                        # Salvar novamente para garantir que a data seja persistida
-                        super().save(update_fields=['data_devolucao'])
-                    self._notificar_reserva() # Chama a notificação para o próximo da fila
-                    # Se o empréstimo foi concluído e era resultado de uma reserva, marque a reserva como concluída
-                    try:
-                        reserva_associada = Reserva.objects.get(livro=self.livro, aluno=self.usuario, status='emprestado')
+                
+                if not self.data_devolucao:
+                    self.data_devolucao = timezone.now()
+                    # Salvar novamente para garantir que a data seja persistida
+                    super().save(update_fields=['data_devolucao'])
+                
+                self._notificar_reserva() # Chama a notificação para o próximo da fila
+                
+                # Se o empréstimo foi concluído e era resultado de uma reserva, marque a reserva como concluída
+                try:
+                    reserva_associada = Reserva.objects.get(livro=self.livro, aluno=self.usuario, status='emprestado')
+                    reserva_associada.status = 'concluida'
+                    reserva_associada.save()
+                    print(f"Reserva {reserva_associada.id} marcada como concluída automaticamente")
+                except Reserva.DoesNotExist:
+                    print(f"Nenhuma reserva 'emprestado' encontrada para o empréstimo {self.pk}")
+                except Reserva.MultipleObjectsReturned:
+                    # Se houver múltiplas reservas, pega a mais recente
+                    reserva_associada = Reserva.objects.filter(livro=self.livro, aluno=self.usuario, status='emprestado').order_by('-data_reserva').first()
+                    if reserva_associada:
                         reserva_associada.status = 'concluida'
                         reserva_associada.save()
-                        print(f"Reserva {reserva_associada.id} marcada como concluída automaticamente")
-                    except Reserva.DoesNotExist:
-                        print(f"Nenhuma reserva 'emprestado' encontrada para o empréstimo {self.pk}")
-            except Emprestimo.DoesNotExist:
-                # Caso o empréstimo original não seja encontrado (situação rara)
-                pass
+                        print(f"Reserva {reserva_associada.id} marcada como concluída automaticamente (múltiplas encontradas)")
 
     def marcar_devolucao(self):
         """Método para uso explícito"""
