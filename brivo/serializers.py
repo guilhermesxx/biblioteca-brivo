@@ -210,27 +210,58 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Usuario
-        fields = ['id', 'ra', 'nome', 'email', 'senha', 'turma', 'tipo', 'ativo']
+        fields = ['id', 'ra', 'nome', 'email', 'username', 'senha', 'turma', 'tipo', 'ativo']
 
     def validate_email(self, value):
+        if not value:  # Email pode ser nulo para admins
+            return value
         # Durante atualização, permite o mesmo email se for do mesmo usuário
         if self.instance and self.instance.email == value:
             return value
         if Usuario.objects.filter(email=value).exists():
             raise serializers.ValidationError("Este email já está em uso.")
         return value
+    
+    def validate_username(self, value):
+        if not value:  # Username pode ser nulo
+            return value
+        # Durante atualização, permite o mesmo username se for do mesmo usuário
+        if self.instance and self.instance.username == value:
+            return value
+        if Usuario.objects.filter(username=value).exists():
+            raise serializers.ValidationError("Este username já está em uso.")
+        return value
 
     def validate_ra(self, value):
+        if not value:  # RA pode ser nulo para admins
+            return value
         # Durante atualização, permite o mesmo RA se for do mesmo usuário
         if self.instance and self.instance.ra == value:
             return value
         if Usuario.objects.filter(ra=value).exists():
             raise serializers.ValidationError("Este RA já está em uso.")
         return value
+    
+    def validate(self, data):
+        tipo = data.get('tipo')
+        
+        # Validações específicas por tipo
+        if tipo == 'admin':
+            if not data.get('username') and not data.get('email'):
+                raise serializers.ValidationError("Administradores precisam de username ou email.")
+        else:
+            if not data.get('email'):
+                raise serializers.ValidationError("Alunos e professores precisam de email.")
+            if not data.get('ra'):
+                raise serializers.ValidationError("Alunos e professores precisam de RA.")
+            if not data.get('turma'):
+                raise serializers.ValidationError("Alunos e professores precisam de turma.")
+        
+        return data
 
     def create(self, validated_data):
         senha = validated_data.pop('senha')
-        usuario = Usuario.objects.create_user(**validated_data, password=senha)
+        usuario = Usuario.objects.create_user(password=senha, **validated_data)
         return usuario
 
     def update(self, instance, validated_data):
@@ -342,35 +373,48 @@ class EmprestimoSerializer(serializers.ModelSerializer):
 
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
-    # Sobrescreve o método validate para adicionar a lógica de verificação de tipo de usuário
     def validate(self, attrs):
-        # Chama o método validate da classe pai para realizar a autenticação padrão (email/senha)
-        data = super().validate(attrs)
-        user = self.user # O usuário autenticado é acessível via self.user após a validação do pai
-
+        # Usa o backend customizado para autenticação
+        from django.contrib.auth import authenticate
+        
+        login_field = attrs.get(self.username_field)
+        password = attrs.get('password')
+        tipo_enviado = self.context['request'].data.get('tipo')
+        
+        # Autentica usando o backend customizado
+        user = authenticate(
+            request=self.context.get('request'),
+            username=login_field,
+            password=password
+        )
+        
+        if not user:
+            raise AuthenticationFailed('Email/Username ou senha inválidos.', code='invalid_credentials')
+        
         # Verifica se o usuário está ativo
         if not user.is_active:
             raise AuthenticationFailed("Usuário inativo.", code='user_inactive')
-
-        # Obtém o tipo de usuário enviado na requisição do frontend
-        tipo_enviado = self.context['request'].data.get('tipo')
-
-        # Lógica para verificar o tipo de usuário
-        # Se um tipo foi enviado E o tipo do usuário autenticado não corresponde ao tipo enviado,
-        # lança uma exceção AuthenticationFailed.
-        # Isso fará com que o login retorne um erro 401/403, conforme a sua necessidade.
+        
+        # Verifica tipo de usuário
         if tipo_enviado and user.tipo.lower() != tipo_enviado.lower():
             raise AuthenticationFailed(
                 f"Tipo de usuário inválido para o login. Você tentou logar como '{tipo_enviado}', mas o usuário é '{user.tipo}'.",
                 code='invalid_user_type'
             )
-
-        # Adiciona informações do usuário ao payload do token de resposta
-        data['user'] = {
-            "id": user.id,
-            "email": user.email,
-            "tipo": user.tipo,
-            "nome": user.nome,
+        
+        # Gera tokens
+        refresh = self.get_token(user)
+        
+        data = {
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),
+            'user': {
+                "id": user.id,
+                "email": user.email,
+                "username": user.username,
+                "tipo": user.tipo,
+                "nome": user.nome,
+            }
         }
-
+        
         return data

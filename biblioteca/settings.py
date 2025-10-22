@@ -53,6 +53,12 @@ INSTALLED_APPS = [
 # Especifica o modelo de usuário personalizado.
 AUTH_USER_MODEL = 'brivo.Usuario'
 
+# Backend de autenticação customizado
+AUTHENTICATION_BACKENDS = [
+    'brivo.authentication.EmailOrUsernameBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 # Configurações de CORS
 # ATENÇÃO: `CORS_ALLOW_ALL_ORIGINS = True` é prático para o desenvolvimento,
 # mas para produção, considere listar domínios específicos para maior segurança.

@@ -28,41 +28,51 @@ class HistoricoAcao(models.Model):
 
 # Gerenciador customizado de usuário
 class CustomUserManager(BaseUserManager):
-    def create_user(self, ra, nome, email, turma, tipo, password=None):
-        if not email:
-            raise ValueError("O e-mail é obrigatório.")
-        if not ra:
-            raise ValueError("O RA é obrigatório.")
+    def create_user(self, nome, tipo, password=None, email=None, username=None, ra=None, turma=None):
         if not nome:
             raise ValueError("O nome é obrigatório.")
-        if not turma:
-            raise ValueError("A turma é obrigatória.")
         if not tipo:
             raise ValueError("O tipo de usuário é obrigatório.")
+        
+        # Validações específicas por tipo
+        if tipo == 'admin':
+            if not username and not email:
+                raise ValueError("Administradores precisam de username ou email.")
+        else:
+            if not email:
+                raise ValueError("Alunos e professores precisam de email.")
+            if not ra:
+                raise ValueError("O RA é obrigatório para alunos e professores.")
+            if not turma:
+                raise ValueError("A turma é obrigatória para alunos e professores.")
 
         user = self.model(
             ra=ra,
             nome=nome,
-            email=self.normalize_email(email),
+            email=self.normalize_email(email) if email else None,
+            username=username,
             turma=turma,
             tipo=tipo,
             is_active=True,
-            is_staff=(tipo == "admin"), # Define is_staff com base no tipo
-            is_superuser=(tipo == "admin"), # Define is_superuser com base no tipo
+            is_staff=(tipo == "admin"),
+            is_superuser=(tipo == "admin"),
         )
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, ra, nome, email, turma="ADM", tipo="admin", password=None):
-        # Chama create_user com tipo "admin" para criar um superusuário
+    def create_superuser(self, nome, password=None, email=None, username=None, **extra_fields):
+        # Cria superusuário admin
+        extra_fields.setdefault('tipo', 'admin')
+        extra_fields.setdefault('turma', 'ADM')
+        
         return self.create_user(
-            ra=ra,
             nome=nome,
+            tipo='admin',
+            password=password,
             email=email,
-            turma=turma,
-            tipo=tipo, # Garante que o tipo seja 'admin' para superusuários
-            password=password
+            username=username,
+            **extra_fields
         )
 
 class UsuarioQuerySet(models.QuerySet):
@@ -80,10 +90,11 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
         ('admin', 'Administrador'),
     ]
 
-    ra = models.CharField(max_length=20, unique=True)
+    ra = models.CharField(max_length=20, unique=True, null=True, blank=True)
     nome = models.CharField(max_length=255)
-    email = models.EmailField(unique=True)
-    turma = models.CharField(max_length=20)
+    email = models.EmailField(unique=True, null=True, blank=True)
+    username = models.CharField(max_length=150, unique=True, null=True, blank=True)  # NOVO: Username para admins
+    turma = models.CharField(max_length=20, null=True, blank=True)
     tipo = models.CharField(max_length=10, choices=TIPO_USUARIO_CHOICES) # Campo 'tipo' para diferenciar usuários
     data_cadastro = models.DateTimeField(auto_now_add=True)
 
@@ -91,8 +102,8 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False) # Usado pelo Django Admin
     is_superuser = models.BooleanField(default=False) # Usado pelo Django Admin e permissões
 
-    USERNAME_FIELD = 'email' # Campo usado para login
-    REQUIRED_FIELDS = ['ra', 'nome', 'turma', 'tipo'] # Campos obrigatórios na criação de usuário
+    USERNAME_FIELD = 'email' # Campo usado para login (pode ser email ou username para admins)
+    REQUIRED_FIELDS = ['nome', 'tipo'] # Campos obrigatórios na criação de usuário
 
     ativo = models.BooleanField(default=True) # Campo para soft delete
 
