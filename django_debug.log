@@ -15845,3 +15845,342 @@ WARNING 2025-10-22 12:12:15,281 basehttp 10940 9832 "POST /api/livros/ HTTP/1.1"
 INFO 2025-10-22 12:12:16,777 basehttp 10940 15380 "GET /api/dashboard/ HTTP/1.1" 200 621
 INFO 2025-10-22 12:12:16,878 basehttp 10940 15380 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 117223
 INFO 2025-10-22 12:12:49,463 basehttp 10940 15380 - Broken pipe from ('172.30.1.110', 55491)
+INFO 2025-11-13 10:14:27,781 autoreload 22632 20836 Watching for file changes with StatReloader
+INFO 2025-11-13 10:18:45,388 basehttp 22632 20260 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-11-13 10:18:45,641 log 22632 20260 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:18:45,650 basehttp 22632 20260 "POST /api/token/refresh/ HTTP/1.1" 400 74808
+INFO 2025-11-13 10:23:40,852 basehttp 22632 13760 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-13 10:23:41,104 log 22632 13760 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:41,112 basehttp 22632 13760 "POST /api/token/ HTTP/1.1" 400 74561
+ERROR 2025-11-13 10:23:41,914 log 22632 2792 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:41,920 basehttp 22632 2792 "POST /api/token/ HTTP/1.1" 400 74561
+INFO 2025-11-13 10:23:44,586 basehttp 22632 7848 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-13 10:23:44,717 log 22632 7848 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:44,725 basehttp 22632 7848 "POST /api/token/ HTTP/1.1" 400 74686
+ERROR 2025-11-13 10:23:47,889 log 22632 18524 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:47,894 basehttp 22632 18524 "POST /api/token/ HTTP/1.1" 400 74561
+ERROR 2025-11-13 10:23:48,082 log 22632 12256 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:48,086 basehttp 22632 12256 "POST /api/token/ HTTP/1.1" 400 74561
+ERROR 2025-11-13 10:23:48,279 log 22632 21276 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:48,283 basehttp 22632 21276 "POST /api/token/ HTTP/1.1" 400 74561
+ERROR 2025-11-13 10:23:51,511 log 22632 20152 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-13 10:23:51,516 basehttp 22632 20152 "POST /api/token/ HTTP/1.1" 400 74686
+INFO 2025-11-13 10:24:07,631 autoreload 13192 22996 Watching for file changes with StatReloader
+INFO 2025-11-13 10:24:09,522 views 13192 9876 === LOGIN ATTEMPT ===
+INFO 2025-11-13 10:24:09,524 views 13192 9876 Dados recebidos: {'email': 'testebrivo1', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-13 10:24:10,246 views 13192 13072 === LOGIN ATTEMPT ===
+INFO 2025-11-13 10:24:10,247 views 13192 13072 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-13 10:24:10,611 views 13192 9876 Login bem-sucedido
+INFO 2025-11-13 10:24:10,613 basehttp 13192 9876 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-13 10:24:10,621 basehttp 13192 9876 "OPTIONS /api/usuarios/50/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:10,633 basehttp 13192 9876 "GET /api/usuarios/50/ HTTP/1.1" 200 121
+INFO 2025-11-13 10:24:10,861 basehttp 13192 9876 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:10,874 basehttp 13192 16136 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:10,878 basehttp 13192 9876 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:10,906 basehttp 13192 9876 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 10:24:10,993 basehttp 13192 6056 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 10:24:10,996 basehttp 13192 16136 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:24:11,006 basehttp 13192 16136 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:11,046 basehttp 13192 16136 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 117223
+INFO 2025-11-13 10:24:11,363 views 13192 13072 Login bem-sucedido
+INFO 2025-11-13 10:24:11,366 basehttp 13192 13072 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-13 10:24:11,474 basehttp 13192 13072 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:11,558 basehttp 13192 13072 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-13 10:24:11,748 basehttp 13192 13072 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:11,772 basehttp 13192 4300 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:11,772 basehttp 13192 11388 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:11,833 basehttp 13192 13072 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 10:24:11,873 basehttp 13192 4300 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 10:24:11,910 basehttp 13192 11388 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:24:11,987 basehttp 13192 11388 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-13 10:24:12,089 basehttp 13192 11388 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 117223
+INFO 2025-11-13 10:26:50,669 basehttp 13192 6168 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:26:50,736 views 13192 6168 === LOGIN ATTEMPT ===
+INFO 2025-11-13 10:26:50,738 views 13192 6168 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-13 10:26:51,589 views 13192 6168 Login bem-sucedido
+INFO 2025-11-13 10:26:51,590 basehttp 13192 6168 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-13 10:26:51,670 basehttp 13192 6168 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:26:51,738 basehttp 13192 6168 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-13 10:26:51,886 basehttp 13192 6168 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:26:51,896 basehttp 13192 13836 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:26:51,896 basehttp 13192 12708 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:26:51,971 basehttp 13192 6168 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 10:26:51,971 basehttp 13192 13836 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 10:26:51,996 basehttp 13192 12708 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:26:52,089 basehttp 13192 12708 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-13 10:26:52,183 basehttp 13192 12708 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 117223
+INFO 2025-11-13 10:27:05,862 basehttp 13192 12708 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:27:05,935 basehttp 13192 12708 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-11-13 10:27:10,639 basehttp 13192 12708 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:27:18,409 basehttp 13192 11388 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:27:20,063 basehttp 13192 12708 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-11-13 10:27:20,154 basehttp 13192 12708 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 547
+INFO 2025-11-13 10:27:20,219 basehttp 13192 12708 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-11-13 10:27:20,306 basehttp 13192 12708 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-11-13 10:27:27,778 basehttp 13192 12708 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:27:35,176 basehttp 13192 11388 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:27:35,273 basehttp 13192 11388 "GET /api/livros/ HTTP/1.1" 200 117223
+INFO 2025-11-13 10:27:36,463 basehttp 13192 12708 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:27:36,557 basehttp 13192 12708 "GET /api/livros/ HTTP/1.1" 200 117223
+INFO 2025-11-13 10:31:30,000 basehttp 13192 14584 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:31:30,062 basehttp 13192 14584 "GET /api/livros/ HTTP/1.1" 200 117223
+INFO 2025-11-13 10:31:34,906 basehttp 13192 14584 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:31:34,939 basehttp 13192 14584 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-11-13 10:31:39,166 basehttp 13192 14584 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:31:44,309 basehttp 13192 14584 "GET /api/livros/ HTTP/1.1" 200 117223
+INFO 2025-11-13 10:35:45,893 basehttp 13192 14584 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:35:45,923 basehttp 13192 14584 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 10:35:46,245 basehttp 13192 14584 "POST /api/livros/ HTTP/1.1" 201 767
+INFO 2025-11-13 10:35:46,307 basehttp 13192 14584 "GET /api/livros/ HTTP/1.1" 200 117991
+INFO 2025-11-13 10:40:33,326 basehttp 13192 14584 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 10:40:33,374 basehttp 13192 14584 "POST /api/livros/ HTTP/1.1" 201 668
+INFO 2025-11-13 10:40:33,419 basehttp 13192 14584 "GET /api/livros/ HTTP/1.1" 200 118660
+INFO 2025-11-13 10:44:47,167 basehttp 13192 11396 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 10:44:48,442 basehttp 13192 11396 "POST /api/livros/ HTTP/1.1" 201 831
+INFO 2025-11-13 10:44:48,486 basehttp 13192 11396 "GET /api/livros/ HTTP/1.1" 200 119492
+INFO 2025-11-13 10:46:43,934 basehttp 13192 11396 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:46:44,087 basehttp 13192 11396 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 119492
+INFO 2025-11-13 10:47:04,714 basehttp 13192 11396 "GET /api/livros/ HTTP/1.1" 200 119492
+INFO 2025-11-13 10:47:44,588 basehttp 13192 11396 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:47:44,623 basehttp 13192 11396 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 119492
+INFO 2025-11-13 10:48:00,344 basehttp 13192 11396 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 10:48:02,964 basehttp 13192 11396 "GET /api/livros/ HTTP/1.1" 200 119492
+INFO 2025-11-13 10:48:14,460 basehttp 13192 16852 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:48:14,547 basehttp 13192 16852 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 380
+INFO 2025-11-13 10:48:28,645 basehttp 13192 16852 "POST /api/livros/ HTTP/1.1" 201 1396
+INFO 2025-11-13 10:48:28,679 basehttp 13192 16852 "GET /api/livros/ HTTP/1.1" 200 120889
+INFO 2025-11-13 10:51:53,180 basehttp 13192 14688 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:51:53,274 basehttp 13192 14688 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 10:51:53,405 basehttp 13192 14688 "POST /api/livros/ HTTP/1.1" 201 936
+INFO 2025-11-13 10:51:53,500 basehttp 13192 14688 "GET /api/livros/ HTTP/1.1" 200 121826
+INFO 2025-11-13 10:54:11,441 basehttp 13192 20352 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 10:54:11,441 basehttp 13192 22728 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 10:54:12,054 basehttp 13192 21656 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 10:54:12,055 basehttp 13192 14876 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 10:55:34,252 basehttp 13192 22728 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 363
+INFO 2025-11-13 10:55:52,638 basehttp 13192 22728 "OPTIONS /api/livros/144/ HTTP/1.1" 200 0
+INFO 2025-11-13 10:55:52,703 basehttp 13192 22728 "PUT /api/livros/144/ HTTP/1.1" 200 375
+INFO 2025-11-13 10:55:52,815 basehttp 13192 22728 "GET /api/livros/ HTTP/1.1" 200 121533
+INFO 2025-11-13 10:56:52,665 basehttp 13192 14688 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 10:56:52,689 basehttp 13192 12792 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 10:57:52,873 basehttp 13192 12792 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 10:57:52,992 basehttp 13192 12792 "POST /api/livros/ HTTP/1.1" 201 892
+INFO 2025-11-13 10:57:53,108 basehttp 13192 12792 "GET /api/livros/ HTTP/1.1" 200 122426
+INFO 2025-11-13 11:02:21,320 basehttp 13192 7200 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:02:21,441 basehttp 13192 7200 "POST /api/livros/ HTTP/1.1" 201 1545
+INFO 2025-11-13 11:02:21,478 basehttp 13192 7200 "GET /api/livros/ HTTP/1.1" 200 123972
+INFO 2025-11-13 11:02:28,916 basehttp 13192 19288 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:02:29,020 basehttp 13192 19288 "POST /api/livros/ HTTP/1.1" 201 776
+INFO 2025-11-13 11:02:29,103 basehttp 13192 19288 "GET /api/livros/ HTTP/1.1" 200 124749
+INFO 2025-11-13 11:04:14,027 basehttp 13192 22436 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:04:14,317 basehttp 13192 22436 "POST /api/livros/ HTTP/1.1" 201 788
+INFO 2025-11-13 11:04:14,448 basehttp 13192 22436 "GET /api/livros/ HTTP/1.1" 200 125538
+INFO 2025-11-13 11:06:16,131 basehttp 13192 4064 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:06:16,212 basehttp 13192 4064 "POST /api/livros/ HTTP/1.1" 201 1716
+INFO 2025-11-13 11:06:16,257 basehttp 13192 4064 "GET /api/livros/ HTTP/1.1" 200 127255
+INFO 2025-11-13 11:09:49,611 basehttp 13192 14256 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:09:49,710 basehttp 13192 14256 "POST /api/livros/ HTTP/1.1" 201 642
+INFO 2025-11-13 11:09:49,741 basehttp 13192 14256 "GET /api/livros/ HTTP/1.1" 200 127898
+INFO 2025-11-13 11:13:40,979 basehttp 13192 6280 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:13:41,159 basehttp 13192 6280 "POST /api/livros/ HTTP/1.1" 201 884
+INFO 2025-11-13 11:13:41,299 basehttp 13192 6280 "GET /api/livros/ HTTP/1.1" 200 128783
+INFO 2025-11-13 11:16:43,398 basehttp 13192 6280 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:16:43,509 basehttp 13192 6280 "POST /api/livros/ HTTP/1.1" 201 858
+INFO 2025-11-13 11:16:43,554 basehttp 13192 6280 "GET /api/livros/ HTTP/1.1" 200 129642
+INFO 2025-11-13 11:19:04,501 basehttp 13192 7492 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:19:04,650 basehttp 13192 7492 "POST /api/livros/ HTTP/1.1" 201 967
+INFO 2025-11-13 11:19:04,733 basehttp 13192 7492 "GET /api/livros/ HTTP/1.1" 200 130610
+INFO 2025-11-13 11:19:45,539 basehttp 13192 13440 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:19:45,662 basehttp 13192 13440 "POST /api/livros/ HTTP/1.1" 201 784
+INFO 2025-11-13 11:19:45,774 basehttp 13192 13440 "GET /api/livros/ HTTP/1.1" 200 131395
+INFO 2025-11-13 11:20:28,432 basehttp 13192 6280 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:20:28,478 basehttp 13192 6280 "POST /api/livros/ HTTP/1.1" 201 1336
+INFO 2025-11-13 11:20:28,517 basehttp 13192 6280 "GET /api/livros/ HTTP/1.1" 200 132732
+WARNING 2025-11-13 11:24:11,193 log 13192 6280 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-11-13 11:24:11,194 log 13192 18548 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-11-13 11:24:11,195 basehttp 13192 6280 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-11-13 11:24:11,196 basehttp 13192 18548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-11-13 11:24:11,209 basehttp 13192 6280 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-13 11:24:11,211 basehttp 13192 18548 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-13 11:24:11,226 basehttp 13192 6280 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 11:24:11,226 basehttp 13192 18548 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+WARNING 2025-11-13 11:24:11,694 log 13192 17432 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-11-13 11:24:11,696 log 13192 10696 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-11-13 11:24:11,698 basehttp 13192 17432 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+WARNING 2025-11-13 11:24:11,698 basehttp 13192 10696 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+INFO 2025-11-13 11:24:11,782 basehttp 13192 17432 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:24:11,798 basehttp 13192 10696 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:24:11,853 basehttp 13192 17432 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-13 11:24:11,871 basehttp 13192 10696 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-13 11:24:11,960 basehttp 13192 10696 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 11:24:11,965 basehttp 13192 17432 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 11:25:25,186 basehttp 13192 17432 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:25:25,311 basehttp 13192 17432 "POST /api/livros/ HTTP/1.1" 201 1042
+INFO 2025-11-13 11:25:25,400 basehttp 13192 17432 "GET /api/livros/ HTTP/1.1" 200 133775
+WARNING 2025-11-13 11:26:51,865 log 13192 20740 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-11-13 11:26:51,866 basehttp 13192 20740 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-11-13 11:26:51,944 log 13192 20740 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-11-13 11:26:51,945 basehttp 13192 20740 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-11-13 11:26:51,955 basehttp 13192 11512 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:26:52,048 basehttp 13192 11512 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-13 11:26:52,049 basehttp 13192 20740 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-13 11:26:52,144 basehttp 13192 20740 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-13 11:26:52,146 basehttp 13192 11512 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-13 11:27:12,863 basehttp 13192 18548 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:27:12,914 basehttp 13192 18548 "POST /api/livros/ HTTP/1.1" 201 761
+INFO 2025-11-13 11:27:12,939 basehttp 13192 18548 "GET /api/livros/ HTTP/1.1" 200 134537
+INFO 2025-11-13 11:28:30,527 basehttp 13192 18548 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:28:30,562 basehttp 13192 18548 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 134537
+INFO 2025-11-13 11:29:33,610 basehttp 13192 18548 "GET /api/livros/ HTTP/1.1" 200 134537
+INFO 2025-11-13 11:29:40,642 basehttp 13192 18548 "GET /api/livros/ HTTP/1.1" 200 134537
+INFO 2025-11-13 11:31:03,609 basehttp 13192 18548 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:31:07,272 basehttp 13192 18548 "GET /api/livros/ HTTP/1.1" 200 134537
+INFO 2025-11-13 11:33:15,711 basehttp 13192 18548 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:33:15,772 basehttp 13192 18548 "POST /api/livros/ HTTP/1.1" 201 1214
+INFO 2025-11-13 11:33:15,890 basehttp 13192 18548 "GET /api/livros/ HTTP/1.1" 200 135752
+INFO 2025-11-13 11:38:42,022 basehttp 13192 10684 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:38:42,084 basehttp 13192 10684 "POST /api/livros/ HTTP/1.1" 201 1237
+INFO 2025-11-13 11:38:42,129 basehttp 13192 10684 "GET /api/livros/ HTTP/1.1" 200 136990
+INFO 2025-11-13 11:41:14,191 basehttp 13192 14768 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:41:14,247 basehttp 13192 14768 "POST /api/livros/ HTTP/1.1" 201 1219
+INFO 2025-11-13 11:41:14,279 basehttp 13192 14768 "GET /api/livros/ HTTP/1.1" 200 138210
+INFO 2025-11-13 11:41:54,809 basehttp 13192 14604 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:41:54,901 basehttp 13192 14604 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 138210
+INFO 2025-11-13 11:42:09,437 basehttp 13192 14604 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:42:09,450 basehttp 13192 14604 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-11-13 11:42:09,461 basehttp 13192 14604 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:42:09,480 basehttp 13192 14604 "GET /api/emprestimos/ HTTP/1.1" 200 547
+INFO 2025-11-13 11:42:16,887 basehttp 13192 14604 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:42:23,777 basehttp 13192 21072 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-13 11:42:23,907 basehttp 13192 21072 "POST /api/livros/ HTTP/1.1" 201 839
+INFO 2025-11-13 11:42:24,023 basehttp 13192 21072 "GET /api/livros/ HTTP/1.1" 200 139050
+INFO 2025-11-13 11:42:26,231 basehttp 13192 14604 "GET /api/livros/ HTTP/1.1" 200 139050
+INFO 2025-11-13 11:42:56,880 basehttp 13192 14604 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:43:02,290 basehttp 13192 14604 "GET /api/livros/ HTTP/1.1" 200 139050
+INFO 2025-11-13 11:43:51,687 basehttp 13192 22952 "OPTIONS /api/livros/150/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:43:51,819 basehttp 13192 22952 "PUT /api/livros/150/ HTTP/1.1" 200 774
+INFO 2025-11-13 11:43:51,953 basehttp 13192 22952 "GET /api/livros/ HTTP/1.1" 200 139048
+INFO 2025-11-13 11:44:41,157 basehttp 13192 13452 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 387
+INFO 2025-11-13 11:44:59,727 basehttp 13192 13452 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 387
+INFO 2025-11-13 11:45:16,154 basehttp 13192 22952 "OPTIONS /api/livros/156/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:45:16,300 basehttp 13192 22952 "PUT /api/livros/156/ HTTP/1.1" 200 965
+INFO 2025-11-13 11:45:16,423 basehttp 13192 22952 "GET /api/livros/ HTTP/1.1" 200 139046
+INFO 2025-11-13 11:45:18,231 basehttp 13192 13452 "POST /api/livros/ HTTP/1.1" 201 1191
+INFO 2025-11-13 11:45:18,277 basehttp 13192 13452 "GET /api/livros/ HTTP/1.1" 200 140238
+INFO 2025-11-13 11:45:44,706 basehttp 13192 22952 "OPTIONS /api/livros/159/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:45:44,811 basehttp 13192 22952 "PUT /api/livros/159/ HTTP/1.1" 200 1042
+INFO 2025-11-13 11:45:44,911 basehttp 13192 22952 "GET /api/livros/ HTTP/1.1" 200 140238
+INFO 2025-11-13 11:46:53,563 basehttp 13192 22952 "OPTIONS /api/livros/146/ HTTP/1.1" 200 0
+INFO 2025-11-13 11:46:53,684 basehttp 13192 22952 "PUT /api/livros/146/ HTTP/1.1" 200 1394
+INFO 2025-11-13 11:46:53,726 basehttp 13192 22952 "GET /api/livros/ HTTP/1.1" 200 140236
+INFO 2025-11-13 11:47:16,206 basehttp 13192 13452 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 389
+INFO 2025-11-13 11:47:19,799 basehttp 13192 13452 "POST /api/livros/ HTTP/1.1" 201 1155
+INFO 2025-11-13 11:47:19,819 basehttp 13192 13452 "GET /api/livros/ HTTP/1.1" 200 141392
+INFO 2025-11-13 11:49:18,391 basehttp 13192 14912 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:49:18,448 basehttp 13192 14912 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 141392
+INFO 2025-11-13 11:50:20,753 basehttp 13192 14912 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-13 11:50:23,834 basehttp 13192 14912 "GET /api/livros/ HTTP/1.1" 200 141392
