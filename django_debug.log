@@ -16842,3 +16842,390 @@ WARNING 2025-11-17 21:41:29,475 log 36560 42412 Bad Request: /api/alertas-sistem
 WARNING 2025-11-17 21:41:29,476 basehttp 36560 42412 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
 WARNING 2025-11-17 21:41:44,892 log 36560 42412 Bad Request: /api/alertas-sistema/
 WARNING 2025-11-17 21:41:44,895 basehttp 36560 42412 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
+INFO 2025-11-18 07:53:18,707 autoreload 3204 25720 Watching for file changes with StatReloader
+INFO 2025-11-18 07:54:28,699 basehttp 3204 28184 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-11-18 07:54:29,084 log 3204 28184 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 07:54:29,098 basehttp 3204 28184 "POST /api/token/refresh/ HTTP/1.1" 400 74844
+INFO 2025-11-18 07:54:55,847 basehttp 3204 3064 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-18 07:54:55,942 log 3204 3064 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 07:54:55,956 basehttp 3204 3064 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-18 07:55:03,080 log 3204 21456 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 07:55:03,092 basehttp 3204 21456 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-18 07:55:04,546 log 3204 21340 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 07:55:04,559 basehttp 3204 21340 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-18 07:55:05,063 log 3204 15264 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 07:55:05,074 basehttp 3204 15264 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-18 07:55:12,335 log 3204 26300 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 07:55:12,380 basehttp 3204 26300 "POST /api/token/ HTTP/1.1" 400 74597
+INFO 2025-11-18 07:55:23,773 autoreload 23712 18292 Watching for file changes with StatReloader
+INFO 2025-11-18 07:55:24,063 views 23712 14772 === LOGIN ATTEMPT ===
+INFO 2025-11-18 07:55:24,064 views 23712 14772 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'Brito@123', 'tipo': 'admin'}
+ERROR 2025-11-18 07:55:25,625 views 23712 14772 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-18 07:55:25,627 log 23712 14772 Unauthorized: /api/token/
+WARNING 2025-11-18 07:55:25,628 basehttp 23712 14772 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-18 07:55:38,274 views 23712 14772 === LOGIN ATTEMPT ===
+INFO 2025-11-18 07:55:38,276 views 23712 14772 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-18 07:55:40,249 views 23712 14772 Login bem-sucedido
+INFO 2025-11-18 07:55:40,256 basehttp 23712 14772 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-18 07:55:40,281 basehttp 23712 14772 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:55:40,338 basehttp 23712 14772 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-18 07:55:40,536 basehttp 23712 14772 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:55:40,542 basehttp 23712 23168 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:55:40,600 basehttp 23712 9340 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:55:40,652 basehttp 23712 14772 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-18 07:55:40,685 basehttp 23712 9340 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-18 07:55:40,717 basehttp 23712 23168 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 07:55:40,753 basehttp 23712 23168 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-18 07:55:40,863 basehttp 23712 23168 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 07:56:07,515 basehttp 23712 23168 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:56:07,607 basehttp 23712 23168 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 07:57:25,936 basehttp 23712 23168 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 07:57:32,303 basehttp 23712 23168 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:57:32,328 basehttp 23712 23168 "GET /api/reservas/ HTTP/1.1" 200 329
+INFO 2025-11-18 07:57:40,319 basehttp 23712 23168 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:57:40,344 basehttp 23712 23168 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-11-18 07:57:40,359 basehttp 23712 23168 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:57:40,393 basehttp 23712 23168 "GET /api/emprestimos/ HTTP/1.1" 200 911
+INFO 2025-11-18 07:57:46,285 basehttp 23712 23168 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 07:57:50,467 basehttp 23712 23168 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:57:50,529 basehttp 23712 23168 "GET /api/alertas-sistema/ HTTP/1.1" 200 77305
+INFO 2025-11-18 07:59:09,172 basehttp 23712 23168 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 07:59:09,273 basehttp 23712 23168 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 07:59:12,296 basehttp 23712 23168 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 07:59:19,045 basehttp 23712 23168 "OPTIONS /api/relatorios/pedagogicos/ HTTP/1.1" 200 0
+INFO 2025-11-18 07:59:19,096 basehttp 23712 23168 "GET /api/relatorios/pedagogicos/ HTTP/1.1" 200 1829
+INFO 2025-11-18 07:59:25,550 basehttp 23712 23168 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-11-18 07:59:25,587 basehttp 23712 23168 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 911
+INFO 2025-11-18 07:59:25,611 basehttp 23712 23168 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-11-18 07:59:25,639 basehttp 23712 23168 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 329
+INFO 2025-11-18 07:59:38,908 basehttp 23712 23168 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-11-18 07:59:38,974 basehttp 23712 23168 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 73249
+INFO 2025-11-18 07:59:49,164 basehttp 23712 23168 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-11-18 07:59:49,222 basehttp 23712 23168 "GET /api/emprestimos/ HTTP/1.1" 200 911
+INFO 2025-11-18 07:59:51,769 basehttp 23712 23168 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 07:59:51,851 basehttp 23712 23168 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 07:59:58,754 basehttp 23712 23168 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 73249
+INFO 2025-11-18 08:25:41,432 basehttp 23712 30372 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-18 08:25:41,434 basehttp 23712 11556 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-18 08:31:42,097 autoreload 23712 18292 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-11-18 08:31:45,744 autoreload 14748 17792 Watching for file changes with StatReloader
+INFO 2025-11-18 08:31:49,108 autoreload 14748 17792 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-11-18 08:31:51,537 autoreload 23892 23512 Watching for file changes with StatReloader
+INFO 2025-11-18 08:32:08,904 autoreload 23892 23512 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-11-18 08:32:11,504 autoreload 9916 25060 Watching for file changes with StatReloader
+INFO 2025-11-18 08:33:58,282 autoreload 9916 25060 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-11-18 08:34:02,224 autoreload 5572 27424 Watching for file changes with StatReloader
+INFO 2025-11-18 08:34:02,751 basehttp 5572 27120 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-18 08:34:03,002 basehttp 5572 828 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-18 08:34:03,030 basehttp 5572 27120 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-18 08:34:03,058 basehttp 5572 13792 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 08:34:03,136 basehttp 5572 13792 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 08:34:07,581 basehttp 5572 13792 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 08:34:36,171 basehttp 5572 13792 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 08:34:42,113 basehttp 5572 13792 "GET /api/alertas-sistema/ HTTP/1.1" 200 77305
+WARNING 2025-11-18 08:35:06,797 log 5572 13792 Bad Request: /api/alertas-sistema/
+WARNING 2025-11-18 08:35:06,799 basehttp 5572 13792 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
+INFO 2025-11-18 08:35:54,082 autoreload 5572 27424 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-11-18 08:35:56,800 autoreload 7500 15712 Watching for file changes with StatReloader
+WARNING 2025-11-18 08:36:27,198 log 7500 30500 Bad Request: /api/alertas-sistema/
+WARNING 2025-11-18 08:36:27,200 basehttp 7500 30500 "POST /api/alertas-sistema/ HTTP/1.1" 400 83
+ERROR 2025-11-18 08:37:08,828 utils 7500 30500 Falha ao enviar email para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:37:29,861 utils 7500 30500 Falha ao enviar email para contamax20203@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-11-18 08:37:35,906 autoreload 7500 15712 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-11-18 08:37:38,552 autoreload 10772 29000 Watching for file changes with StatReloader
+INFO 2025-11-18 08:37:44,454 autoreload 10772 29000 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-11-18 08:37:46,738 autoreload 8276 12136 Watching for file changes with StatReloader
+INFO 2025-11-18 08:38:47,376 basehttp 8276 28284 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-18 08:38:47,563 basehttp 8276 28284 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-18 08:38:47,606 basehttp 8276 21160 "GET /api/alertas-sistema/ HTTP/1.1" 200 77565
+INFO 2025-11-18 08:38:47,621 basehttp 8276 26568 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+ERROR 2025-11-18 08:39:18,386 utils 8276 26568 Falha ao enviar email para g60511925@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:39:39,457 utils 8276 26568 Falha ao enviar email para contamax20203@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:40:00,498 utils 8276 26568 Falha ao enviar email para aluno@teste.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-11-18 08:40:06,246 autoreload 8276 12136 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\biblioteca\settings.py changed, reloading.
+INFO 2025-11-18 08:40:09,163 autoreload 19524 20448 Watching for file changes with StatReloader
+INFO 2025-11-18 08:41:04,030 autoreload 21568 24668 Watching for file changes with StatReloader
+INFO 2025-11-18 08:41:04,488 basehttp 21568 29624 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-18 08:41:04,510 basehttp 21568 29624 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-11-18 08:41:04,514 basehttp 21568 7712 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-18 08:41:04,580 basehttp 21568 20796 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+ERROR 2025-11-18 08:41:05,190 log 21568 29624 Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+ERROR 2025-11-18 08:41:05,228 log 21568 7712 Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+ERROR 2025-11-18 08:41:05,228 log 21568 14876 Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+ERROR 2025-11-18 08:41:05,261 log 21568 20796 Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.20.10.4:8000'. You may need to add '172.20.10.4' to ALLOWED_HOSTS.
+WARNING 2025-11-18 08:41:05,281 basehttp 21568 29624 "GET /api/usuarios/11/ HTTP/1.1" 400 74760
+WARNING 2025-11-18 08:41:05,295 basehttp 21568 7712 "GET /api/lembrete-devolucao/ HTTP/1.1" 400 74844
+WARNING 2025-11-18 08:41:05,313 basehttp 21568 14876 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 400 74925
+WARNING 2025-11-18 08:41:05,325 basehttp 21568 20796 "GET /api/alertas-sistema/ HTTP/1.1" 400 74810
+INFO 2025-11-18 08:41:15,924 autoreload 22976 22884 Watching for file changes with StatReloader
+INFO 2025-11-18 08:41:54,559 basehttp 22976 16240 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-18 08:41:54,583 views 22976 16240 === LOGIN ATTEMPT ===
+INFO 2025-11-18 08:41:54,585 views 22976 16240 Dados recebidos: {'email': 'guilherme1920@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+ERROR 2025-11-18 08:41:56,238 views 22976 16240 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-18 08:41:56,245 log 22976 16240 Unauthorized: /api/token/
+WARNING 2025-11-18 08:41:56,248 basehttp 22976 16240 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-18 08:41:59,443 views 22976 16240 === LOGIN ATTEMPT ===
+INFO 2025-11-18 08:41:59,444 views 22976 16240 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-18 08:42:01,264 views 22976 16240 Login bem-sucedido
+INFO 2025-11-18 08:42:01,268 basehttp 22976 16240 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-18 08:42:01,292 basehttp 22976 16240 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-18 08:42:01,531 basehttp 22976 30404 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-18 08:42:01,546 basehttp 22976 16240 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-18 08:42:01,546 basehttp 22976 28708 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-18 08:42:01,593 basehttp 22976 30404 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 08:42:01,599 basehttp 22976 30404 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-18 08:42:01,647 basehttp 22976 30404 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 08:42:05,976 basehttp 22976 30404 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 08:42:10,052 basehttp 22976 30404 "GET /api/alertas-sistema/ HTTP/1.1" 200 77823
+INFO 2025-11-18 08:42:29,178 utils 22976 30404 Email enviado para g60511925@gmail.com
+INFO 2025-11-18 08:42:33,242 utils 22976 30404 Email enviado para contamax20203@gmail.com
+INFO 2025-11-18 08:42:37,747 utils 22976 30404 Email enviado para aluno@teste.com
+INFO 2025-11-18 08:42:43,907 utils 22976 30404 Email enviado para professor@teste.com
+INFO 2025-11-18 08:42:49,332 utils 22976 30404 Email enviado para lluizinha531@gmail.com
+INFO 2025-11-18 08:42:53,574 utils 22976 30404 Email enviado para gui742585@gmail.com
+INFO 2025-11-18 08:42:53,601 utils 22976 30404 Notificação do alerta 's' enviada para 6 usuários.
+INFO 2025-11-18 08:42:53,606 basehttp 22976 30404 - Broken pipe from ('172.20.10.4', 52458)
+INFO 2025-11-18 08:43:05,758 basehttp 22976 28708 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 08:43:13,136 basehttp 22976 28708 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-11-18 08:43:13,307 basehttp 22976 28708 "GET /api/usuarios/ HTTP/1.1" 200 3516
+INFO 2025-11-18 08:44:28,329 autoreload 22976 22884 C:\Users\GuilhermeGoncalvesDa.AzureAD\Documents\GitHub\biblioteca-brivo\brivo\utils.py changed, reloading.
+INFO 2025-11-18 08:44:30,462 autoreload 25972 9944 Watching for file changes with StatReloader
+INFO 2025-11-18 08:45:08,114 basehttp 25972 26504 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 08:45:15,249 basehttp 25972 26504 "GET /api/alertas-sistema/ HTTP/1.1" 200 78080
+INFO 2025-11-18 08:45:47,193 utils 25972 26504 Email enviado para guilherme1920x@gmail.com
+INFO 2025-11-18 08:45:52,327 utils 25972 26504 Email enviado para contaescola338@gmail.com
+INFO 2025-11-18 08:45:58,597 utils 25972 26504 Email enviado para guizin2339@gmail.com
+INFO 2025-11-18 08:46:03,081 utils 25972 26504 Email enviado para g60511925@gmail.com
+INFO 2025-11-18 08:46:08,695 utils 25972 26504 Email enviado para contamax20203@gmail.com
+INFO 2025-11-18 08:46:15,910 utils 25972 26504 Email enviado para needblox.123@gmail.com
+INFO 2025-11-18 08:46:20,597 utils 25972 26504 Email enviado para gustavo.cazelatto@gmail.com
+INFO 2025-11-18 08:46:26,545 utils 25972 26504 Email enviado para failuves@gail.com
+INFO 2025-11-18 08:46:35,046 utils 25972 26504 Email enviado para fernandozaninigalletti@gmai.com
+INFO 2025-11-18 08:46:41,053 utils 25972 26504 Email enviado para fernandozaninigalletti@gmail.com
+INFO 2025-11-18 08:46:46,144 utils 25972 26504 Email enviado para aluno@teste.com
+INFO 2025-11-18 08:46:51,844 utils 25972 26504 Email enviado para professor@teste.com
+INFO 2025-11-18 08:46:57,321 utils 25972 26504 Email enviado para admin@teste.com
+ERROR 2025-11-18 08:52:44,272 utils 25972 26504 Falha ao enviar email para failure@gmail.com: Connection unexpectedly closed
+ERROR 2025-11-18 08:53:05,399 utils 25972 26504 Falha ao enviar email para brunocor3iab20@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:53:26,478 utils 25972 26504 Falha ao enviar email para brunocorreiab20@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:53:47,537 utils 25972 26504 Falha ao enviar email para lluizinha531@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:54:08,586 utils 25972 26504 Falha ao enviar email para gustavocazelatto@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:54:29,667 utils 25972 26504 Falha ao enviar email para gufuzumafu@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+ERROR 2025-11-18 08:54:50,734 utils 25972 26504 Falha ao enviar email para gui742585@gmail.com: [WinError 10060] Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu
+INFO 2025-11-18 08:54:50,755 utils 25972 26504 Notificação do alerta 'teste' enviada para 13 usuários.
+INFO 2025-11-18 08:54:50,761 basehttp 25972 26504 - Broken pipe from ('172.20.10.4', 52602)
+INFO 2025-11-18 09:09:39,565 autoreload 15972 7408 Watching for file changes with StatReloader
+INFO 2025-11-18 09:10:54,654 basehttp 15972 5528 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+ERROR 2025-11-18 09:10:54,852 log 15972 5528 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 09:10:54,865 basehttp 15972 5528 "GET /api/usuarios/11/ HTTP/1.1" 400 74773
+INFO 2025-11-18 09:11:16,547 basehttp 15972 18708 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-18 09:11:16,735 log 15972 18708 Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.151:8000'. You may need to add '172.30.1.151' to ALLOWED_HOSTS.
+WARNING 2025-11-18 09:11:16,823 basehttp 15972 18708 "POST /api/token/ HTTP/1.1" 400 74585
+INFO 2025-11-18 09:11:34,518 autoreload 7712 8572 Watching for file changes with StatReloader
+INFO 2025-11-18 09:11:35,516 views 7712 25836 === LOGIN ATTEMPT ===
+INFO 2025-11-18 09:11:35,518 views 7712 25836 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-18 09:11:36,925 views 7712 25836 Login bem-sucedido
+INFO 2025-11-18 09:11:36,928 basehttp 7712 25836 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-18 09:11:36,946 basehttp 7712 30508 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-18 09:11:37,249 basehttp 7712 30508 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-18 09:11:37,263 basehttp 7712 30508 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-18 09:11:37,276 basehttp 7712 11444 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-18 09:11:37,317 basehttp 7712 11444 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-18 09:11:37,342 basehttp 7712 6664 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-18 09:11:37,399 basehttp 7712 30508 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 09:11:37,414 basehttp 7712 30508 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-18 09:11:37,524 basehttp 7712 30508 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 09:11:50,526 basehttp 7712 30508 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-18 09:11:50,570 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:11:52,423 basehttp 7712 30508 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-18 09:11:52,540 basehttp 7712 30508 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-18 09:11:57,823 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:13:03,683 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:13:10,515 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:14:12,780 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:14:22,483 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:15:12,191 basehttp 7712 30508 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:22:43,286 basehttp 7712 25404 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:23:31,443 basehttp 7712 25404 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:25:23,195 basehttp 7712 25404 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-18 09:26:17,010 basehttp 7712 25404 "OPTIONS /api/livros/231/ HTTP/1.1" 200 0
+INFO 2025-11-18 09:26:17,055 basehttp 7712 25404 "GET /api/livros/231/ HTTP/1.1" 200 673
+INFO 2025-11-18 09:26:17,520 basehttp 7712 25404 "GET /api/livros/ HTTP/1.1" 200 198542

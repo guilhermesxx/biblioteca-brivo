@@ -23,41 +23,22 @@ class AlertaSistemaSerializer(serializers.ModelSerializer):
         data_publicacao = data.get('data_publicacao')
         expira_em = data.get('expira_em')
 
-        # Se for uma notificação pública, data_publicacao deve ser fornecida
+        # Se for público e não tiver data_publicacao, define como agora
         if visibilidade == 'publico' and not data_publicacao:
-            raise serializers.ValidationError(
-                {"data_publicacao": "A data de publicação é obrigatória para notificações públicas."}
-            )
+            data['data_publicacao'] = timezone.now()
 
-        # Se data_publicacao for fornecida, ela não pode ser no passado para novas criações
-        # (para atualizações, pode ser que já tenha passado, o que é normal)
-        if data_publicacao and self.instance is None: # Apenas para novas criações
-            if data_publicacao < timezone.now():
-                raise serializers.ValidationError(
-                    {"data_publicacao": "A data de publicação não pode ser no passado para novas notificações."}
-                )
-
-        # Se expira_em for fornecida, ela não pode ser anterior a data_publicacao (se data_publicacao existir)
+        # Se expira_em for fornecida, ela não pode ser anterior a data_publicacao
         if expira_em and data_publicacao:
             if expira_em <= data_publicacao:
                 raise serializers.ValidationError(
                     {"expira_em": "A data de expiração deve ser posterior à data de publicação."}
                 )
 
-        # Se expira_em for fornecida, ela não pode ser no passado (a menos que já esteja expirada)
-        if expira_em and self.instance is None: # Apenas para novas criações
-            if expira_em < timezone.now():
-                raise serializers.ValidationError(
-                    {"expira_em": "A data de expiração não pode ser no passado para novas notificações."}
-                )
-
         return data
 
     def create(self, validated_data):
-        # O campo email_enviado pode ser definido pelo frontend para indicar se deve enviar notificação
-        # Mas inicialmente sempre começa como False, sendo atualizado após o envio bem-sucedido
-        should_send = validated_data.get('email_enviado', False)
-        validated_data['email_enviado'] = False # Sempre começa como False
+        validated_data.pop('email_enviado', None)
+        validated_data['email_enviado'] = False
         return super().create(validated_data)
 
     def update(self, instance, validated_data):

@@ -1108,18 +1108,14 @@ class AlertaSistemaViewSet(viewsets.ModelViewSet):
         return queryset
 
     def perform_create(self, serializer):
-        """
-        Cria um novo alerta, registra a ação e, se for público,
-        dispara a notificação por email automaticamente.
-        """
         alerta = serializer.save()
         registrar_acao(self.request.user, alerta, 'CRIACAO', descricao=f'Alerta "{alerta.titulo}" criado.')
 
-        # [INTEGRAÇÃO BACKEND] Disparar envio de e-mail para alertas públicos se solicitado
-        enviar_email_solicitado = self.request.data.get('enviar_email', False)
-        if alerta.visibilidade == 'publico' and enviar_email_solicitado:
-            enviar_notificacao_alerta_publico(alerta.id)
-            print(f"Disparando notificação para o alerta público: {alerta.titulo}")
+        if alerta.visibilidade == 'publico':
+            try:
+                enviar_notificacao_alerta_publico(alerta.id)
+            except:
+                pass
 
 
     def perform_update(self, serializer):
@@ -1127,26 +1123,25 @@ class AlertaSistemaViewSet(viewsets.ModelViewSet):
         Atualiza um alerta existente, registra a ação e, se houver mudança relevante
         para alertas públicos, dispara a notificação.
         """
-        # Obter o estado original do objeto antes da atualização
         original_alerta = self.get_object()
-
-        alerta = serializer.save() # Salva as alterações
+        alerta = serializer.save()
         registrar_acao(self.request.user, alerta, 'EDICAO', descricao=f'Alerta "{alerta.titulo}" editado.')
 
-        # [INTEGRAÇÃO BACKEND] Lógica para disparar envio de e-mail/notificação em caso de atualização
         should_send_email = False
-
-        # Cenário 1: Alerta se tornou público e ainda não foi enviado
+        
         if (original_alerta.visibilidade == 'admin_only' and alerta.visibilidade == 'publico' and not alerta.email_enviado):
             should_send_email = True
-        # Cenário 2: Alerta já era público e foi solicitado reenvio
+        
         enviar_email_solicitado = self.request.data.get('enviar_email', False)
         if (alerta.visibilidade == 'publico' and enviar_email_solicitado):
             should_send_email = True
 
         if should_send_email:
-            enviar_notificacao_alerta_publico(alerta.id)
-            print(f"Disparando notificação para o alerta público (atualizado): {alerta.titulo}")
+            try:
+                enviar_notificacao_alerta_publico(alerta.id)
+                logger.info(f"Email de alerta público reenviado: {alerta.titulo}")
+            except Exception as e:
+                logger.error(f"Erro ao reenviar email do alerta: {str(e)}")
 
 
     def perform_destroy(self, instance):

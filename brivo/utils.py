@@ -36,18 +36,24 @@ def registrar_acao(usuario, objeto, acao, descricao=''):
         logger.error(f"Erro ao registrar ação para o objeto {objeto.__class__.__name__} (ID: {objeto.id}): {e}")
 
 
-def enviar_email(destinatario, assunto, mensagem):
+def enviar_email(destinatario, assunto, mensagem, html=False):
     """
     Envia um e-mail usando o backend configurado.
     """
     try:
-        send_mail(
+        from django.core.mail import EmailMessage
+        
+        email = EmailMessage(
             subject=assunto,
-            message=mensagem,
+            body=mensagem,
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[destinatario],
-            fail_silently=False,
+            to=[destinatario],
         )
+        
+        if html:
+            email.content_subtype = 'html'
+        
+        email.send(fail_silently=False)
         logger.info(f"Email enviado para {destinatario}")
         return True
     except Exception as e:
@@ -143,56 +149,44 @@ def enviar_notificacao_alerta_publico(alerta_id):
         logger.error(f"AlertaSistema com ID {alerta_id} não encontrado para envio de notificação.")
         return
 
-    # Só envia se o alerta for público e ainda não tiver sido enviado
-    if alerta.visibilidade == 'publico' and not alerta.email_enviado:
-        # Filtra usuários que são alunos ou professores e estão ativos
-        # Exclui administradores, pois eles gerenciam os alertas
-        usuarios_para_notificar = Usuario.objects.filter(
-            ativo=True,
-            tipo__in=['aluno', 'professor']
-        )
+    if alerta.visibilidade != 'publico':
+        logger.info(f"Alerta {alerta_id} não é público, email não será enviado.")
+        return
 
-        assunto = f"Alerta da Biblioteca: {alerta.titulo}"
-        mensagem = f"""
-Ola!
+    usuarios_para_notificar = Usuario.objects.filter(ativo=True)
 
-A Biblioteca Escolar tem um novo alerta para voce:
+    if not usuarios_para_notificar.exists():
+        logger.warning("Nenhum usuário ativo encontrado para enviar notificação.")
+        return
 
-Titulo: {alerta.titulo}
-Mensagem: {alerta.mensagem}
+    assunto = f"[Biblioteca Brivo] {alerta.titulo}"
+    
+    emails_enviados = 0
+    for usuario in usuarios_para_notificar:
+        if usuario.email:
+            expira_texto = f"\nExpira em: {alerta.expira_em.strftime('%d/%m/%Y às %H:%M')}" if alerta.expira_em else ''
+            
+            mensagem = f"""
+Olá!
 
-Tipo de Alerta: {alerta.get_tipo_display()}
-Data de Publicacao: {alerta.data_publicacao.strftime('%d/%m/%Y %H:%M')}
-{'Expira em: ' + alerta.expira_em.strftime('%d/%m/%Y %H:%M') if alerta.expira_em else ''}
+A Biblioteca tem um novo alerta:
 
-Por favor, verifique o sistema para mais detalhes.
+Título: {alerta.titulo}
+Tipo: {alerta.get_tipo_display()}
 
-Atenciosamente,
-Sistema de Biblioteca Escolar
+{alerta.mensagem}
+{expira_texto}
+
+Biblioteca Brivo
 """
-        emails_enviados_com_sucesso = []
-        emails_falharam = []
-        
-        for usuario in usuarios_para_notificar:
+            
             if enviar_email(usuario.email, assunto, mensagem):
-                emails_enviados_com_sucesso.append(usuario.email)
-            else:
-                emails_falharam.append(usuario.email)
-                logger.warning(f"Falha ao enviar e-mail de alerta para {usuario.email} (Alerta: {alerta.titulo}).")
-
-        # Sempre marca como enviado para não bloquear o sistema
-        total_usuarios = len(usuarios_para_notificar)
-        alerta.email_enviado = True
-        alerta.save(update_fields=['email_enviado'])
-        
-        if len(emails_enviados_com_sucesso) > 0:
-            registrar_acao(None, alerta, 'NOTIFICACAO', 
-                         descricao=f'E-mail de alerta público "{alerta.titulo}" enviado para {len(emails_enviados_com_sucesso)}/{total_usuarios} usuários.')
-            logger.info(f"Alerta '{alerta.titulo}' processado. Sucesso: {len(emails_enviados_com_sucesso)}/{total_usuarios}")
-        else:
-            registrar_acao(None, alerta, 'NOTIFICACAO', 
-                         descricao=f'Alerta público "{alerta.titulo}" criado (emails falharam por problema de conexão).')
-            logger.warning(f"Alerta '{alerta.titulo}' criado mas emails falharam. Problema de conexão SMTP.")
+                emails_enviados += 1
+    
+    alerta.email_enviado = True
+    alerta.save(update_fields=['email_enviado'])
+    
+    logger.info(f"Notificação do alerta '{alerta.titulo}' enviada para {emails_enviados} usuários.")
 
 
 # =============================================================================
