@@ -193,16 +193,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # -----------------------------------------------------------------------------
 # Configurações de envio de e-mail
 # -----------------------------------------------------------------------------
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_TIMEOUT = 30
-EMAIL_HOST_USER = ' '
-EMAIL_HOST_PASSWORD = 'cqtbqjyaktaiztzi'
-DEFAULT_FROM_EMAIL = 'Biblioteca Escolar <brivo1652@gmail.com>'
+EMAIL_HOST_USER = 'bibliotecabrivo@gmail.com'
+EMAIL_HOST_PASSWORD = 'hpid whck cvdh livf'
+DEFAULT_FROM_EMAIL = 'Biblioteca Escolar <bibliotecabrivo@gmail.com>'
 
 # -----------------------------------------------------------------------------
 # Configuração de Logging (permanece a mesma, é uma boa configuração)

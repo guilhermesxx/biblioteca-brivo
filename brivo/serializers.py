@@ -202,7 +202,22 @@ class ReservaSerializer(serializers.ModelSerializer):
             # Caso contrário, mantém o status padrão 'na_fila'
             validated_data['status'] = 'na_fila'
 
-        return super().create(validated_data)
+        reserva = super().create(validated_data)
+        
+        # ENVIAR EMAILS AUTOMATICAMENTE CONFORME O STATUS DA RESERVA
+        try:
+            from .utils import enviar_email_confirmacao_reserva, enviar_email_entrada_fila
+            
+            if reserva.status == 'aguardando_retirada':
+                enviar_email_confirmacao_reserva(reserva)
+            elif reserva.status == 'na_fila':
+                enviar_email_entrada_fila(reserva)
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.warning(f"Email de reserva nao enviado para {reserva.aluno.email}: {str(e)}")
+        
+        return reserva
 
 # Serializers para os Usuários
 class UsuarioSerializer(serializers.ModelSerializer):
@@ -271,6 +286,16 @@ class UsuarioSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         senha = validated_data.pop('senha')
         usuario = Usuario.objects.create_user(password=senha, **validated_data)
+        
+        # ENVIAR EMAIL DE BOAS-VINDAS AUTOMATICAMENTE
+        try:
+            from .utils import enviar_email_boas_vindas
+            enviar_email_boas_vindas(usuario)
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.warning(f"Email de boas-vindas nao enviado para {usuario.email}: {str(e)}")
+        
         return usuario
 
     def update(self, instance, validated_data):

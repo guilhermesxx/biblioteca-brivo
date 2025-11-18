@@ -102,6 +102,17 @@ class UsuarioViewSet(viewsets.ModelViewSet):
         try:
             response = super().create(request, *args, **kwargs)
             logger.info(f"Usuario criado com sucesso: {response.data}")
+            
+            # ENVIAR EMAIL DE BOAS-VINDAS AUTOMATICAMENTE
+            try:
+                from .utils import enviar_email_boas_vindas
+                from .models import Usuario
+                usuario_criado = Usuario.objects.get(id=response.data['id'])
+                enviar_email_boas_vindas(usuario_criado)
+                logger.info(f"Email de boas-vindas enviado para {usuario_criado.email}")
+            except Exception as e:
+                logger.warning(f"Email de boas-vindas nao enviado: {str(e)}")
+            
             return response
         except Exception as e:
             logger.error(f"Erro ao criar usuario: {str(e)}")

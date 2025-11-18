@@ -16631,3 +16631,214 @@ INFO 2025-11-14 11:53:15,800 basehttp 3208 4456 "GET /api/avisar-reservas-expira
 INFO 2025-11-14 11:53:15,820 basehttp 3208 7620 "GET /api/dashboard/ HTTP/1.1" 200 621
 INFO 2025-11-14 11:53:15,826 basehttp 3208 7620 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
 INFO 2025-11-14 11:53:15,868 basehttp 3208 7620 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-17 21:04:50,997 autoreload 36952 6072 Watching for file changes with StatReloader
+INFO 2025-11-17 21:13:47,576 basehttp 36952 12664 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-11-17 21:13:47,943 log 36952 12664 Internal Server Error: /api/token/refresh/
+Traceback (most recent call last):
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\serializers.py", line 447, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\serializers.py", line 141, in validate
+    refresh.outstand()
+  File "C:\Users\minha\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework_simplejwt\tokens.py", line 222, in outstand
+    return OutstandingToken.objects.get_or_create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'OutstandingToken' has no attribute 'objects'
+ERROR 2025-11-17 21:13:47,952 basehttp 36952 12664 "POST /api/token/refresh/ HTTP/1.1" 500 121567
+INFO 2025-11-17 21:14:04,781 basehttp 36952 12664 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:04,785 views 36952 12664 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:14:04,790 views 36952 12664 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-17 21:14:05,478 views 36952 12664 Login bem-sucedido
+INFO 2025-11-17 21:14:05,478 basehttp 36952 12664 "POST /api/token/ HTTP/1.1" 200 590
+INFO 2025-11-17 21:14:05,484 basehttp 36952 12664 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:05,499 basehttp 36952 12664 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-17 21:14:05,575 basehttp 36952 12664 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:05,583 basehttp 36952 12664 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:05,584 basehttp 36952 35460 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:05,612 basehttp 36952 12664 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-17 21:14:05,643 basehttp 36952 39132 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-17 21:14:05,664 basehttp 36952 35460 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-17 21:14:05,679 basehttp 36952 35460 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:05,728 basehttp 36952 35460 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-17 21:14:13,879 basehttp 36952 35460 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-17 21:14:17,756 basehttp 36952 35460 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:17,792 basehttp 36952 35460 "GET /api/livros/ HTTP/1.1" 200 198245
+INFO 2025-11-17 21:14:33,328 basehttp 36952 35460 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:33,338 basehttp 36952 35460 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-17 21:14:33,408 basehttp 36952 35460 "POST /api/livros/ HTTP/1.1" 201 296
+INFO 2025-11-17 21:14:33,453 basehttp 36952 35460 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:14:36,583 basehttp 36952 35460 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-17 21:14:38,563 basehttp 36952 35460 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:38,626 basehttp 36952 35460 "GET /api/usuarios/ HTTP/1.1" 200 3377
+INFO 2025-11-17 21:14:46,485 basehttp 36952 35460 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:46,495 basehttp 36952 35460 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 547
+INFO 2025-11-17 21:14:46,520 basehttp 36952 35460 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-11-17 21:14:46,541 basehttp 36952 35460 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-11-17 21:14:59,219 views 36952 35460 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:14:59,220 views 36952 35460 Dados recebidos: {'email': 'contamax20203@gmail.com', 'password': 'BRITO@12', 'tipo': 'aluno'}
+ERROR 2025-11-17 21:15:00,415 views 36952 35460 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-17 21:15:00,418 log 36952 35460 Unauthorized: /api/token/
+WARNING 2025-11-17 21:15:00,418 basehttp 36952 35460 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-17 21:15:05,839 views 36952 35460 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:15:05,840 views 36952 35460 Dados recebidos: {'email': 'contamax20203@gmail.com', 'password': 'brito@123', 'tipo': 'aluno'}
+ERROR 2025-11-17 21:15:06,436 views 36952 35460 Erro no login: Tipo de usuário inválido para o login. Você tentou logar como 'aluno', mas o usuário é 'professor'.
+WARNING 2025-11-17 21:15:06,441 log 36952 35460 Unauthorized: /api/token/
+WARNING 2025-11-17 21:15:06,443 basehttp 36952 35460 "POST /api/token/ HTTP/1.1" 401 117
+INFO 2025-11-17 21:15:11,684 views 36952 35460 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:15:11,686 views 36952 35460 Dados recebidos: {'email': 'contamax20203@gmail.com', 'password': 'Brito@123', 'tipo': 'aluno'}
+ERROR 2025-11-17 21:15:12,994 views 36952 35460 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-17 21:15:12,995 log 36952 35460 Unauthorized: /api/token/
+WARNING 2025-11-17 21:15:13,000 basehttp 36952 35460 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-17 21:15:17,972 views 36952 35460 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:15:17,972 views 36952 35460 Dados recebidos: {'email': 'contamax20203@gmail.com', 'password': 'Gui162020@', 'tipo': 'aluno'}
+ERROR 2025-11-17 21:15:19,087 views 36952 35460 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-17 21:15:19,090 log 36952 35460 Unauthorized: /api/token/
+WARNING 2025-11-17 21:15:19,092 basehttp 36952 35460 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-17 21:15:28,061 views 36952 35460 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:15:28,064 views 36952 35460 Dados recebidos: {'email': 'contamax20203@gmail.com', 'password': 'Brito@123', 'tipo': 'aluno'}
+ERROR 2025-11-17 21:15:29,239 views 36952 35460 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-17 21:15:29,240 log 36952 35460 Unauthorized: /api/token/
+WARNING 2025-11-17 21:15:29,241 basehttp 36952 35460 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-17 21:15:33,361 views 36952 35460 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:15:33,363 views 36952 35460 Dados recebidos: {'email': 'contamax20203@gmail.com', 'password': 'brito@123', 'tipo': 'aluno'}
+ERROR 2025-11-17 21:15:33,964 views 36952 35460 Erro no login: Tipo de usuário inválido para o login. Você tentou logar como 'aluno', mas o usuário é 'professor'.
+WARNING 2025-11-17 21:15:33,966 log 36952 35460 Unauthorized: /api/token/
+WARNING 2025-11-17 21:15:33,973 basehttp 36952 35460 "POST /api/token/ HTTP/1.1" 401 117
+INFO 2025-11-17 21:17:00,425 views 36952 33520 === CRIAR USUARIO ===
+INFO 2025-11-17 21:17:00,426 views 36952 33520 Dados recebidos: {'nome': 'Guillherme', 'email': 'gui742585@gmail.com', 'ra': '3221434231232', 'turma': '3ds', 'senha': 'brito@123', 'tipo': 'aluno'}
+INFO 2025-11-17 21:17:00,426 views 36952 33520 Content-Type: application/json
+INFO 2025-11-17 21:17:00,432 views 36952 33520 Method: POST
+INFO 2025-11-17 21:17:01,307 views 36952 33520 Usuario criado com sucesso: {'id': 52, 'ra': '3221434231232', 'nome': 'Guillherme', 'email': 'gui742585@gmail.com', 'username': None, 'turma': '3ds', 'tipo': 'aluno', 'ativo': True}
+INFO 2025-11-17 21:17:01,308 basehttp 36952 33520 "POST /api/usuarios/ HTTP/1.1" 201 138
+INFO 2025-11-17 21:17:01,313 views 36952 33520 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:17:01,315 views 36952 33520 Dados recebidos: {'email': 'gui742585@gmail.com', 'password': 'brito@123', 'tipo': 'aluno'}
+INFO 2025-11-17 21:17:01,937 views 36952 33520 Login bem-sucedido
+INFO 2025-11-17 21:17:01,939 basehttp 36952 33520 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-17 21:17:01,943 basehttp 36952 33520 "OPTIONS /api/usuarios/52/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:17:01,953 basehttp 36952 33520 "GET /api/usuarios/52/ HTTP/1.1" 200 138
+WARNING 2025-11-17 21:17:02,029 log 36952 33520 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-11-17 21:17:02,030 basehttp 36952 33520 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+INFO 2025-11-17 21:17:02,034 basehttp 36952 33520 "OPTIONS /api/user-stats/ HTTP/1.1" 200 0
+WARNING 2025-11-17 21:17:02,041 log 36952 20772 Forbidden: /api/avisar-reservas-expirando/
+INFO 2025-11-17 21:17:02,041 basehttp 36952 39132 "OPTIONS /api/livros/?page_size=6 HTTP/1.1" 200 0
+INFO 2025-11-17 21:17:02,044 basehttp 36952 39140 "OPTIONS /api/reservas/?aluno__id=52&status=aguardando_retirada HTTP/1.1" 200 0
+INFO 2025-11-17 21:17:02,047 basehttp 36952 32160 "OPTIONS /api/emprestimos/?usuario__id=52&devolvido=false HTTP/1.1" 200 0
+WARNING 2025-11-17 21:17:02,048 basehttp 36952 20772 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-11-17 21:17:02,076 basehttp 36952 33520 "GET /api/user-stats/ HTTP/1.1" 200 82
+INFO 2025-11-17 21:17:02,093 basehttp 36952 39140 "GET /api/emprestimos/?usuario__id=52&devolvido=false HTTP/1.1" 200 52
+INFO 2025-11-17 21:17:02,106 basehttp 36952 32160 "GET /api/reservas/?aluno__id=52&status=aguardando_retirada HTTP/1.1" 200 52
+INFO 2025-11-17 21:17:02,113 basehttp 36952 39132 "GET /api/livros/?page_size=6 HTTP/1.1" 200 198542
+INFO 2025-11-17 21:27:52,092 autoreload 36952 6072 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\views.py changed, reloading.
+INFO 2025-11-17 21:27:53,704 autoreload 23344 40092 Watching for file changes with StatReloader
+INFO 2025-11-17 21:28:18,471 autoreload 23344 40092 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-11-17 21:28:19,395 autoreload 39872 5960 Watching for file changes with StatReloader
+INFO 2025-11-17 21:28:27,308 autoreload 39872 5960 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\serializers.py changed, reloading.
+INFO 2025-11-17 21:28:30,866 autoreload 21800 38112 Watching for file changes with StatReloader
+INFO 2025-11-17 21:28:31,325 basehttp 21800 12040 "OPTIONS /api/livros/237/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:28:31,378 basehttp 21800 12040 "GET /api/livros/237/ HTTP/1.1" 200 296
+INFO 2025-11-17 21:28:31,437 basehttp 21800 12040 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:28:40,910 autoreload 21800 38112 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\models.py changed, reloading.
+INFO 2025-11-17 21:28:42,392 autoreload 41412 41416 Watching for file changes with StatReloader
+INFO 2025-11-17 21:28:47,437 autoreload 41412 41416 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\models.py changed, reloading.
+INFO 2025-11-17 21:28:48,873 autoreload 41744 41748 Watching for file changes with StatReloader
+INFO 2025-11-17 21:29:00,020 autoreload 41744 41748 C:\Users\minha\OneDrive\Documentos\biblioteca-brivo\brivo\models.py changed, reloading.
+INFO 2025-11-17 21:29:01,315 autoreload 36560 39636 Watching for file changes with StatReloader
+INFO 2025-11-17 21:29:36,533 basehttp 36560 20788 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:29:39,581 utils 36560 20788 Email enviado para gui742585@gmail.com
+INFO 2025-11-17 21:29:42,596 utils 36560 20788 Email enviado para gui742585@gmail.com
+INFO 2025-11-17 21:29:42,612 basehttp 36560 20788 "POST /api/reservas/ HTTP/1.1" 201 257
+INFO 2025-11-17 21:29:42,761 basehttp 36560 20788 "GET /api/user-stats/ HTTP/1.1" 200 82
+INFO 2025-11-17 21:29:42,773 basehttp 36560 29964 "GET /api/emprestimos/?usuario__id=52&devolvido=false HTTP/1.1" 200 52
+INFO 2025-11-17 21:29:42,776 basehttp 36560 21800 "GET /api/reservas/?aluno__id=52&status=aguardando_retirada HTTP/1.1" 200 309
+INFO 2025-11-17 21:29:42,801 basehttp 36560 41600 "GET /api/livros/?page_size=6 HTTP/1.1" 200 198542
+INFO 2025-11-17 21:35:07,954 basehttp 36560 30152 "GET /api/usuarios/52/ HTTP/1.1" 200 138
+WARNING 2025-11-17 21:35:08,273 log 36560 30152 Forbidden: /api/lembrete-devolucao/
+WARNING 2025-11-17 21:35:08,274 basehttp 36560 30152 "GET /api/lembrete-devolucao/ HTTP/1.1" 403 65
+WARNING 2025-11-17 21:35:08,289 log 36560 30152 Forbidden: /api/avisar-reservas-expirando/
+WARNING 2025-11-17 21:35:08,290 basehttp 36560 30152 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 403 65
+INFO 2025-11-17 21:35:08,307 basehttp 36560 30152 "GET /api/user-stats/ HTTP/1.1" 200 82
+INFO 2025-11-17 21:35:08,363 basehttp 36560 30152 "GET /api/livros/?page_size=6 HTTP/1.1" 200 198542
+INFO 2025-11-17 21:35:08,377 basehttp 36560 42412 "GET /api/reservas/?aluno__id=52&status=aguardando_retirada HTTP/1.1" 200 309
+INFO 2025-11-17 21:35:08,389 basehttp 36560 42412 "GET /api/emprestimos/?usuario__id=52&devolvido=false HTTP/1.1" 200 52
+INFO 2025-11-17 21:36:14,137 basehttp 36560 42412 "GET /api/livros/237/ HTTP/1.1" 200 296
+INFO 2025-11-17 21:36:14,216 basehttp 36560 42412 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:36:16,271 basehttp 36560 40620 "GET /api/emprestimos/?usuario__id=52&devolvido=false HTTP/1.1" 200 52
+INFO 2025-11-17 21:36:16,281 basehttp 36560 18164 "GET /api/reservas/?aluno__id=52&status=aguardando_retirada HTTP/1.1" 200 309
+INFO 2025-11-17 21:36:16,283 basehttp 36560 42412 "GET /api/user-stats/ HTTP/1.1" 200 82
+INFO 2025-11-17 21:36:16,305 basehttp 36560 30152 "GET /api/livros/?page_size=6 HTTP/1.1" 200 198542
+INFO 2025-11-17 21:36:21,339 basehttp 36560 30152 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 52
+INFO 2025-11-17 21:36:21,351 basehttp 36560 30152 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 309
+INFO 2025-11-17 21:37:00,424 views 36560 30152 === LOGIN ATTEMPT ===
+INFO 2025-11-17 21:37:00,425 views 36560 30152 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-17 21:37:00,943 views 36560 30152 Login bem-sucedido
+INFO 2025-11-17 21:37:00,946 basehttp 36560 30152 "POST /api/token/ HTTP/1.1" 200 590
+INFO 2025-11-17 21:37:00,954 basehttp 36560 30152 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-17 21:37:01,025 basehttp 36560 30152 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-17 21:37:01,055 basehttp 36560 18164 "GET /api/dashboard/ HTTP/1.1" 200 712
+INFO 2025-11-17 21:37:01,093 basehttp 36560 18164 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-17 21:37:03,994 utils 36560 42412 Email enviado para gui742585@gmail.com
+INFO 2025-11-17 21:37:04,036 basehttp 36560 42412 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-17 21:37:08,837 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 712
+INFO 2025-11-17 21:37:17,376 basehttp 36560 42412 "GET /api/reservas/ HTTP/1.1" 200 339
+INFO 2025-11-17 21:37:19,813 basehttp 36560 42412 "OPTIONS /api/reservas/17/efetivar-emprestimo/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:37:23,333 utils 36560 42412 Email enviado para gui742585@gmail.com
+INFO 2025-11-17 21:37:23,356 basehttp 36560 42412 "POST /api/reservas/17/efetivar-emprestimo/ HTTP/1.1" 200 85
+INFO 2025-11-17 21:37:23,373 basehttp 36560 42412 "GET /api/reservas/ HTTP/1.1" 200 330
+INFO 2025-11-17 21:37:23,377 basehttp 36560 42412 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:37:23,396 basehttp 36560 42412 "GET /api/emprestimos/ HTTP/1.1" 200 883
+INFO 2025-11-17 21:38:29,062 basehttp 36560 42412 "GET /api/emprestimos/ HTTP/1.1" 200 883
+INFO 2025-11-17 21:38:29,067 basehttp 36560 42412 "OPTIONS /api/emprestimos/22/devolver/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:38:32,750 utils 36560 42412 Email enviado para gui742585@gmail.com
+WARNING 2025-11-17 21:38:32,809 views 36560 42412 Reserva associada não encontrada para empréstimo 22
+INFO 2025-11-17 21:38:32,812 basehttp 36560 42412 "POST /api/emprestimos/22/devolver/ HTTP/1.1" 200 43
+INFO 2025-11-17 21:38:32,831 basehttp 36560 42412 "GET /api/reservas/ HTTP/1.1" 200 329
+INFO 2025-11-17 21:38:51,685 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-17 21:38:53,723 basehttp 36560 42412 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:39:15,405 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-17 21:39:15,488 basehttp 36560 42412 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-17 21:39:19,711 basehttp 36560 42412 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:39:24,423 basehttp 36560 42412 "GET /api/livros/237/ HTTP/1.1" 200 296
+INFO 2025-11-17 21:39:24,485 basehttp 36560 42412 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:39:28,454 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-17 21:39:28,549 basehttp 36560 42412 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198542
+INFO 2025-11-17 21:39:30,386 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-17 21:39:35,314 basehttp 36560 42412 "GET /api/usuarios/ HTTP/1.1" 200 3516
+INFO 2025-11-17 21:39:40,471 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-17 21:39:47,975 basehttp 36560 42412 "GET /api/livros/ HTTP/1.1" 200 198542
+INFO 2025-11-17 21:41:02,760 basehttp 36560 42412 "GET /api/dashboard/ HTTP/1.1" 200 806
+INFO 2025-11-17 21:41:05,076 basehttp 36560 42412 "OPTIONS /api/alertas-sistema/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:41:05,131 basehttp 36560 42412 "GET /api/alertas-sistema/ HTTP/1.1" 200 77618
+INFO 2025-11-17 21:41:18,081 basehttp 36560 42412 "OPTIONS /api/alertas-sistema/235/ HTTP/1.1" 200 0
+INFO 2025-11-17 21:41:18,143 basehttp 36560 42412 "DELETE /api/alertas-sistema/235/ HTTP/1.1" 204 0
+INFO 2025-11-17 21:41:18,207 basehttp 36560 42412 "GET /api/alertas-sistema/ HTTP/1.1" 200 77305
+WARNING 2025-11-17 21:41:29,475 log 36560 42412 Bad Request: /api/alertas-sistema/
+WARNING 2025-11-17 21:41:29,476 basehttp 36560 42412 "POST /api/alertas-sistema/ HTTP/1.1" 400 98
+WARNING 2025-11-17 21:41:44,892 log 36560 42412 Bad Request: /api/alertas-sistema/
+WARNING 2025-11-17 21:41:44,895 basehttp 36560 42412 "POST /api/alertas-sistema/ HTTP/1.1" 400 98

@@ -385,6 +385,14 @@ class Emprestimo(models.Model):
                 raise ValidationError("Não há exemplares disponíveis para este livro.")
 
         super().save(*args, **kwargs) # Salva o empréstimo
+        
+        # ENVIAR EMAIL DE CONFIRMAÇÃO DE EMPRÉSTIMO PARA NOVOS EMPRÉSTIMOS
+        if is_new_loan:
+            try:
+                from .utils import enviar_email_emprestimo_confirmado
+                enviar_email_emprestimo_confirmado(self)
+            except Exception as e:
+                print(f"Email de empréstimo não enviado: {str(e)}")
 
         # Lógica para gerenciar a quantidade de livros e alertas APÓS o save
         if not is_new_loan: # Se é uma atualização de um empréstimo existente
@@ -399,6 +407,13 @@ class Emprestimo(models.Model):
                     self.data_devolucao = timezone.now()
                     # Salvar novamente para garantir que a data seja persistida
                     super().save(update_fields=['data_devolucao'])
+                
+                # ENVIAR EMAIL DE DEVOLUÇÃO CONFIRMADA
+                try:
+                    from .utils import enviar_email_devolucao_confirmada
+                    enviar_email_devolucao_confirmada(self)
+                except Exception as e:
+                    print(f"Email de devolução não enviado: {str(e)}")
                 
                 self._notificar_reserva() # Chama a notificação para o próximo da fila
                 
@@ -434,14 +449,16 @@ class Emprestimo(models.Model):
         ).order_by('data_reserva').first()
 
         if proxima_reserva:
-            # Marca a reserva como notificada. A notificação real (e-mail)
-            # deve ser disparada por um processo separado que verifica 'notificado_em'.
-            # O status da reserva permanece 'na_fila' até que o usuário agende a retirada.
+            # Marca a reserva como notificada e envia email
             proxima_reserva.notificado_em = timezone.now()
             proxima_reserva.save()
-            # Opcional: Chamar a função de utilidade para enviar o e-mail aqui
-            # from .utils import notificar_primeiro_da_fila
-            # notificar_primeiro_da_fila(proxima_reserva) # Descomente e implemente em utils.py se desejar notificação imediata
+            
+            # ENVIAR EMAIL DE "SUA VEZ NA FILA"
+            try:
+                from .utils import enviar_email_sua_vez_fila
+                enviar_email_sua_vez_fila(proxima_reserva)
+            except Exception as e:
+                print(f"Email de sua vez na fila não enviado: {str(e)}")
 
 
 # NOVO: Modelo para Alertas do Sistema
