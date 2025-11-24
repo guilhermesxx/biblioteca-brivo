@@ -17440,3 +17440,1148 @@ INFO 2025-11-23 01:17:06,360 basehttp 35864 31656 "GET /api/livros/ HTTP/1.1" 20
 INFO 2025-11-23 01:17:06,380 basehttp 35864 30884 "GET /api/livros/ HTTP/1.1" 200 198245
 INFO 2025-11-23 01:17:16,057 basehttp 35864 30884 "GET /api/reservas/?aluno=52 HTTP/1.1" 200 52
 INFO 2025-11-23 01:17:21,565 basehttp 35864 30884 "GET /api/reservas/?aluno=52 HTTP/1.1" 200 52
+INFO 2025-11-24 11:20:48,250 autoreload 18764 16676 Watching for file changes with StatReloader
+INFO 2025-11-24 11:22:59,600 basehttp 18764 20192 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-11-24 11:23:00,098 log 18764 20192 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:23:00,114 basehttp 18764 20192 "POST /api/token/refresh/ HTTP/1.1" 400 74844
+INFO 2025-11-24 11:38:16,697 basehttp 18764 17860 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-24 11:38:16,925 log 18764 17860 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:16,930 basehttp 18764 17860 "POST /api/token/ HTTP/1.1" 400 74663
+INFO 2025-11-24 11:38:18,623 basehttp 18764 13956 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-24 11:38:18,729 log 18764 13956 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:18,733 basehttp 18764 13956 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:21,195 log 18764 9764 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:21,203 basehttp 18764 9764 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:22,200 log 18764 7820 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:22,206 basehttp 18764 7820 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:22,802 log 18764 1180 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:22,807 basehttp 18764 1180 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:29,593 log 18764 3940 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:29,599 basehttp 18764 3940 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:30,243 log 18764 18732 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:30,247 basehttp 18764 18732 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:30,614 log 18764 13144 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:30,617 basehttp 18764 13144 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:30,994 log 18764 14832 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:30,999 basehttp 18764 14832 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:31,411 log 18764 16120 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:31,415 basehttp 18764 16120 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:31,733 log 18764 632 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:31,736 basehttp 18764 632 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:31,984 log 18764 10596 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:31,991 basehttp 18764 10596 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:32,125 log 18764 8008 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:32,131 basehttp 18764 8008 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:32,541 log 18764 3928 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:32,549 basehttp 18764 3928 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:32,938 log 18764 20056 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:32,945 basehttp 18764 20056 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:33,242 log 18764 18000 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:33,249 basehttp 18764 18000 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:33,290 log 18764 20300 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:33,297 basehttp 18764 20300 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:33,657 log 18764 21292 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:33,663 basehttp 18764 21292 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:34,061 log 18764 16920 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:34,069 basehttp 18764 16920 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:34,144 log 18764 21352 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:34,149 basehttp 18764 21352 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:34,461 log 18764 19736 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:34,465 basehttp 18764 19736 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:34,891 log 18764 7816 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:34,899 basehttp 18764 7816 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:35,328 log 18764 19016 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:35,332 basehttp 18764 19016 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:35,722 log 18764 2604 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:35,728 basehttp 18764 2604 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:36,126 log 18764 16780 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:36,131 basehttp 18764 16780 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:36,508 log 18764 2872 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:36,515 basehttp 18764 2872 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:36,871 log 18764 3580 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:36,876 basehttp 18764 3580 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:37,344 log 18764 14752 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:37,348 basehttp 18764 14752 "POST /api/token/ HTTP/1.1" 400 74663
+ERROR 2025-11-24 11:38:37,571 log 18764 18464 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:37,577 basehttp 18764 18464 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:41,531 log 18764 20876 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:41,537 basehttp 18764 20876 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:41,829 log 18764 19864 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:41,836 basehttp 18764 19864 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:42,287 log 18764 17972 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:42,295 basehttp 18764 17972 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:42,786 log 18764 3612 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:42,796 basehttp 18764 3612 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:43,712 log 18764 9772 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:43,719 basehttp 18764 9772 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:44,095 log 18764 20752 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:44,102 basehttp 18764 20752 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:44,920 log 18764 13804 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:44,923 basehttp 18764 13804 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:45,434 log 18764 15260 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:45,438 basehttp 18764 15260 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:38:46,192 log 18764 20388 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:38:46,198 basehttp 18764 20388 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:39:08,870 log 18764 14596 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:39:08,873 basehttp 18764 14596 "POST /api/token/ HTTP/1.1" 400 74663
+INFO 2025-11-24 11:39:40,022 basehttp 18764 10680 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-24 11:39:40,081 log 18764 10680 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:39:40,091 basehttp 18764 10680 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:39:40,917 log 18764 1664 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:39:40,926 basehttp 18764 1664 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:39:41,262 log 18764 13116 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:39:41,270 basehttp 18764 13116 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:39:41,794 log 18764 10972 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:39:41,804 basehttp 18764 10972 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:39:42,189 log 18764 8064 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:39:42,199 basehttp 18764 8064 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:40:03,117 log 18764 21424 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:40:03,127 basehttp 18764 21424 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:40:10,635 log 18764 11180 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:40:10,641 basehttp 18764 11180 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:42:39,726 log 18764 1316 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:42:39,740 basehttp 18764 1316 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:42:40,330 log 18764 21776 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:42:40,352 basehttp 18764 21776 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:42:40,699 log 18764 7164 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:42:40,720 basehttp 18764 7164 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:42:41,033 log 18764 21072 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:42:41,046 basehttp 18764 21072 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:42:46,022 log 18764 22320 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:42:46,037 basehttp 18764 22320 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:42:46,487 log 18764 2604 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:42:46,510 basehttp 18764 2604 "POST /api/token/ HTTP/1.1" 400 74597
+ERROR 2025-11-24 11:43:29,322 log 18764 12848 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:43:29,337 basehttp 18764 12848 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:43:30,405 log 18764 4548 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:43:30,422 basehttp 18764 4548 "POST /api/token/ HTTP/1.1" 400 74602
+ERROR 2025-11-24 11:43:30,751 log 18764 17880 Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.174:8000'. You may need to add '172.30.1.174' to ALLOWED_HOSTS.
+WARNING 2025-11-24 11:43:30,767 basehttp 18764 17880 "POST /api/token/ HTTP/1.1" 400 74602
+INFO 2025-11-24 11:44:03,952 autoreload 11872 20416 Watching for file changes with StatReloader
+WARNING 2025-11-24 11:44:21,064 log 11872 8112 Not Found: /
+WARNING 2025-11-24 11:44:21,075 basehttp 11872 8112 "GET / HTTP/1.1" 404 2842
+WARNING 2025-11-24 11:44:21,226 log 11872 8112 Not Found: /favicon.ico
+WARNING 2025-11-24 11:44:21,227 basehttp 11872 8112 "GET /favicon.ico HTTP/1.1" 404 2893
+INFO 2025-11-24 11:44:54,557 views 11872 22188 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:44:54,559 views 11872 22188 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 11:44:56,249 views 11872 22188 Login bem-sucedido
+INFO 2025-11-24 11:44:56,253 basehttp 11872 22188 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 11:44:56,265 basehttp 11872 22188 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:44:56,286 basehttp 11872 22188 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-24 11:44:56,547 basehttp 11872 22188 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:44:56,565 basehttp 11872 13848 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:44:56,567 basehttp 11872 10748 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:44:56,616 basehttp 11872 10748 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 11:44:56,655 basehttp 11872 22188 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 11:44:56,675 basehttp 11872 13848 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:44:56,681 basehttp 11872 13848 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 11:44:56,759 basehttp 11872 13848 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-24 11:45:02,214 views 11872 22220 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:45:02,215 views 11872 22220 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 11:45:03,929 views 11872 22220 Login bem-sucedido
+INFO 2025-11-24 11:45:03,949 basehttp 11872 22220 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 11:45:04,079 basehttp 11872 22220 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:04,170 basehttp 11872 22220 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-24 11:45:04,359 basehttp 11872 22220 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:04,395 basehttp 11872 21800 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:04,398 basehttp 11872 20940 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:04,445 basehttp 11872 22220 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 11:45:04,497 basehttp 11872 20940 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 11:45:04,542 basehttp 11872 21800 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:45:04,635 basehttp 11872 21800 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:04,761 basehttp 11872 21800 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-24 11:45:07,439 views 11872 14576 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:45:07,442 views 11872 14576 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 11:45:09,127 views 11872 14576 Login bem-sucedido
+INFO 2025-11-24 11:45:09,129 basehttp 11872 14576 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 11:45:09,204 basehttp 11872 14576 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:09,281 basehttp 11872 14576 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-24 11:45:09,445 basehttp 11872 14576 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:09,456 basehttp 11872 14528 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:09,461 basehttp 11872 20184 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:09,529 basehttp 11872 14576 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 11:45:09,553 basehttp 11872 14528 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 11:45:09,607 basehttp 11872 20184 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:45:09,681 basehttp 11872 20184 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:09,808 basehttp 11872 20184 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-24 11:45:20,975 basehttp 11872 21800 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:45:43,275 basehttp 11872 21800 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:43,400 basehttp 11872 21800 "GET /api/livros/ HTTP/1.1" 200 198245
+INFO 2025-11-24 11:45:43,694 basehttp 11872 20184 "OPTIONS /api/livros/143/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:43,783 basehttp 11872 20184 "GET /api/livros/143/ HTTP/1.1" 200 767
+INFO 2025-11-24 11:45:43,892 basehttp 11872 20184 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:45:44,025 basehttp 11872 20184 "GET /api/livros/ HTTP/1.1" 200 198245
+INFO 2025-11-24 11:45:48,152 basehttp 11872 20184 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:45:48,307 basehttp 11872 20184 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-24 11:48:09,105 basehttp 11872 19908 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:48:09,181 views 11872 19908 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:48:09,183 views 11872 19908 Dados recebidos: {'email': 'testebrivo1', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 11:48:10,888 views 11872 19908 Login bem-sucedido
+INFO 2025-11-24 11:48:10,890 basehttp 11872 19908 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 11:48:10,976 basehttp 11872 19908 "OPTIONS /api/usuarios/50/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:48:11,066 basehttp 11872 19908 "GET /api/usuarios/50/ HTTP/1.1" 200 121
+INFO 2025-11-24 11:48:11,326 basehttp 11872 19908 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:48:11,371 basehttp 11872 22300 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:48:11,431 basehttp 11872 21172 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:48:11,437 basehttp 11872 19908 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 11:48:11,478 basehttp 11872 22300 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 11:48:11,600 basehttp 11872 19908 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:48:11,686 basehttp 11872 19908 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 11:48:11,787 basehttp 11872 19908 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 198245
+INFO 2025-11-24 11:51:05,135 basehttp 11872 19600 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:51:05,232 basehttp 11872 19600 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 11:51:05,481 basehttp 11872 19600 "POST /api/livros/ HTTP/1.1" 201 944
+INFO 2025-11-24 11:51:05,673 basehttp 11872 19600 "GET /api/livros/ HTTP/1.1" 200 199190
+INFO 2025-11-24 11:51:35,750 basehttp 11872 20896 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:51:35,816 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:35,819 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:37,437 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:37,440 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:37,442 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:42,910 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:42,913 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:44,623 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:44,626 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:44,628 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:45,977 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:45,978 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:47,529 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:47,531 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:47,533 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:48,606 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:48,607 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:50,080 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:50,082 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:50,085 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:50,960 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:50,962 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:52,483 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:52,485 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:52,486 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:53,307 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:53,309 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:54,592 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:54,593 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:54,596 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:55,495 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:55,498 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:56,999 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:57,002 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:57,004 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:51:58,061 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:51:58,064 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:51:59,830 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:51:59,833 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:51:59,834 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:52:01,096 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:52:01,098 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:52:02,776 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:52:02,779 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:52:02,782 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:52:04,002 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:52:04,003 views 11872 20896 Dados recebidos: {'email': 'brunocorr3iab20@gmail.com', 'password': 'Bru123@200', 'tipo': 'admin'}
+ERROR 2025-11-24 11:52:05,811 views 11872 20896 Erro no login: Email/Username ou senha inválidos.
+WARNING 2025-11-24 11:52:05,821 log 11872 20896 Unauthorized: /api/token/
+WARNING 2025-11-24 11:52:05,832 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 401 48
+INFO 2025-11-24 11:53:36,557 views 11872 20896 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:53:36,559 views 11872 20896 Dados recebidos: {'email': 'testebrivo1', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 11:53:38,199 views 11872 20896 Login bem-sucedido
+INFO 2025-11-24 11:53:38,205 basehttp 11872 20896 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 11:53:38,303 basehttp 11872 20896 "OPTIONS /api/usuarios/50/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:53:38,414 basehttp 11872 20896 "GET /api/usuarios/50/ HTTP/1.1" 200 121
+INFO 2025-11-24 11:53:38,635 basehttp 11872 20896 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:53:38,675 basehttp 11872 23964 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:53:38,720 basehttp 11872 20896 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 11:53:38,781 basehttp 11872 23960 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:53:38,875 basehttp 11872 23960 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 11:53:38,889 basehttp 11872 23964 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:53:38,984 basehttp 11872 23964 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 11:53:39,116 basehttp 11872 23964 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 199190
+INFO 2025-11-24 11:55:22,761 basehttp 11872 23728 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:55:22,840 views 11872 23728 === LOGIN ATTEMPT ===
+INFO 2025-11-24 11:55:22,840 views 11872 23728 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 11:55:24,116 views 11872 23728 Login bem-sucedido
+INFO 2025-11-24 11:55:24,116 basehttp 11872 23728 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 11:55:24,200 basehttp 11872 23728 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:55:24,282 basehttp 11872 23728 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-24 11:55:24,473 basehttp 11872 23728 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:55:24,493 basehttp 11872 17888 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:55:24,493 basehttp 11872 19392 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:55:24,533 basehttp 11872 23728 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 11:55:24,570 basehttp 11872 19392 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 11:55:24,619 basehttp 11872 17888 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:55:24,674 basehttp 11872 17888 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 11:55:24,790 basehttp 11872 17888 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 199190
+INFO 2025-11-24 11:56:14,740 basehttp 11872 23964 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:56:19,490 basehttp 11872 23964 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:56:19,625 basehttp 11872 23964 "GET /api/livros/ HTTP/1.1" 200 199190
+INFO 2025-11-24 11:56:21,643 basehttp 11872 17888 "OPTIONS /api/livros/82/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:56:21,741 basehttp 11872 17888 "GET /api/livros/82/ HTTP/1.1" 200 1627
+INFO 2025-11-24 11:56:21,780 basehttp 11872 17888 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:56:21,923 basehttp 11872 17888 "GET /api/livros/ HTTP/1.1" 200 199190
+INFO 2025-11-24 11:56:35,917 basehttp 11872 17888 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:56:36,152 basehttp 11872 17888 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 199190
+INFO 2025-11-24 11:56:40,916 basehttp 11872 17888 "GET /api/livros/ HTTP/1.1" 200 199190
+INFO 2025-11-24 11:56:41,046 basehttp 11872 19392 "GET /api/livros/ HTTP/1.1" 200 199190
+INFO 2025-11-24 11:57:11,508 basehttp 11872 19392 "OPTIONS /api/reservas/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:57:11,581 basehttp 11872 19392 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-11-24 11:57:15,500 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:57:15,630 basehttp 11872 19392 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 199190
+INFO 2025-11-24 11:57:22,527 basehttp 11872 19392 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-11-24 11:57:22,640 basehttp 11872 19392 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 74385
+INFO 2025-11-24 11:57:48,715 basehttp 11872 19392 "OPTIONS /api/emprestimos/recent-reads/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:57:48,807 basehttp 11872 19392 "GET /api/emprestimos/recent-reads/ HTTP/1.1" 200 2
+INFO 2025-11-24 11:57:48,876 basehttp 11872 19392 "OPTIONS /api/emprestimos/ HTTP/1.1" 200 0
+INFO 2025-11-24 11:57:48,988 basehttp 11872 19392 "GET /api/emprestimos/ HTTP/1.1" 200 547
+INFO 2025-11-24 11:57:57,267 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 11:58:02,503 basehttp 11872 19392 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-11-24 11:58:02,595 basehttp 11872 19392 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 547
+INFO 2025-11-24 11:58:02,676 basehttp 11872 19392 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-11-24 11:58:02,758 basehttp 11872 19392 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-11-24 11:58:53,520 basehttp 11872 23272 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 11:58:53,646 basehttp 11872 23272 "POST /api/livros/ HTTP/1.1" 201 632
+INFO 2025-11-24 11:58:53,774 basehttp 11872 23272 "GET /api/livros/ HTTP/1.1" 200 199823
+WARNING 2025-11-24 12:01:18,270 log 11872 19392 Bad Request: /api/usuarios/51/
+WARNING 2025-11-24 12:01:18,272 basehttp 11872 19392 "PUT /api/usuarios/51/ HTTP/1.1" 400 79
+INFO 2025-11-24 12:01:34,620 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:01:52,203 basehttp 11872 2052 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:01:56,417 basehttp 11872 2052 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:01:56,481 basehttp 11872 2052 "GET /api/livros/ HTTP/1.1" 200 199823
+INFO 2025-11-24 12:02:00,530 basehttp 11872 19392 "GET /api/livros/ HTTP/1.1" 200 199823
+INFO 2025-11-24 12:02:04,089 basehttp 11872 22428 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:02:04,232 basehttp 11872 22428 "POST /api/livros/ HTTP/1.1" 201 840
+INFO 2025-11-24 12:02:04,374 basehttp 11872 22428 "GET /api/livros/ HTTP/1.1" 200 200664
+INFO 2025-11-24 12:05:50,700 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:05:51,687 basehttp 11872 22428 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:05:51,858 basehttp 11872 22428 "POST /api/livros/ HTTP/1.1" 201 783
+INFO 2025-11-24 12:05:51,976 basehttp 11872 22428 "GET /api/livros/ HTTP/1.1" 200 201448
+INFO 2025-11-24 12:07:04,509 basehttp 11872 19392 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:07:04,621 basehttp 11872 19392 "GET /api/usuarios/ HTTP/1.1" 200 3516
+INFO 2025-11-24 12:07:37,024 basehttp 11872 19392 "GET /api/usuarios/ HTTP/1.1" 200 3516
+INFO 2025-11-24 12:07:52,936 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:08:14,240 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:08:14,409 basehttp 11872 17104 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:14,478 views 11872 17104 === LOGIN ATTEMPT ===
+INFO 2025-11-24 12:08:14,479 views 11872 17104 Dados recebidos: {'email': 'testebrivo1', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 12:08:16,258 views 11872 17104 Login bem-sucedido
+INFO 2025-11-24 12:08:16,262 basehttp 11872 17104 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 12:08:16,336 basehttp 11872 17104 "OPTIONS /api/usuarios/50/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:16,423 basehttp 11872 17104 "GET /api/usuarios/50/ HTTP/1.1" 200 121
+INFO 2025-11-24 12:08:16,578 basehttp 11872 17104 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:16,588 basehttp 11872 18404 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:16,591 basehttp 11872 16060 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:16,653 basehttp 11872 17104 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 12:08:16,694 basehttp 11872 18404 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 12:08:16,735 basehttp 11872 16060 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:08:16,815 basehttp 11872 16060 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:16,921 basehttp 11872 16060 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 201448
+INFO 2025-11-24 12:08:23,264 basehttp 11872 19392 "GET /api/reservas/ HTTP/1.1" 200 52
+INFO 2025-11-24 12:08:23,917 basehttp 11872 16060 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:08:27,804 basehttp 11872 19392 "GET /api/livros/ HTTP/1.1" 200 201448
+INFO 2025-11-24 12:08:27,926 basehttp 11872 19392 "GET /api/livros/ HTTP/1.1" 200 201448
+INFO 2025-11-24 12:08:28,686 basehttp 11872 16060 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:08:28,815 basehttp 11872 16060 "GET /api/livros/ HTTP/1.1" 200 201448
+INFO 2025-11-24 12:09:35,358 basehttp 11872 9772 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:35,422 views 11872 9772 === LOGIN ATTEMPT ===
+INFO 2025-11-24 12:09:35,424 views 11872 9772 Dados recebidos: {'email': 'testebrivo2', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 12:09:37,061 views 11872 9772 Login bem-sucedido
+INFO 2025-11-24 12:09:37,061 basehttp 11872 9772 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 12:09:37,136 basehttp 11872 9772 "OPTIONS /api/usuarios/51/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:37,214 basehttp 11872 9772 "GET /api/usuarios/51/ HTTP/1.1" 200 121
+INFO 2025-11-24 12:09:37,698 basehttp 11872 9772 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:37,752 basehttp 11872 14672 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:37,752 basehttp 11872 23808 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:37,782 basehttp 11872 9772 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 12:09:37,836 basehttp 11872 14672 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 12:09:37,902 basehttp 11872 23808 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:09:37,981 basehttp 11872 23808 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:38,109 basehttp 11872 23808 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 201448
+INFO 2025-11-24 12:09:55,064 basehttp 11872 23808 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:09:55,156 basehttp 11872 23808 "GET /api/livros/ HTTP/1.1" 200 201448
+INFO 2025-11-24 12:10:02,711 basehttp 11872 23808 "OPTIONS /api/livros/234/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:10:02,789 basehttp 11872 23808 "GET /api/livros/234/ HTTP/1.1" 200 646
+INFO 2025-11-24 12:10:03,261 basehttp 11872 23808 "GET /api/livros/ HTTP/1.1" 200 201448
+INFO 2025-11-24 12:10:08,586 basehttp 11872 23808 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:10:08,851 basehttp 11872 23808 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 201448
+INFO 2025-11-24 12:10:14,995 basehttp 11872 23068 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:10:15,093 basehttp 11872 23068 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:10:15,224 basehttp 11872 23068 "POST /api/livros/ HTTP/1.1" 201 591
+INFO 2025-11-24 12:10:15,355 basehttp 11872 23068 "GET /api/livros/ HTTP/1.1" 200 202040
+INFO 2025-11-24 12:10:25,811 basehttp 11872 23808 "OPTIONS /api/emprestimos/?devolvido=true HTTP/1.1" 200 0
+INFO 2025-11-24 12:10:25,893 basehttp 11872 23808 "GET /api/emprestimos/?devolvido=true HTTP/1.1" 200 547
+INFO 2025-11-24 12:10:27,151 basehttp 11872 16952 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:10:27,208 basehttp 11872 16952 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:10:27,290 basehttp 11872 16952 "POST /api/livros/ HTTP/1.1" 201 863
+INFO 2025-11-24 12:10:27,363 basehttp 11872 16952 "GET /api/livros/ HTTP/1.1" 200 202904
+INFO 2025-11-24 12:10:28,134 basehttp 11872 23808 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:10:28,211 basehttp 11872 23808 "OPTIONS /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 0
+INFO 2025-11-24 12:10:28,285 basehttp 11872 23808 "GET /api/reservas/?status__in=na_fila,aguardando_retirada,emprestado HTTP/1.1" 200 52
+INFO 2025-11-24 12:10:38,709 basehttp 11872 23808 "GET /api/livros/ HTTP/1.1" 200 202904
+INFO 2025-11-24 12:11:32,607 basehttp 11872 4980 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:32,688 views 11872 4980 === LOGIN ATTEMPT ===
+INFO 2025-11-24 12:11:32,690 views 11872 4980 Dados recebidos: {'email': 'testebrivo1', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-24 12:11:34,027 views 11872 4980 Login bem-sucedido
+INFO 2025-11-24 12:11:34,031 basehttp 11872 4980 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-24 12:11:34,132 basehttp 11872 4980 "OPTIONS /api/usuarios/50/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:34,235 basehttp 11872 4980 "GET /api/usuarios/50/ HTTP/1.1" 200 121
+INFO 2025-11-24 12:11:34,407 basehttp 11872 4980 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:34,432 basehttp 11872 22828 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:34,435 basehttp 11872 22300 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:34,523 basehttp 11872 4980 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 12:11:34,592 basehttp 11872 22300 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 12:11:34,601 basehttp 11872 22828 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:11:34,674 basehttp 11872 22828 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:34,806 basehttp 11872 22828 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 202904
+INFO 2025-11-24 12:11:40,219 basehttp 11872 22828 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:11:44,066 basehttp 11872 22828 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:11:44,197 basehttp 11872 22828 "GET /api/livros/ HTTP/1.1" 200 202904
+INFO 2025-11-24 12:11:58,320 basehttp 11872 19392 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-24 12:12:02,347 basehttp 11872 19392 "GET /api/livros/ HTTP/1.1" 200 202904
+INFO 2025-11-24 12:12:36,407 basehttp 11872 23068 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:12:37,725 basehttp 11872 23068 "POST /api/livros/ HTTP/1.1" 201 852
+INFO 2025-11-24 12:12:37,918 basehttp 11872 23068 "GET /api/livros/ HTTP/1.1" 200 203757
+INFO 2025-11-24 12:13:48,992 basehttp 11872 16952 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 497
+INFO 2025-11-24 12:13:54,781 basehttp 11872 16952 "POST /api/livros/ HTTP/1.1" 201 1157
+INFO 2025-11-24 12:13:54,852 basehttp 11872 16952 "GET /api/livros/ HTTP/1.1" 200 204915
+INFO 2025-11-24 12:14:57,434 basehttp 11872 16952 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 12:14:57,438 basehttp 11872 23640 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 12:15:04,320 basehttp 11872 20724 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-24 12:15:04,322 basehttp 11872 18368 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-24 12:15:18,081 basehttp 11872 19392 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-24 12:15:18,167 basehttp 11872 19392 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:15:18,304 basehttp 11872 19392 "POST /api/livros/ HTTP/1.1" 201 915
+INFO 2025-11-24 12:15:18,424 basehttp 11872 19392 "GET /api/livros/ HTTP/1.1" 200 205831
+INFO 2025-11-24 12:16:13,044 basehttp 11872 18368 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:16:13,212 basehttp 11872 18368 "POST /api/livros/ HTTP/1.1" 201 735
+INFO 2025-11-24 12:16:13,378 basehttp 11872 18368 "GET /api/livros/ HTTP/1.1" 200 206567
+INFO 2025-11-24 12:16:45,262 basehttp 11872 23640 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-24 12:16:45,352 basehttp 11872 23640 "POST /api/livros/ HTTP/1.1" 201 940
+INFO 2025-11-24 12:16:45,419 basehttp 11872 23640 "GET /api/livros/ HTTP/1.1" 200 207508
