@@ -18589,3 +18589,255 @@ INFO 2025-11-24 12:17:48,827 basehttp 11872 22764 "POST /api/livros/verificar-du
 INFO 2025-11-24 12:17:48,956 basehttp 11872 22764 "POST /api/livros/ HTTP/1.1" 201 1695
 INFO 2025-11-24 12:17:49,031 basehttp 11872 22764 "GET /api/livros/ HTTP/1.1" 200 209204
 INFO 2025-11-24 12:17:59,305 basehttp 11872 22764 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 07:51:43,452 autoreload 25668 26156 Watching for file changes with StatReloader
+INFO 2025-11-26 07:54:09,892 basehttp 25668 3804 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+ERROR 2025-11-26 07:54:10,092 log 25668 3804 Invalid HTTP_HOST header: '172.30.1.197:8000'. You may need to add '172.30.1.197' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.197:8000'. You may need to add '172.30.1.197' to ALLOWED_HOSTS.
+WARNING 2025-11-26 07:54:10,100 basehttp 25668 3804 "POST /api/token/refresh/ HTTP/1.1" 400 74834
+INFO 2025-11-26 07:54:27,233 basehttp 25668 26804 "OPTIONS /api/token/ HTTP/1.1" 200 0
+ERROR 2025-11-26 07:54:27,263 log 25668 26804 Invalid HTTP_HOST header: '172.30.1.197:8000'. You may need to add '172.30.1.197' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\middleware\common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GuilhermeGoncalvesDa.AzureAD\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\http\request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '172.30.1.197:8000'. You may need to add '172.30.1.197' to ALLOWED_HOSTS.
+WARNING 2025-11-26 07:54:27,271 basehttp 25668 26804 "POST /api/token/ HTTP/1.1" 400 74587
+INFO 2025-11-26 07:54:38,513 autoreload 8536 9852 Watching for file changes with StatReloader
+INFO 2025-11-26 07:54:38,808 views 8536 26736 === LOGIN ATTEMPT ===
+INFO 2025-11-26 07:54:38,810 views 8536 26736 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 07:54:39,574 views 8536 26736 Login bem-sucedido
+INFO 2025-11-26 07:54:39,575 basehttp 8536 26736 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-26 07:54:39,582 basehttp 8536 26736 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-11-26 07:54:39,601 basehttp 8536 26736 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-26 07:54:39,722 basehttp 8536 26736 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-26 07:54:39,727 basehttp 8536 3020 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-26 07:54:39,742 basehttp 8536 13172 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-26 07:54:39,750 basehttp 8536 26736 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 07:54:39,776 basehttp 8536 3020 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 07:54:39,783 basehttp 8536 13172 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 07:54:39,792 basehttp 8536 13172 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-26 07:54:39,816 basehttp 8536 13172 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 209204
+INFO 2025-11-26 07:54:43,287 basehttp 8536 13172 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:00:04,683 autoreload 22724 23184 Watching for file changes with StatReloader
+WARNING 2025-11-26 08:01:41,067 log 22724 26688 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:01:41,069 basehttp 22724 26688 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:01:41,075 log 22724 18984 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:01:41,077 basehttp 22724 18984 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:04:29,932 log 22724 26688 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:04:29,936 basehttp 22724 26688 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:04:29,942 log 22724 18984 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:04:29,943 basehttp 22724 18984 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:06:16,936 log 22724 26688 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:06:16,939 basehttp 22724 26688 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:06:16,955 log 22724 18984 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:06:16,956 basehttp 22724 18984 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:06:17,621 log 22724 26688 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:06:17,622 basehttp 22724 26688 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:06:17,629 log 22724 18984 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:06:17,630 basehttp 22724 18984 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 08:08:49,686 basehttp 22724 16252 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-26 08:08:49,934 basehttp 22724 16252 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4206
+INFO 2025-11-26 08:08:50,254 basehttp 22724 5992 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-26 08:08:50,260 basehttp 22724 5992 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4206
+INFO 2025-11-26 08:08:50,960 basehttp 22724 9952 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-26 08:08:50,974 basehttp 22724 9952 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4206
+INFO 2025-11-26 08:11:57,980 basehttp 22724 13572 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:11:57,985 views 22724 13572 === LOGIN ATTEMPT ===
+INFO 2025-11-26 08:11:57,987 views 22724 13572 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 08:11:58,324 views 22724 13572 Login bem-sucedido
+INFO 2025-11-26 08:11:58,325 basehttp 22724 13572 "POST /api/token/ HTTP/1.1" 200 595
+WARNING 2025-11-26 08:11:59,399 log 22724 13572 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:11:59,401 basehttp 22724 13572 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 08:12:06,854 log 22724 13572 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:12:06,855 basehttp 22724 13572 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 08:13:33,997 basehttp 22724 13572 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:13:34,098 basehttp 22724 13572 "GET /api/livros/ HTTP/1.1" 200 209204
+INFO 2025-11-26 08:14:45,791 basehttp 22724 18740 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+WARNING 2025-11-26 08:14:45,838 log 22724 18740 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:14:45,843 basehttp 22724 18740 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 08:15:35,631 basehttp 22724 18740 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:15:35,634 views 22724 18740 === LOGIN ATTEMPT ===
+INFO 2025-11-26 08:15:35,635 views 22724 18740 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 08:15:36,421 views 22724 18740 Login bem-sucedido
+INFO 2025-11-26 08:15:36,422 basehttp 22724 18740 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-26 08:15:42,429 basehttp 22724 18740 "GET /api/livros/ HTTP/1.1" 200 209204
+INFO 2025-11-26 08:17:39,994 basehttp 22724 18740 "POST /api/livros/ HTTP/1.1" 201 975
+INFO 2025-11-26 08:17:50,473 basehttp 22724 9356 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:17:50,531 basehttp 22724 9356 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 210180
+INFO 2025-11-26 08:18:07,572 basehttp 22724 9356 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:18:10,772 basehttp 22724 9356 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:18:10,805 basehttp 22724 9356 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:18:13,621 basehttp 22724 9356 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:18:13,654 basehttp 22724 26352 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:18:21,489 basehttp 22724 26352 "OPTIONS /api/livros/250/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:18:21,500 basehttp 22724 26352 "GET /api/livros/250/ HTTP/1.1" 200 975
+INFO 2025-11-26 08:18:21,615 basehttp 22724 26352 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:24:21,273 basehttp 22724 25516 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:24:40,143 basehttp 22724 21468 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 08:24:40,144 basehttp 22724 26860 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 08:24:57,579 basehttp 22724 25516 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:25:07,795 basehttp 22724 25516 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:25:08,791 basehttp 22724 25516 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:25:10,215 basehttp 22724 25516 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:25:25,209 autoreload 4616 18620 Watching for file changes with StatReloader
+INFO 2025-11-26 08:26:04,319 basehttp 4616 11244 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:26:08,491 basehttp 4616 11244 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:27:05,883 basehttp 4616 24172 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+WARNING 2025-11-26 08:27:05,955 log 4616 24172 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:27:05,956 basehttp 4616 24172 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 08:27:16,063 basehttp 4616 24172 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:27:16,135 views 4616 24172 === LOGIN ATTEMPT ===
+INFO 2025-11-26 08:27:16,136 views 4616 24172 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 08:27:16,777 views 4616 24172 Login bem-sucedido
+INFO 2025-11-26 08:27:16,778 basehttp 4616 24172 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-26 08:27:18,864 basehttp 4616 24172 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:28:32,817 basehttp 4616 27352 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-26 08:28:33,056 basehttp 4616 23604 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 08:28:33,069 basehttp 4616 27352 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 08:28:33,091 basehttp 4616 10104 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:28:33,141 basehttp 4616 10104 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 210180
+INFO 2025-11-26 08:28:55,326 basehttp 4616 10104 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:28:58,298 basehttp 4616 10104 "OPTIONS /api/usuarios/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:28:58,364 basehttp 4616 10104 "GET /api/usuarios/ HTTP/1.1" 200 3516
+INFO 2025-11-26 08:29:01,457 basehttp 4616 10104 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:29:06,377 basehttp 4616 10104 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:29:28,123 basehttp 4616 10104 "PUT /api/livros/250/ HTTP/1.1" 200 975
+INFO 2025-11-26 08:29:28,153 basehttp 4616 10104 "GET /api/livros/ HTTP/1.1" 200 210180
+INFO 2025-11-26 08:31:17,523 basehttp 4616 22428 "POST /api/livros/ HTTP/1.1" 201 930
+INFO 2025-11-26 08:33:41,852 basehttp 4616 10104 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:33:41,936 basehttp 4616 10104 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 211111
+INFO 2025-11-26 08:37:21,638 basehttp 4616 10104 "OPTIONS /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 0
+INFO 2025-11-26 08:37:21,664 basehttp 4616 10104 "GET /api/alertas-sistema/?resolvido=false HTTP/1.1" 200 78160
+INFO 2025-11-26 08:37:31,583 basehttp 4616 10104 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:37:31,680 basehttp 4616 10104 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 211111
+INFO 2025-11-26 08:38:40,385 basehttp 4616 21544 "POST /api/livros/ HTTP/1.1" 201 820
+INFO 2025-11-26 08:42:24,522 basehttp 4616 21544 "POST /api/livros/ HTTP/1.1" 201 732
+INFO 2025-11-26 08:44:57,227 basehttp 4616 25660 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+WARNING 2025-11-26 08:44:57,315 log 4616 25660 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:44:57,318 basehttp 4616 25660 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 08:45:35,343 basehttp 4616 21544 "POST /api/livros/ HTTP/1.1" 201 974
+INFO 2025-11-26 08:47:40,831 basehttp 4616 10248 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:47:40,864 basehttp 4616 10248 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 213640
+INFO 2025-11-26 08:48:07,810 basehttp 4616 17132 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:48:07,880 views 4616 17132 === LOGIN ATTEMPT ===
+INFO 2025-11-26 08:48:07,882 views 4616 17132 Dados recebidos: {'email': 'testebrivo1', 'password': 'brivo@adm1', 'tipo': 'admin'}
+INFO 2025-11-26 08:48:08,606 views 4616 17132 Login bem-sucedido
+INFO 2025-11-26 08:48:08,608 basehttp 4616 17132 "POST /api/token/ HTTP/1.1" 200 584
+INFO 2025-11-26 08:48:08,741 basehttp 4616 17132 "OPTIONS /api/usuarios/50/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:48:08,806 basehttp 4616 17132 "GET /api/usuarios/50/ HTTP/1.1" 200 121
+INFO 2025-11-26 08:48:08,977 basehttp 4616 17132 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:48:08,993 basehttp 4616 18460 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:48:08,995 basehttp 4616 20616 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:48:09,054 basehttp 4616 17132 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 08:48:09,074 basehttp 4616 20616 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 08:48:09,096 basehttp 4616 18460 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:48:09,153 basehttp 4616 18460 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-26 08:48:09,246 basehttp 4616 18460 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 213640
+INFO 2025-11-26 08:48:27,103 basehttp 4616 18460 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+WARNING 2025-11-26 08:48:27,188 log 4616 18460 Unauthorized: /api/livros/
+WARNING 2025-11-26 08:48:27,189 basehttp 4616 18460 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 08:49:24,699 basehttp 4616 21544 "POST /api/livros/ HTTP/1.1" 201 793
+INFO 2025-11-26 08:49:47,276 basehttp 4616 18460 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:50:05,266 basehttp 4616 18460 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:50:05,388 basehttp 4616 18460 "GET /api/livros/ HTTP/1.1" 200 214434
+INFO 2025-11-26 08:51:46,836 basehttp 4616 24524 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:51:47,038 views 4616 24524 === LOGIN ATTEMPT ===
+INFO 2025-11-26 08:51:47,039 views 4616 24524 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 08:51:47,648 views 4616 24524 Login bem-sucedido
+INFO 2025-11-26 08:51:47,649 basehttp 4616 24524 "POST /api/token/ HTTP/1.1" 200 595
+INFO 2025-11-26 08:51:52,929 basehttp 4616 24524 "GET /api/livros/ HTTP/1.1" 200 214434
+INFO 2025-11-26 08:53:34,956 basehttp 4616 24324 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:53:34,989 basehttp 4616 24324 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 214434
+INFO 2025-11-26 08:53:53,697 basehttp 4616 24524 "POST /api/livros/ HTTP/1.1" 201 775
+INFO 2025-11-26 08:54:28,828 basehttp 4616 12576 "POST /api/livros/ HTTP/1.1" 201 903
+WARNING 2025-11-26 08:54:39,640 log 4616 24324 Unauthorized: /api/lembrete-devolucao/
+WARNING 2025-11-26 08:54:39,642 log 4616 18912 Unauthorized: /api/avisar-reservas-expirando/
+WARNING 2025-11-26 08:54:39,642 basehttp 4616 24324 "GET /api/lembrete-devolucao/ HTTP/1.1" 401 191
+WARNING 2025-11-26 08:54:39,643 basehttp 4616 18912 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 401 191
+INFO 2025-11-26 08:54:39,652 basehttp 4616 24324 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-26 08:54:39,653 basehttp 4616 18912 "POST /api/token/refresh/ HTTP/1.1" 200 491
+INFO 2025-11-26 08:54:39,662 basehttp 4616 18912 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 08:54:39,663 basehttp 4616 24324 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 08:55:06,888 basehttp 4616 24524 "POST /api/livros/ HTTP/1.1" 201 770
+INFO 2025-11-26 08:55:09,050 basehttp 4616 12284 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-26 08:55:09,136 basehttp 4616 12284 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-26 08:55:09,919 basehttp 4616 12284 "POST /api/livros/ HTTP/1.1" 201 914
+INFO 2025-11-26 08:55:10,062 basehttp 4616 12284 "GET /api/livros/ HTTP/1.1" 200 217800
+INFO 2025-11-26 08:57:32,257 basehttp 4616 24524 "POST /api/livros/ HTTP/1.1" 201 775
+INFO 2025-11-26 08:58:33,106 basehttp 4616 24324 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 08:58:33,110 basehttp 4616 18912 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 08:59:15,867 basehttp 4616 5300 "POST /api/livros/ HTTP/1.1" 201 822
+INFO 2025-11-26 08:59:39,343 basehttp 4616 18912 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 08:59:39,400 basehttp 4616 18912 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 219399
+INFO 2025-11-26 08:59:46,796 basehttp 4616 21728 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 68
+INFO 2025-11-26 08:59:46,968 basehttp 4616 21728 "POST /api/livros/ HTTP/1.1" 201 746
+INFO 2025-11-26 08:59:47,096 basehttp 4616 21728 "GET /api/livros/ HTTP/1.1" 200 220146
+INFO 2025-11-26 08:59:50,588 basehttp 4616 2996 "POST /api/livros/ HTTP/1.1" 201 858
+INFO 2025-11-26 09:01:08,747 basehttp 4616 18912 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 09:01:08,783 basehttp 4616 18912 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 221005
+INFO 2025-11-26 09:01:17,868 basehttp 4616 5300 "POST /api/livros/ HTTP/1.1" 201 774
+INFO 2025-11-26 09:02:36,151 basehttp 4616 5300 "POST /api/livros/ HTTP/1.1" 201 887
+INFO 2025-11-26 09:03:32,414 basehttp 4616 5300 "POST /api/livros/ HTTP/1.1" 201 742
+INFO 2025-11-26 09:03:48,599 basehttp 4616 18912 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 09:03:48,634 basehttp 4616 18912 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 223411
+INFO 2025-11-26 09:04:37,340 basehttp 4616 2996 "POST /api/livros/ HTTP/1.1" 201 880
+INFO 2025-11-26 09:05:01,524 basehttp 4616 5300 "POST /api/livros/ HTTP/1.1" 201 795
+INFO 2025-11-26 09:08:52,435 basehttp 4616 2996 "POST /api/livros/ HTTP/1.1" 201 742
+INFO 2025-11-26 09:13:05,895 basehttp 4616 2996 "POST /api/livros/ HTTP/1.1" 201 825
+INFO 2025-11-26 09:18:44,377 basehttp 4616 8044 "POST /api/livros/ HTTP/1.1" 201 766
+INFO 2025-11-26 09:19:53,843 basehttp 4616 12212 "POST /api/livros/ HTTP/1.1" 201 938
+INFO 2025-11-26 09:22:33,220 basehttp 4616 17052 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 09:22:33,253 basehttp 4616 17052 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 228363
+INFO 2025-11-26 09:24:39,646 basehttp 4616 8804 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 09:24:39,646 basehttp 4616 17052 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 09:24:52,181 basehttp 4616 12212 "POST /api/livros/ HTTP/1.1" 201 839
+INFO 2025-11-26 09:26:11,407 basehttp 4616 3572 "POST /api/livros/ HTTP/1.1" 201 1038
+INFO 2025-11-26 09:26:32,578 basehttp 4616 8804 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 09:26:32,633 basehttp 4616 8804 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 230242
+INFO 2025-11-26 09:28:33,098 basehttp 4616 8804 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 09:28:33,099 basehttp 4616 17052 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 09:28:57,153 basehttp 4616 17052 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 09:28:57,213 basehttp 4616 17052 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 230242
+INFO 2025-11-26 09:29:35,782 basehttp 4616 18460 "POST /api/livros/ HTTP/1.1" 201 878
+WARNING 2025-11-26 09:30:17,487 log 4616 28600 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:30:17,488 basehttp 4616 28600 "POST /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:30:56,619 log 4616 28600 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:30:56,621 basehttp 4616 28600 "POST /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:31:31,118 log 4616 28600 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:31:31,120 basehttp 4616 28600 "GET /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:31:38,702 log 4616 28600 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:31:38,704 basehttp 4616 28600 "GET /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:32:49,971 log 4616 28600 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:32:49,973 basehttp 4616 28600 "POST /api/livros/ HTTP/1.1" 401 191
+INFO 2025-11-26 09:33:57,535 basehttp 4616 16156 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 09:33:57,584 basehttp 4616 16156 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 231121
+WARNING 2025-11-26 09:34:44,878 log 4616 17160 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:34:44,880 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:35:04,554 log 4616 17160 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:35:04,554 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:35:04,836 log 4616 17160 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:35:04,836 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:35:04,972 log 4616 17160 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:35:04,974 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191
+WARNING 2025-11-26 09:35:14,829 log 4616 17160 Unauthorized: /api/livros/
+WARNING 2025-11-26 09:35:14,830 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191

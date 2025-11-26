@@ -13,4 +13,4 @@ def get_current_ip(request):
         s.close()
         return JsonResponse({'ip': ip, 'expo_url': f'exp://{ip}:8081'})
     except:
-        return JsonResponse({'ip': '172.30.1.174', 'expo_url': 'exp://192.168.1.100:8081'})
+        return JsonResponse({'ip': '172.30.1.197', 'expo_url': 'exp://192.168.1.100:8081'})
