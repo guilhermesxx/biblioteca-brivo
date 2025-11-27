@@ -18841,3 +18841,36 @@ WARNING 2025-11-26 09:35:04,972 log 4616 17160 Unauthorized: /api/livros/
 WARNING 2025-11-26 09:35:04,974 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191
 WARNING 2025-11-26 09:35:14,829 log 4616 17160 Unauthorized: /api/livros/
 WARNING 2025-11-26 09:35:14,830 basehttp 4616 17160 "GET /api/livros/ HTTP/1.1" 401 191
+INFO 2025-11-26 22:35:53,850 autoreload 37864 37764 Watching for file changes with StatReloader
+INFO 2025-11-26 22:39:10,604 autoreload 10216 32864 Watching for file changes with StatReloader
+WARNING 2025-11-26 22:41:24,938 log 10216 39828 Unauthorized: /api/livros/
+WARNING 2025-11-26 22:41:24,939 basehttp 10216 39828 "GET /api/livros/ HTTP/1.1" 401 68
+WARNING 2025-11-26 22:42:48,643 log 10216 39304 Unauthorized: /api/livros/
+WARNING 2025-11-26 22:42:48,644 basehttp 10216 39304 "GET /api/livros/ HTTP/1.1" 401 68
+INFO 2025-11-26 22:43:34,655 basehttp 10216 8720 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:43:34,661 views 10216 8720 === LOGIN ATTEMPT ===
+INFO 2025-11-26 22:43:34,662 views 10216 8720 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 22:43:35,003 views 10216 8720 Login bem-sucedido
+INFO 2025-11-26 22:43:35,003 basehttp 10216 8720 "POST /api/token/ HTTP/1.1" 200 590
+INFO 2025-11-26 22:43:36,636 basehttp 10216 8720 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:43:36,699 basehttp 10216 8720 "GET /api/livros/ HTTP/1.1" 200 231121
+INFO 2025-11-26 22:44:33,830 basehttp 10216 8720 "OPTIONS /api/livros/verificar-duplicatas/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:44:33,840 basehttp 10216 8720 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 427
+INFO 2025-11-26 22:45:12,176 basehttp 10216 36056 "OPTIONS /api/token/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:45:12,178 views 10216 36056 === LOGIN ATTEMPT ===
+INFO 2025-11-26 22:45:12,180 views 10216 36056 Dados recebidos: {'email': 'guilherme1920x@gmail.com', 'password': 'brito@123', 'tipo': 'admin'}
+INFO 2025-11-26 22:45:12,460 views 10216 36056 Login bem-sucedido
+INFO 2025-11-26 22:45:12,461 basehttp 10216 36056 "POST /api/token/ HTTP/1.1" 200 590
+INFO 2025-11-26 22:45:12,464 basehttp 10216 36056 "OPTIONS /api/usuarios/11/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:45:12,470 basehttp 10216 36056 "GET /api/usuarios/11/ HTTP/1.1" 200 143
+INFO 2025-11-26 22:45:12,551 basehttp 10216 36056 "OPTIONS /api/lembrete-devolucao/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:45:12,552 basehttp 10216 36996 "OPTIONS /api/avisar-reservas-expirando/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:45:12,553 basehttp 10216 39064 "OPTIONS /api/dashboard/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:45:12,558 basehttp 10216 36056 "GET /api/avisar-reservas-expirando/ HTTP/1.1" 200 72
+INFO 2025-11-26 22:45:12,585 basehttp 10216 36996 "GET /api/lembrete-devolucao/ HTTP/1.1" 200 61
+INFO 2025-11-26 22:45:12,588 basehttp 10216 39064 "GET /api/dashboard/ HTTP/1.1" 200 621
+INFO 2025-11-26 22:45:12,590 basehttp 10216 39064 "OPTIONS /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 0
+INFO 2025-11-26 22:45:12,603 basehttp 10216 39064 "GET /api/livros/?page_size=6&ordering=-data_publicacao HTTP/1.1" 200 231121
+INFO 2025-11-26 22:47:15,124 basehttp 10216 39064 "OPTIONS /api/livros/ HTTP/1.1" 200 0
+INFO 2025-11-26 22:47:15,146 basehttp 10216 39064 "GET /api/livros/ HTTP/1.1" 200 231121
+INFO 2025-11-26 22:47:59,777 basehttp 10216 8720 "POST /api/livros/verificar-duplicatas/ HTTP/1.1" 200 449
